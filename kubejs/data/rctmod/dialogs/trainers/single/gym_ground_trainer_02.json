@@ -1,0 +1,29 @@
+{
+  "missing_pokemon": [
+    "You don't have any healthy Pokemon to battle with!"
+  ],
+  "battle_start": [
+    "Hi I'm Lilia, good job getting up here, but I won't go easy on you!"
+  ],
+  "battle_lost": [
+    "Oh jeez, now I'm going to have to go back down to heal my Pokemon..."
+  ],
+  "battle_won": [
+    "Sorry, you're going to have to climb back up here again. So scary..."
+  ],
+  "on_cooldown": [
+    "Calm down Lilia, calm down, deep breaths..."
+  ],
+  "is_busy": [
+    "Sorry, I'm focused on my battle right now, and not falling down."
+  ],
+  "done_looser": [
+    "THIS IS A BUG, IF YOU SEE THIS MESSAGE, SCREENSHOT AND REPORT IT TO MIZU ON DISCORD. (done_looser ground_trainer_02)"
+  ],
+  "done_winner": [
+    "THIS IS A BUG, IF YOU SEE THIS MESSAGE, SCREENSHOT AND REPORT IT TO MIZU ON DISCORD. (done_winner ground_trainer_02)"
+  ],
+  "done_generic": [
+    "I can't battle you anymore!"
+  ]
+}

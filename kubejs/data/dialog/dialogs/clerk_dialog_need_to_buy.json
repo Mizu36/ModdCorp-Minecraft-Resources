@@ -1,0 +1,49 @@
+{
+	"id": "clerk_choice_dialog_need_to_buy",
+	"title": "clerk need_to_buy",
+	"description": "dialog.npc.clerk.dialog.need_to_buy",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.clerk.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.clerk.dialog.need_to_buy.line_0"
+				}
+			],
+			"portraits": [
+				{
+					"path": "clerk.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"options": [
+				{
+					"text": {
+						"translate": "dialog.npc.clerk.dialog.need_to_buy.option_0"
+					},
+					"target": "end",
+					"command": [
+						"clerkshop"
+					]
+				},
+				{
+					"text": {
+						"translate": "dialog.npc.clerk.dialog.need_to_buy.option_1"
+					},
+					"target": "end",
+					"command": [
+						"clerkadvice"
+					]
+				}
+			]
+		},
+		{
+			"id": "end"
+		}
+	]
+}

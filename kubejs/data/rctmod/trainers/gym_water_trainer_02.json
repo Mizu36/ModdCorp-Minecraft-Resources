@@ -1,0 +1,71 @@
+{
+    "displayName": "Snorkler Sam",
+    "team": [
+        {
+            "species": "cobblemon:krabby",
+            "gender": "FEMALE",
+            "level": 16,
+            "nature": "cobblemon:lonely",
+            "ability": "sheerforce",
+            "moveset": [
+                "mudshot",
+                "protect",
+                "metalclaw",
+                "watergun"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "minecraft:air"
+        },
+        {
+            "species": "cobblemon:wailmer",
+            "gender": "MALE",
+            "level": 18,
+            "nature": "cobblemon:timid",
+            "ability": "pressure",
+            "moveset": [
+                "waterpulse",
+                "mist",
+                "hail",
+                "icebeam"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:oran_berry"
+        }
+    ],
+    "winCommand": "",
+    "lossCommand": "",
+    "canOnlyBeatOnce": false,
+    "cooldownSeconds": 0
+}

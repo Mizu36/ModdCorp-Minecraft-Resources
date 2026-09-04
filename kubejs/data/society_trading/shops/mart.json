@@ -1,0 +1,311 @@
+{
+  "shop_id": "mart",
+  "name": "shop.society_trading.mart",
+  "texture": "cobblemon:textures/item/poke_balls/poke_ball",
+  "selector_weight": -101,
+  "jei_catalyst": {
+    "item": "cobblemon:poke_ball"
+  },
+  "trades": [
+    {
+      "offer": {
+        "item": "cobblemon:poke_ball",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:cog",
+        "count": 2
+      },
+      "second_request": {
+        "item": "numismatics:sprocket",
+        "count": 2
+      },
+      "numismatics_cost": 160,
+      "trade_id": "mart_poke_ball"
+    },
+    {
+      "offer": {
+        "item": "cobblemon:great_ball",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:cog",
+        "count": 7
+      },
+      "numismatics_cost": 448,
+      "stage_required": "gym_bug_complete",
+      "unlock_description": "jei.society_trading.gym_bug_complete",
+      "trade_id": "mart_great_ball"
+    },
+    {
+      "offer": {
+        "item": "cobblemon:ultra_ball",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:crown",
+        "count": 1
+      },
+      "second_request": {
+        "item": "numismatics:cog",
+        "count": 4
+      },
+      "numismatics_cost": 768,
+      "stage_required": "gym_poison_complete",
+      "unlock_description": "jei.society_trading.gym_poison_complete",
+      "trade_id": "mart_ultra_ball"
+    },
+    {
+      "offer": {
+        "item": "cobblemon:potion",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:cog",
+        "count": 3
+      },
+      "numismatics_cost": 192,
+      "trade_id": "mart_potion"
+    },
+    {
+      "offer": {
+        "item": "cobblemon:super_potion",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:crown",
+        "count": 1
+      },
+      "second_request": {
+        "item": "numismatics:cog",
+        "count": 6
+      },
+      "numismatics_cost": 896,
+      "stage_required": "gym_bug_complete",
+      "unlock_description": "jei.society_trading.gym_bug_complete",
+      "trade_id": "mart_super_potion"
+    },
+    {
+      "offer": {
+        "item": "cobblemon:hyper_potion",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:crown",
+        "count": 3
+      },
+      "second_request": {
+        "item": "numismatics:cog",
+        "count": 4
+      },
+      "numismatics_cost": 1792,
+      "stage_required": "gym_poison_complete",
+      "unlock_description": "jei.society_trading.gym_poison_complete",
+      "trade_id": "mart_hyper_potion"
+    },
+    {
+      "offer": {
+        "item": "cobblemon:max_potion",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:crown",
+        "count": 7
+      },
+      "numismatics_cost": 3584,
+      "stage_required": "gym_electric_complete",
+      "unlock_description": "jei.society_trading.gym_electric_complete",
+      "trade_id": "mart_max_potion"
+    },
+    {
+      "offer": {
+        "item": "cobblemon:full_restore",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:sun",
+        "count": 1
+      },
+      "second_request": {
+        "item": "numismatics:crown",
+        "count": 3
+      },
+      "numismatics_cost": 5632,
+      "stage_required": "gym_normal_complete",
+      "unlock_description": "jei.society_trading.gym_normal_complete",
+      "trade_id": "mart_full_restore"
+    },
+    {
+      "offer": {
+        "item": "cobblemon:revive",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:crown",
+        "count": 5
+      },
+      "numismatics_cost": 2560,
+      "stage_required": "gym_poison_complete",
+      "unlock_description": "jei.society_trading.gym_poison_complete",
+      "trade_id": "mart_revive"
+    },
+    {
+      "offer": {
+        "item": "cobblemon:antidote",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:cog",
+        "count": 1
+      },
+      "numismatics_cost": 64,
+      "trade_id": "mart_antidote"
+    },
+    {
+      "offer": {
+        "item": "cobblemon:paralyze_heal",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:cog",
+        "count": 2
+      },
+      "numismatics_cost": 128,
+      "trade_id": "mart_paralyze_heal"
+    },
+    {
+      "offer": {
+        "item": "cobblemon:awakening",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:cog",
+        "count": 4
+      },
+      "numismatics_cost": 256,
+      "trade_id": "mart_awakening"
+    },
+    {
+      "offer": {
+        "item": "cobblemon:burn_heal",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:cog",
+        "count": 4
+      },
+      "numismatics_cost": 256,
+      "trade_id": "mart_burn_heal"
+    },
+    {
+      "offer": {
+        "item": "cobblemon:ice_heal",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:cog",
+        "count": 4
+      },
+      "numismatics_cost": 256,
+      "trade_id": "mart_ice_heal"
+    },
+    {
+      "offer": {
+        "item": "cobblemon:full_heal",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:crown",
+        "count": 2
+      },
+      "numismatics_cost": 1024,
+      "trade_id": "mart_full_heal"
+    },
+    {
+      "offer": {
+        "item": "sunlit_cobblemon:poke_bobber",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:sun",
+        "count": 2
+      },
+      "second_request": {
+        "item": "numismatics:crown",
+        "count": 3
+      },
+      "numismatics_cost": 9728,
+      "trade_id": "mart_poke_bobber"
+    },
+    {
+      "offer": {
+        "item": "sunlit_cobblemon:great_poke_bobber",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:sun",
+        "count": 4
+      },
+      "second_request": {
+        "item": "numismatics:crown",
+        "count": 6
+      },
+      "numismatics_cost": 19456,
+      "stage_required": "gym_bug_complete",
+      "unlock_description": "jei.society_trading.gym_bug_complete",
+      "trade_id": "mart_great_poke_bobber"
+    },
+    {
+      "offer": {
+        "item": "sunlit_cobblemon:ultra_poke_bobber",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:sun",
+        "count": 9
+      },
+      "numismatics_cost": 36864,
+      "stage_required": "gym_poison_complete",
+      "unlock_description": "jei.society_trading.gym_poison_complete",
+      "trade_id": "mart_ultra_poke_bobber"
+    },
+    {
+      "offer": {
+        "item": "sunlit_cobblemon:master_poke_bobber",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:ancient_coin",
+        "count": 4
+      },
+      "numismatics_cost": 1048576,
+      "stage_required": "gym_normal_complete",
+      "unlock_description": "jei.society_trading.gym_normal_complete",
+      "trade_id": "mart_master_poke_bobber"
+    },
+    {
+      "offer": {
+        "item": "unimplemented_items:repel",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:sun",
+        "count": 2
+      },
+      "numismatics_cost": 8192,
+      "trade_id": "mart_repel"
+    },
+    {
+      "offer": {
+        "item": "sunlit_cobblemon:silph_scope",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:sprocket",
+        "count": 2
+      },
+      "numismatics_cost": 32,
+      "trade_id": "mart_silph_scope"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "missing_pokemon": [
+    "Oh no, what happened to your Pokemon?"
+  ],
+  "low_level_cap": [
+    "I'm sorry, but your Pokemon don't meet the level requirement for this gym."
+  ],
+  "over_level_cap": [
+    "THIS IS A BUG, IF YOU SEE THIS MESSAGE, SCREENSHOT AND REPORT IT TO MIZU ON DISCORD. (over_level_cap gym_ground_ashley)"
+  ],
+  "battle_start": [
+    "This is going to be fun! Go Trapinch!"
+  ],
+  "battle_lost": [
+    "I was right, that was very fun. Take this TM for Bulldoze, you earned it! If you haven't yet, you should challenge the gym in Archi next."
+  ],
+  "battle_won": [
+    "Looks like my team was a little too much for you, please go rest and come back when you're ready to challenge me again."
+  ],
+  "on_cooldown": [
+    "Hold on, I need a moment before we can battle again."
+  ],
+  "is_busy": [
+    "Can't you see I am extremely busy right now!",
+    "I have important matters to attend to, come back later."
+  ],
+  "done_looser": [
+    "I think you've beaten me enough times."
+  ],
+  "done_winner": [
+    "I'm gonna cut you off there, you are simply not ready to take on the gym challenge."
+  ],
+  "done_generic": [
+    "I can't battle you anymore!"
+  ]
+}

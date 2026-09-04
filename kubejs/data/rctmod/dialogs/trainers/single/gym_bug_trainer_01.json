@@ -1,0 +1,29 @@
+{
+  "missing_pokemon": [
+    "You don't have any healthy Pokemon to battle with!"
+  ],
+  "battle_start": [
+    "I'm gonna show you the power of my lil guys!"
+  ],
+  "battle_lost": [
+    "What have you done?! My poor little friends..."
+  ],
+  "battle_won": [
+    "You were no match for my arachkids!"
+  ],
+  "on_cooldown": [
+    "Sorry, hold on, my bois are napping."
+  ],
+  "is_busy": [
+    "Fuck em up my webby friend! Huh? Oh sorry, I'm in the middle of something."
+  ],
+  "done_looser": [
+    "I can't... I won't battle you anymore..."
+  ],
+  "done_winner": [
+    "Why don't you stop trying to best my lil goobers."
+  ],
+  "done_generic": [
+    "I can't battle you anymore!"
+  ]
+}

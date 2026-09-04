@@ -1,0 +1,134 @@
+{
+    "displayName": "Gym Leader Kinoko",
+    "identity": "Leader Kinoko",
+    "team": [
+        {
+            "species": "cobblemon:ivysaur",
+            "gender": "FEMALE",
+            "level": 30,
+            "nature": "cobblemon:modest",
+            "ability": "overgrow",
+            "moveset": [
+                "poisonpowder",
+                "magicalleaf",
+                "growth",
+                "venoshock"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 12,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 64,
+                "special_defence": 0,
+                "speed": 64
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:oran_berry"
+        },
+        {
+            "species": "cobblemon:shiinotic",
+            "gender": "MALE",
+            "level": 31,
+            "nature": "cobblemon:sassy",
+            "ability": "effectspore",
+            "moveset": [
+                "strengthsap",
+                "sludgebomb",
+                "poisonpowder",
+                "drainingkiss"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 24,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 64,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 64,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:kebia_berry"
+        },
+        {
+            "species": "cobblemon:parasect",
+            "gender": "FEMALE",
+            "level": 32,
+            "nature": "cobblemon:adamant",
+            "ability": "dryskin",
+            "moveset": [
+                "crosspoison",
+                "spore",
+                "thief",
+                "swordsdance"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 24,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 64,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 64,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:oran_berry"
+        },
+        {
+            "species": "cobblemon:amoonguss",
+            "gender": "MALE",
+            "level": 34,
+            "nature": "cobblemon:modest",
+            "ability": "regenerator",
+            "moveset": [
+                "toxic",
+                "venoshock",
+                "ingrain",
+                "grassknot"
+            ],
+            "ivs": {
+                "hp": 12,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 12,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 64,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 64,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:occa_berry"
+        }
+    ],
+    "winCommand": "",
+    "lossCommand": "",
+    "canOnlyBeatOnce": false,
+    "cooldownSeconds": 0
+}

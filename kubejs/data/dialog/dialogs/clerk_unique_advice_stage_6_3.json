@@ -1,0 +1,26 @@
+﻿{
+    "id":  "clerk_unique_advice_stage_6_3",
+    "title":  "clerk advice",
+    "description":  "dialog.npc.clerk.unique.advice_stage_6_3",
+    "entries":  [
+                    {
+                        "id":  "start",
+                        "speaker":  {
+                                        "translate":  "dialog.npc.clerk.name",
+                                        "color":  "white"
+                                    },
+                        "text":  [
+                                     {
+                                         "translate":  "dialog.npc.clerk.unique_advice_stage_6_3.line_0"
+                                     }
+                                 ],
+                        "portraits":  [
+                                          {
+                                              "path":  "clerk.png",
+                                              "position":  "INLINE",
+                                              "brightness":  1
+                                          }
+                                      ]
+                    }
+                ]
+}

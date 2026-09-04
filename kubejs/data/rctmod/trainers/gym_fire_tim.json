@@ -1,0 +1,134 @@
+{
+    "displayName": "Gym Leader Tim",
+    "identity": "Leader Tim",
+    "team": [
+        {
+            "species": "cobblemon:magmar",
+            "gender": "MALE",
+            "level": 32,
+            "nature": "cobblemon:mild",
+            "ability": "flamebody",
+            "moveset": [
+                "confuseray",
+                "burningjealousy",
+                "lowsweep",
+                "sunnyday"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 24
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 64,
+                "special_defence": 0,
+                "speed": 64
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:oran_berry"
+        },
+        {
+            "species": "cobblemon:scovillain",
+            "gender": "FEMALE",
+            "level": 33,
+            "nature": "cobblemon:rash",
+            "ability": "moody",
+            "moveset": [
+                "magicalleaf",
+                "firefang",
+                "willowisp",
+                "swagger"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 12,
+                "defence": 0,
+                "special_attack": 12,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 64,
+                "defence": 0,
+                "special_attack": 64,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:oran_berry"
+        },
+        {
+            "species": "cobblemon:turtonator",
+            "gender": "FEMALE",
+            "level": 34,
+            "nature": "cobblemon:relaxed",
+            "ability": "shellarmor",
+            "moveset": [
+                "burningjealousy",
+                "irondefense",
+                "workup",
+                "dragonpulse"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 24,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 64,
+                "special_attack": 0,
+                "special_defence": 64,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:oran_berry"
+        },
+        {
+            "species": "cobblemon:chiyu",
+            "gender": "MALE",
+            "level": 36,
+            "nature": "cobblemon:mild",
+            "ability": "beadsofruin",
+            "moveset": [
+                "burningjealousy",
+                "nastyplot",
+                "reflect",
+                "willowisp"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 24
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 128
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:absorb_bulb"
+        }
+    ],
+    "winCommand": "",
+    "lossCommand": "",
+    "canOnlyBeatOnce": false,
+    "cooldownSeconds": 0
+}

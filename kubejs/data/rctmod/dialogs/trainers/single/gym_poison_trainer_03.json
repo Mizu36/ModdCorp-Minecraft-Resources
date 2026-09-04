@@ -1,0 +1,29 @@
+{
+  "missing_pokemon": [
+    "You don't have any healthy Pokemon to battle with!"
+  ],
+  "battle_start": [
+    "It's time to for me to prove my worth!"
+  ],
+  "battle_lost": [
+    "Sorry Kinoko... I wasn't able to live up to the name you gave me."
+  ],
+  "battle_won": [
+    "Kinoko... I have won!"
+  ],
+  "on_cooldown": [
+    "Sorry, its too soon for a rematch, give me, like, two seconds."
+  ],
+  "is_busy": [
+    "A-ACHOOO!"
+  ],
+  "done_looser": [
+    "THIS IS A BUG, IF YOU SEE THIS MESSAGE, SCREENSHOT AND REPORT IT TO MIZU ON DISCORD. (done_looser poison_trainer_03)"
+  ],
+  "done_winner": [
+    "THIS IS A BUG, IF YOU SEE THIS MESSAGE, SCREENSHOT AND REPORT IT TO MIZU ON DISCORD. (done_winner poison_trainer_03)"
+  ],
+  "done_generic": [
+    "I can't battle you anymore!"
+  ]
+}

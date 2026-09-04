@@ -1,0 +1,71 @@
+{
+    "displayName": "Spore Chanterelle",
+    "team": [
+        {
+            "species": "cobblemon:salandit",
+            "gender": "FEMALE",
+            "level": 28,
+            "nature": "cobblemon:hasty",
+            "ability": "",
+            "moveset": [
+                "firefang",
+                "venoshock",
+                "nastyplot",
+                "sunnyday"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "minecraft:air"
+        },
+        {
+            "species": "cobblemon:croagunk",
+            "gender": "FEMALE",
+            "level": 28,
+            "nature": "cobblemon:adamant",
+            "ability": "dryskin",
+            "moveset": [
+                "suckerpunch",
+                "swagger",
+                "fakeout",
+                "poisonjab"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:oran_berry"
+        }
+    ],
+    "winCommand": "",
+    "lossCommand": "",
+    "canOnlyBeatOnce": false,
+    "cooldownSeconds": 0
+}

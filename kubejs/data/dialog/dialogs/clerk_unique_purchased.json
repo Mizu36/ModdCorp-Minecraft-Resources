@@ -1,0 +1,6 @@
+{
+  "id": "clerk_unique_purchased",
+  "title": "clerk purchased",
+  "description": "dialog.npc.clerk.unique.purchased",
+  "entries": [{"id":"start","speaker":{"translate":"dialog.npc.clerk.name","color":"white"},"text":[{"translate":"dialog.npc.clerk.unique_purchased.line_0"}],"portraits":[{"path":"clerk.png","position":"INLINE","brightness":1.0}]}]
+}

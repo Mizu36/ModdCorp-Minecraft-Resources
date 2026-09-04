@@ -1,0 +1,26 @@
+﻿{
+    "id":  "nurse_unique_advice_stage_1_0",
+    "title":  "nurse advice",
+    "description":  "dialog.npc.nurse.unique.advice_stage_1_0",
+    "entries":  [
+                    {
+                        "id":  "start",
+                        "speaker":  {
+                                        "translate":  "dialog.npc.nurse.name",
+                                        "color":  "white"
+                                    },
+                        "text":  [
+                                     {
+                                         "translate":  "dialog.npc.nurse.unique_advice_stage_1_0.line_0"
+                                     }
+                                 ],
+                        "portraits":  [
+                                          {
+                                              "path":  "nurse.png",
+                                              "position":  "INLINE",
+                                              "brightness":  1
+                                          }
+                                      ]
+                    }
+                ]
+}

@@ -1,0 +1,71 @@
+{
+    "displayName": "Tower Keeper Borf",
+    "team": [
+        {
+            "species": "cobblemon:diglett",
+            "gender": "FEMALE",
+            "level": 16,
+            "nature": "cobblemon:hasty",
+            "ability": "arenatrap",
+            "moveset": [
+                "bulldoze",
+                "charm",
+                "dig",
+                "growl"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "minecraft:air"
+        },
+        {
+            "species": "cobblemon:marshtomp",
+            "gender": "MALE",
+            "level": 18,
+            "nature": "cobblemon:impish",
+            "ability": "torrent",
+            "moveset": [
+                "supersonic",
+                "protect",
+                "rockthrow",
+                "chillingwater"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "minecraft:air"
+        }
+    ],
+    "winCommand": "",
+    "lossCommand": "",
+    "canOnlyBeatOnce": false,
+    "cooldownSeconds": 0
+}

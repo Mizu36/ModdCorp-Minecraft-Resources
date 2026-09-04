@@ -1,0 +1,71 @@
+{
+    "displayName": "Tower Keeper Lilia",
+    "team": [
+        {
+            "species": "cobblemon:sandygast",
+            "gender": "FEMALE",
+            "level": 18,
+            "nature": "cobblemon:bold",
+            "ability": "watercompaction",
+            "moveset": [
+                "sandtomb",
+                "astonish",
+                "sandattack",
+                "absorb"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:oran_berry"
+        },
+        {
+            "species": "cobblemon:silicobra",
+            "gender": "MALE",
+            "level": 16,
+            "nature": "cobblemon:relaxed",
+            "ability": "sandveil",
+            "moveset": [
+                "minimize",
+                "brutalswing",
+                "bulldoze",
+                "sandstorm"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "minecraft:air"
+        }
+    ],
+    "winCommand": "",
+    "lossCommand": "",
+    "canOnlyBeatOnce": false,
+    "cooldownSeconds": 0
+}

@@ -1,0 +1,29 @@
+{
+  "missing_pokemon": [
+    "You don't have any healthy Pokemon to battle with!"
+  ],
+  "battle_start": [
+    "Don't let me name intimidate you! I only live for the flames of battle!"
+  ],
+  "battle_lost": [
+    "I lost my fire!"
+  ],
+  "battle_won": [
+    "You were no match for my flames!"
+  ],
+  "on_cooldown": [
+    "Can you give me a second? There's something just begging to be lit on fire over there."
+  ],
+  "is_busy": [
+    "Hmmm... should I switch Pokemon?"
+  ],
+  "done_looser": [
+    "THIS IS A BUG, IF YOU SEE THIS MESSAGE, SCREENSHOT AND REPORT IT TO MIZU ON DISCORD. (done_looser fire_trainer_02)"
+  ],
+  "done_winner": [
+    "THIS IS A BUG, IF YOU SEE THIS MESSAGE, SCREENSHOT AND REPORT IT TO MIZU ON DISCORD. (done_winner fire_trainer_02)"
+  ],
+  "done_generic": [
+    "I can't battle you anymore!"
+  ]
+}

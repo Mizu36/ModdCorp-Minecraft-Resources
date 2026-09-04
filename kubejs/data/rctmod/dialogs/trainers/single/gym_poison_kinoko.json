@@ -1,0 +1,35 @@
+{
+  "missing_pokemon": [
+    "Aw, shroom... you don't have any healthy Pokemon left. Go heal up and find your way back when you're ready, shroom."
+  ],
+  "low_level_cap": [
+    "Your Pokemon are still too young to handle my spores, shroom. Grow a little more and come find me again."
+  ],
+  "over_level_cap": [
+    "THIS IS A BUG, IF YOU SEE THIS MESSAGE, SCREENSHOT AND REPORT IT TO MIZU ON DISCORD. (over_level_cap gym_poison_kinoko)"
+  ],
+  "battle_start": [
+    "Made it through all that foliage, shroom? Impressive! I'm Kinoko, beware the power of my fungi, shroom!"
+  ],
+  "battle_lost": [
+    "Ohhh, what a bloom of a battle, shroom! You've earned this medallion, and a TM for Venoshock as a little parting spore. Good luck, shroom!"
+  ],
+  "battle_won": [
+    "Hehe, my fungi were just too much for you today, shroom. Come back once you've toughened up, I'll be waiting right here in the dark, shroom."
+  ],
+  "on_cooldown": [
+    "Sorry, shroom, but I'm still recovering from our last battle. Give me a little time to regrow, and we'll spar again, shroom."
+  ],
+  "is_busy": [
+    "Can't talk right now, shroom, I'm knee-deep in a battle."
+  ],
+  "done_looser": [
+    "There's nothing left to spore between us now, shroom."
+  ],
+  "done_winner": [
+    "I think you've had enough of my spores for one day, shroom. Go train up before we battle again."
+  ],
+  "done_generic": [
+    "I can't battle you anymore, shroom!"
+  ]
+}

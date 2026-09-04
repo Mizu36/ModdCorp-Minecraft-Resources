@@ -1,0 +1,71 @@
+{
+    "displayName": "Tower Keeper Kieran",
+    "team": [
+        {
+            "species": "cobblemon:toedscool",
+            "gender": "MALE",
+            "level": 16,
+            "nature": "cobblemon:jolly",
+            "ability": "myceliummight",
+            "moveset": [
+                "supersonic",
+                "stunspore",
+                "megadrain",
+                "mudshot"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "minecraft:air"
+        },
+        {
+            "species": "cobblemon:mudbray",
+            "gender": "FEMALE",
+            "level": 18,
+            "nature": "cobblemon:adamant",
+            "ability": "owntempo",
+            "moveset": [
+                "irondefense",
+                "doublekick",
+                "bulldoze",
+                "mudslap"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:oran_berry"
+        }
+    ],
+    "winCommand": "",
+    "lossCommand": "",
+    "canOnlyBeatOnce": false,
+    "cooldownSeconds": 0
+}

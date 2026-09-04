@@ -1,0 +1,35 @@
+{
+  "missing_pokemon": [
+    "You don't seem to have any healthy Pokemon, sorry to do this, but you'll need to go back out the way you came and heal your Pokemon."
+  ],
+  "low_level_cap": [
+    "I'm sorry to put you out like this, but your Pokemon are too low level to battle me. Please come back when your Pokemon are stronger."
+  ],
+  "over_level_cap": [
+    "THIS IS A BUG, IF YOU SEE THIS MESSAGE, SCREENSHOT AND REPORT IT TO MIZU ON DISCORD. (over_level_cap gym_water_kamiya)"
+  ],
+  "battle_start": [
+    "My name is Kamiya, it's a pleasure to meet you! I hope you're ready for a battle!"
+  ],
+  "battle_lost": [
+    "That was very impressive, you deserve this medallion and the TM for Water Pulse. If you haven't already, make sure you go challenge the gym in Jewel of the Desert."
+  ],
+  "battle_won": [
+    "I enjoyed myself thoroughly, thank you. Please come back when your Pokemon are stronger, and we can battle again!"
+  ],
+  "on_cooldown": [
+    "I am so sorry, but I need to recuperate before we can battle again. Please come back later."
+  ],
+  "is_busy": [
+    "I'm in the middle of a battle, but I'll happily battle you when I'm done."
+  ],
+  "done_looser": [
+    "There is nothing more either of us can get out of battling each other."
+  ],
+  "done_winner": [
+    "I really think you should go train some more before we battle again, I don't think you are ready for another battle with me."
+  ],
+  "done_generic": [
+    "I can't battle you anymore!"
+  ]
+}

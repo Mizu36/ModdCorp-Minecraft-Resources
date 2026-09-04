@@ -1,0 +1,35 @@
+{
+  "missing_pokemon": [
+    "You don't have any healthy Pokemon to battle with!"
+  ],
+  "low_level_cap": [
+    "Your Pokemon seem to be a little underleveled for this battle."
+  ],
+  "over_level_cap": [
+    "THIS IS A BUG, IF YOU SEE THIS MESSAGE, SCREENSHOT AND REPORT IT TO MIZU ON DISCORD. (over_level_cap gym_fire_tim)"
+  ],
+  "battle_start": [
+    "Hello friend. My name is Tim. Are you ready to battle?"
+  ],
+  "battle_lost": [
+    "Oh drat, you beat me. Looks like you have what it takes to beat the Pokemon League! Keep pushing forward!"
+  ],
+  "battle_won": [
+    "I can see the fire in your eyes, but unfortunately it didn't burn hot enough to defeat me."
+  ],
+  "on_cooldown": [
+    "Sorry, give me a second to cool down. The last match left me heated."
+  ],
+  "is_busy": [
+    "Sorry, I'm busy at the moment."
+  ],
+  "done_looser": [
+    "You defeated me fair and square. Well done! You should move on to the next challenge."
+  ],
+  "done_winner": [
+    "You are testing my patience here, why don't you go challenge someone else for a while?"
+  ],
+  "done_generic": [
+    "I can't battle you anymore!"
+  ]
+}
