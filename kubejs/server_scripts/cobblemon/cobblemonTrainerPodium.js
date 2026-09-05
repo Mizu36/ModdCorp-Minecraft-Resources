@@ -253,10 +253,6 @@ ItemEvents.entityInteracted((e) => {
               }
           }
       }
-      global.runMusicForLeagueEncounter(player, blockData.encounterId);
-      if (encounter.onBattleStart) {
-          global.handleLeagueBattleStart(player, blockData.encounterId);
-      }
   }
 });
 

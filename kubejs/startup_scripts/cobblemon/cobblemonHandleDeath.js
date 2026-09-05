@@ -104,6 +104,29 @@ global.handleCobblemonDefeat = (e) => {
 StartupEvents.postInit((init) => {
   let $CobblemonEvents = Java.loadClass("com.cobblemon.mod.common.api.events.CobblemonEvents");
 
+  $CobblemonEvents.BATTLE_STARTED_POST.subscribe("normal", (e) => {
+    let players = e.battle.getPlayers();
+    let trainer;
+
+    e.battle.getActors().forEach((actor) => {
+      let actorEntity = actor.getEntity();
+      if (actorEntity && actorEntity.type === "rctmod:trainer") {
+        trainer = actorEntity;
+      }
+    });
+
+    if (!trainer || players.length === 0) return;
+
+    let player = players[0];
+    let encounterId = trainer.persistentData.encounterId;
+    if (encounterId) {
+      global.runMusicForLeagueEncounter(player, encounterId);
+      global.handleLeagueBattleStart(player, encounterId);
+    } else {
+      global.runMusicForEncounter(player);
+    }
+  });
+
   $CobblemonEvents.BATTLE_VICTORY.subscribe("normal", (e) => {
     global.handleCobblemonDefeat(e);
   });
