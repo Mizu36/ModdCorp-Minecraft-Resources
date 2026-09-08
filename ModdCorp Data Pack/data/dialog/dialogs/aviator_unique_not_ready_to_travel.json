@@ -1,0 +1,26 @@
+{
+    "id": "aviator_unique_not_ready_to_travel",
+    "title": "aviator not_ready_to_travel",
+    "description": "dialog.npc.aviator.unique.not_ready_to_travel",
+    "entries": [
+        {
+            "id": "start",
+            "speaker": {
+                "translate": "dialog.npc.aviator.name",
+                "color": "white"
+            },
+            "text": [
+                {
+                    "translate": "dialog.npc.aviator.unique_not_ready_to_travel.line_0"
+                }
+            ],
+            "portraits": [
+                {
+                    "path": "aviator.png",
+                    "position": "INLINE",
+                    "brightness": 1
+                }
+            ]
+        }
+    ]
+}

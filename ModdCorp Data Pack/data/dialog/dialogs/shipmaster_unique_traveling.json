@@ -1,0 +1,26 @@
+{
+    "id": "shipmaster_unique_traveling",
+    "title": "shipmaster traveling",
+    "description": "dialog.npc.shipmaster.unique.traveling",
+    "entries": [
+        {
+            "id": "start",
+            "speaker": {
+                "translate": "dialog.npc.shipmaster.name",
+                "color": "white"
+            },
+            "text": [
+                {
+                    "translate": "dialog.npc.shipmaster.unique_traveling.line_0"
+                }
+            ],
+            "portraits": [
+                {
+                    "path": "shipmaster.png",
+                    "position": "INLINE",
+                    "brightness": 1
+                }
+            ]
+        }
+    ]
+}

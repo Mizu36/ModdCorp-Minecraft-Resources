@@ -1,0 +1,26 @@
+{
+    "id": "subway_unique_traveling",
+    "title": "subway traveling",
+    "description": "dialog.npc.subway.unique.traveling",
+    "entries": [
+        {
+            "id": "start",
+            "speaker": {
+                "translate": "dialog.npc.subway.name",
+                "color": "white"
+            },
+            "text": [
+                {
+                    "translate": "dialog.npc.subway.unique_traveling.line_0"
+                }
+            ],
+            "portraits": [
+                {
+                    "path": "subway.png",
+                    "position": "INLINE",
+                    "brightness": 1
+                }
+            ]
+        }
+    ]
+}

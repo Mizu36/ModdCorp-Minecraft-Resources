@@ -1,0 +1,26 @@
+{
+    "id": "aviator_unique_traveling",
+    "title": "aviator traveling",
+    "description": "dialog.npc.aviator.unique.traveling",
+    "entries": [
+        {
+            "id": "start",
+            "speaker": {
+                "translate": "dialog.npc.aviator.name",
+                "color": "white"
+            },
+            "text": [
+                {
+                    "translate": "dialog.npc.aviator.unique_traveling.line_0"
+                }
+            ],
+            "portraits": [
+                {
+                    "path": "aviator.png",
+                    "position": "INLINE",
+                    "brightness": 1
+                }
+            ]
+        }
+    ]
+}

@@ -20,6 +20,36 @@ StartupEvents.registry("item", event => {
     });
 });
 
+StartupEvents.registry("item", event => {
+  event
+    .create("society:shipmaster_invitation")
+    .displayName("Shipmaster Invitation")
+    .tooltip(Text.gray("Creative only. Grants a Shipmaster villager home."))
+    .modelJson({
+      parent: "society:item/invitation"
+    });
+});
+
+StartupEvents.registry("item", event => {
+  event
+    .create("society:aviator_invitation")
+    .displayName("Aviator Invitation")
+    .tooltip(Text.gray("Creative only. Grants an Aviator villager home."))
+    .modelJson({
+      parent: "society:item/invitation"
+    });
+});
+
+StartupEvents.registry("item", event => {
+  event
+    .create("society:subway_invitation")
+    .displayName("Subway Invitation")
+    .tooltip(Text.gray("Creative only. Grants a Subway villager home."))
+    .modelJson({
+      parent: "society:item/invitation"
+    });
+});
+
 StartupEvents.registry("block", (event) => {
   event
     .create("society:villager_home")

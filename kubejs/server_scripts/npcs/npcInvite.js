@@ -24,6 +24,42 @@ ItemEvents.rightClicked("society:clerk_invitation", e => {
   global.addItemCooldown(player, item, 4);
 });
 
+ItemEvents.rightClicked("society:subway_invitation", e => {
+  const { player, item } = e;
+
+  if (!player.isCreative()) {
+    e.cancel();
+    return;
+  }
+
+  player.give(Item.of("society:villager_home", '{type:"subway"}'));
+  global.addItemCooldown(player, item, 4);
+});
+
+ItemEvents.rightClicked("society:shipmaster_invitation", e => {
+  const { player, item } = e;
+
+  if (!player.isCreative()) {
+    e.cancel();
+    return;
+  }
+
+  player.give(Item.of("society:villager_home", '{type:"shipmaster"}'));
+  global.addItemCooldown(player, item, 4);
+});
+
+ItemEvents.rightClicked("society:aviator_invitation", e => {
+  const { player, item } = e;
+
+  if (!player.isCreative()) {
+    e.cancel();
+    return;
+  }
+
+  player.give(Item.of("society:villager_home", '{type:"aviator"}'));
+  global.addItemCooldown(player, item, 4);
+});
+
 ItemEvents.rightClicked("society:invitation", (e) => {
   const { server, player, item } = e;
   if (player.isFake()) e.cancel();

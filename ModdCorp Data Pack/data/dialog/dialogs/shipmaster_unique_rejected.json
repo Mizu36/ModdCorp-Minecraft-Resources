@@ -1,0 +1,26 @@
+﻿{
+    "id":  "shipmaster_unique_rejected",
+    "title":  "shipmaster rejected",
+    "description":  "dialog.npc.shipmaster.unique.rejected",
+    "entries":  [
+                    {
+                        "id":  "start",
+                        "speaker":  {
+                                        "translate":  "dialog.npc.shipmaster.name",
+                                        "color":  "white"
+                                    },
+                        "text":  [
+                                     {
+                                         "translate":  "dialog.npc.shipmaster.unique_rejected.line_0"
+                                     }
+                                 ],
+                        "portraits":  [
+                                          {
+                                              "path":  "shipmaster.png",
+                                              "position":  "INLINE",
+                                              "brightness":  1
+                                          }
+                                      ]
+                    }
+                ]
+}

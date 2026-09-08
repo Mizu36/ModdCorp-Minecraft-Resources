@@ -12,6 +12,9 @@ const npcMap = new Map([
   ["trader", "humanoid/trader"],
   ["nurse", "humanoid_slim/nurse"],
   ["clerk", "humanoid_slim/clerk"],
+  ["shipmaster", "humanoid/shipmaster"],
+  ["aviator", "humanoid/aviator"],
+  ["subway", "humanoid/subway"]
 ]);
 const getBoundNpc = (level, block, boundNpc) => {
   let nearbyNPCs = level.getLevel()
@@ -35,7 +38,7 @@ BlockEvents.placed("society:villager_home", (e) => {
   const { x, y, z } = block;
   if (homeNbt) {
     let villagerType = homeNbt.getString("type");
-    let isSpecialHome = villagerType === "nurse" || villagerType === "clerk";
+    let isSpecialHome = villagerType === "nurse" || villagerType === "clerk" || villagerType === "shipmaster" || villagerType === "aviator" || villagerType === "subway";
 
     if (isSpecialHome && !player.isCreative()) {
       e.cancel();

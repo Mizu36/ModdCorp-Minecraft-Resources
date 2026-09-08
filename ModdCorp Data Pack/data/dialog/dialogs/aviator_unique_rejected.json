@@ -1,0 +1,26 @@
+{
+    "id": "aviator_unique_rejected",
+    "title": "aviator rejected",
+    "description": "dialog.npc.aviator.unique.rejected",
+    "entries": [
+        {
+            "id": "start",
+            "speaker": {
+                "translate": "dialog.npc.aviator.name",
+                "color": "white"
+            },
+            "text": [
+                {
+                    "translate": "dialog.npc.aviator.unique_rejected.line_0"
+                }
+            ],
+            "portraits": [
+                {
+                    "path": "aviator.png",
+                    "position": "INLINE",
+                    "brightness": 1
+                }
+            ]
+        }
+    ]
+}

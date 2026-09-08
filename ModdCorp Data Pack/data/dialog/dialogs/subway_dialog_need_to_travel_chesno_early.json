@@ -1,0 +1,49 @@
+{
+	"id": "subway_choice_dialog_need_to_travel_chesno_early",
+	"title": "subway need_to_travel_chesno_early",
+	"description": "dialog.npc.subway.dialog.need_to_travel_chesno_early",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.subway.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.subway.dialog.need_to_travel_chesno_early.line_0"
+				}
+			],
+			"portraits": [
+				{
+					"path": "subway.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"options": [
+				{
+					"text": {
+						"translate": "dialog.npc.subway.dialog.need_to_travel_chesno_early.option_0"
+					},
+					"target": "end",
+					"command": [
+						"moddcorptravel subway shiromori"
+					]
+				},
+				{
+					"text": {
+						"translate": "dialog.npc.subway.dialog.need_to_travel_chesno_early.option_1"
+					},
+					"target": "end",
+					"command": [
+						"moddcorpreject subway"
+					]
+				}
+			]
+		},
+		{
+			"id": "end"
+		}
+	]
+}

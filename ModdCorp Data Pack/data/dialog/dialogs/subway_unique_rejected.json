@@ -1,0 +1,26 @@
+{
+    "id": "subway_unique_rejected",
+    "title": "subway rejected",
+    "description": "dialog.npc.subway.unique.rejected",
+    "entries": [
+        {
+            "id": "start",
+            "speaker": {
+                "translate": "dialog.npc.subway.name",
+                "color": "white"
+            },
+            "text": [
+                {
+                    "translate": "dialog.npc.subway.unique_rejected.line_0"
+                }
+            ],
+            "portraits": [
+                {
+                    "path": "subway.png",
+                    "position": "INLINE",
+                    "brightness": 1
+                }
+            ]
+        }
+    ]
+}

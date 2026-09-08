@@ -1,0 +1,26 @@
+{
+    "id": "subway_unique_out_of_service",
+    "title": "subway out_of_service",
+    "description": "dialog.npc.subway.unique.out_of_service",
+    "entries": [
+        {
+            "id": "start",
+            "speaker": {
+                "translate": "dialog.npc.subway.name",
+                "color": "white"
+            },
+            "text": [
+                {
+                    "translate": "dialog.npc.subway.unique_out_of_service.line_0"
+                }
+            ],
+            "portraits": [
+                {
+                    "path": "subway.png",
+                    "position": "INLINE",
+                    "brightness": 1
+                }
+            ]
+        }
+    ]
+}

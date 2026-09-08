@@ -1,0 +1,58 @@
+{
+	"id": "aviator_choice_dialog_need_to_travel_battle_mountain_late",
+	"title": "aviator need_to_travel_battle_mountain_late",
+	"description": "dialog.npc.aviator.dialog.need_to_travel_battle_mountain_late",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.aviator.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.aviator.dialog.need_to_travel_battle_mountain_late.line_0"
+				}
+			],
+			"portraits": [
+				{
+					"path": "aviator.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"options": [
+				{
+					"text": {
+						"translate": "dialog.npc.aviator.dialog.need_to_travel_battle_mountain_late.option_0"
+					},
+					"target": "end",
+					"command": [
+						"moddcorptravel aviator chesnoairship"
+					]
+				},
+				{
+					"text": {
+						"translate": "dialog.npc.aviator.dialog.need_to_travel_battle_mountain_late.option_1"
+					},
+					"target": "end",
+					"command": [
+						"moddcorptravel aviator sky"
+					]
+				},
+				{
+					"text": {
+						"translate": "dialog.npc.aviator.dialog.need_to_travel_battle_mountain_late.option_2"
+					},
+					"target": "end",
+					"command": [
+						"moddcorpreject aviator"
+					]
+				}
+			]
+		},
+		{
+			"id": "end"
+		}
+	]
+}
