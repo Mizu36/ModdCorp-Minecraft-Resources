@@ -1,0 +1,35 @@
+{
+  "missing_pokemon": [
+    ""
+  ],
+  "low_level_cap": [
+    ""
+  ],
+  "over_level_cap": [
+    "THIS IS A BUG, IF YOU SEE THIS MESSAGE, SCREENSHOT AND REPORT IT TO MIZU ON DISCORD. (over_level_cap gym_ice_)"
+  ],
+  "battle_start": [
+    ""
+  ],
+  "battle_lost": [
+    ""
+  ],
+  "battle_won": [
+    ""
+  ],
+  "on_cooldown": [
+    ""
+  ],
+  "is_busy": [
+    ""
+  ],
+  "done_looser": [
+    ""
+  ],
+  "done_winner": [
+    ""
+  ],
+  "done_generic": [
+    "I can't battle you anymore!"
+  ]
+}
