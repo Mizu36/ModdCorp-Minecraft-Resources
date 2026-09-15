@@ -458,6 +458,7 @@ global.leagueConfig = {
         moneyReward: 2850,
         moneyLoss: 1250,
     },
+
     //==============================================
     // Fire Gym (Requires Poison Gym beaten)
     //==============================================
@@ -583,11 +584,368 @@ global.leagueConfig = {
     //==============================================
     // Electric Gym
     //==============================================
+
+
+    electric_leader: {
+
+        trainerId: "gym_electric_voltaire",
+        displayName: "Gym Leader Voltaire",
+        isLeader: true,
+        canAverageLevel: true,
+        averageAboveLevel: 45,
+
+        requiredStages: ["gym_electric_trainer_01_complete", "gym_electric_trainer_02_complete", "gym_electric_trainer_03_complete"],
+        blockedStages: [],
+        rewardStages: ["gym_electric_complete"],
+        removeStages: ["gym_electric_trainer_01_complete", "gym_electric_trainer_02_complete", "gym_electric_trainer_03_complete"],
+        completedStage: "gym_electric_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (electric_leader blocked message)",
+        completedMessage:
+            "",
+
+        rewardItems: [
+            {
+                id: "sunlit_cobblemon:sunlit_league_medallion",
+                count: 1,
+            },
+            {
+                id: "simpletms:",
+                count: 1,
+            }
+        ],
+        moneyReward: 8000,
+        moneyLoss: 1000,
+
+        battle_music: ["sunlit:gym_swsh_battle"],
+
+        onBattleStart: [],
+
+        onBattleEnd: [],
+        
+        onVictory: [],
+    },
+
+    electric_trainer_01: {
+
+        trainerId: "gym_electric_trainer_01",
+        displayName: "",
+        isLeader: false,
+
+        requiredStages: ["gym_fire_complete"],
+        blockedStages: [],
+        rewardStages: ["gym_electric_trainer_01_complete"],
+        completedStage: "gym_electric_trainer_01_complete",
+        gymCompletedStage: "gym_electric_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (electric_trainer_01 blocked message)",
+        completedMessage:
+            "",
+        gymCompletedMessage:
+            "",
+
+        moneyReward: 3600,
+        moneyLoss: 1500,
+    },
+
+    electric_trainer_02: {
+
+        trainerId: "gym_electric_trainer_02",
+        displayName: "",
+        isLeader: false,
+
+        requiredStages: ["gym_fire_complete"],
+        blockedStages: [],
+        rewardStages: ["gym_electric_trainer_02_complete"],
+        completedStage: "gym_electric_trainer_02_complete",
+        gymCompletedStage: "gym_electric_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (electric_trainer_02 blocked message)",
+        completedMessage:
+            "",
+        gymCompletedMessage:
+            "",
+
+        moneyReward: 3600,
+        moneyLoss: 1500,
+    },
+
+    electric_trainer_03: {
+
+        trainerId: "gym_electric_trainer_03",
+        displayName: "",
+        isLeader: false,
+
+        requiredStages: ["gym_fire_complete"],
+        blockedStages: [],
+        rewardStages: ["gym_electric_trainer_03_complete"],
+        completedStage: "gym_electric_trainer_03_complete",
+        gymCompletedStage: "gym_electric_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (electric_trainer_03 blocked message)",
+        completedMessage:
+            "",
+        gymCompletedMessage:
+            "",
+
+        moneyReward: 3600,
+        moneyLoss: 1500,
+    },
+
     //==============================================
     // Ice Gym
     //==============================================
+
+    ice_leader: {
+
+        trainerId: "gym_ice_glacia",
+        displayName: "Gym Leader Glacia",
+        isLeader: true,
+        canAverageLevel: true,
+        averageAboveLevel: 45,
+
+        requiredStages: ["gym_ice_trainer_01_complete", "gym_ice_trainer_02_complete", "gym_ice_trainer_03_complete"],
+        blockedStages: [],
+        rewardStages: ["gym_ice_complete"],
+        removeStages: ["gym_ice_trainer_01_complete", "gym_ice_trainer_02_complete", "gym_ice_trainer_03_complete"],
+        completedStage: "gym_ice_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (ice_leader blocked message)",
+        completedMessage:
+            "",
+
+        rewardItems: [
+            {
+                id: "sunlit_cobblemon:sunlit_league_medallion",
+                count: 1,
+            },
+            {
+                id: "simpletms:",
+                count: 1,
+            }
+        ],
+        moneyReward: 8500,
+        moneyLoss: 1250,
+
+        battle_music: ["sunlit:gym_swsh_battle"],
+
+        onBattleStart: [],
+
+        onBattleEnd: [],
+        
+        onVictory: [],
+    },
+
+    ice_trainer_01: {
+
+        trainerId: "gym_ice_trainer_01",
+        displayName: "",
+        isLeader: false,
+
+        requiredStages: ["gym_electric_complete"],
+        blockedStages: [],
+        rewardStages: ["gym_ice_trainer_01_complete"],
+        completedStage: "gym_ice_trainer_01_complete",
+        gymCompletedStage: "gym_ice_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (ice_trainer_01 blocked message)",
+        completedMessage:
+            "",
+        gymCompletedMessage:
+            "",
+
+        moneyReward: 3800,
+        moneyLoss: 1600,
+    },
+
+    ice_trainer_02: {
+
+        trainerId: "gym_ice_trainer_02",
+        displayName: "",
+        isLeader: false,
+
+        requiredStages: ["gym_electric_complete"],
+        blockedStages: [],
+        rewardStages: ["gym_ice_trainer_02_complete"],
+        completedStage: "gym_ice_trainer_02_complete",
+        gymCompletedStage: "gym_ice_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (ice_trainer_02 blocked message)",
+        completedMessage:
+            "",
+        gymCompletedMessage:
+            "",
+
+        moneyReward: 3800,
+        moneyLoss: 1600,
+    },
+
+    ice_trainer_03: {
+
+        trainerId: "gym_ice_trainer_03",
+        displayName: "",
+        isLeader: false,
+
+        requiredStages: ["gym_electric_complete"],
+        blockedStages: [],
+        rewardStages: ["gym_ice_trainer_03_complete"],
+        completedStage: "gym_ice_trainer_03_complete",
+        gymCompletedStage: "gym_ice_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (ice_trainer_03 blocked message)",
+        completedMessage:
+            "",
+        gymCompletedMessage:
+            "",
+
+        moneyReward: 3800,
+        moneyLoss: 1600,
+    },
+
     //==============================================
     // Normal Gym
     //==============================================
+
+    normal_leader: {
+
+        trainerId: "gym_normal_maddie",
+        displayName: "Secretary MaddiePly",
+        isLeader: true,
+        canAverageLevel: true,
+        averageAboveLevel: 45,
+
+        requiredStages: ["gym_normal_trainer_01_complete", "gym_normal_trainer_02_complete", "gym_normal_trainer_03_complete"],
+        blockedStages: [],
+        rewardStages: ["gym_normal_complete"],
+        removeStages: ["gym_normal_trainer_01_complete", "gym_normal_trainer_02_complete", "gym_normal_trainer_03_complete"],
+        completedStage: "gym_normal_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (normal_leader blocked message)",
+        completedMessage:
+            "",
+
+        rewardItems: [
+            {
+                id: "sunlit_cobblemon:sunlit_league_medallion",
+                count: 1,
+            },
+            {
+                id: "simpletms:",
+                count: 1,
+            }
+        ],
+        moneyReward: 5000,
+        moneyLoss: 2000,
+
+        battle_music: ["sunlit:gym_swsh_battle"],
+
+        onBattleStart: [],
+
+        onBattleEnd: [],
+        
+        onVictory: [],
+    },
+
+    normal_trainer_01: {
+
+        trainerId: "gym_normal_trainer_01",
+        displayName: "",
+        isLeader: false,
+
+        requiredStages: ["gym_ice_complete"],
+        blockedStages: [],
+        rewardStages: ["gym_normal_trainer_01_complete"],
+        completedStage: "gym_normal_trainer_01_complete",
+        gymCompletedStage: "gym_normal_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (normal_trainer_01 blocked message)",
+        completedMessage:
+            "",
+        gymCompletedMessage:
+            "",
+
+        moneyReward: 2000,
+        moneyLoss: 2000,
+    },
+
+    normal_trainer_02: {
+
+        trainerId: "gym_normal_trainer_02",
+        displayName: "",
+        isLeader: false,
+
+        requiredStages: ["gym_ice_complete"],
+        blockedStages: [],
+        rewardStages: ["gym_normal_trainer_02_complete"],
+        completedStage: "gym_normal_trainer_02_complete",
+        gymCompletedStage: "gym_normal_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (normal_trainer_02 blocked message)",
+        completedMessage:
+            "",
+        gymCompletedMessage:
+            "",
+
+        moneyReward: 2000,
+        moneyLoss: 2000,
+    },
+
+    normal_trainer_03: {
+
+        trainerId: "gym_normal_trainer_03",
+        displayName: "",
+        isLeader: false,
+
+        requiredStages: ["gym_ice_complete"],
+        blockedStages: [],
+        rewardStages: ["gym_normal_trainer_03_complete"],
+        completedStage: "gym_normal_trainer_03_complete",
+        gymCompletedStage: "gym_normal_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (normal_trainer_03 blocked message)",
+        completedMessage:
+            "",
+        gymCompletedMessage:
+            "",
+
+        moneyReward: 2000,
+        moneyLoss: 2000,
+    },
 
 };

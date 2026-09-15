@@ -2,7 +2,7 @@ console.info("[LEAGUE] leagueCommands.js loaded");
 
 ServerEvents.commandRegistry(event => {
 
-    const { commands: Commands, arguments: Arguments } = event;
+    const { commands: Commands, arguments: Arguments, Suggestions } = event;
 
     event.register(
 
@@ -17,6 +17,17 @@ ServerEvents.commandRegistry(event => {
                             "encounterId",
                             Arguments.STRING.create(event)
                         )
+                        .suggests((ctx, builder) => {
+
+                            const ids = Object.keys(global.leagueConfig);
+
+                            for (const id of ids) {
+                                builder.suggest(id);
+                            }
+
+                            return builder.buildFuture();
+
+                        })
                         .executes(ctx => {
 
                             const player = ctx.source.playerOrException;
@@ -29,39 +40,22 @@ ServerEvents.commandRegistry(event => {
                                 return 0;
                             }
 
-                            player.give( Item.of("sunlit_cobblemon:trainer_podium", `{LeagueMode:1b,encounterId:"${encounterId}"}`));
+                            player.give(
+                                Item.of(
+                                    "sunlit_cobblemon:trainer_podium",
+                                    `{LeagueMode:1b,encounterId:"${encounterId}"}`
+                                )
+                            );
 
-                            player.tell(Text.green("Given League Podium for encounter: " + encounterId));
+                            player.tell(
+                                Text.green("Given League Podium for encounter: " + encounterId)
+                            );
 
                             return 1;
 
                         })
                     )
             )
-            .then(
-                Commands.literal("list")
-                    .executes(ctx => {
-
-                        let player = ctx.source.playerOrException;
-
-                        player.tell(Text.gold("===== League Encounters ====="));
-
-                        let ids = Object.keys(global.leagueConfig);
-
-                        for (let i = 0; i < ids.length; i++) {
-
-                            let id = ids[i];
-                            let entry = global.leagueConfig[id];
-
-                            player.tell(Text.gray(id + " -> " + entry.displayName));
-
-                        }
-
-                        return 1;
-
-                    })
-            )
-
     );
 
 });
