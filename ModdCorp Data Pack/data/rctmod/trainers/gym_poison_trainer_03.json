@@ -6,7 +6,7 @@
             "gender": "FEMALE",
             "level": 28,
             "nature": "cobblemon:hasty",
-            "ability": "",
+            "ability": "corrosion",
             "moveset": [
                 "firefang",
                 "venoshock",
