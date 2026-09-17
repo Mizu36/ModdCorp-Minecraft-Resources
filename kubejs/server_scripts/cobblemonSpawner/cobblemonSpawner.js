@@ -5,8 +5,6 @@ const PokemonProperties = Java.loadClass("com.cobblemon.mod.common.api.pokemon.P
 const COBBLEMON_SPAWNER_ID = "sunlit_cobblemon:cobblemon_spawner";
 const SPAWNER_ACTIVE_RANGE = 32;
 
-// Called from the block's own serverTick - each spawner drives itself instead
-// of being scanned from a single global tick loop.
 global.tickCobblemonSpawner = function(entity) {
 
     let block = entity.block;

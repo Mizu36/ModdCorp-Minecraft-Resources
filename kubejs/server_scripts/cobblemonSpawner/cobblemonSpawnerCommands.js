@@ -7,17 +7,6 @@ ServerEvents.commandRegistry(event => {
         Commands.literal("cobblespawner")
 
         .then(
-            Commands.literal("create")
-                .then(
-                    Commands.argument(
-                        "cobblemon",
-                        Arguments.STRING.create(event)
-                    )
-                    .executes(ctx => createSpawnerCommand(ctx))
-                )
-        )
-
-        .then(
             Commands.literal("set")
                 .then(
                     Commands.argument(
