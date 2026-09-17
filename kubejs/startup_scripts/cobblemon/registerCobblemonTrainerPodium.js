@@ -47,44 +47,6 @@ global.removeNearbyTrainers = (level, block, forceRemoval) => {
   return noTrainers;
 };
 
-global.getTrainerSpawnPos = function(level, block) {
-
-    let startY = block.y;
-
-    for (let y = startY + 1; y <= 320; y++) {
-
-        let checkBlock = level.getBlock(new BlockPos(block.x, y, block.z));
-
-        if (checkBlock.id == "minecraft:air") {
-          let spawnY;
-
-          if (y == block.y + 1) {
-              // Visible podium
-              spawnY = Number(block.y);
-          } else {
-              // Hidden by one or more blocks
-              spawnY = Number(y);
-            }
-
-            return [
-                Number(block.x) + 0.5,
-                spawnY,
-                Number(block.z) + 0.5
-            ];
-
-        }
-
-    }
-
-    // Should never happen, but prevents crashes.
-    return [
-        Number(block.x) + 0.5,
-        Number(startY),
-        Number(block.z) + 0.5
-    ];
-
-};
-
 global.runTrainerPodium = (entity) => {
   const { level, block } = entity;
   let selene = false;

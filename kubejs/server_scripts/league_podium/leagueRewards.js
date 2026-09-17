@@ -1,7 +1,6 @@
-console.info("[LEAGUE] leagueRewards.js loaded");
+console.info("[MODDCORP] leagueRewards.js loaded");
 
 global.trainerBattleMusic = ["sunlit:rby_trainer_battle", "sunlit:sgc_johto_trainer_battle", "sunlit:sgc_kanto_trainer_battle", "sunlit:rse_trainer_battle", "sunlit:frlg_trainer_battle", "sunlit:colosseum_trainer_battle_01", "sunlit:colosseum_trainer_battle_02", "sunlit:xd_trainer_battle", "sunlit:dpp_trainer_battle", "sunlit:hgss_johto_trainer_battle", "sunlit:hgss_kanto_trainer_battle", "sunlit:bw_trainer_battle", "sunlit:xy_trainer_battle", "sunlit:oras_trainer_battle", "sunlit:sm_trainer_battle", "sunlit:swsh_trainer_battle", "sunlit:sv_trainer_battle", "sunlit:champions_trainer_battle"];
-//global.trainerBattleMusic = ["sunlit:ado_battle_full", "sunlit:metaphor_battle_full"];
 global.leaderBattleMusic = ["sunlit:kanto_leader_battle", "sunlit:johto_leader_battle", "sunlit:hoenn_leader_battle", "sunlit:sinnoh_leader_battle", "sunlit:unova_leader_battle", "sunlit:kalos_leader_battle", "sunlit:alola_leader_battle", "sunlit:galar_leader_battle", "sunlit:paldea_leader_battle"];
 
 //==================================================

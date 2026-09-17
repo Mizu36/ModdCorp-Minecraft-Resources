@@ -1,4 +1,4 @@
-console.info("[LEAGUE PODIUM] leagueConfig.js loaded");
+console.info("[MODDCORP] leagueConfig.js loaded");
 
 /**
  * League Trainer Configuration

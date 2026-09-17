@@ -1,5 +1,5 @@
-console.info("[LEAGUE] leagueLogic.js loaded");
-console.info("[LEAGUE] Config:");
+console.info("[MODDCORP] leagueLogic.js loaded");
+console.info("[MODDCORP] Config:");
 console.info(global.leagueConfig);
 
 

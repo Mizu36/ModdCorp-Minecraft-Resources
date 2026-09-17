@@ -1,17 +1,16 @@
-console.info("[LEAGUE] leagueOverride.js loaded");
+console.info("[MODDCORP] leagueOverride.js loaded");
 
-BlockEvents.placed("sunlit_cobblemon:trainer_podium", event => {
-
+BlockEvents.placed("moddcorp:league_podium", event => {
     const { block, player } = event;
 
     // Find the item that was just placed
     let item = player.getHeldItem("main_hand");
 
-    if (item.id !== "sunlit_cobblemon:trainer_podium") {
+    if (item.id !== "moddcorp:league_podium") {
         item = player.getHeldItem("off_hand");
     }
 
-    if (item.id !== "sunlit_cobblemon:trainer_podium")
+    if (item.id !== "moddcorp:league_podium")
         return;
 
     let itemNBT = item.getNbt();
@@ -19,22 +18,12 @@ BlockEvents.placed("sunlit_cobblemon:trainer_podium", event => {
     if (!itemNBT || itemNBT.isEmpty())
         return;
 
-    // Not one of our podiums
-    if (!itemNBT.contains("LeagueMode"))
-        return;
-
-    console.info("[LEAGUE] League podium detected!");
-
     let blockNBT = block.getEntityData();
 
     blockNBT.merge({
 
         data: {
-
-            LeagueMode: true,
-
             encounterId: itemNBT.getString("encounterId")
-
         }
 
     });
@@ -42,25 +31,42 @@ BlockEvents.placed("sunlit_cobblemon:trainer_podium", event => {
     global.setBlockEntityData(block, blockNBT);
 
     console.info("[LEAGUE] encounterId = " + itemNBT.getString("encounterId"));
-
 });
 
-console.info("[LEAGUE] Original function:");
-console.info(global.runTrainerPodium);
-
-const originalRunTrainerPodium = global.runTrainerPodium;
-
-global.runTrainerPodium = function(entity) {
-
-    const nbt = entity.block.getEntityData();
-
-    if (nbt.data?.LeagueMode) {
-
-        global.runLeaguePodium(entity);
-
+global.handleLeagueInteraction = function(player, server, blockData, e){
+    let encounter = global.leagueConfig[blockData.encounterId];
+    if (!encounter) {
+        e.cancel();
         return;
     }
-
-    originalRunTrainerPodium(entity);
-
+    if (encounter.gymCompletedMessage && encounter.gymCompletedStage && player.stages.has(encounter.gymCompletedStage)) {
+        server.runCommandSilent(global.getEmbersTextAPICommand(player.username, global.animalMessageSettings, 80, Text.of(encounter.gymCompletedMessage).toJson()));
+        e.cancel();
+        return;
+    }
+    if (encounter.completedStage && player.stages.has(encounter.completedStage)) {
+        server.runCommandSilent(global.getEmbersTextAPICommand(player.username, global.animalMessageSettings, 80, Text.of(encounter.completedMessage).toJson()));
+        e.cancel();
+        return;
+    }
+    if (encounter.blockedStages) {
+        for (let i = 0; i < encounter.blockedStages.length; i++) {
+            let stage = encounter.blockedStages[i];
+            if (player.stages.has(stage)) {
+                server.runCommandSilent(global.getEmbersTextAPICommand(player.username, global.animalMessageSettings, 80, Text.of(encounter.blockedMessage).toJson()));
+                e.cancel();
+                return;
+            }
+        }
+    }
+    if (encounter.requiredStages) {
+        for (let i = 0; i < encounter.requiredStages.length; i++) {
+            let stage = encounter.requiredStages[i];
+            if (!player.stages.has(stage)) {
+                server.runCommandSilent(global.getEmbersTextAPICommand(player.username, global.animalMessageSettings, 80, Text.of(encounter.lockedMessage).toJson()));
+                e.cancel();
+                return;
+            }
+        }
+    }
 }

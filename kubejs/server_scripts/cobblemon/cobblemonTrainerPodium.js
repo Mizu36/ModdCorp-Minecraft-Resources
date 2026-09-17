@@ -117,11 +117,6 @@ const getNearbyPodium = (level, target) => {
   return level.getBlock(target.onPos.above()).id == "sunlit_cobblemon:trainer_podium";
 };
 
-// =======================================================
-// LEAGUE PODIUM SUPPORT
-// Society: Sunlit Cobblemon
-// =======================================================
-
 ItemEvents.entityInteracted((e) => {
   const { hand, player, target, level, server } = e;
   if (hand == "OFF_HAND") return;
@@ -131,9 +126,11 @@ ItemEvents.entityInteracted((e) => {
     ? new BlockPos(target.persistentData.podiumX, target.persistentData.podiumY, target.persistentData.podiumZ)
     : target.onPos.above();
   let block = level.getBlock(podiumPos);
-  let blockNBT = block.getEntityData();
-  let blockData = blockNBT?.data ?? {};
-  const isLeaguePodium = blockData != null && blockData.containsKey ? blockData.containsKey("encounterId"): blockData.encounterId != null;
+  if (block.id == "moddcorp:league_podium") {
+    let blockData = block.getEntityData()?.data ?? {};
+    global.handleLeagueInteraction(player, server, blockData, e);
+    return;
+  }
   if (block.id !== "sunlit_cobblemon:trainer_podium") {
     target.setRemoved("unloaded_to_chunk");
     level.spawnParticles(
@@ -150,7 +147,7 @@ ItemEvents.entityInteracted((e) => {
     );
     e.cancel();
   }
-  if (!isLeaguePodium && target.persistentData.gymLeader !== player.getUuid().toString()) {
+  if (target.persistentData.gymLeader !== player.getUuid().toString()) {
     server.runCommandSilent(
       global.getEmbersTextAPICommand(
         player.username,
@@ -165,94 +162,56 @@ ItemEvents.entityInteracted((e) => {
   let levelAverage = global.getPartyLevel(player);
   let upgraded = block.getProperties().get("upgraded").toLowerCase() == "true";
 
-  if (!isLeaguePodium) {
-    if (!upgraded && levelAverage > 100) {
+  if (!upgraded && levelAverage > 100) {
+    server.runCommandSilent(
+      global.getEmbersTextAPICommand(
+        player.username,
+        global.animalMessageSettings,
+        80,
+        Text.translatable("sunlit_cobblemon.trainer_podium.banned_mon").toJson()
+      )
+    );
+    e.cancel();
+    return;
+  } else if (upgraded && target.persistentData.levelTier !== "elite") {
+    global.removeNearbyTrainers(level, block, true);
+    server.runCommandSilent(
+      global.getEmbersTextAPICommand(
+        player.username,
+        global.animalMessageSettings,
+        80,
+        Text.translatable("sunlit_cobblemon.trainer_podium.trainer_left").toJson()
+      )
+    );
+  }
+  let badge = global.getGymBadgeType(player);
+  if (badge != null && badge != "none") {
+    if (!global.partyIsMonotype(player, badge)) {
       server.runCommandSilent(
         global.getEmbersTextAPICommand(
           player.username,
           global.animalMessageSettings,
           80,
-          Text.translatable("sunlit_cobblemon.trainer_podium.banned_mon").toJson()
+          Text.translatable("sunlit_cobblemon.trainer_podium.badge_restricts").toJson()
         )
       );
       e.cancel();
-      return;
-    } else if (upgraded && target.persistentData.levelTier !== "elite") {
-      global.removeNearbyTrainers(level, block, true);
-      server.runCommandSilent(
-        global.getEmbersTextAPICommand(
-          player.username,
-          global.animalMessageSettings,
-          80,
-          Text.translatable("sunlit_cobblemon.trainer_podium.trainer_left").toJson()
-        )
-      );
     }
-    let badge = global.getGymBadgeType(player);
-    if (badge != null && badge != "none") {
-      if (!global.partyIsMonotype(player, badge)) {
-        server.runCommandSilent(
-          global.getEmbersTextAPICommand(
-            player.username,
-            global.animalMessageSettings,
-            80,
-            Text.translatable("sunlit_cobblemon.trainer_podium.badge_restricts").toJson()
-          )
-        );
-        e.cancel();
-      }
-    }
-    let currentLevel = global.getPlayerPodiumLevelTier(levelAverage);
-    let trainerLevel = Number(target.persistentData.levelTier)
-    if (!upgraded && trainerLevel !== currentLevel) {
-      let tooHigh = currentLevel < trainerLevel;
-      server.runCommandSilent(
-        global.getEmbersTextAPICommand(
-          player.username,
-          global.animalMessageSettings,
-          80,
-          Text.translatable(`sunlit_cobblemon.trainer_podium.too_${tooHigh ? "high" : "low"}`, `${trainerLevel + 5}`).toJson()
-        )
-      );
-      global.removeNearbyTrainers(level, block, true);
-      e.cancel();
-    }
-  } else {
-      let encounter = global.leagueConfig[blockData.encounterId];
-      if (!encounter) {
-          e.cancel();
-          return;
-      }
-      if (encounter.gymCompletedMessage && encounter.gymCompletedStage && player.stages.has(encounter.gymCompletedStage)) {
-          server.runCommandSilent(global.getEmbersTextAPICommand(player.username, global.animalMessageSettings, 80, Text.of(encounter.gymCompletedMessage).toJson()));
-          e.cancel();
-          return;
-      }
-      if (encounter.completedStage && player.stages.has(encounter.completedStage)) {
-          server.runCommandSilent(global.getEmbersTextAPICommand(player.username, global.animalMessageSettings, 80, Text.of(encounter.completedMessage).toJson()));
-          e.cancel();
-          return;
-      }
-      if (encounter.blockedStages) {
-          for (let i = 0; i < encounter.blockedStages.length; i++) {
-              let stage = encounter.blockedStages[i];
-              if (player.stages.has(stage)) {
-                  server.runCommandSilent(global.getEmbersTextAPICommand(player.username, global.animalMessageSettings, 80, Text.of(encounter.blockedMessage).toJson()));
-                  e.cancel();
-                  return;
-              }
-          }
-      }
-      if (encounter.requiredStages) {
-          for (let i = 0; i < encounter.requiredStages.length; i++) {
-              let stage = encounter.requiredStages[i];
-              if (!player.stages.has(stage)) {
-                  server.runCommandSilent(global.getEmbersTextAPICommand(player.username, global.animalMessageSettings, 80, Text.of(encounter.lockedMessage).toJson()));
-                  e.cancel();
-                  return;
-              }
-          }
-      }
+  }
+  let currentLevel = global.getPlayerPodiumLevelTier(levelAverage);
+  let trainerLevel = Number(target.persistentData.levelTier)
+  if (!upgraded && trainerLevel !== currentLevel) {
+    let tooHigh = currentLevel < trainerLevel;
+    server.runCommandSilent(
+      global.getEmbersTextAPICommand(
+        player.username,
+        global.animalMessageSettings,
+        80,
+        Text.translatable(`sunlit_cobblemon.trainer_podium.too_${tooHigh ? "high" : "low"}`, `${trainerLevel + 5}`).toJson()
+      )
+    );
+    global.removeNearbyTrainers(level, block, true);
+    e.cancel();
   }
 });
 

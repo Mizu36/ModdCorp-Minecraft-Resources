@@ -1,4 +1,4 @@
-console.info("[LEAGUE] leagueCommands.js loaded");
+console.info("[MODDCORP] leagueCommands.js loaded");
 
 ServerEvents.commandRegistry(event => {
 
@@ -42,8 +42,8 @@ ServerEvents.commandRegistry(event => {
 
                             player.give(
                                 Item.of(
-                                    "sunlit_cobblemon:trainer_podium",
-                                    `{LeagueMode:1b,encounterId:"${encounterId}"}`
+                                    "moddcorp:league_podium",
+                                    `{encounterId:"${encounterId}"}`
                                 )
                             );
 
