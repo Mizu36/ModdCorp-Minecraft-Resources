@@ -162,7 +162,7 @@ global.handleNpcSubway = (e, level, server, target, player) => {
 };
 
 global.handleNpcAviator = (e, level, server, target, player) => {
-  const location = getClosestLocation(target, ["chesnoairship", "sky", "battlemountain"]);
+  const location = getClosestLocation(target, ["chesnoairship", "stratos", "battlemountain"]);
   const stage = getCurrentStage(player);
   if (location === "chesnoairship") {
     if (stage < 6) {
@@ -172,18 +172,18 @@ global.handleNpcAviator = (e, level, server, target, player) => {
     } else {
       server.runCommandSilent(`dialog ${player.getUuid()} show ${player.username} aviator_choice_dialog_need_to_travel_chesno_late`);
     }
-  } else if (location === "sky") {
+  } else if (location === "stratos") {
     if (stage < 9) { //Can only go to chesno
-      server.runCommandSilent(`dialog ${player.getUuid()} show ${player.username} aviator_choice_dialog_need_to_travel_sky_early`);
+      server.runCommandSilent(`dialog ${player.getUuid()} show ${player.username} aviator_choice_dialog_need_to_travel_stratos_early`);
     } else { //Can go to chesno or battle mountain
-      server.runCommandSilent(`dialog ${player.getUuid()} show ${player.username} aviator_choice_dialog_need_to_travel_sky_late`);
+      server.runCommandSilent(`dialog ${player.getUuid()} show ${player.username} aviator_choice_dialog_need_to_travel_stratos_late`);
     }
   } else if (location === "battlemountain") {
     if (stage < 6) { //Can only go to chesno, unique dialog
       server.runCommandSilent(`dialog ${player.getUuid()} show ${player.username} aviator_choice_dialog_need_to_travel_battle_mountain_very_early`);
-    } else if (stage < 9) { //Can only go to chesno or sky, unique dialog
+    } else if (stage < 9) { //Can only go to chesno or stratos, unique dialog
       server.runCommandSilent(`dialog ${player.getUuid()} show ${player.username} aviator_choice_dialog_need_to_travel_battle_mountain_early`);
-    } else { //Can go to chesno or sky
+    } else { //Can go to chesno or stratos
       server.runCommandSilent(`dialog ${player.getUuid()} show ${player.username} aviator_choice_dialog_need_to_travel_battle_mountain_late`);
     }
   }
@@ -248,8 +248,8 @@ const locationCoords = {
   polaris: {x: 334, z: 125, y: 63},
   chesnosubway: {x: 764, z: 426, y: 65},
   shiromori: {x: 2395, z: 707, y: 70},
-  chesnoairship: {x: 800, z: 400, y: 70}, //placeholder for chesno airship location
-  sky: {x: 100, z: 100, y: 100}, //placeholder for sky location
+  chesnoairship: {x: 707, z: 413, y: 72},
+  stratos: {x: 100, z: 100, y: 100}, //placeholder for sky location
   battlemountain: {x: -100, z: -100, y: 100} //placeholder for battle mountain location
 };
 
