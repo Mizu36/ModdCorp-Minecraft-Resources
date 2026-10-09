@@ -1,0 +1,134 @@
+{
+    "displayName": "Gym Leader Kamiya",
+    "identity": "Leader Kamiya",
+    "team": [
+        {
+            "species": "cobblemon:wingull",
+            "gender": "FEMALE",
+            "level": 20,
+            "nature": "cobblemon:timid",
+            "ability": "keeneye",
+            "moveset": [
+                "supersonic",
+                "wingattack",
+                "waterpulse",
+                "quickattack"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 12
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 64,
+                "special_defence": 0,
+                "speed": 64
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:oran_berry"
+        },
+        {
+            "species": "cobblemon:tirtouga",
+            "gender": "FEMALE",
+            "level": 20,
+            "nature": "cobblemon:impish",
+            "ability": "solidrock",
+            "moveset": [
+                "aquajet",
+                "waterpulse",
+                "withdraw",
+                "ancientpower"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 12,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 64,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 64
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:oran_berry"
+        },
+        {
+            "species": "cobblemon:quagsire",
+            "gender": "MALE",
+            "level": 20,
+            "nature": "cobblemon:sassy",
+            "ability": "unaware",
+            "moveset": [
+                "waterfall",
+                "amnesia",
+                "raindance",
+                "mudshot"
+            ],
+            "ivs": {
+                "hp": 12,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 64,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 64,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:oran_berry"
+        },
+        {
+            "species": "cobblemon:dondozo",
+            "gender": "MALE",
+            "level": 24,
+            "nature": "cobblemon:adamant",
+            "ability": "waterveil",
+            "moveset": [
+                "dive",
+                "rest",
+                "nobleroar",
+                "waterpulse"
+            ],
+            "ivs": {
+                "hp": 6,
+                "attack": 0,
+                "defence": 6,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 64,
+                "attack": 0,
+                "defence": 64,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:wacan_berry"
+        }
+    ],
+    "winCommand": "",
+    "lossCommand": "",
+    "canOnlyBeatOnce": false,
+    "cooldownSeconds": 0
+}

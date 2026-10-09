@@ -1,0 +1,134 @@
+{
+    "displayName": "Gym Leader Glacia",
+    "identity": "Leader Glacia",
+    "team": [
+        {
+            "species": "cobblemon:arctozolt",
+            "gender": "MALE",
+            "level": 42,
+            "nature": "cobblemon:adamant",
+            "ability": "slushrush",
+            "moveset": [
+                "hail",
+                "freezedry",
+                "avalanche",
+                "protect"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 64,
+                "defence": 64,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:sitrus_berry"
+        },
+        {
+            "species": "cobblemon:crabominable",
+            "gender": "FEMALE",
+            "level": 42,
+            "nature": "cobblemon:adamant",
+            "ability": "ironfist",
+            "moveset": [
+                "icehammer",
+                "irondefense",
+                "drainpunch",
+                "bulkup"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 12,
+                "defence": 12,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 64,
+                "defence": 64,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:sitrus_berry"
+        },
+        {
+            "species": "cobblemon:froslass",
+            "gender": "FEMALE",
+            "level": 44,
+            "nature": "cobblemon:timid",
+            "ability": "snowcloak",
+            "moveset": [
+                "confuseray",
+                "iceshard",
+                "icebeam",
+                "poltergeist"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 24,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 64,
+                "special_attack": 0,
+                "special_defence": 64,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:sitrus_berry"
+        },
+        {
+            "species": "cobblemon:baxcalibur",
+            "gender": "MALE",
+            "level": 45,
+            "nature": "cobblemon:adamant",
+            "ability": "thermalexchange",
+            "moveset": [
+                "dragontail",
+                "avalanche",
+                "iceshard",
+                "snowscape"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 24,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 64,
+                "defence": 64,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:sitrus_berry"
+        }
+    ],
+    "winCommand": "",
+    "lossCommand": "",
+    "canOnlyBeatOnce": false,
+    "cooldownSeconds": 0
+}
