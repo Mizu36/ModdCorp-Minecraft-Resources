@@ -97,8 +97,8 @@
         },
         {
             "species": "cobblemon:chiyu",
-            "gender": "MALE",
-            "level": 36,
+            "gender": "UNKNOWN",
+            "level": 34,
             "nature": "cobblemon:mild",
             "ability": "beadsofruin",
             "moveset": [

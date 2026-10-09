@@ -1,18 +1,18 @@
 {
-    "displayName": "Gym Leader Voltaire",
-    "identity": "Leader Voltaire",
+    "displayName": "Gym Leader Glacia",
+    "identity": "Leader Glacia",
     "team": [
         {
-            "species": "cobblemon:",
+            "species": "cobblemon:arctozolt",
             "gender": "MALE",
-            "level": 0,
-            "nature": "cobblemon:",
-            "ability": "",
+            "level": 42,
+            "nature": "cobblemon:adamant",
+            "ability": "slushrush",
             "moveset": [
-                "",
-                "",
-                "",
-                ""
+                "hail",
+                "freezedry",
+                "avalanche",
+                "protect"
             ],
             "ivs": {
                 "hp": 0,
@@ -20,61 +20,61 @@
                 "defence": 0,
                 "special_attack": 0,
                 "special_defence": 0,
-                "speed": 24
+                "speed": 0
             },
             "evs": {
                 "hp": 0,
-                "attack": 0,
-                "defence": 0,
-                "special_attack": 64,
+                "attack": 64,
+                "defence": 64,
+                "special_attack": 0,
                 "special_defence": 0,
-                "speed": 64
+                "speed": 0
             },
             "shiny": false,
-            "heldItem": "cobblemon:"
+            "heldItem": "cobblemon:sitrus_berry"
         },
         {
-            "species": "cobblemon:",
+            "species": "cobblemon:crabominable",
             "gender": "FEMALE",
-            "level": 0,
-            "nature": "cobblemon:",
-            "ability": "",
+            "level": 42,
+            "nature": "cobblemon:adamant",
+            "ability": "ironfist",
             "moveset": [
-                "",
-                "",
-                "",
-                ""
+                "icehammer",
+                "irondefense",
+                "drainpunch",
+                "bulkup"
             ],
             "ivs": {
                 "hp": 0,
                 "attack": 12,
-                "defence": 0,
-                "special_attack": 12,
+                "defence": 12,
+                "special_attack": 0,
                 "special_defence": 0,
                 "speed": 0
             },
             "evs": {
                 "hp": 0,
                 "attack": 64,
-                "defence": 0,
-                "special_attack": 64,
+                "defence": 64,
+                "special_attack": 0,
                 "special_defence": 0,
                 "speed": 0
             },
             "shiny": false,
-            "heldItem": "cobblemon:"
+            "heldItem": "cobblemon:sitrus_berry"
         },
         {
-            "species": "cobblemon:",
+            "species": "cobblemon:froslass",
             "gender": "FEMALE",
-            "level": 0,
-            "nature": "cobblemon:",
-            "ability": "",
+            "level": 44,
+            "nature": "cobblemon:timid",
+            "ability": "snowcloak",
             "moveset": [
-                "",
-                "",
-                "",
-                ""
+                "confuseray",
+                "iceshard",
+                "icebeam",
+                "poltergeist"
             ],
             "ivs": {
                 "hp": 0,
@@ -93,38 +93,38 @@
                 "speed": 0
             },
             "shiny": false,
-            "heldItem": "cobblemon:"
+            "heldItem": "cobblemon:sitrus_berry"
         },
         {
-            "species": "cobblemon:",
+            "species": "cobblemon:baxcalibur",
             "gender": "MALE",
-            "level": 0,
-            "nature": "cobblemon:",
-            "ability": "",
+            "level": 45,
+            "nature": "cobblemon:adamant",
+            "ability": "thermalexchange",
             "moveset": [
-                "",
-                "",
-                "",
-                ""
+                "dragontail",
+                "avalanche",
+                "iceshard",
+                "snowscape"
             ],
             "ivs": {
                 "hp": 0,
-                "attack": 0,
+                "attack": 24,
                 "defence": 0,
                 "special_attack": 0,
                 "special_defence": 0,
-                "speed": 24
+                "speed": 0
             },
             "evs": {
                 "hp": 0,
-                "attack": 0,
-                "defence": 0,
+                "attack": 64,
+                "defence": 64,
                 "special_attack": 0,
                 "special_defence": 0,
-                "speed": 128
+                "speed": 0
             },
             "shiny": false,
-            "heldItem": "cobblemon:"
+            "heldItem": "cobblemon:sitrus_berry"
         }
     ],
     "winCommand": "",
