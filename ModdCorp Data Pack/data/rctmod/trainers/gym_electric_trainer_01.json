@@ -2,16 +2,16 @@
     "displayName": "",
     "team": [
         {
-            "species": "cobblemon:",
+            "species": "cobblemon:pikachu",
             "gender": "MALE",
-            "level": 0,
-            "nature": "cobblemon:",
-            "ability": "",
+            "level": 35,
+            "nature": "cobblemon:naive",
+            "ability": "static",
             "moveset": [
-                "",
-                "",
-                "",
-                ""
+                "quickattack",
+                "electroball",
+                "agility",
+                "irontail"
             ],
             "ivs": {
                 "hp": 0,
@@ -33,16 +33,16 @@
             "heldItem": "minecraft:air"
         },
         {
-            "species": "cobblemon:",
+            "species": "cobblemon:jolteon",
             "gender": "FEMALE",
-            "level": 0,
-            "nature": "cobblemon:",
-            "ability": "",
+            "level": 36,
+            "nature": "cobblemon:naive",
+            "ability": "quickfeet",
             "moveset": [
-                "",
-                "",
-                "",
-                ""
+                "charm",
+                "thunderfang",
+                "quickattack",
+                "charge"
             ],
             "ivs": {
                 "hp": 0,
@@ -61,7 +61,7 @@
                 "speed": 0
             },
             "shiny": false,
-            "heldItem": "cobblemon:"
+            "heldItem": "cobblemon:oran_berry"
         }
     ],
     "winCommand": "",

@@ -23,7 +23,7 @@ global.leagueConfig = {
 
     bug_leader: {
 
-        trainerId: "gym_bug_shino",
+        trainerId: "gym_leader_bug_shino",
         displayName: "Gym Leader Shino",
         isLeader: true,
         canAverageLevel: true,
@@ -56,7 +56,7 @@ global.leagueConfig = {
         moneyReward: 3000,
         moneyLoss: 696,
 
-        battle_music: ["sunlit:gym_swsh_battle"],
+        battle_music: [], //Can be used to specify custom battle music for this encounter
 
         onBattleStart: [], //Can be used to trigger commands when battle starts
 
@@ -73,7 +73,6 @@ global.leagueConfig = {
         isLeader: false,
 
         requiredStages: null,
-        blockedStages: [],
         rewardStages: ["gym_bug_trainer_01_complete"],
         completedStage: "gym_bug_trainer_01_complete",
         gymCompletedStage: "gym_bug_complete",
@@ -97,14 +96,13 @@ global.leagueConfig = {
 
     ground_leader: {
 
-        trainerId: "gym_ground_ashley",
+        trainerId: "gym_leader_ground_ashley",
         displayName: "Gym Leader Ashley",
         isLeader: true,
         canAverageLevel: true,
         averageAboveLevel: 27,
 
         requiredStages: ["gym_ground_trainer_01_complete", "gym_ground_trainer_02_complete", "gym_ground_trainer_03_complete"],
-        blockedStages: [],
         rewardStages: ["gym_ground_complete"],
         removeStages: ["gym_ground_trainer_01_complete", "gym_ground_trainer_02_complete", "gym_ground_trainer_03_complete"],
         completedStage: "gym_ground_complete",
@@ -129,14 +127,6 @@ global.leagueConfig = {
         ],
         moneyReward: 4000,
         moneyLoss: 750,
-
-        battle_music: ["sunlit:gym_swsh_battle"],
-        
-        onBattleStart: [],
-
-        onBattleEnd: [],
-        
-        onVictory: [],
     },
 
     ground_trainer_01: {
@@ -146,7 +136,6 @@ global.leagueConfig = {
         isLeader: false,
 
         requiredStages: ["gym_bug_complete"],
-        blockedStages: [],
         rewardStages: ["gym_ground_trainer_01_complete"],
         completedStage: "gym_ground_trainer_01_complete",
         gymCompletedStage: "gym_ground_complete",
@@ -171,7 +160,6 @@ global.leagueConfig = {
         isLeader: false,
 
         requiredStages: ["gym_bug_complete"],
-        blockedStages: [],
         rewardStages: ["gym_ground_trainer_02_complete"],
         completedStage: "gym_ground_trainer_02_complete",
         gymCompletedStage: "gym_ground_complete",
@@ -196,7 +184,6 @@ global.leagueConfig = {
         isLeader: false,
 
         requiredStages: ["gym_bug_complete"],
-        blockedStages: [],
         rewardStages: ["gym_ground_trainer_03_complete"],
         completedStage: "gym_ground_trainer_03_complete",
         gymCompletedStage: "gym_ground_complete",
@@ -220,14 +207,13 @@ global.leagueConfig = {
     
     water_leader: {
 
-        trainerId: "gym_water_kamiya",
+        trainerId: "gym_leader_water_kamiya",
         displayName: "Gym Leader Kamiya",
         isLeader: true,
         canAverageLevel: true,
         averageAboveLevel: 27,
 
         requiredStages: ["gym_water_trainer_01_complete", "gym_water_trainer_02_complete", "gym_water_trainer_03_complete"],
-        blockedStages: [],
         rewardStages: ["gym_water_complete"],
         removeStages: ["gym_water_trainer_01_complete", "gym_water_trainer_02_complete", "gym_water_trainer_03_complete"],
         completedStage: "gym_water_complete",
@@ -252,14 +238,6 @@ global.leagueConfig = {
         ],
         moneyReward: 4000,
         moneyLoss: 750,
-
-        battle_music: ["sunlit:gym_swsh_battle"],
-
-        onBattleStart: [],
-
-        onBattleEnd: [],
-        
-        onVictory: [],
     },
 
     water_trainer_01: {
@@ -269,7 +247,6 @@ global.leagueConfig = {
         isLeader: false,
 
         requiredStages: ["gym_bug_complete"],
-        blockedStages: [],
         rewardStages: ["gym_water_trainer_01_complete"],
         completedStage: "gym_water_trainer_01_complete",
         gymCompletedStage: "gym_water_complete",
@@ -294,7 +271,6 @@ global.leagueConfig = {
         isLeader: false,
 
         requiredStages: ["gym_bug_complete"],
-        blockedStages: [],
         rewardStages: ["gym_water_trainer_02_complete"],
         completedStage: "gym_water_trainer_02_complete",
         gymCompletedStage: "gym_water_complete",
@@ -319,7 +295,6 @@ global.leagueConfig = {
         isLeader: false,
 
         requiredStages: ["gym_bug_complete"],
-        blockedStages: [],
         rewardStages: ["gym_water_trainer_03_complete"],
         completedStage: "gym_water_trainer_03_complete",
         gymCompletedStage: "gym_water_complete",
@@ -343,14 +318,13 @@ global.leagueConfig = {
 
     poison_leader: {
 
-        trainerId: "gym_poison_kinoko",
+        trainerId: "gym_leader_poison_kinoko",
         displayName: "Gym Leader Kinoko",
         isLeader: true,
         canAverageLevel: true,
         averageAboveLevel: 35,
 
         requiredStages: ["gym_poison_trainer_01_complete", "gym_poison_trainer_02_complete", "gym_poison_trainer_03_complete"],
-        blockedStages: [],
         rewardStages: ["gym_poison_complete"],
         removeStages: ["gym_poison_trainer_01_complete", "gym_poison_trainer_02_complete", "gym_poison_trainer_03_complete"],
         completedStage: "gym_poison_complete",
@@ -374,14 +348,6 @@ global.leagueConfig = {
         ],
         moneyReward: 7500,
         moneyLoss: 750,
-
-        battle_music: ["sunlit:gym_swsh_battle"],
-
-        onBattleStart: [],
-
-        onBattleEnd: [],
-        
-        onVictory: [],
     },
 
     poison_trainer_01: {
@@ -391,7 +357,6 @@ global.leagueConfig = {
         isLeader: false,
 
         requiredStages: ["gym_ground_complete", "gym_water_complete"],
-        blockedStages: [],
         rewardStages: ["gym_poison_trainer_01_complete"],
         completedStage: "gym_poison_trainer_01_complete",
         gymCompletedStage: "gym_poison_complete",
@@ -416,7 +381,6 @@ global.leagueConfig = {
         isLeader: false,
 
         requiredStages: ["gym_ground_complete", "gym_water_complete"],
-        blockedStages: [],
         rewardStages: ["gym_poison_trainer_02_complete"],
         completedStage: "gym_poison_trainer_02_complete",
         gymCompletedStage: "gym_poison_complete",
@@ -441,7 +405,6 @@ global.leagueConfig = {
         isLeader: false,
 
         requiredStages: ["gym_ground_complete", "gym_water_complete"],
-        blockedStages: [],
         rewardStages: ["gym_poison_trainer_03_complete"],
         completedStage: "gym_poison_trainer_03_complete",
         gymCompletedStage: "gym_poison_complete",
@@ -465,14 +428,13 @@ global.leagueConfig = {
 
     fire_leader: {
 
-        trainerId: "gym_fire_tim",
+        trainerId: "gym_leader_fire_tim",
         displayName: "Gym Leader Tim",
         isLeader: true,
         canAverageLevel: true,
         averageAboveLevel: 40,
 
         requiredStages: ["gym_fire_trainer_01_complete", "gym_fire_trainer_02_complete", "gym_fire_trainer_03_complete"],
-        blockedStages: [],
         rewardStages: ["gym_fire_complete"],
         removeStages: ["gym_fire_trainer_01_complete", "gym_fire_trainer_02_complete", "gym_fire_trainer_03_complete"],
         completedStage: "gym_fire_complete",
@@ -496,14 +458,6 @@ global.leagueConfig = {
         ],
         moneyReward: 7500,
         moneyLoss: 750,
-
-        battle_music: ["sunlit:gym_swsh_battle"],
-
-        onBattleStart: [],
-
-        onBattleEnd: [],
-        
-        onVictory: [],
     },
 
     fire_trainer_01: {
@@ -513,7 +467,6 @@ global.leagueConfig = {
         isLeader: false,
 
         requiredStages: ["gym_poison_complete"],
-        blockedStages: [],
         rewardStages: ["gym_fire_trainer_01_complete"],
         completedStage: "gym_fire_trainer_01_complete",
         gymCompletedStage: "gym_fire_complete",
@@ -538,7 +491,6 @@ global.leagueConfig = {
         isLeader: false,
 
         requiredStages: ["gym_poison_complete"],
-        blockedStages: [],
         rewardStages: ["gym_fire_trainer_02_complete"],
         completedStage: "gym_fire_trainer_02_complete",
         gymCompletedStage: "gym_fire_complete",
@@ -563,7 +515,6 @@ global.leagueConfig = {
         isLeader: false,
 
         requiredStages: ["gym_poison_complete"],
-        blockedStages: [],
         rewardStages: ["gym_fire_trainer_03_complete"],
         completedStage: "gym_fire_trainer_03_complete",
         gymCompletedStage: "gym_fire_complete",
@@ -582,20 +533,19 @@ global.leagueConfig = {
     },
 
     //==============================================
-    // Electric Gym
+    // Electric Gym (Requires Fire Gym beaten)
     //==============================================
 
 
     electric_leader: {
 
-        trainerId: "gym_electric_voltaire",
+        trainerId: "gym_leader_electric_voltaire",
         displayName: "Gym Leader Voltaire",
         isLeader: true,
         canAverageLevel: true,
         averageAboveLevel: 45,
 
         requiredStages: ["gym_electric_trainer_01_complete", "gym_electric_trainer_02_complete", "gym_electric_trainer_03_complete"],
-        blockedStages: [],
         rewardStages: ["gym_electric_complete"],
         removeStages: ["gym_electric_trainer_01_complete", "gym_electric_trainer_02_complete", "gym_electric_trainer_03_complete"],
         completedStage: "gym_electric_complete",
@@ -619,14 +569,6 @@ global.leagueConfig = {
         ],
         moneyReward: 8000,
         moneyLoss: 1000,
-
-        battle_music: ["sunlit:gym_swsh_battle"],
-
-        onBattleStart: [],
-
-        onBattleEnd: [],
-        
-        onVictory: [],
     },
 
     electric_trainer_01: {
@@ -636,7 +578,6 @@ global.leagueConfig = {
         isLeader: false,
 
         requiredStages: ["gym_fire_complete"],
-        blockedStages: [],
         rewardStages: ["gym_electric_trainer_01_complete"],
         completedStage: "gym_electric_trainer_01_complete",
         gymCompletedStage: "gym_electric_complete",
@@ -661,7 +602,6 @@ global.leagueConfig = {
         isLeader: false,
 
         requiredStages: ["gym_fire_complete"],
-        blockedStages: [],
         rewardStages: ["gym_electric_trainer_02_complete"],
         completedStage: "gym_electric_trainer_02_complete",
         gymCompletedStage: "gym_electric_complete",
@@ -686,7 +626,6 @@ global.leagueConfig = {
         isLeader: false,
 
         requiredStages: ["gym_fire_complete"],
-        blockedStages: [],
         rewardStages: ["gym_electric_trainer_03_complete"],
         completedStage: "gym_electric_trainer_03_complete",
         gymCompletedStage: "gym_electric_complete",
@@ -705,19 +644,18 @@ global.leagueConfig = {
     },
 
     //==============================================
-    // Ice Gym
+    // Ice Gym (Requires Electric Gym beaten)
     //==============================================
 
     ice_leader: {
 
-        trainerId: "gym_ice_glacia",
+        trainerId: "gym_leader_ice_glacia",
         displayName: "Gym Leader Glacia",
         isLeader: true,
         canAverageLevel: true,
         averageAboveLevel: 45,
 
         requiredStages: ["gym_ice_trainer_01_complete", "gym_ice_trainer_02_complete", "gym_ice_trainer_03_complete"],
-        blockedStages: [],
         rewardStages: ["gym_ice_complete"],
         removeStages: ["gym_ice_trainer_01_complete", "gym_ice_trainer_02_complete", "gym_ice_trainer_03_complete"],
         completedStage: "gym_ice_complete",
@@ -741,14 +679,6 @@ global.leagueConfig = {
         ],
         moneyReward: 8500,
         moneyLoss: 1250,
-
-        battle_music: ["sunlit:gym_swsh_battle"],
-
-        onBattleStart: [],
-
-        onBattleEnd: [],
-        
-        onVictory: [],
     },
 
     ice_trainer_01: {
@@ -758,7 +688,6 @@ global.leagueConfig = {
         isLeader: false,
 
         requiredStages: ["gym_electric_complete"],
-        blockedStages: [],
         rewardStages: ["gym_ice_trainer_01_complete"],
         completedStage: "gym_ice_trainer_01_complete",
         gymCompletedStage: "gym_ice_complete",
@@ -783,7 +712,6 @@ global.leagueConfig = {
         isLeader: false,
 
         requiredStages: ["gym_electric_complete"],
-        blockedStages: [],
         rewardStages: ["gym_ice_trainer_02_complete"],
         completedStage: "gym_ice_trainer_02_complete",
         gymCompletedStage: "gym_ice_complete",
@@ -808,7 +736,6 @@ global.leagueConfig = {
         isLeader: false,
 
         requiredStages: ["gym_electric_complete"],
-        blockedStages: [],
         rewardStages: ["gym_ice_trainer_03_complete"],
         completedStage: "gym_ice_trainer_03_complete",
         gymCompletedStage: "gym_ice_complete",
@@ -827,19 +754,18 @@ global.leagueConfig = {
     },
 
     //==============================================
-    // Normal Gym
+    // Normal Gym (Requires Ice Gym beaten)
     //==============================================
 
     normal_leader: {
 
-        trainerId: "gym_normal_maddie",
+        trainerId: "gym_leader_normal_maddie",
         displayName: "Secretary MaddiePly",
         isLeader: true,
         canAverageLevel: true,
         averageAboveLevel: 45,
 
         requiredStages: ["gym_normal_trainer_01_complete", "gym_normal_trainer_02_complete", "gym_normal_trainer_03_complete"],
-        blockedStages: [],
         rewardStages: ["gym_normal_complete"],
         removeStages: ["gym_normal_trainer_01_complete", "gym_normal_trainer_02_complete", "gym_normal_trainer_03_complete"],
         completedStage: "gym_normal_complete",
@@ -863,14 +789,6 @@ global.leagueConfig = {
         ],
         moneyReward: 5000,
         moneyLoss: 2000,
-
-        battle_music: ["sunlit:gym_swsh_battle"],
-
-        onBattleStart: [],
-
-        onBattleEnd: [],
-        
-        onVictory: [],
     },
 
     normal_trainer_01: {
@@ -880,7 +798,6 @@ global.leagueConfig = {
         isLeader: false,
 
         requiredStages: ["gym_ice_complete"],
-        blockedStages: [],
         rewardStages: ["gym_normal_trainer_01_complete"],
         completedStage: "gym_normal_trainer_01_complete",
         gymCompletedStage: "gym_normal_complete",
@@ -905,7 +822,6 @@ global.leagueConfig = {
         isLeader: false,
 
         requiredStages: ["gym_ice_complete"],
-        blockedStages: [],
         rewardStages: ["gym_normal_trainer_02_complete"],
         completedStage: "gym_normal_trainer_02_complete",
         gymCompletedStage: "gym_normal_complete",
@@ -930,7 +846,6 @@ global.leagueConfig = {
         isLeader: false,
 
         requiredStages: ["gym_ice_complete"],
-        blockedStages: [],
         rewardStages: ["gym_normal_trainer_03_complete"],
         completedStage: "gym_normal_trainer_03_complete",
         gymCompletedStage: "gym_normal_complete",
@@ -948,4 +863,839 @@ global.leagueConfig = {
         moneyLoss: 2000,
     },
 
+    super_boss_ceo:{
+
+        trainerId: "super_boss_ceo",
+        displayName: "The CEO",
+        isLeader: false,
+
+        requiredStages: ["gym_normal_complete"],
+        rewardStages: ["super_boss_ceo_complete"],
+        completedStage: "super_boss_ceo_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (super_boss_ceo blocked message)",
+        completedMessage:
+            "",
+        gymCompletedMessage:
+            "",
+
+        moneyReward: 10000,
+        moneyLoss: 5000,
+
+        battle_music: ["sunlit:boss_battle_full"]
+    },
+
+    //==============================================
+    // League
+    //==============================================
+
+    e4_one:{
+
+        trainerId: "e4_one",
+        displayName: "",
+
+        requiredStages: ["challenging_e4", "gym_normal_complete"],
+        blockedStages: ["e4_complete"], //Should trigger different team if this stage is blocked
+        rewardStages: ["e4_one_complete"],
+        completedStage: "e4_one_complete",
+        removeStagesOnLoss: ["challenging_e4"],
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (e4_one blocked message)",
+        completedMessage:
+            "",
+        gymCompletedMessage:
+            "",
+
+        moneyReward: 5000,
+        moneyLoss: 1000,
+
+        battle_music: ["sunlit:elite_four_battle_full"]
+    },
+
+    e4_two:{
+
+        trainerId: "e4_two",
+        displayName: "",
+
+        requiredStages: ["challenging_e4", "e4_one_complete"],
+        blockedStages: ["e4_complete"], //Should trigger different team if this stage is blocked
+        rewardStages: ["e4_two_complete"],
+        completedStage: "e4_two_complete",
+        removeStagesOnLoss: ["challenging_e4", "e4_one_complete"],
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (e4_two blocked message)",
+        completedMessage:
+            "",
+        gymCompletedMessage:
+            "",
+
+        moneyReward: 5000,
+        moneyLoss: 1000,
+
+        battle_music: ["sunlit:elite_four_battle_full"]
+    },
+
+    e4_three:{
+
+        trainerId: "e4_three",
+        displayName: "",
+
+        requiredStages: ["challenging_e4", "e4_one_complete", "e4_two_complete"],
+        blockedStages: ["e4_complete"], //Should trigger different team if this stage is blocked
+        rewardStages: ["e4_three_complete"],
+        completedStage: "e4_three_complete",
+        removeStagesOnLoss: ["challenging_e4", "e4_one_complete", "e4_two_complete"],
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (e4_three blocked message)",
+        completedMessage:
+            "",
+        gymCompletedMessage:
+            "",
+
+        moneyReward: 5000,
+        moneyLoss: 1000,
+
+        battle_music: ["sunlit:elite_four_battle_full"]
+    },
+
+    e4_four:{
+
+        trainerId: "e4_four",
+        displayName: "",
+
+        requiredStages: ["challenging_e4", "e4_one_complete", "e4_two_complete", "e4_three_complete"],
+        blockedStages: ["e4_complete"], //Should trigger different team if this stage is blocked
+        rewardStages: ["e4_four_complete"],
+        completedStage: "e4_four_complete",
+        removeStagesOnLoss: ["challenging_e4", "e4_one_complete", "e4_two_complete", "e4_three_complete"],
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (e4_four blocked message)",
+        completedMessage:
+            "",
+        gymCompletedMessage:
+            "",
+
+        moneyReward: 5000,
+        moneyLoss: 1000,
+
+        battle_music: ["sunlit:elite_four_battle_full"]
+    },
+
+    champion:{
+
+        trainerId: "champion",
+        displayName: "",
+
+        requiredStages: ["challenging_e4", "e4_one_complete", "e4_two_complete", "e4_three_complete", "e4_four_complete"],
+        blockedStages: ["e4_complete"], //Should trigger different team if this stage is blocked
+        rewardStages: ["e4_complete"],
+        removeStages: ["e4_one_complete", "e4_two_complete", "e4_three_complete", "e4_four_complete", "challenging_e4"],
+        completedStage: "e4_complete",
+        removeStagesOnLoss: ["challenging_e4", "e4_one_complete", "e4_two_complete", "e4_three_complete", "e4_four_complete"],
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (champion blocked message)",
+        completedMessage:
+            "",
+        gymCompletedMessage:
+            "",
+
+        moneyReward: 10000,
+        moneyLoss: 1000,
+
+        battle_music: ["sunlit:elite_four_battle_full"]
+    },
+
+    e4_one_rematch:{
+
+        trainerId: "e4_one_rematch",
+        displayName: "",
+
+        requiredStages: ["challenging_e4_rematch"],
+        blockedStages: [], //Should trigger different team if this stage is blocked
+        rewardStages: ["e4_one_rematch_complete"],
+        completedStage: "e4_one_rematch_complete",
+        removeStagesOnLoss: ["challenging_e4_rematch"],
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (e4_one_rematch blocked message)",
+        completedMessage:
+            "",
+        gymCompletedMessage:
+            "",
+
+        moneyReward: 7500,
+        moneyLoss: 1000,
+
+        battle_music: ["sunlit:elite_four_battle_full"]
+    },
+
+    e4_two_rematch:{
+
+        trainerId: "e4_two_rematch",
+        displayName: "",
+
+        requiredStages: ["challenging_e4_rematch", "e4_one_rematch_complete"],
+        blockedStages: [], //Should trigger different team if this stage is blocked
+        rewardStages: ["e4_two_rematch_complete"],
+        completedStage: "e4_two_rematch_complete",
+        removeStagesOnLoss: ["challenging_e4_rematch", "e4_one_rematch_complete"],
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (e4_two_rematch blocked message)",
+        completedMessage:
+            "",
+        gymCompletedMessage:
+            "",
+
+        moneyReward: 7500,
+        moneyLoss: 1000,
+
+        battle_music: ["sunlit:elite_four_battle_full"]
+    },
+
+    e4_three_rematch:{
+
+        trainerId: "e4_three_rematch",
+        displayName: "",
+
+        requiredStages: ["challenging_e4_rematch", "e4_one_rematch_complete", "e4_two_rematch_complete"],
+        blockedStages: [], //Should trigger different team if this stage is blocked
+        rewardStages: ["e4_three_rematch_complete"],
+        completedStage: "e4_three_rematch_complete",
+        removeStagesOnLoss: ["challenging_e4_rematch", "e4_one_rematch_complete", "e4_two_rematch_complete"],
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (e4_three_rematch blocked message)",
+        completedMessage:
+            "",
+        gymCompletedMessage:
+            "",
+
+        moneyReward: 7500,
+        moneyLoss: 1000,
+
+        battle_music: ["sunlit:elite_four_battle_full"]
+    },
+
+    e4_four_rematch:{
+
+        trainerId: "e4_four_rematch",
+        displayName: "",
+
+        requiredStages: ["challenging_e4_rematch", "e4_one_rematch_complete", "e4_two_rematch_complete", "e4_three_rematch_complete"],
+        blockedStages: [], //Should trigger different team if this stage is blocked
+        rewardStages: ["e4_four_rematch_complete"],
+        completedStage: "e4_four_rematch_complete",
+        removeStagesOnLoss: ["challenging_e4_rematch", "e4_one_rematch_complete", "e4_two_rematch_complete", "e4_three_rematch_complete"],
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (e4_four_rematch blocked message)",
+        completedMessage:
+            "",
+        gymCompletedMessage:
+            "",
+
+        moneyReward: 7500,
+        moneyLoss: 1000,
+
+        battle_music: ["sunlit:elite_four_battle_full"]
+    },
+
+    champion_rematch:{
+
+        trainerId: "champion_rematch",
+        displayName: "",
+
+        requiredStages: ["challenging_e4_rematch", "e4_one_rematch_complete", "e4_two_rematch_complete", "e4_three_rematch_complete", "e4_four_rematch_complete"],
+        blockedStages: [], //Should trigger different team if this stage is blocked
+        rewardStages: ["e4_rematch_complete"],
+        removeStages: ["e4_one_rematch_complete", "e4_two_rematch_complete", "e4_three_rematch_complete", "e4_four_rematch_complete", "challenging_e4_rematch"],
+        completedStage: "e4_rematch_complete",
+        removeStagesOnLoss: ["challenging_e4_rematch", "e4_one_rematch_complete", "e4_two_rematch_complete", "e4_three_rematch_complete", "e4_four_rematch_complete"],
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (champion_rematch blocked message)",
+        completedMessage:
+            "",
+        gymCompletedMessage:
+            "",
+
+        moneyReward: 15000,
+        moneyLoss: 1000,
+
+        battle_music: ["sunlit:elite_four_battle_full"]
+    },
+
+    //==============================================
+    // Battle Dojo (Gym Leaders)
+    //==============================================
+
+    bug_leader_rematch: {
+
+        trainerId: "gym_leader_bug_shino_rematch",
+        displayName: "Gym Leader Shino",
+        canAverageLevel: true,
+        averageAboveLevel: 50,
+
+        requiredStages: ["challenging_gym_rematch"],
+        rewardStages: ["gym_bug_rematch_complete"],
+        completedStage: "gym_bug_rematch_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (bug_leader_rematch blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["sunlit:gym_leader_rematch_full"],
+    },
+
+    ground_leader_rematch: {
+
+        trainerId: "gym_leader_ground_ashley_rematch",
+        displayName: "Gym Leader Ashley",
+        canAverageLevel: true,
+        averageAboveLevel: 50,
+
+        requiredStages: ["challenging_gym_rematch"],
+        rewardStages: ["gym_ground_rematch_complete"],
+        completedStage: "gym_ground_rematch_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (ground_leader_rematch blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["sunlit:gym_leader_rematch_full"],
+    },
+
+    water_leader_rematch: {
+
+        trainerId: "gym_leader_water_kamiya_rematch",
+        displayName: "Gym Leader Kamiya",
+        canAverageLevel: true,
+        averageAboveLevel: 50,
+
+        requiredStages: ["challenging_gym_rematch"],
+        rewardStages: ["gym_water_rematch_complete"],
+        completedStage: "gym_water_rematch_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (water_leader_rematch blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["sunlit:gym_leader_rematch_full"],
+    },
+
+    poison_leader_rematch: {
+
+        trainerId: "gym_leader_poison_kinoko_rematch",
+        displayName: "Gym Leader Kinoko",
+        canAverageLevel: true,
+        averageAboveLevel: 50,
+
+        requiredStages: ["challenging_gym_rematch"],
+        rewardStages: ["gym_poison_rematch_complete"],
+        completedStage: "gym_poison_rematch_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (poison_leader_rematch blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["sunlit:gym_leader_rematch_full"],
+    },
+
+    fire_leader_rematch: {
+
+        trainerId: "gym_leader_fire_tim_rematch",
+        displayName: "Gym Leader Tim",
+        canAverageLevel: true,
+        averageAboveLevel: 50,
+
+        requiredStages: ["challenging_gym_rematch"],
+        rewardStages: ["gym_fire_rematch_complete"],
+        completedStage: "gym_fire_rematch_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (fire_leader_rematch blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["sunlit:gym_leader_rematch_full"],
+    },
+
+    electric_leader_rematch: {
+
+        trainerId: "gym_leader_electric_voltaire_rematch",
+        displayName: "Gym Leader Voltaire",
+        canAverageLevel: true,
+        averageAboveLevel: 50,
+
+        requiredStages: ["challenging_gym_rematch"],
+        rewardStages: ["gym_electric_rematch_complete"],
+        completedStage: "gym_electric_rematch_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (electric_leader_rematch blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["sunlit:gym_leader_rematch_full"],
+    },
+
+    ice_leader_rematch: {
+
+        trainerId: "gym_leader_ice_glacia_rematch",
+        displayName: "Gym Leader Glacia",
+        canAverageLevel: true,
+        averageAboveLevel: 50,
+
+        requiredStages: ["challenging_gym_rematch"],
+        rewardStages: ["gym_ice_rematch_complete"],
+        completedStage: "gym_ice_rematch_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (ice_leader_rematch blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["sunlit:gym_leader_rematch_full"],
+    },
+
+    normal_leader_rematch: {
+
+        trainerId: "gym_leader_normal_maddie_rematch",
+        displayName: "Gym Leader MaddiePly",
+        canAverageLevel: true,
+        averageAboveLevel: 50,
+
+        requiredStages: ["challenging_gym_rematch"],
+        rewardStages: ["gym_normal_rematch_complete"],
+        completedStage: "gym_normal_rematch_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (normal_leader_rematch blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["sunlit:gym_leader_rematch_full"],
+    },
+
+    //==============================================
+    // Battle Dojo (Cameos)
+    //==============================================
+
+    ado_cameo: {
+
+        trainerId: "battle_dojo_ado",
+        displayName: "Ado",
+        canAverageLevel: true,
+        averageAboveLevel: 50,
+
+        rewardStages: ["battle_dojo_ado_complete"],
+        completedStage: "battle_dojo_ado_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (ado_cameo blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["sunlit:ado_battle_full"],
+    },
+
+    giovanni_cameo: {
+
+        trainerId: "battle_dojo_giovanni",
+        displayName: "Giovanni",
+        canAverageLevel: true,
+        averageAboveLevel: 50,
+
+        rewardStages: ["battle_dojo_giovanni_complete"],
+        completedStage: "battle_dojo_giovanni_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (giovanni_cameo blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["sunlit:giovanni_battle_full"],
+    },
+
+    archie_cameo: {
+
+        trainerId: "battle_dojo_archie",
+        displayName: "Archie",
+        canAverageLevel: true,
+        averageAboveLevel: 50,
+
+        rewardStages: ["battle_dojo_archie_complete"],
+        completedStage: "battle_dojo_archie_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (archie_cameo blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["sunlit:archmax_battle_full"],
+    },
+
+    maxie_cameo: {
+
+        trainerId: "battle_dojo_maxie",
+        displayName: "Maxie",
+        canAverageLevel: true,
+        averageAboveLevel: 50,
+
+        rewardStages: ["battle_dojo_maxie_complete"],
+        completedStage: "battle_dojo_maxie_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (maxie_cameo blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["sunlit:archmax_battle_full"],
+    },
+
+    evice_cameo: {
+
+        trainerId: "battle_dojo_evice",
+        displayName: "Evice",
+        canAverageLevel: true,
+        averageAboveLevel: 50,
+
+        rewardStages: ["battle_dojo_evice_complete"],
+        completedStage: "battle_dojo_evice_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (evice_cameo blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["sunlit:evice_battle_full"],
+    },
+
+    greevil_cameo: {
+
+        trainerId: "battle_dojo_greevil",
+        displayName: "Greevil",
+        canAverageLevel: true,
+        averageAboveLevel: 50,
+
+        rewardStages: ["battle_dojo_greevil_complete"],
+        completedStage: "battle_dojo_greevil_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (greevil_cameo blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["sunlit:greevil_battle_full"],
+    },
+
+    cyrus_cameo: {
+
+        trainerId: "battle_dojo_cyrus",
+        displayName: "Cyrus",
+        canAverageLevel: true,
+        averageAboveLevel: 50,
+
+        rewardStages: ["battle_dojo_cyrus_complete"],
+        completedStage: "battle_dojo_cyrus_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (cyrus_cameo blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["sunlit:cyrus_battle_full"],
+    },
+
+    ghetsis_cameo: {
+
+        trainerId: "battle_dojo_ghetsis",
+        displayName: "Ghetsis",
+        canAverageLevel: true,
+        averageAboveLevel: 50,
+
+        rewardStages: ["battle_dojo_ghetsis_complete"],
+        completedStage: "battle_dojo_ghetsis_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (ghetsis_cameo blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["sunlit:ghetsis_battle_full"],
+    },
+
+    n_cameo: {
+
+        trainerId: "battle_dojo_n",
+        displayName: "N",
+        canAverageLevel: true,
+        averageAboveLevel: 50,
+
+        rewardStages: ["battle_dojo_n_complete"],
+        completedStage: "battle_dojo_n_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (n_cameo blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["sunlit:n_battle_full"],
+    },
+
+    lysandre_cameo: {
+
+        trainerId: "battle_dojo_lysandre",
+        displayName: "Lysandre",
+        canAverageLevel: true,
+        averageAboveLevel: 50,
+
+        rewardStages: ["battle_dojo_lysandre_complete"],
+        completedStage: "battle_dojo_lysandre_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (lysandre_cameo blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["sunlit:lysandre_battle_full"],
+    },
+
+    guzma_cameo: {
+
+        trainerId: "battle_dojo_guzma",
+        displayName: "Guzma",
+        canAverageLevel: true,
+        averageAboveLevel: 50,
+
+        rewardStages: ["battle_dojo_guzma_complete"],
+        completedStage: "battle_dojo_guzma_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (guzma_cameo blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["sunlit:guzma_battle_full"],
+    },
+
+    lusamine_cameo: {
+
+        trainerId: "battle_dojo_lusamine",
+        displayName: "Lusamine",
+        canAverageLevel: true,
+        averageAboveLevel: 50,
+
+        rewardStages: ["battle_dojo_lusamine_complete"],
+        completedStage: "battle_dojo_lusamine_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (lusamine_cameo blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["sunlit:lusamine_battle_full"],
+    },
+
+    rose_cameo: {
+
+        trainerId: "battle_dojo_rose",
+        displayName: "Chairman Rose",
+        canAverageLevel: true,
+        averageAboveLevel: 50,
+
+        rewardStages: ["battle_dojo_rose_complete"],
+        completedStage: "battle_dojo_rose_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (rose_cameo blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["sunlit:rose_battle_full"],
+    },
+
+    sada_cameo: {
+
+        trainerId: "battle_dojo_sada",
+        displayName: "Sada",
+        canAverageLevel: true,
+        averageAboveLevel: 50,
+
+        rewardStages: ["battle_dojo_sada_complete"],
+        completedStage: "battle_dojo_sada_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (sada_cameo blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["sunlit:sada_battle_full"],
+    },
+
+    turo_cameo: {
+
+        trainerId: "battle_dojo_turo",
+        displayName: "Turo",
+        canAverageLevel: true,
+        averageAboveLevel: 50,
+
+        rewardStages: ["battle_dojo_turo_complete"],
+        completedStage: "battle_dojo_turo_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (turo_cameo blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["sunlit:turo_battle_full"],
+    }
 };

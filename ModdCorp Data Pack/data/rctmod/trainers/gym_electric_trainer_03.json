@@ -2,16 +2,16 @@
     "displayName": "",
     "team": [
         {
-            "species": "cobblemon:",
+            "species": "cobblemon:rotom",
             "gender": "MALE",
-            "level": 0,
-            "nature": "cobblemon:",
-            "ability": "",
+            "level": 35,
+            "nature": "cobblemon:modest",
+            "ability": "levitate",
             "moveset": [
-                "",
-                "",
-                "",
-                ""
+                "electroball",
+                "hex",
+                "thunderwave",
+                "willowisp"
             ],
             "ivs": {
                 "hp": 0,
@@ -33,16 +33,16 @@
             "heldItem": "minecraft:air"
         },
         {
-            "species": "cobblemon:",
+            "species": "cobblemon:togedemaru",
             "gender": "FEMALE",
-            "level": 0,
-            "nature": "cobblemon:",
-            "ability": "",
+            "level": 36,
+            "nature": "cobblemon:timid",
+            "ability": "ironbarbs",
             "moveset": [
-                "",
-                "",
-                "",
-                ""
+                "nuzzle",
+                "magnetrise",
+                "electricterrain",
+                "steelroller"
             ],
             "ivs": {
                 "hp": 0,
@@ -61,7 +61,7 @@
                 "speed": 0
             },
             "shiny": false,
-            "heldItem": "cobblemon:"
+            "heldItem": "cobblemon:sitrus_berry"
         }
     ],
     "winCommand": "",

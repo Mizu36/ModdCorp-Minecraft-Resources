@@ -2,16 +2,16 @@
     "displayName": "",
     "team": [
         {
-            "species": "cobblemon:",
-            "gender": "MALE",
-            "level": 0,
-            "nature": "cobblemon:",
-            "ability": "",
+            "species": "cobblemon:flaaffy",
+            "gender": "FEMALE",
+            "level": 35,
+            "nature": "cobblemon:modest",
+            "ability": "static",
             "moveset": [
-                "",
-                "",
-                "",
-                ""
+                "powergem",
+                "cottonguard",
+                "confuseray",
+                "icepunch"
             ],
             "ivs": {
                 "hp": 0,
@@ -33,16 +33,16 @@
             "heldItem": "minecraft:air"
         },
         {
-            "species": "cobblemon:",
+            "species": "cobblemon:luxio",
             "gender": "FEMALE",
-            "level": 0,
-            "nature": "cobblemon:",
-            "ability": "",
+            "level": 36,
+            "nature": "cobblemon:hasty",
+            "ability": "intimidate",
             "moveset": [
-                "",
-                "",
-                "",
-                ""
+                "psychicfangs",
+                "voltswitch",
+                "electroball",
+                "quickattack"
             ],
             "ivs": {
                 "hp": 0,
@@ -61,7 +61,7 @@
                 "speed": 0
             },
             "shiny": false,
-            "heldItem": "cobblemon:"
+            "heldItem": "cobblemon:oran_berry"
         }
     ],
     "winCommand": "",

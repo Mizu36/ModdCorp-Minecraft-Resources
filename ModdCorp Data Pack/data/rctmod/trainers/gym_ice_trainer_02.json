@@ -2,16 +2,16 @@
     "displayName": "",
     "team": [
         {
-            "species": "cobblemon:",
+            "species": "cobblemon:vanilluxe",
             "gender": "MALE",
-            "level": 0,
-            "nature": "cobblemon:",
-            "ability": "",
+            "level": 40,
+            "nature": "cobblemon:modest",
+            "ability": "snowwarning",
             "moveset": [
-                "",
-                "",
-                "",
-                ""
+                "mirrorcoat",
+                "freezedry",
+                "acidarmor",
+                "explosion"
             ],
             "ivs": {
                 "hp": 0,
@@ -33,16 +33,16 @@
             "heldItem": "minecraft:air"
         },
         {
-            "species": "cobblemon:",
-            "gender": "FEMALE",
-            "level": 0,
-            "nature": "cobblemon:",
-            "ability": "",
+            "species": "cobblemon:aurorus",
+            "gender": "MALE",
+            "level": 40,
+            "nature": "cobblemon:calm",
+            "ability": "refrigerate",
             "moveset": [
-                "",
-                "",
-                "",
-                ""
+                "hypervoice",
+                "irondefense",
+                "iciclespear",
+                "thunderwave"
             ],
             "ivs": {
                 "hp": 0,
@@ -61,7 +61,7 @@
                 "speed": 0
             },
             "shiny": false,
-            "heldItem": "cobblemon:"
+            "heldItem": "cobblemon:oran_berry"
         }
     ],
     "winCommand": "",

@@ -2,16 +2,16 @@
     "displayName": "",
     "team": [
         {
-            "species": "cobblemon:",
+            "species": "cobblemon:delibird",
             "gender": "MALE",
-            "level": 0,
-            "nature": "cobblemon:",
-            "ability": "",
+            "level": 40,
+            "nature": "cobblemon:naive",
+            "ability": "hustle",
             "moveset": [
-                "",
-                "",
-                "",
-                ""
+                "present",
+                "drillpeck",
+                "counter",
+                "destinybond"
             ],
             "ivs": {
                 "hp": 0,
@@ -19,7 +19,7 @@
                 "defence": 0,
                 "special_attack": 0,
                 "special_defence": 0,
-                "speed": 0
+                "speed": 24
             },
             "evs": {
                 "hp": 0,
@@ -27,22 +27,22 @@
                 "defence": 0,
                 "special_attack": 0,
                 "special_defence": 0,
-                "speed": 0
+                "speed": 256
             },
             "shiny": false,
             "heldItem": "minecraft:air"
         },
         {
-            "species": "cobblemon:",
+            "species": "cobblemon:jynx",
             "gender": "FEMALE",
-            "level": 0,
-            "nature": "cobblemon:",
-            "ability": "",
+            "level": 40,
+            "nature": "cobblemon:timid",
+            "ability": "oblivious",
             "moveset": [
-                "",
-                "",
-                "",
-                ""
+                "lovelykiss",
+                "psychic",
+                "faketears",
+                "fakeout"
             ],
             "ivs": {
                 "hp": 0,
@@ -61,7 +61,7 @@
                 "speed": 0
             },
             "shiny": false,
-            "heldItem": "cobblemon:"
+            "heldItem": "cobblemon:oran_berry"
         }
     ],
     "winCommand": "",
