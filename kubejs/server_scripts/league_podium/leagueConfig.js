@@ -318,7 +318,7 @@ global.leagueConfig = {
         trainerId: "gym_leader_poison_kinoko",
         displayName: "Gym Leader Kinoko",
         isLeader: true,
-        averageAboveLevel: 35,
+        averageAboveLevel: 37,
 
         requiredStages: ["gym_poison_trainer_01_complete", "gym_poison_trainer_02_complete", "gym_poison_trainer_03_complete"],
         rewardStages: ["gym_poison_complete"],
@@ -427,7 +427,7 @@ global.leagueConfig = {
         trainerId: "gym_leader_fire_tim",
         displayName: "Gym Leader Tim",
         isLeader: true,
-        averageAboveLevel: 40,
+        averageAboveLevel: 37,
 
         requiredStages: ["gym_fire_trainer_01_complete", "gym_fire_trainer_02_complete", "gym_fire_trainer_03_complete"],
         rewardStages: ["gym_fire_complete"],
@@ -537,7 +537,7 @@ global.leagueConfig = {
         trainerId: "gym_leader_electric_voltaire",
         displayName: "Gym Leader Voltaire",
         isLeader: true,
-        averageAboveLevel: 45,
+        averageAboveLevel: 43,
 
         requiredStages: ["gym_electric_trainer_01_complete", "gym_electric_trainer_02_complete", "gym_electric_trainer_03_complete"],
         rewardStages: ["gym_electric_complete"],
@@ -646,7 +646,7 @@ global.leagueConfig = {
         trainerId: "gym_leader_ice_glacia",
         displayName: "Gym Leader Glacia",
         isLeader: true,
-        averageAboveLevel: 45,
+        averageAboveLevel: 48,
 
         requiredStages: ["gym_ice_trainer_01_complete", "gym_ice_trainer_02_complete", "gym_ice_trainer_03_complete"],
         rewardStages: ["gym_ice_complete"],
@@ -755,7 +755,7 @@ global.leagueConfig = {
         trainerId: "gym_leader_normal_maddie",
         displayName: "Secretary MaddiePly",
         isLeader: true,
-        averageAboveLevel: 45,
+        averageAboveLevel: 53,
 
         requiredStages: ["gym_normal_trainer_01_complete", "gym_normal_trainer_02_complete", "gym_normal_trainer_03_complete"],
         rewardStages: ["gym_normal_complete"],

@@ -6,7 +6,7 @@
             "species": "cobblemon:gliscor",
             "nickname": "Secretary",
             "gender": "FEMALE",
-            "level": 80,
+            "level": 85,
             "nature": "cobblemon:impish",
             "ability": "poisonheal",
             "moveset": [
@@ -38,7 +38,7 @@
             "species": "cobblemon:arceus",
             "nickname": "VP",
             "gender": "UNKNOWN",
-            "level": 80,
+            "level": 85,
             "nature": "cobblemon:impish",
             "ability": "multitype",
             "moveset": [
@@ -70,7 +70,7 @@
             "species": "cobblemon:ditto",
             "nickname": "AI Replacement",
             "gender": "FEMALE",
-            "level": 80,
+            "level": 85,
             "nature": "cobblemon:impish",
             "ability": "imposter",
             "moveset": [
@@ -99,7 +99,7 @@
             "species": "cobblemon:clodsire",
             "nickname": "Modsire",
             "gender": "MALE",
-            "level": 80,
+            "level": 86,
             "nature": "cobblemon:careful",
             "ability": "waterabsorb",
             "moveset": [
@@ -131,7 +131,7 @@
             "species": "cobblemon:miraidon",
             "nickname": "Too Tired",
             "gender": "UNKNOWN",
-            "level": 80,
+            "level": 87,
             "nature": "cobblemon:modest",
             "ability": "hadronengine",
             "moveset": [
@@ -163,7 +163,7 @@
             "species": "cobblemon:hooh",
             "nickname": "BIRD UP",
             "gender": "UNKNOWN",
-            "level": 85,
+            "level": 88,
             "nature": "cobblemon:impish",
             "ability": "regenerator",
             "moveset": [
