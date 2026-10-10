@@ -877,7 +877,7 @@ global.leagueConfig = {
         moneyReward: 10000,
         moneyLoss: 5000,
 
-        battle_music: ["sunlit:boss_battle_full"]
+        battle_music: ["moddcorp:boss_battle_full"]
     },
 
     //==============================================
@@ -907,7 +907,7 @@ global.leagueConfig = {
         moneyReward: 5000,
         moneyLoss: 1000,
 
-        battle_music: ["sunlit:elite_four_battle_full"]
+        battle_music: ["moddcorp:elite_four_battle_full"]
     },
 
     e4_two:{
@@ -933,7 +933,7 @@ global.leagueConfig = {
         moneyReward: 5000,
         moneyLoss: 1000,
 
-        battle_music: ["sunlit:elite_four_battle_full"]
+        battle_music: ["moddcorp:elite_four_battle_full"]
     },
 
     e4_three:{
@@ -959,7 +959,7 @@ global.leagueConfig = {
         moneyReward: 5000,
         moneyLoss: 1000,
 
-        battle_music: ["sunlit:elite_four_battle_full"]
+        battle_music: ["moddcorp:elite_four_battle_full"]
     },
 
     e4_four:{
@@ -985,7 +985,7 @@ global.leagueConfig = {
         moneyReward: 5000,
         moneyLoss: 1000,
 
-        battle_music: ["sunlit:elite_four_battle_full"]
+        battle_music: ["moddcorp:elite_four_battle_full"]
     },
 
     champion:{
@@ -1012,7 +1012,7 @@ global.leagueConfig = {
         moneyReward: 10000,
         moneyLoss: 1000,
 
-        battle_music: ["sunlit:elite_four_battle_full"]
+        battle_music: ["moddcorp:elite_four_battle_full"]
     },
 
     e4_one_rematch:{
@@ -1038,7 +1038,7 @@ global.leagueConfig = {
         moneyReward: 7500,
         moneyLoss: 1000,
 
-        battle_music: ["sunlit:elite_four_battle_full"]
+        battle_music: ["moddcorp:elite_four_battle_full"]
     },
 
     e4_two_rematch:{
@@ -1064,7 +1064,7 @@ global.leagueConfig = {
         moneyReward: 7500,
         moneyLoss: 1000,
 
-        battle_music: ["sunlit:elite_four_battle_full"]
+        battle_music: ["moddcorp:elite_four_battle_full"]
     },
 
     e4_three_rematch:{
@@ -1090,7 +1090,7 @@ global.leagueConfig = {
         moneyReward: 7500,
         moneyLoss: 1000,
 
-        battle_music: ["sunlit:elite_four_battle_full"]
+        battle_music: ["moddcorp:elite_four_battle_full"]
     },
 
     e4_four_rematch:{
@@ -1116,7 +1116,7 @@ global.leagueConfig = {
         moneyReward: 7500,
         moneyLoss: 1000,
 
-        battle_music: ["sunlit:elite_four_battle_full"]
+        battle_music: ["moddcorp:elite_four_battle_full"]
     },
 
     champion_rematch:{
@@ -1143,7 +1143,7 @@ global.leagueConfig = {
         moneyReward: 15000,
         moneyLoss: 1000,
 
-        battle_music: ["sunlit:elite_four_battle_full"]
+        battle_music: ["moddcorp:elite_four_battle_full"]
     },
 
     //==============================================
@@ -1170,7 +1170,7 @@ global.leagueConfig = {
         moneyReward: 3000,
         moneyLoss: 696,
 
-        battle_music: ["sunlit:gym_leader_rematch_full"],
+        battle_music: ["moddcorp:gym_leader_rematch_full"],
     },
 
     ground_leader_rematch: {
@@ -1193,7 +1193,7 @@ global.leagueConfig = {
         moneyReward: 3000,
         moneyLoss: 696,
 
-        battle_music: ["sunlit:gym_leader_rematch_full"],
+        battle_music: ["moddcorp:gym_leader_rematch_full"],
     },
 
     water_leader_rematch: {
@@ -1216,7 +1216,7 @@ global.leagueConfig = {
         moneyReward: 3000,
         moneyLoss: 696,
 
-        battle_music: ["sunlit:gym_leader_rematch_full"],
+        battle_music: ["moddcorp:gym_leader_rematch_full"],
     },
 
     poison_leader_rematch: {
@@ -1239,7 +1239,7 @@ global.leagueConfig = {
         moneyReward: 3000,
         moneyLoss: 696,
 
-        battle_music: ["sunlit:gym_leader_rematch_full"],
+        battle_music: ["moddcorp:gym_leader_rematch_full"],
     },
 
     fire_leader_rematch: {
@@ -1262,7 +1262,7 @@ global.leagueConfig = {
         moneyReward: 3000,
         moneyLoss: 696,
 
-        battle_music: ["sunlit:gym_leader_rematch_full"],
+        battle_music: ["moddcorp:gym_leader_rematch_full"],
     },
 
     electric_leader_rematch: {
@@ -1285,7 +1285,7 @@ global.leagueConfig = {
         moneyReward: 3000,
         moneyLoss: 696,
 
-        battle_music: ["sunlit:gym_leader_rematch_full"],
+        battle_music: ["moddcorp:gym_leader_rematch_full"],
     },
 
     ice_leader_rematch: {
@@ -1308,7 +1308,7 @@ global.leagueConfig = {
         moneyReward: 3000,
         moneyLoss: 696,
 
-        battle_music: ["sunlit:gym_leader_rematch_full"],
+        battle_music: ["moddcorp:gym_leader_rematch_full"],
     },
 
     normal_leader_rematch: {
@@ -1331,7 +1331,7 @@ global.leagueConfig = {
         moneyReward: 3000,
         moneyLoss: 696,
 
-        battle_music: ["sunlit:gym_leader_rematch_full"],
+        battle_music: ["moddcorp:gym_leader_rematch_full"],
     },
 
     //==============================================
@@ -1357,7 +1357,7 @@ global.leagueConfig = {
         moneyReward: 3000,
         moneyLoss: 696,
 
-        battle_music: ["sunlit:ado_battle_full"],
+        battle_music: ["moddcorp:ado_battle_full"],
     },
 
     giovanni_cameo: {
@@ -1379,7 +1379,7 @@ global.leagueConfig = {
         moneyReward: 3000,
         moneyLoss: 696,
 
-        battle_music: ["sunlit:giovanni_battle_full"],
+        battle_music: ["moddcorp:giovanni_battle_full"],
     },
 
     archie_cameo: {
@@ -1401,7 +1401,7 @@ global.leagueConfig = {
         moneyReward: 3000,
         moneyLoss: 696,
 
-        battle_music: ["sunlit:archmax_battle_full"],
+        battle_music: ["moddcorp:archmax_battle_full"],
     },
 
     maxie_cameo: {
@@ -1423,7 +1423,7 @@ global.leagueConfig = {
         moneyReward: 3000,
         moneyLoss: 696,
 
-        battle_music: ["sunlit:archmax_battle_full"],
+        battle_music: ["moddcorp:archmax_battle_full"],
     },
 
     evice_cameo: {
@@ -1445,7 +1445,7 @@ global.leagueConfig = {
         moneyReward: 3000,
         moneyLoss: 696,
 
-        battle_music: ["sunlit:evice_battle_full"],
+        battle_music: ["moddcorp:evice_battle_full"],
     },
 
     greevil_cameo: {
@@ -1467,7 +1467,7 @@ global.leagueConfig = {
         moneyReward: 3000,
         moneyLoss: 696,
 
-        battle_music: ["sunlit:greevil_battle_full"],
+        battle_music: ["moddcorp:greevil_battle_full"],
     },
 
     cyrus_cameo: {
@@ -1489,7 +1489,7 @@ global.leagueConfig = {
         moneyReward: 3000,
         moneyLoss: 696,
 
-        battle_music: ["sunlit:cyrus_battle_full"],
+        battle_music: ["moddcorp:cyrus_battle_full"],
     },
 
     ghetsis_cameo: {
@@ -1511,7 +1511,7 @@ global.leagueConfig = {
         moneyReward: 3000,
         moneyLoss: 696,
 
-        battle_music: ["sunlit:ghetsis_battle_full"],
+        battle_music: ["moddcorp:ghetsis_battle_full"],
     },
 
     n_cameo: {
@@ -1533,7 +1533,7 @@ global.leagueConfig = {
         moneyReward: 3000,
         moneyLoss: 696,
 
-        battle_music: ["sunlit:n_battle_full"],
+        battle_music: ["moddcorp:n_battle_full"],
     },
 
     lysandre_cameo: {
@@ -1555,7 +1555,7 @@ global.leagueConfig = {
         moneyReward: 3000,
         moneyLoss: 696,
 
-        battle_music: ["sunlit:lysandre_battle_full"],
+        battle_music: ["moddcorp:lysandre_battle_full"],
     },
 
     guzma_cameo: {
@@ -1577,7 +1577,7 @@ global.leagueConfig = {
         moneyReward: 3000,
         moneyLoss: 696,
 
-        battle_music: ["sunlit:guzma_battle_full"],
+        battle_music: ["moddcorp:guzma_battle_full"],
     },
 
     lusamine_cameo: {
@@ -1599,7 +1599,7 @@ global.leagueConfig = {
         moneyReward: 3000,
         moneyLoss: 696,
 
-        battle_music: ["sunlit:lusamine_battle_full"],
+        battle_music: ["moddcorp:lusamine_battle_full"],
     },
 
     rose_cameo: {
@@ -1621,7 +1621,7 @@ global.leagueConfig = {
         moneyReward: 3000,
         moneyLoss: 696,
 
-        battle_music: ["sunlit:rose_battle_full"],
+        battle_music: ["moddcorp:rose_battle_full"],
     },
 
     sada_cameo: {
@@ -1643,7 +1643,7 @@ global.leagueConfig = {
         moneyReward: 3000,
         moneyLoss: 696,
 
-        battle_music: ["sunlit:sada_battle_full"],
+        battle_music: ["moddcorp:sada_battle_full"],
     },
 
     turo_cameo: {
@@ -1665,6 +1665,6 @@ global.leagueConfig = {
         moneyReward: 3000,
         moneyLoss: 696,
 
-        battle_music: ["sunlit:turo_battle_full"],
+        battle_music: ["moddcorp:turo_battle_full"],
     }
 };

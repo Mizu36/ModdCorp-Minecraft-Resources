@@ -1,7 +1,7 @@
 console.info("[MODDCORP] leagueRewards.js loaded");
 
-global.trainerBattleMusic = ["sunlit:rby_trainer_battle", "sunlit:sgc_johto_trainer_battle", "sunlit:sgc_kanto_trainer_battle", "sunlit:rse_trainer_battle", "sunlit:frlg_trainer_battle", "sunlit:colosseum_trainer_battle_01", "sunlit:colosseum_trainer_battle_02", "sunlit:xd_trainer_battle", "sunlit:dpp_trainer_battle", "sunlit:hgss_johto_trainer_battle", "sunlit:hgss_kanto_trainer_battle", "sunlit:bw_trainer_battle", "sunlit:xy_trainer_battle", "sunlit:oras_trainer_battle", "sunlit:sm_trainer_battle", "sunlit:swsh_trainer_battle", "sunlit:sv_trainer_battle", "sunlit:champions_trainer_battle"];
-global.leaderBattleMusic =  ["sunlit:gym_leader_battle_full"];
+global.trainerBattleMusic = ["moddcorp:rby_trainer_battle", "moddcorp:sgc_johto_trainer_battle", "moddcorp:sgc_kanto_trainer_battle", "moddcorp:rse_trainer_battle", "moddcorp:frlg_trainer_battle", "moddcorp:colosseum_trainer_battle_01", "moddcorp:colosseum_trainer_battle_02", "moddcorp:xd_trainer_battle", "moddcorp:dpp_trainer_battle", "moddcorp:hgss_johto_trainer_battle", "moddcorp:hgss_kanto_trainer_battle", "moddcorp:bw_trainer_battle", "moddcorp:xy_trainer_battle", "moddcorp:oras_trainer_battle", "moddcorp:sm_trainer_battle", "moddcorp:swsh_trainer_battle", "moddcorp:sv_trainer_battle", "moddcorp:champions_trainer_battle"];
+global.leaderBattleMusic =  ["moddcorp:gym_leader_battle_full"];
 
 //==================================================
 // Expand command placeholders

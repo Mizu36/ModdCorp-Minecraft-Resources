@@ -26,7 +26,7 @@ ServerEvents.commandRegistry(event => {
 
         const server = ctx.source.server;
         server.runCommandSilent(`healpokemon ${player.username}`);
-        server.runCommandSilent(`playsound sunlit:healing player ${player.username} ${player.x} ${player.y} ${player.z} 1 1`);
+        server.runCommandSilent(`playsound moddcorp:healing player ${player.username} ${player.x} ${player.y} ${player.z} 1 1`);
         server.runCommandSilent(`dialog ${player.getUuid()} show ${player.username} nurse_unique_healed`);
         return 1;
       })
