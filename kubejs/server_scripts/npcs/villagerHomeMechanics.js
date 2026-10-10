@@ -14,8 +14,21 @@ const npcMap = new Map([
   ["clerk", "humanoid_slim/clerk"],
   ["shipmaster", "humanoid/shipmaster"],
   ["aviator", "humanoid/aviator"],
-  ["subway", "humanoid/subway"]
+  ["subway", "humanoid/subway"],
+  ["gym_bug_trainer", "humanoid/gym_bug_trainer"],
+  ["gym_leader_bug_shino", "humanoid/gym_leader_bug_shino"],
+  ["gym_leader_electric_voltaire", "humanoid/gym_leader_electric_voltaire"],
+  ["gym_leader_fire_tim", "humanoid/gym_leader_fire_tim"],
+  ["gym_leader_ground_ashley", "humanoid_slim/gym_leader_ground_ashley"],
+  ["gym_leader_ice_glacia", "humanoid_slim/gym_leader_ice_glacia"],
+  ["gym_leader_normal_maddie", "humanoid_slim/gym_leader_normal_maddie"],
+  ["gym_leader_poison_kinoko", "humanoid_slim/gym_leader_poison_kinoko"],
+  ["gym_leader_water_kamiya", "humanoid_slim/gym_leader_water_kamiya"]
 ]);
+global.villagerHomeTypes = Array.from(npcMap.keys());
+const specialHomeTypes = ["nurse", "clerk", "shipmaster", "aviator", "subway", "gym_bug_trainer", "gym_leader_bug_shino",
+  "gym_leader_electric_voltaire", "gym_leader_fire_tim", "gym_leader_ground_ashley", "gym_leader_ice_glacia",
+  "gym_leader_normal_maddie", "gym_leader_poison_kinoko", "gym_leader_water_kamiya"];
 const getBoundNpc = (level, block, boundNpc) => {
   let nearbyNPCs = level.getLevel()
     .getServer()
@@ -38,7 +51,7 @@ BlockEvents.placed("society:villager_home", (e) => {
   const { x, y, z } = block;
   if (homeNbt) {
     let villagerType = homeNbt.getString("type");
-    let isSpecialHome = villagerType === "nurse" || villagerType === "clerk" || villagerType === "shipmaster" || villagerType === "aviator" || villagerType === "subway";
+    let isSpecialHome = specialHomeTypes.includes(String(villagerType));
 
     if (isSpecialHome && !player.isCreative()) {
       e.cancel();
@@ -163,7 +176,7 @@ BlockEvents.broken("society:villager_home", (e) => {
       )
     );
     block.popItem(Item.of(block.id, `{type:${type}}`));
-    if (type !== "nurse" && type !== "clerk") player.persistentData.npcData[type].dayLastPlaced = -10
+    if (!specialHomeTypes.includes(String(type))) player.persistentData.npcData[type].dayLastPlaced = -10
   } else {
     if (!(type == undefined || placer == undefined || boundNpc == undefined)) {
       if (!player.isCreative()) {

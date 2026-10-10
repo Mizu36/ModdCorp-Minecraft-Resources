@@ -1,0 +1,19 @@
+{
+	"id": "gym_leader_fire_tim_choice_dialog_is_busy_0",
+	"title": "gym_leader_fire_tim is_busy_0",
+	"description": "dialog.npc.gym_leader_fire_tim.dialog.is_busy_0",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_fire_tim.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_fire_tim.dialog.is_busy_0.line_0"
+				}
+			]
+		}
+	]
+}

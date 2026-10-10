@@ -1,0 +1,19 @@
+{
+	"id": "gym_leader_fire_tim_choice_dialog_completed",
+	"title": "gym_leader_fire_tim completed",
+	"description": "dialog.npc.gym_leader_fire_tim.dialog.completed",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_fire_tim.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_fire_tim.dialog.completed.line_0"
+				}
+			]
+		}
+	]
+}

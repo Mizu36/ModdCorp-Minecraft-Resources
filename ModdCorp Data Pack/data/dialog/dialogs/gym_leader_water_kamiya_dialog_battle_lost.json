@@ -1,0 +1,19 @@
+{
+	"id": "gym_leader_water_kamiya_choice_dialog_battle_lost",
+	"title": "gym_leader_water_kamiya battle_lost",
+	"description": "dialog.npc.gym_leader_water_kamiya.dialog.battle_lost",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_water_kamiya.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_water_kamiya.dialog.battle_lost.line_0"
+				}
+			]
+		}
+	]
+}

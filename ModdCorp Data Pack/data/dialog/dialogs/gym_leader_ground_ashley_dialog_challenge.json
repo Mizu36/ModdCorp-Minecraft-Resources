@@ -1,0 +1,61 @@
+{
+	"id": "gym_leader_ground_ashley_choice_dialog_challenge",
+	"title": "gym_leader_ground_ashley challenge",
+	"description": "dialog.npc.gym_leader_ground_ashley.dialog.challenge",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_ground_ashley.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_ground_ashley.dialog.challenge.line_0"
+				}
+			],
+			"options": [
+				{
+					"text": {
+						"translate": "dialog.npc.gym_leader_ground_ashley.dialog.challenge.option_0"
+					},
+					"target": "battle_start",
+					"command": [
+						"moddcorpbattle ground_leader"
+					]
+				},
+				{
+					"text": {
+						"translate": "dialog.npc.gym_leader_ground_ashley.dialog.challenge.option_1"
+					},
+					"target": "end",
+					"command": []
+				}
+			]
+		},
+		{
+			"id": "battle_start",
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_ground_ashley.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_ground_ashley.dialog.battle_start.line_0"
+				}
+			]
+		},
+		{
+			"id": "end",
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_ground_ashley.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_ground_ashley.dialog.challenge.line_2"
+				}
+			]
+		}
+	]
+}

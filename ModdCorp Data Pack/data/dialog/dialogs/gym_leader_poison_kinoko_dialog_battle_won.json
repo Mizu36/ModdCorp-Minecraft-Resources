@@ -1,0 +1,19 @@
+{
+	"id": "gym_leader_poison_kinoko_choice_dialog_battle_won",
+	"title": "gym_leader_poison_kinoko battle_won",
+	"description": "dialog.npc.gym_leader_poison_kinoko.dialog.battle_won",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_poison_kinoko.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_poison_kinoko.dialog.battle_won.line_0"
+				}
+			]
+		}
+	]
+}

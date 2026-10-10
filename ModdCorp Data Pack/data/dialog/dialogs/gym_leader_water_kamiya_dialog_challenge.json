@@ -1,0 +1,61 @@
+{
+	"id": "gym_leader_water_kamiya_choice_dialog_challenge",
+	"title": "gym_leader_water_kamiya challenge",
+	"description": "dialog.npc.gym_leader_water_kamiya.dialog.challenge",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_water_kamiya.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_water_kamiya.dialog.challenge.line_0"
+				}
+			],
+			"options": [
+				{
+					"text": {
+						"translate": "dialog.npc.gym_leader_water_kamiya.dialog.challenge.option_0"
+					},
+					"target": "battle_start",
+					"command": [
+						"moddcorpbattle water_leader"
+					]
+				},
+				{
+					"text": {
+						"translate": "dialog.npc.gym_leader_water_kamiya.dialog.challenge.option_1"
+					},
+					"target": "end",
+					"command": []
+				}
+			]
+		},
+		{
+			"id": "battle_start",
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_water_kamiya.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_water_kamiya.dialog.battle_start.line_0"
+				}
+			]
+		},
+		{
+			"id": "end",
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_water_kamiya.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_water_kamiya.dialog.challenge.line_2"
+				}
+			]
+		}
+	]
+}

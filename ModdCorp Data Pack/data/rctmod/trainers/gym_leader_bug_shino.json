@@ -4,6 +4,7 @@
     "team": [
         {
             "species": "cobblemon:anorith",
+            "nickname": "The Scrongler",
             "gender": "MALE",
             "level": 12,
             "nature": "cobblemon:jolly",

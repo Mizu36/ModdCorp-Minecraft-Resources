@@ -1,0 +1,19 @@
+{
+	"id": "gym_leader_electric_voltaire_choice_dialog_is_busy_0",
+	"title": "gym_leader_electric_voltaire is_busy_0",
+	"description": "dialog.npc.gym_leader_electric_voltaire.dialog.is_busy_0",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_electric_voltaire.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_electric_voltaire.dialog.is_busy_0.line_0"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,19 @@
+{
+	"id": "gym_leader_normal_maddie_choice_dialog_completed",
+	"title": "gym_leader_normal_maddie completed",
+	"description": "dialog.npc.gym_leader_normal_maddie.dialog.completed",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_normal_maddie.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_normal_maddie.dialog.completed.line_0"
+				}
+			]
+		}
+	]
+}

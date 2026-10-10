@@ -1,0 +1,19 @@
+{
+	"id": "gym_leader_water_kamiya_choice_dialog_completed",
+	"title": "gym_leader_water_kamiya completed",
+	"description": "dialog.npc.gym_leader_water_kamiya.dialog.completed",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_water_kamiya.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_water_kamiya.dialog.completed.line_0"
+				}
+			]
+		}
+	]
+}

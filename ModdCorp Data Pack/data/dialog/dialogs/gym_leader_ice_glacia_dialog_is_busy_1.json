@@ -1,0 +1,19 @@
+{
+	"id": "gym_leader_ice_glacia_choice_dialog_is_busy_1",
+	"title": "gym_leader_ice_glacia is_busy_1",
+	"description": "dialog.npc.gym_leader_ice_glacia.dialog.is_busy_1",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_ice_glacia.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_ice_glacia.dialog.is_busy_1.line_0"
+				}
+			]
+		}
+	]
+}

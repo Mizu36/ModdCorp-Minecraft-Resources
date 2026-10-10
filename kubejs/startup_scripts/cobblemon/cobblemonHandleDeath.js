@@ -9,19 +9,67 @@ const getTrainerLevel = (player) => {
   return trainerLevel;
 };
 
+// Battles started from NPC dialogs (/moddcorpbattle) have no trainer entity,
+// so the encounter is tracked per player and a stand-in "trainer" is used.
+global.pendingNpcBattles = global.pendingNpcBattles || {};
+
+const safeEntity = (actor) => {
+  try {
+    return actor.getEntity ? actor.getEntity() : null;
+  } catch (err) {
+    return null;
+  }
+};
+
+const makeNpcTrainerStub = (player, pending) => ({
+  type: "rctmod:trainer",
+  persistentData: { encounterId: pending.encounterId, badgeType: "none", levelTier: "normal" },
+  isPlayer: () => false,
+  getOnPos: () => player.getOnPos(),
+});
+
 global.handleCobblemonDefeat = (e) => {
+  // Wild battles have no trainer/reward logic
+  let isWildBattle = false;
+  e.battle.getActors().forEach((actor) => {
+    if (String(actor.getType()) === "WILD") isWildBattle = true;
+  });
+  if (isWildBattle) return;
+
   let winningPlayer;
   let losingPlayer;
   let loserLevels = [];
+  // Actors are matched to a pending NPC battle through the player entity (non-player actors may have no entity)
+  let pendingPlayer = null;
+  let playerWon = false;
   e.winners.forEach((element) => {
-    winningPlayer = element.entity;
+    winningPlayer = safeEntity(element);
+    if (winningPlayer && winningPlayer.isPlayer() && global.pendingNpcBattles[String(winningPlayer.uuid)]) {
+      pendingPlayer = winningPlayer;
+      playerWon = true;
+    }
   });
   e.losers.forEach((element) => {
-    losingPlayer = element.entity;
+    losingPlayer = safeEntity(element);
+    if (losingPlayer && losingPlayer.isPlayer() && global.pendingNpcBattles[String(losingPlayer.uuid)]) {
+      pendingPlayer = losingPlayer;
+      playerWon = false;
+    }
     element.pokemonList.forEach((element) => {
       loserLevels.push(element.originalPokemon.getLevel());
     });
   });
+  let pending = pendingPlayer ? global.pendingNpcBattles[String(pendingPlayer.uuid)] : null;
+  console.info(`[NPC BATTLE] victory: pending=${pending ? pending.encounterId : "none"} playerWon=${playerWon}`);
+  if (pending && pending.started) {
+    delete global.pendingNpcBattles[String(pendingPlayer.uuid)];
+    if (typeof global.showNpcBattleResult === "function") {
+      global.showNpcBattleResult(pendingPlayer.getServer(), pendingPlayer, pending.encounterId, playerWon);
+    }
+    let stub = makeNpcTrainerStub(pendingPlayer, pending);
+    if (playerWon) { winningPlayer = pendingPlayer; losingPlayer = stub; }
+    else { losingPlayer = pendingPlayer; winningPlayer = stub; }
+  }
   if ((winningPlayer && winningPlayer.isPlayer()) && (losingPlayer && losingPlayer.isPlayer())) return;
   if (winningPlayer && winningPlayer.isPlayer()) {
     let reward = 0;
@@ -107,21 +155,64 @@ global.handleCobblemonDefeat = (e) => {
 StartupEvents.postInit((init) => {
   let $CobblemonEvents = Java.loadClass("com.cobblemon.mod.common.api.events.CobblemonEvents");
 
+  // This version of rctmod ignores the "nickname" key, so apply nicknames from global.trainerNicknames
+  // (generated from the trainer JSONs) before the battle packs its teams.
+  try {
+    $CobblemonEvents.BATTLE_STARTED_PRE.subscribe("normal", (e) => {
+      let players = e.battle.getPlayers();
+      if (players.length === 0) return;
+      let pending = global.pendingNpcBattles[String(players[0].uuid)];
+      if (!pending || !pending.trainerId || Date.now() - pending.requestedAt > 10000) return;
+      let entries = global.trainerNicknames && global.trainerNicknames[pending.trainerId];
+      if (!entries) return;
+      let Component = Java.loadClass("net.minecraft.network.chat.Component");
+      let used = {};
+      e.battle.getActors().forEach((actor) => {
+        if (String(actor.getType()) !== "NPC") return;
+        actor.pokemonList.forEach((bp) => {
+          let pk = bp.originalPokemon;
+          let species = String(pk.species.resourceIdentifier.path);
+          for (let i = 0; i < entries.length; i++) {
+            let en = entries[i];
+            if (used[i] || en.species !== species || en.level !== pk.level) continue;
+            used[i] = true;
+            if (en.nickname) {
+              let name = Component.literal(en.nickname);
+              pk.setNickname(name);
+              if (bp.effectedPokemon !== pk) bp.effectedPokemon.setNickname(name);
+            }
+            break;
+          }
+        });
+      });
+    });
+  } catch (err) {
+    console.warn("[NPC BATTLE] could not subscribe to BATTLE_STARTED_PRE: " + err);
+  }
+
   $CobblemonEvents.BATTLE_STARTED_POST.subscribe("normal", (e) => {
     let players = e.battle.getPlayers();
     let trainer;
 
     e.battle.getActors().forEach((actor) => {
-      let actorEntity = actor.getEntity();
+      let actorEntity = safeEntity(actor);
       if (actorEntity && actorEntity.type === "rctmod:trainer") {
         trainer = actorEntity;
       }
     });
 
-    if (!trainer || players.length === 0) return;
+    if (players.length === 0) return;
 
     let player = players[0];
-    let encounterId = trainer.persistentData.encounterId;
+    let encounterId;
+    if (trainer) {
+      encounterId = trainer.persistentData.encounterId;
+    } else {
+      let pending = global.pendingNpcBattles[String(player.uuid)];
+      if (!pending || Date.now() - pending.requestedAt > 10000) return;
+      pending.started = true;
+      encounterId = pending.encounterId;
+    }
     if (encounterId) {
       global.runMusicForLeagueEncounter(player, encounterId);
       global.handleLeagueBattleStart(player, encounterId);
@@ -130,7 +221,39 @@ StartupEvents.postInit((init) => {
     }
   });
 
+  // Trainer-side Pokémon must not drop their held items on faint (wild Pokémon still do).
+  // Cobblemon drops the held item in PokemonServerDelegate.updatePostDeath after the death animation,
+  // so clearing it when the faint is reported in battle prevents the drop.
+  try {
+    $CobblemonEvents.BATTLE_FAINTED.subscribe("normal", (e) => {
+      let killed = e.killed;
+      let actor = killed.actor;
+      if (String(actor.getType()) !== "NPC") return;
+      killed.originalPokemon.removeHeldItem();
+      killed.effectedPokemon.removeHeldItem();
+      let entity = killed.entity;
+      if (entity && entity.pokemon) entity.pokemon.removeHeldItem();
+    });
+  } catch (err) {
+    console.warn("[NPC BATTLE] could not subscribe to BATTLE_FAINTED: " + err);
+  }
+
   $CobblemonEvents.BATTLE_VICTORY.subscribe("normal", (e) => {
     global.handleCobblemonDefeat(e);
   });
+
+  // Forfeits/flees don't fire a victory event, so clear the pending NPC battle here to free the NPC
+  try {
+    $CobblemonEvents.BATTLE_FLED.subscribe("normal", (e) => {
+      e.battle.getPlayers().forEach((p) => {
+        let pending = global.pendingNpcBattles[String(p.uuid)];
+        if (pending && pending.started) {
+          delete global.pendingNpcBattles[String(p.uuid)];
+          global.handleLeagueBattleEnd(p, pending.encounterId);
+        }
+      });
+    });
+  } catch (err) {
+    console.warn("[NPC BATTLE] could not subscribe to BATTLE_FLED: " + err);
+  }
 });

@@ -109,6 +109,169 @@ ServerEvents.commandRegistry(event => {
   );
 });
 
+// The NPC the player last interacted with; its entity anchors where the opposing Pokémon appear
+global.npcBattleTargets = global.npcBattleTargets || {};
+
+// NPC key (dialog.npc.<key>.name) -> league encounter fought through /moddcorpbattle
+global.gymTrainerEncounters = {
+  gym_bug_trainer: "bug_trainer_01",
+  gym_leader_bug_shino: "bug_leader",
+  gym_leader_ground_ashley: "ground_leader",
+  gym_leader_water_kamiya: "water_leader",
+  gym_leader_poison_kinoko: "poison_leader",
+  gym_leader_fire_tim: "fire_leader",
+  gym_leader_electric_voltaire: "electric_leader",
+  gym_leader_ice_glacia: "ice_leader",
+  gym_leader_normal_maddie: "normal_leader",
+};
+
+// NPCs that have the full set of state dialogs (<npc>_choice_dialog_<state>); the others only have "challenge"
+global.gymTrainerFullDialogs = [
+  "gym_leader_bug_shino",
+  "gym_leader_ground_ashley",
+  "gym_leader_water_kamiya",
+  "gym_leader_poison_kinoko",
+  "gym_leader_fire_tim",
+  "gym_leader_electric_voltaire",
+  "gym_leader_ice_glacia",
+  "gym_leader_normal_maddie",
+];
+
+// Number of random variants for states with several lines (dialog ids get a _<n> suffix)
+const gymDialogVariants = { is_busy: 2 };
+
+global.npcBattleKeys = global.npcBattleKeys || {};
+
+global.showGymDialog = (server, player, npcId, state) => {
+  const variants = gymDialogVariants[state];
+  const suffix = variants ? `_${Math.floor(Math.random() * variants)}` : "";
+  server.runCommandSilent(`dialog ${player.getUuid()} show ${player.username} ${npcId}_choice_dialog_${state}${suffix}`);
+};
+
+const hasHealthyPokemon = (player) => {
+  let healthy = false;
+  const party = global.getPlayerParty(player);
+  if (party) party.forEach((pokemon) => { if (pokemon.getCurrentHealth() > 0) healthy = true; });
+  return healthy;
+};
+
+const isEncounterBusy = (player, encounterId) => {
+  var now = Date.now();
+  var BattleRegistry = Java.loadClass("com.cobblemon.mod.common.battles.BattleRegistry").INSTANCE;
+  var uuids = Object.keys(global.pendingNpcBattles);
+  for (var i = 0; i < uuids.length; i++) {
+    var uuid = uuids[i];
+    var pending = global.pendingNpcBattles[uuid];
+    if (pending.encounterId !== encounterId) continue;
+    if (!pending.started) {
+      if (now - pending.requestedAt < 10000) return true;
+      continue;
+    }
+    // A started battle that never reported a result (fled, disconnected) must not block the NPC forever
+    try {
+      if (BattleRegistry.getBattleByParticipatingPlayerId(UUID.fromString(uuid)) != null) return true;
+    } catch (err) {
+      if (now - pending.requestedAt < 20 * 60 * 1000) return true;
+    }
+  }
+  return false;
+};
+
+// Returns "ready" or the dialog state explaining why the player can't battle right now
+global.getGymEncounterState = (player, encounterId) => {
+  var encounter = global.leagueConfig[encounterId];
+  if (encounter.completedStage && player.stages.has(encounter.completedStage)) return "completed";
+  if (encounter.requiredStages && encounter.requiredStages.some((stage) => !player.stages.has(stage))) return "locked";
+  if (isEncounterBusy(player, encounterId)) return "is_busy";
+  if (!hasHealthyPokemon(player)) return "missing_pokemon";
+  return "ready";
+};
+
+global.startNpcBattle = (server, player, encounterId) => {
+  var encounter = global.leagueConfig[encounterId];
+  if (!encounter) return false;
+
+  var playerKey = String(player.uuid);
+  var npcId = global.npcBattleKeys[playerKey];
+  var gateState = "ready";
+  if (npcId && global.gymTrainerFullDialogs.includes(npcId)) {
+    gateState = global.getGymEncounterState(player, encounterId);
+    if (gateState !== "ready") {
+      global.showGymDialog(server, player, npcId, gateState);
+      return false;
+    }
+  } else {
+    var allowed = true;
+    global.handleLeagueInteraction(player, server, { encounterId: encounterId }, { cancel: () => { allowed = false; } });
+    if (!allowed) return false;
+  }
+
+  // Falls back to the player as the anchor entity (the same thing the duo podium does) if the NPC is unknown
+  var anchor = global.npcBattleTargets[playerKey] || playerKey;
+  global.pendingNpcBattles[playerKey] = { encounterId: encounterId, requestedAt: Date.now(), started: false, trainerId: encounter.trainerId };
+  server.runCommandSilent(`trainers makebattle ${player.username} ${encounter.trainerId} ${anchor}`);
+  return true;
+};
+
+// Called when an NPC battle ends. Dialog keys are written from the NPC's perspective:
+// battle_won = the NPC won, battle_lost = the player won.
+global.showNpcBattleResult = (server, player, encounterId, playerWon) => {
+  const npcId = global.gymTrainerFullDialogs.find((id) => global.gymTrainerEncounters[id] === encounterId);
+  if (!npcId) return;
+  server.scheduleInTicks(40, () => {
+    global.showGymDialog(server, player, npcId, playerWon ? "battle_lost" : "battle_won");
+  });
+};
+
+global.handleNpcGymTrainer = (e, level, server, target, player, npcId) => {
+  const encounterId = global.gymTrainerEncounters[npcId];
+  if (!encounterId) return;
+  global.npcBattleTargets[String(player.uuid)] = String(target.getUuid());
+  global.npcBattleKeys[String(player.uuid)] = npcId;
+  var dialogState = "challenge";
+  var encounterState = "ready";
+  if (global.gymTrainerFullDialogs.includes(npcId)) {
+    encounterState = global.getGymEncounterState(player, encounterId);
+    if (encounterState !== "ready") dialogState = encounterState;
+  }
+  global.showGymDialog(server, player, npcId, dialogState);
+};
+
+ServerEvents.commandRegistry(event => {
+  const { commands: Commands, arguments: Arguments } = event;
+
+  event.register(
+    Commands.literal("moddcorphome") // /moddcorphome <npcType>: gives a villager home bound to that NPC type, no invitation item needed
+      .requires(src => src.hasPermission(2))
+      .then(Commands.argument("type", Arguments.STRING.create(event))
+        .suggests((ctx, builder) => {
+          (global.villagerHomeTypes || []).forEach((t) => builder.suggest(String(t)));
+          return builder.buildFuture();
+        })
+        .executes(ctx => {
+          const player = ctx.source.player;
+          if (!player) return 0;
+          const type = Arguments.STRING.getResult(ctx, "type");
+          player.give(Item.of("society:villager_home", `{type:"${type}"}`));
+          player.tell(Text.of(`Gave a villager home for "${type}". Place it to move the NPC in.`).green());
+          return 1;
+        })
+      )
+  );
+
+  event.register(
+    Commands.literal("moddcorpbattle") // dialog button: /moddcorpbattle <encounterId>
+      .then(Commands.argument("encounter", Arguments.STRING.create(event))
+        .executes(ctx => {
+          const player = ctx.source.player;
+          if (!player) return 0;
+          const encounterId = Arguments.STRING.getResult(ctx, "encounter");
+          return global.startNpcBattle(ctx.source.server, player, encounterId) ? 1 : 0;
+        })
+      )
+  );
+});
+
 global.showNpcClerkAdvice = (server, player) => {
   const stage = getCurrentStage(player);
   const variation = getRandomInt(0, 4);

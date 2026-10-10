@@ -1,0 +1,66 @@
+{
+	"id": "gym_bug_trainer_choice_dialog_challenge",
+	"title": "gym_bug_trainer challenge",
+	"description": "dialog.npc.gym_bug_trainer.dialog.challenge",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.gym_bug_trainer.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_bug_trainer.dialog.challenge.line_0"
+				}
+			],
+			"options": [
+				{
+					"text": {
+						"translate": "dialog.npc.gym_bug_trainer.dialog.challenge.option_0"
+					},
+					"target": "battle_start",
+					"command": []
+				},
+				{
+					"text": {
+						"translate": "dialog.npc.gym_bug_trainer.dialog.challenge.option_1"
+					},
+					"target": "end","command": []
+				}
+			]
+		},
+		{
+			"id": "battle_start",
+			"speaker": {
+				"translate": "dialog.npc.gym_bug_trainer.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_bug_trainer.dialog.challenge.line_1"
+				}
+			],
+			"options": [
+				{
+					"text": {
+						"translate": "dialog.npc.gym_bug_trainer.dialog.challenge.option_2"
+					},
+					"target": "end","command": [
+						"moddcorpbattle bug_trainer_01"
+					]
+				}
+			]
+		},
+		{
+			"id": "end",
+			"speaker": {
+				"translate": "dialog.npc.gym_bug_trainer.name",
+				"color": "white"
+			},
+			"text": [
+				{ "translate": "dialog.npc.gym_bug_trainer.dialog.challenge.line_2" }
+			]
+		}
+	]
+}

@@ -1,0 +1,19 @@
+{
+	"id": "gym_leader_ice_glacia_choice_dialog_locked",
+	"title": "gym_leader_ice_glacia locked",
+	"description": "dialog.npc.gym_leader_ice_glacia.dialog.locked",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_ice_glacia.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_ice_glacia.dialog.locked.line_0"
+				}
+			]
+		}
+	]
+}

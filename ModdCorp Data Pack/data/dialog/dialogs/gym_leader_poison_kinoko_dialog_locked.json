@@ -1,0 +1,19 @@
+{
+	"id": "gym_leader_poison_kinoko_choice_dialog_locked",
+	"title": "gym_leader_poison_kinoko locked",
+	"description": "dialog.npc.gym_leader_poison_kinoko.dialog.locked",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_poison_kinoko.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_poison_kinoko.dialog.locked.line_0"
+				}
+			]
+		}
+	]
+}

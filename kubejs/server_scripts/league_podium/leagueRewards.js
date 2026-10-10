@@ -1,7 +1,7 @@
 console.info("[MODDCORP] leagueRewards.js loaded");
 
 global.trainerBattleMusic = ["sunlit:rby_trainer_battle", "sunlit:sgc_johto_trainer_battle", "sunlit:sgc_kanto_trainer_battle", "sunlit:rse_trainer_battle", "sunlit:frlg_trainer_battle", "sunlit:colosseum_trainer_battle_01", "sunlit:colosseum_trainer_battle_02", "sunlit:xd_trainer_battle", "sunlit:dpp_trainer_battle", "sunlit:hgss_johto_trainer_battle", "sunlit:hgss_kanto_trainer_battle", "sunlit:bw_trainer_battle", "sunlit:xy_trainer_battle", "sunlit:oras_trainer_battle", "sunlit:sm_trainer_battle", "sunlit:swsh_trainer_battle", "sunlit:sv_trainer_battle", "sunlit:champions_trainer_battle"];
-global.leaderBattleMusic = ["sunlit:gym_leader_battle_full"];
+global.leaderBattleMusic =  ["sunlit:gym_leader_battle_full"];
 
 //==================================================
 // Expand command placeholders
@@ -43,13 +43,8 @@ global.runMusicForLeagueEncounter = function(player, encounterId) {
     command = global.expandLeagueCommand("stopsound %player% record", player, encounterId);
     Utils.server.runCommandSilent(command);
     
-    if (encounter.battle_music) {
-        let music;
-        if (encounter.battle_music.length > 1)
-            music = encounter.battle_music[Math.floor(Math.random() * encounter.battle_music.length)];
-        else if (encounter.battle_music.length === 1)
-            music = encounter.battle_music[0];
-        
+    if (encounter.battle_music && encounter.battle_music.length > 0) {
+        let music = encounter.battle_music[Math.floor(Math.random() * encounter.battle_music.length)];
         command = global.expandLeagueCommand("execute at %player% run playsound " + music + " record %player% ~ ~ ~", player, encounterId);
         Utils.server.runCommandSilent(command);
     } else {

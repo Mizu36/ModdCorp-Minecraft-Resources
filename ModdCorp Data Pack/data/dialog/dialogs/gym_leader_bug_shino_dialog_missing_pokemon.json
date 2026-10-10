@@ -1,0 +1,19 @@
+{
+	"id": "gym_leader_bug_shino_choice_dialog_missing_pokemon",
+	"title": "gym_leader_bug_shino missing_pokemon",
+	"description": "dialog.npc.gym_leader_bug_shino.dialog.missing_pokemon",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_bug_shino.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_bug_shino.dialog.missing_pokemon.line_0"
+				}
+			]
+		}
+	]
+}

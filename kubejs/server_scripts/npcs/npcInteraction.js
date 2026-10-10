@@ -51,6 +51,8 @@ const handleNpc = (e, npcId, level, server, target, player, item) => {
         global.handleNpcAviator(e, level, server, target, player);
     } else if (npcId === "subway") {
         global.handleNpcSubway(e, level, server, target, player);
+    } else if (global.gymTrainerEncounters[npcId]) {
+        global.handleNpcGymTrainer(e, level, server, target, player, npcId);
     } else if (!npcData) {
         if (!player.stages.has(`invited_${npcId}`)) {
             player.stages.add(`invited_${npcId}`)

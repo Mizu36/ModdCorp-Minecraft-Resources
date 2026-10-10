@@ -1,0 +1,61 @@
+{
+	"id": "gym_leader_fire_tim_choice_dialog_challenge",
+	"title": "gym_leader_fire_tim challenge",
+	"description": "dialog.npc.gym_leader_fire_tim.dialog.challenge",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_fire_tim.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_fire_tim.dialog.challenge.line_0"
+				}
+			],
+			"options": [
+				{
+					"text": {
+						"translate": "dialog.npc.gym_leader_fire_tim.dialog.challenge.option_0"
+					},
+					"target": "battle_start",
+					"command": [
+						"moddcorpbattle fire_leader"
+					]
+				},
+				{
+					"text": {
+						"translate": "dialog.npc.gym_leader_fire_tim.dialog.challenge.option_1"
+					},
+					"target": "end",
+					"command": []
+				}
+			]
+		},
+		{
+			"id": "battle_start",
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_fire_tim.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_fire_tim.dialog.battle_start.line_0"
+				}
+			]
+		},
+		{
+			"id": "end",
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_fire_tim.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_fire_tim.dialog.challenge.line_2"
+				}
+			]
+		}
+	]
+}
