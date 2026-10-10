@@ -26,7 +26,6 @@ global.leagueConfig = {
         trainerId: "gym_leader_bug_shino",
         displayName: "Gym Leader Shino",
         isLeader: true,
-        canAverageLevel: true,
         averageAboveLevel: 18,
 
         requiredStages: ["gym_bug_trainer_01_complete"],
@@ -99,7 +98,6 @@ global.leagueConfig = {
         trainerId: "gym_leader_ground_ashley",
         displayName: "Gym Leader Ashley",
         isLeader: true,
-        canAverageLevel: true,
         averageAboveLevel: 27,
 
         requiredStages: ["gym_ground_trainer_01_complete", "gym_ground_trainer_02_complete", "gym_ground_trainer_03_complete"],
@@ -210,7 +208,6 @@ global.leagueConfig = {
         trainerId: "gym_leader_water_kamiya",
         displayName: "Gym Leader Kamiya",
         isLeader: true,
-        canAverageLevel: true,
         averageAboveLevel: 27,
 
         requiredStages: ["gym_water_trainer_01_complete", "gym_water_trainer_02_complete", "gym_water_trainer_03_complete"],
@@ -321,7 +318,6 @@ global.leagueConfig = {
         trainerId: "gym_leader_poison_kinoko",
         displayName: "Gym Leader Kinoko",
         isLeader: true,
-        canAverageLevel: true,
         averageAboveLevel: 35,
 
         requiredStages: ["gym_poison_trainer_01_complete", "gym_poison_trainer_02_complete", "gym_poison_trainer_03_complete"],
@@ -431,7 +427,6 @@ global.leagueConfig = {
         trainerId: "gym_leader_fire_tim",
         displayName: "Gym Leader Tim",
         isLeader: true,
-        canAverageLevel: true,
         averageAboveLevel: 40,
 
         requiredStages: ["gym_fire_trainer_01_complete", "gym_fire_trainer_02_complete", "gym_fire_trainer_03_complete"],
@@ -542,7 +537,6 @@ global.leagueConfig = {
         trainerId: "gym_leader_electric_voltaire",
         displayName: "Gym Leader Voltaire",
         isLeader: true,
-        canAverageLevel: true,
         averageAboveLevel: 45,
 
         requiredStages: ["gym_electric_trainer_01_complete", "gym_electric_trainer_02_complete", "gym_electric_trainer_03_complete"],
@@ -652,7 +646,6 @@ global.leagueConfig = {
         trainerId: "gym_leader_ice_glacia",
         displayName: "Gym Leader Glacia",
         isLeader: true,
-        canAverageLevel: true,
         averageAboveLevel: 45,
 
         requiredStages: ["gym_ice_trainer_01_complete", "gym_ice_trainer_02_complete", "gym_ice_trainer_03_complete"],
@@ -762,7 +755,6 @@ global.leagueConfig = {
         trainerId: "gym_leader_normal_maddie",
         displayName: "Secretary MaddiePly",
         isLeader: true,
-        canAverageLevel: true,
         averageAboveLevel: 45,
 
         requiredStages: ["gym_normal_trainer_01_complete", "gym_normal_trainer_02_complete", "gym_normal_trainer_03_complete"],
@@ -1162,8 +1154,7 @@ global.leagueConfig = {
 
         trainerId: "gym_leader_bug_shino_rematch",
         displayName: "Gym Leader Shino",
-        canAverageLevel: true,
-        averageAboveLevel: 50,
+        averageAboveLevel: 55,
 
         requiredStages: ["challenging_gym_rematch"],
         rewardStages: ["gym_bug_rematch_complete"],
@@ -1186,8 +1177,7 @@ global.leagueConfig = {
 
         trainerId: "gym_leader_ground_ashley_rematch",
         displayName: "Gym Leader Ashley",
-        canAverageLevel: true,
-        averageAboveLevel: 50,
+        averageAboveLevel: 55,
 
         requiredStages: ["challenging_gym_rematch"],
         rewardStages: ["gym_ground_rematch_complete"],
@@ -1210,8 +1200,7 @@ global.leagueConfig = {
 
         trainerId: "gym_leader_water_kamiya_rematch",
         displayName: "Gym Leader Kamiya",
-        canAverageLevel: true,
-        averageAboveLevel: 50,
+        averageAboveLevel: 55,
 
         requiredStages: ["challenging_gym_rematch"],
         rewardStages: ["gym_water_rematch_complete"],
@@ -1234,8 +1223,7 @@ global.leagueConfig = {
 
         trainerId: "gym_leader_poison_kinoko_rematch",
         displayName: "Gym Leader Kinoko",
-        canAverageLevel: true,
-        averageAboveLevel: 50,
+        averageAboveLevel: 55,
 
         requiredStages: ["challenging_gym_rematch"],
         rewardStages: ["gym_poison_rematch_complete"],
@@ -1258,8 +1246,7 @@ global.leagueConfig = {
 
         trainerId: "gym_leader_fire_tim_rematch",
         displayName: "Gym Leader Tim",
-        canAverageLevel: true,
-        averageAboveLevel: 50,
+        averageAboveLevel: 55,
 
         requiredStages: ["challenging_gym_rematch"],
         rewardStages: ["gym_fire_rematch_complete"],
@@ -1282,8 +1269,7 @@ global.leagueConfig = {
 
         trainerId: "gym_leader_electric_voltaire_rematch",
         displayName: "Gym Leader Voltaire",
-        canAverageLevel: true,
-        averageAboveLevel: 50,
+        averageAboveLevel: 55,
 
         requiredStages: ["challenging_gym_rematch"],
         rewardStages: ["gym_electric_rematch_complete"],
@@ -1306,8 +1292,7 @@ global.leagueConfig = {
 
         trainerId: "gym_leader_ice_glacia_rematch",
         displayName: "Gym Leader Glacia",
-        canAverageLevel: true,
-        averageAboveLevel: 50,
+        averageAboveLevel: 55,
 
         requiredStages: ["challenging_gym_rematch"],
         rewardStages: ["gym_ice_rematch_complete"],
@@ -1330,8 +1315,7 @@ global.leagueConfig = {
 
         trainerId: "gym_leader_normal_maddie_rematch",
         displayName: "Gym Leader MaddiePly",
-        canAverageLevel: true,
-        averageAboveLevel: 50,
+        averageAboveLevel: 55,
 
         requiredStages: ["challenging_gym_rematch"],
         rewardStages: ["gym_normal_rematch_complete"],
@@ -1358,8 +1342,7 @@ global.leagueConfig = {
 
         trainerId: "battle_dojo_ado",
         displayName: "Ado",
-        canAverageLevel: true,
-        averageAboveLevel: 50,
+        averageAboveLevel: 55,
 
         rewardStages: ["battle_dojo_ado_complete"],
         completedStage: "battle_dojo_ado_complete",
@@ -1381,8 +1364,7 @@ global.leagueConfig = {
 
         trainerId: "battle_dojo_giovanni",
         displayName: "Giovanni",
-        canAverageLevel: true,
-        averageAboveLevel: 50,
+        averageAboveLevel: 55,
 
         rewardStages: ["battle_dojo_giovanni_complete"],
         completedStage: "battle_dojo_giovanni_complete",
@@ -1404,8 +1386,7 @@ global.leagueConfig = {
 
         trainerId: "battle_dojo_archie",
         displayName: "Archie",
-        canAverageLevel: true,
-        averageAboveLevel: 50,
+        averageAboveLevel: 55,
 
         rewardStages: ["battle_dojo_archie_complete"],
         completedStage: "battle_dojo_archie_complete",
@@ -1427,8 +1408,7 @@ global.leagueConfig = {
 
         trainerId: "battle_dojo_maxie",
         displayName: "Maxie",
-        canAverageLevel: true,
-        averageAboveLevel: 50,
+        averageAboveLevel: 55,
 
         rewardStages: ["battle_dojo_maxie_complete"],
         completedStage: "battle_dojo_maxie_complete",
@@ -1450,8 +1430,7 @@ global.leagueConfig = {
 
         trainerId: "battle_dojo_evice",
         displayName: "Evice",
-        canAverageLevel: true,
-        averageAboveLevel: 50,
+        averageAboveLevel: 55,
 
         rewardStages: ["battle_dojo_evice_complete"],
         completedStage: "battle_dojo_evice_complete",
@@ -1473,8 +1452,7 @@ global.leagueConfig = {
 
         trainerId: "battle_dojo_greevil",
         displayName: "Greevil",
-        canAverageLevel: true,
-        averageAboveLevel: 50,
+        averageAboveLevel: 55,
 
         rewardStages: ["battle_dojo_greevil_complete"],
         completedStage: "battle_dojo_greevil_complete",
@@ -1496,8 +1474,7 @@ global.leagueConfig = {
 
         trainerId: "battle_dojo_cyrus",
         displayName: "Cyrus",
-        canAverageLevel: true,
-        averageAboveLevel: 50,
+        averageAboveLevel: 55,
 
         rewardStages: ["battle_dojo_cyrus_complete"],
         completedStage: "battle_dojo_cyrus_complete",
@@ -1519,8 +1496,7 @@ global.leagueConfig = {
 
         trainerId: "battle_dojo_ghetsis",
         displayName: "Ghetsis",
-        canAverageLevel: true,
-        averageAboveLevel: 50,
+        averageAboveLevel: 55,
 
         rewardStages: ["battle_dojo_ghetsis_complete"],
         completedStage: "battle_dojo_ghetsis_complete",
@@ -1542,8 +1518,7 @@ global.leagueConfig = {
 
         trainerId: "battle_dojo_n",
         displayName: "N",
-        canAverageLevel: true,
-        averageAboveLevel: 50,
+        averageAboveLevel: 55,
 
         rewardStages: ["battle_dojo_n_complete"],
         completedStage: "battle_dojo_n_complete",
@@ -1565,8 +1540,7 @@ global.leagueConfig = {
 
         trainerId: "battle_dojo_lysandre",
         displayName: "Lysandre",
-        canAverageLevel: true,
-        averageAboveLevel: 50,
+        averageAboveLevel: 55,
 
         rewardStages: ["battle_dojo_lysandre_complete"],
         completedStage: "battle_dojo_lysandre_complete",
@@ -1588,8 +1562,7 @@ global.leagueConfig = {
 
         trainerId: "battle_dojo_guzma",
         displayName: "Guzma",
-        canAverageLevel: true,
-        averageAboveLevel: 50,
+        averageAboveLevel: 55,
 
         rewardStages: ["battle_dojo_guzma_complete"],
         completedStage: "battle_dojo_guzma_complete",
@@ -1611,8 +1584,7 @@ global.leagueConfig = {
 
         trainerId: "battle_dojo_lusamine",
         displayName: "Lusamine",
-        canAverageLevel: true,
-        averageAboveLevel: 50,
+        averageAboveLevel: 55,
 
         rewardStages: ["battle_dojo_lusamine_complete"],
         completedStage: "battle_dojo_lusamine_complete",
@@ -1634,8 +1606,7 @@ global.leagueConfig = {
 
         trainerId: "battle_dojo_rose",
         displayName: "Chairman Rose",
-        canAverageLevel: true,
-        averageAboveLevel: 50,
+        averageAboveLevel: 55,
 
         rewardStages: ["battle_dojo_rose_complete"],
         completedStage: "battle_dojo_rose_complete",
@@ -1657,8 +1628,7 @@ global.leagueConfig = {
 
         trainerId: "battle_dojo_sada",
         displayName: "Sada",
-        canAverageLevel: true,
-        averageAboveLevel: 50,
+        averageAboveLevel: 55,
 
         rewardStages: ["battle_dojo_sada_complete"],
         completedStage: "battle_dojo_sada_complete",
@@ -1680,8 +1650,7 @@ global.leagueConfig = {
 
         trainerId: "battle_dojo_turo",
         displayName: "Turo",
-        canAverageLevel: true,
-        averageAboveLevel: 50,
+        averageAboveLevel: 55,
 
         rewardStages: ["battle_dojo_turo_complete"],
         completedStage: "battle_dojo_turo_complete",

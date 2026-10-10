@@ -164,10 +164,10 @@ StartupEvents.postInit((init) => {
       let pending = global.pendingNpcBattles[String(players[0].uuid)];
       if (!pending || !pending.trainerId || Date.now() - pending.requestedAt > 10000) return;
       let entries = global.trainerNicknames && global.trainerNicknames[pending.trainerId];
-      if (!entries) return;
       let Component = Java.loadClass("net.minecraft.network.chat.Component");
       let used = {};
-      e.battle.getActors().forEach((actor) => {
+      // Nicknames are matched against the JSON levels, so this must run before the level override below.
+      if (entries) e.battle.getActors().forEach((actor) => {
         if (String(actor.getType()) !== "NPC") return;
         actor.pokemonList.forEach((bp) => {
           let pk = bp.originalPokemon;
@@ -182,6 +182,43 @@ StartupEvents.postInit((init) => {
               if (bp.effectedPokemon !== pk) bp.effectedPokemon.setNickname(name);
             }
             break;
+          }
+        });
+      });
+
+      // Scale the trainer's team to the player's party based on averageAboveLevel in leagueConfig:
+      // undefined or -1 = use team as is, 0 = always scale, N = scale only when the party average > N.
+      // If the party's highest and lowest levels differ by more than 5, every Pokémon becomes highest - 2
+      // instead of the average (anti-cheese).
+      let encounter = global.leagueConfig && global.leagueConfig[pending.encounterId];
+      let threshold = encounter ? encounter.averageAboveLevel : undefined;
+      if (threshold === undefined || threshold === null || threshold < 0) return;
+      let Cobblemon = Java.loadClass("com.cobblemon.mod.common.Cobblemon");
+      let party = Cobblemon.INSTANCE.getStorage().getParty(players[0].uuid).toGappyList();
+      let sum = 0, count = 0, hi = 0, lo = 1000;
+      for (let i = 0; i < party.size(); i++) {
+        let member = party.get(i);
+        if (!member) continue;
+        let lvl = member.getLevel();
+        sum += lvl;
+        count++;
+        if (lvl > hi) hi = lvl;
+        if (lvl < lo) lo = lvl;
+      }
+      if (count === 0) return;
+      let avg = Math.round(sum / count);
+      if (avg <= threshold) return;
+      let target = hi - lo <= 5 ? avg : hi - 2;
+      target = Math.max(1, Math.min(100, target));
+      e.battle.getActors().forEach((actor) => {
+        if (String(actor.getType()) !== "NPC") return;
+        actor.pokemonList.forEach((bp) => {
+          let pk = bp.originalPokemon;
+          pk.setLevel(target);
+          pk.heal();
+          if (bp.effectedPokemon !== pk) {
+            bp.effectedPokemon.setLevel(target);
+            bp.effectedPokemon.heal();
           }
         });
       });
