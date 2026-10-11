@@ -29,12 +29,18 @@ const makeNpcTrainerStub = (player, pending) => ({
 });
 
 global.handleCobblemonDefeat = (e) => {
-  // Wild battles have no trainer/reward logic
+  let loserName = "";
+  e.losers.forEach((element) => {
+    loserName = element.getName();
+  });
+  let isEon = !!(loserName && loserName.toString().includes("eon"));
+
+  // Wild battles have no trainer/reward logic (Eon battles have their own rewards)
   let isWildBattle = false;
   e.battle.getActors().forEach((actor) => {
     if (String(actor.getType()) === "WILD") isWildBattle = true;
   });
-  if (isWildBattle) return;
+  if (isWildBattle && !isEon) return;
 
   let winningPlayer;
   let losingPlayer;
@@ -70,7 +76,7 @@ global.handleCobblemonDefeat = (e) => {
     if (playerWon) { winningPlayer = pendingPlayer; losingPlayer = stub; }
     else { losingPlayer = pendingPlayer; winningPlayer = stub; }
   }
-  if ((winningPlayer && winningPlayer.isPlayer()) && (losingPlayer && losingPlayer.isPlayer())) return;
+  if (!isEon && (winningPlayer && winningPlayer.isPlayer()) && (losingPlayer && losingPlayer.isPlayer())) return;
   if (winningPlayer && winningPlayer.isPlayer()) {
     let reward = 0;
     loserLevels.forEach((loserLevel) => {
@@ -125,6 +131,16 @@ global.handleCobblemonDefeat = (e) => {
       } else if (winningPlayer && Math.random() < 0.01) {
         winningPlayer.give(Item.of("sunlit_cobblemon:the_art_of_battle"))
       }
+    } else if (losingPlayer && isEon) {
+      global.getEonRewards(winningPlayer, losingPlayer.getOnPos(), loserName.toString());
+      winningPlayer.getServer().runCommandSilent(
+        global.getEmbersTextAPICommand(
+          winningPlayer.username,
+          `{anchor:"TOP_LEFT",background:1,color:"#FFFFFF",size:1,offsetY:68,offsetX:6,typewriter:1,align:"TOP_LEFT"}`,
+          160,
+          "The wild team of Pokémon shared some of their treasure with you!"
+        )
+      );
     }
     reward = Math.round(reward);
     global.depositIntoPersonalOrCurio(winningPlayer.level, winningPlayer, reward);
