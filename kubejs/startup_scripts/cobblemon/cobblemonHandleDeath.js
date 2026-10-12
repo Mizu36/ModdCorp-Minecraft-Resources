@@ -257,6 +257,11 @@ StartupEvents.postInit((init) => {
     if (players.length === 0) return;
 
     let player = players[0];
+    if (!trainer && e.battle.getActors().some((actor) => String(actor.getType()) === "WILD")) {
+      global.runMusicForWildEncounter(player, e.battle);
+      return;
+    }
+
     let encounterId;
     if (trainer) {
       encounterId = trainer.persistentData.encounterId;
@@ -299,6 +304,9 @@ StartupEvents.postInit((init) => {
   try {
     $CobblemonEvents.BATTLE_FLED.subscribe("normal", (e) => {
       e.battle.getPlayers().forEach((p) => {
+        Utils.server.runCommandSilent("stopsound " + p.username + " music");
+        Utils.server.runCommandSilent("stopsound " + p.username + " record");
+
         let pending = global.pendingNpcBattles[String(p.uuid)];
         if (pending && pending.started) {
           delete global.pendingNpcBattles[String(p.uuid)];

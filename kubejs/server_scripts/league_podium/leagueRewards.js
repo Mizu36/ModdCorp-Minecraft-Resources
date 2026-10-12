@@ -1,7 +1,23 @@
 console.info("[MODDCORP] leagueRewards.js loaded");
 
-global.trainerBattleMusic = ["moddcorp:rby_trainer_battle", "moddcorp:sgc_johto_trainer_battle", "moddcorp:sgc_kanto_trainer_battle", "moddcorp:rse_trainer_battle", "moddcorp:frlg_trainer_battle", "moddcorp:colosseum_trainer_battle_01", "moddcorp:colosseum_trainer_battle_02", "moddcorp:xd_trainer_battle", "moddcorp:dpp_trainer_battle", "moddcorp:hgss_johto_trainer_battle", "moddcorp:hgss_kanto_trainer_battle", "moddcorp:bw_trainer_battle", "moddcorp:xy_trainer_battle", "moddcorp:oras_trainer_battle", "moddcorp:sm_trainer_battle", "moddcorp:swsh_trainer_battle", "moddcorp:sv_trainer_battle", "moddcorp:champions_trainer_battle"];
+global.wildBattleMusic = ["moddcorp:wild_battle_full"];
+global.legendaryBattleMusic = ["moddcorp:boss_pokemon_battle_full"];
+global.trainerBattleMusic = ["moddcorp:trainer_battle_full"];
 global.leaderBattleMusic =  ["moddcorp:gym_leader_battle_full"];
+global.legendaryPokemon = [
+    "articuno", "zapdos", "moltres", "mewtwo",
+    "raikou", "entei", "suicune", "lugia", "hooh",
+    "regirock", "regice", "registeel", "latias", "latios", "kyogre", "groudon", "rayquaza",
+    "uxie", "mesprit", "azelf", "dialga", "palkia", "heatran", "regigigas", "giratina", "cresselia",
+    "cobalion", "terrakion", "virizion", "tornadus", "thundurus", "landorus", "reshiram", "zekrom", "kyurem",
+    "xerneas", "yveltal", "zygarde",
+    "typenull", "silvally", "tapukoko", "tapulele", "tapubulu", "tapufini",
+    "cosmog", "cosmoem", "solgaleo", "lunala", "necrozma",
+    "zacian", "zamazenta", "eternatus", "kubfu", "urshifu", "regieleki", "regidrago",
+    "glastrier", "spectrier", "calyrex", "enamorus",
+    "wochien", "chienpao", "tinglu", "chiyu", "koraidon", "miraidon",
+    "ogerpon", "terapagos", "okidogi", "munkidori", "fezandipiti"
+];
 
 //==================================================
 // Expand command placeholders
@@ -28,6 +44,23 @@ global.runMusicForEncounter = function(player){
     Utils.server.runCommandSilent("stopsound " + player.username + " record");
     Utils.server.runCommandSilent("execute at " + player.username + " run playsound " + music + " record " + player.username + " ~ ~ ~");
 }
+
+global.runMusicForWildEncounter = function(player, battle) {
+    let isLegendary = false;
+    battle.getActors().forEach((actor) => {
+        if (String(actor.getType()) !== "WILD") return;
+        actor.getPokemonList().forEach((battlePokemon) => {
+            let species = String(battlePokemon.originalPokemon.species.resourceIdentifier.path);
+            if (global.legendaryPokemon.includes(species)) isLegendary = true;
+        });
+    });
+
+    let musicList = isLegendary ? global.legendaryBattleMusic : global.wildBattleMusic;
+    let music = musicList[Math.floor(Math.random() * musicList.length)];
+    Utils.server.runCommandSilent("stopsound " + player.username + " music");
+    Utils.server.runCommandSilent("stopsound " + player.username + " record");
+    Utils.server.runCommandSilent("execute at " + player.username + " run playsound " + music + " record " + player.username + " ~ ~ ~");
+};
 
 global.runMusicForLeagueEncounter = function(player, encounterId) {
 
