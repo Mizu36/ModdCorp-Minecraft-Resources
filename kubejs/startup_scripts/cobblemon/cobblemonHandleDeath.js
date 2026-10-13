@@ -28,7 +28,21 @@ const makeNpcTrainerStub = (player, pending) => ({
   getOnPos: () => player.getOnPos(),
 });
 
+global.isPlayerVsPlayerBattle = (battle) => {
+  let actors = battle.getActors();
+  return actors.length > 1 && actors.every((actor) => String(actor.getType()) === "PLAYER");
+};
+
 global.handleCobblemonDefeat = (e) => {
+  // Player vs player battles only stop the music; no rewards or league logic
+  if (global.isPlayerVsPlayerBattle(e.battle)) {
+    e.battle.getPlayers().forEach((p) => {
+      Utils.server.runCommandSilent("stopsound " + p.username + " music");
+      Utils.server.runCommandSilent("stopsound " + p.username + " record");
+    });
+    return;
+  }
+
   let loserName = "";
   e.losers.forEach((element) => {
     loserName = element.getName();
@@ -40,6 +54,12 @@ global.handleCobblemonDefeat = (e) => {
   e.battle.getActors().forEach((actor) => {
     if (String(actor.getType()) === "WILD") isWildBattle = true;
   });
+  if (isWildBattle) {
+    e.battle.getPlayers().forEach((p) => {
+      Utils.server.runCommandSilent("stopsound " + p.username + " music");
+      Utils.server.runCommandSilent("stopsound " + p.username + " record");
+    });
+  }
   if (isWildBattle && !isEon) return;
 
   let winningPlayer;
@@ -255,6 +275,11 @@ StartupEvents.postInit((init) => {
     });
 
     if (players.length === 0) return;
+
+    if (global.isPlayerVsPlayerBattle(e.battle)) {
+      global.runMusicForPlayerBattle(players);
+      return;
+    }
 
     let player = players[0];
     if (!trainer && e.battle.getActors().some((actor) => String(actor.getType()) === "WILD")) {

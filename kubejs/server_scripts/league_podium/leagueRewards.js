@@ -3,6 +3,7 @@ console.info("[MODDCORP] leagueRewards.js loaded");
 global.wildBattleMusic = ["moddcorp:wild_battle_full"];
 global.legendaryBattleMusic = ["moddcorp:boss_pokemon_battle_full"];
 global.trainerBattleMusic = ["moddcorp:trainer_battle_full"];
+global.playerBattleMusic = ["moddcorp:player_battle_full"];
 global.leaderBattleMusic =  ["moddcorp:gym_leader_battle_full"];
 global.legendaryPokemon = [
     "articuno", "zapdos", "moltres", "mewtwo",
@@ -60,6 +61,15 @@ global.runMusicForWildEncounter = function(player, battle) {
     Utils.server.runCommandSilent("stopsound " + player.username + " music");
     Utils.server.runCommandSilent("stopsound " + player.username + " record");
     Utils.server.runCommandSilent("execute at " + player.username + " run playsound " + music + " record " + player.username + " ~ ~ ~");
+};
+
+global.runMusicForPlayerBattle = function(players) {
+    let music = global.playerBattleMusic[Math.floor(Math.random() * global.playerBattleMusic.length)];
+    players.forEach((player) => {
+        Utils.server.runCommandSilent("stopsound " + player.username + " music");
+        Utils.server.runCommandSilent("stopsound " + player.username + " record");
+        Utils.server.runCommandSilent("execute at " + player.username + " run playsound " + music + " record " + player.username + " ~ ~ ~");
+    });
 };
 
 global.runMusicForLeagueEncounter = function(player, encounterId) {

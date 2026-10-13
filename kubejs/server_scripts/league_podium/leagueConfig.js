@@ -1123,7 +1123,7 @@ global.leagueConfig = {
         moneyReward: 15000,
         moneyLoss: 1000,
 
-        battle_music: ["moddcorp:champion_battle_full"]
+        battle_music: ["moddcorp:champion_rematch_full"]
     },
 
     //==============================================
