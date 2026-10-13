@@ -1,0 +1,202 @@
+{
+    "displayName": "Elite Four Chigusa",
+    "identity": "Chigusa",
+    "team": [
+        {
+            "species": "cobblemon:jumpluff",
+            "nickname": "",
+            "gender": "FEMALE",
+            "level": 71,
+            "nature": "cobblemon:timid",
+            "ability": "infiltrator",
+            "moveset": [
+                "sleeppowder",
+                "leechseed",
+                "gigadrain",
+                "uturn"
+            ],
+            "ivs": {
+                "hp": 5,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 15
+            },
+            "evs": {
+                "hp": 4,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 252
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:focus_sash"
+        },
+        {
+            "species": "cobblemon:cacturne",
+            "nickname": "",
+            "gender": "MALE",
+            "level": 71,
+            "nature": "cobblemon:adamant",
+            "ability": "waterabsorb",
+            "moveset": [
+                "suckerpunch",
+                "seedbomb",
+                "knockoff",
+                "spikes"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 10,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 10
+            },
+            "evs": {
+                "hp": 4,
+                "attack": 252,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 252
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:black_glasses"
+        },
+        {
+            "species": "cobblemon:lilligant",
+            "nickname": "",
+            "gender": "FEMALE",
+            "level": 71,
+            "nature": "cobblemon:timid",
+            "ability": "owntempo",
+            "moveset": [
+                "quiverdance",
+                "gigadrain",
+                "sleeppowder",
+                "petaldance"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 10,
+                "special_defence": 0,
+                "speed": 10
+            },
+            "evs": {
+                "hp": 4,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 252,
+                "special_defence": 0,
+                "speed": 252
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:wide_lens"
+        },
+        {
+            "species": "cobblemon:meowscarada",
+            "nickname": "",
+            "gender": "MALE",
+            "level": 71,
+            "nature": "cobblemon:jolly",
+            "ability": "protean",
+            "moveset": [
+                "flowertrick",
+                "knockoff",
+                "playrough",
+                "uturn"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 5,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 15
+            },
+            "evs": {
+                "hp": 4,
+                "attack": 252,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 252
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:life_orb"
+        },
+        {
+            "species": "cobblemon:celebi",
+            "nickname": "",
+            "gender": "UNKNOWN",
+            "level": 72,
+            "nature": "cobblemon:modest",
+            "ability": "naturalcure",
+            "moveset": [
+                "psychic",
+                "gigadrain",
+                "earthpower",
+                "recover"
+            ],
+            "ivs": {
+                "hp": 10,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 10,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 252,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 252,
+                "special_defence": 4,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:leftovers"
+        },
+        {
+            "species": "cobblemon:hydrapple",
+            "nickname": "",
+            "gender": "MALE",
+            "level": 72,
+            "nature": "cobblemon:modest",
+            "ability": "supersweetsyrup",
+            "moveset": [
+                "ficklebeam",
+                "gigadrain",
+                "earthpower",
+                "sludgebomb"
+            ],
+            "ivs": {
+                "hp": 10,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 10,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 252,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 252,
+                "special_defence": 4,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:assault_vest"
+        }
+    ],
+    "winCommand": "",
+    "lossCommand": "",
+    "canOnlyBeatOnce": false,
+    "cooldownSeconds": 0
+}

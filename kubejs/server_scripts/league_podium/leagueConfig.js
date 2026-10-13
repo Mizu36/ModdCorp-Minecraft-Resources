@@ -884,10 +884,10 @@ global.leagueConfig = {
     // League
     //==============================================
 
-    e4_one:{
+    e4_grass:{
 
-        trainerId: "e4_one",
-        displayName: "",
+        trainerId: "elite_four_grass_chigusa",
+        displayName: "Elite Four Chigusa",
 
         requiredStages: ["challenging_e4", "gym_normal_complete"],
         blockedStages: ["e4_complete"], //Should trigger different team if this stage is blocked
@@ -896,12 +896,10 @@ global.leagueConfig = {
         removeStagesOnLoss: ["challenging_e4"],
 
         lockedMessage:
-            "",
+            "How did you get here?",
         blockedMessage:
             "If you are seeing this message, report it to Mizu on Discord. This is a bug. (e4_one blocked message)",
         completedMessage:
-            "",
-        gymCompletedMessage:
             "",
 
         moneyReward: 5000,
@@ -910,10 +908,10 @@ global.leagueConfig = {
         battle_music: ["moddcorp:elite_four_battle_full"]
     },
 
-    e4_two:{
+    e4_ghost:{
 
-        trainerId: "e4_two",
-        displayName: "",
+        trainerId: "elite_four_ghost_acerola",
+        displayName: "Elite Four Acerola",
 
         requiredStages: ["challenging_e4", "e4_one_complete"],
         blockedStages: ["e4_complete"], //Should trigger different team if this stage is blocked
@@ -927,8 +925,6 @@ global.leagueConfig = {
             "If you are seeing this message, report it to Mizu on Discord. This is a bug. (e4_two blocked message)",
         completedMessage:
             "",
-        gymCompletedMessage:
-            "",
 
         moneyReward: 5000,
         moneyLoss: 1000,
@@ -936,10 +932,10 @@ global.leagueConfig = {
         battle_music: ["moddcorp:elite_four_battle_full"]
     },
 
-    e4_three:{
+    e4_steel:{
 
-        trainerId: "e4_three",
-        displayName: "",
+        trainerId: "elite_four_steel_silas",
+        displayName: "Elite Four Silas",
 
         requiredStages: ["challenging_e4", "e4_one_complete", "e4_two_complete"],
         blockedStages: ["e4_complete"], //Should trigger different team if this stage is blocked
@@ -953,8 +949,6 @@ global.leagueConfig = {
             "If you are seeing this message, report it to Mizu on Discord. This is a bug. (e4_three blocked message)",
         completedMessage:
             "",
-        gymCompletedMessage:
-            "",
 
         moneyReward: 5000,
         moneyLoss: 1000,
@@ -962,10 +956,10 @@ global.leagueConfig = {
         battle_music: ["moddcorp:elite_four_battle_full"]
     },
 
-    e4_four:{
+    e4_dragon:{
 
-        trainerId: "e4_four",
-        displayName: "",
+        trainerId: "elite_four_dragon_ragnar",
+        displayName: "Elite Four Ragnar",
 
         requiredStages: ["challenging_e4", "e4_one_complete", "e4_two_complete", "e4_three_complete"],
         blockedStages: ["e4_complete"], //Should trigger different team if this stage is blocked
@@ -979,8 +973,6 @@ global.leagueConfig = {
             "If you are seeing this message, report it to Mizu on Discord. This is a bug. (e4_four blocked message)",
         completedMessage:
             "",
-        gymCompletedMessage:
-            "",
 
         moneyReward: 5000,
         moneyLoss: 1000,
@@ -990,8 +982,8 @@ global.leagueConfig = {
 
     champion:{
 
-        trainerId: "champion",
-        displayName: "",
+        trainerId: "champion_mizu",
+        displayName: "Champion Mizu",
 
         requiredStages: ["challenging_e4", "e4_one_complete", "e4_two_complete", "e4_three_complete", "e4_four_complete"],
         blockedStages: ["e4_complete"], //Should trigger different team if this stage is blocked
@@ -1006,22 +998,20 @@ global.leagueConfig = {
             "If you are seeing this message, report it to Mizu on Discord. This is a bug. (champion blocked message)",
         completedMessage:
             "",
-        gymCompletedMessage:
-            "",
-
+        
         moneyReward: 10000,
         moneyLoss: 1000,
 
-        battle_music: ["moddcorp:elite_four_battle_full"]
+        battle_music: ["moddcorp:champion_battle_full"]
     },
 
-    e4_one_rematch:{
+    e4_grass_rematch:{
 
-        trainerId: "e4_one_rematch",
-        displayName: "",
+        trainerId: "elite_four_grass_chigusa_rematch",
+        displayName: "Elite Four Chigusa",
+        averageAboveLevel: 74,
 
         requiredStages: ["challenging_e4_rematch"],
-        blockedStages: [], //Should trigger different team if this stage is blocked
         rewardStages: ["e4_one_rematch_complete"],
         completedStage: "e4_one_rematch_complete",
         removeStagesOnLoss: ["challenging_e4_rematch"],
@@ -1032,8 +1022,6 @@ global.leagueConfig = {
             "If you are seeing this message, report it to Mizu on Discord. This is a bug. (e4_one_rematch blocked message)",
         completedMessage:
             "",
-        gymCompletedMessage:
-            "",
 
         moneyReward: 7500,
         moneyLoss: 1000,
@@ -1041,13 +1029,13 @@ global.leagueConfig = {
         battle_music: ["moddcorp:elite_four_battle_full"]
     },
 
-    e4_two_rematch:{
+    e4_ghost_rematch:{
 
-        trainerId: "e4_two_rematch",
-        displayName: "",
+        trainerId: "elite_four_ghost_acerola",
+        displayName: "Elite Four Acerola",
+        averageAboveLevel: 75,
 
         requiredStages: ["challenging_e4_rematch", "e4_one_rematch_complete"],
-        blockedStages: [], //Should trigger different team if this stage is blocked
         rewardStages: ["e4_two_rematch_complete"],
         completedStage: "e4_two_rematch_complete",
         removeStagesOnLoss: ["challenging_e4_rematch", "e4_one_rematch_complete"],
@@ -1058,8 +1046,6 @@ global.leagueConfig = {
             "If you are seeing this message, report it to Mizu on Discord. This is a bug. (e4_two_rematch blocked message)",
         completedMessage:
             "",
-        gymCompletedMessage:
-            "",
 
         moneyReward: 7500,
         moneyLoss: 1000,
@@ -1067,13 +1053,13 @@ global.leagueConfig = {
         battle_music: ["moddcorp:elite_four_battle_full"]
     },
 
-    e4_three_rematch:{
+    e4_steel_rematch:{
 
-        trainerId: "e4_three_rematch",
-        displayName: "",
+        trainerId: "elite_four_steel_silas",
+        displayName: "Elite Four Silas",
+        averageAboveLevel: 76,
 
         requiredStages: ["challenging_e4_rematch", "e4_one_rematch_complete", "e4_two_rematch_complete"],
-        blockedStages: [], //Should trigger different team if this stage is blocked
         rewardStages: ["e4_three_rematch_complete"],
         completedStage: "e4_three_rematch_complete",
         removeStagesOnLoss: ["challenging_e4_rematch", "e4_one_rematch_complete", "e4_two_rematch_complete"],
@@ -1084,8 +1070,6 @@ global.leagueConfig = {
             "If you are seeing this message, report it to Mizu on Discord. This is a bug. (e4_three_rematch blocked message)",
         completedMessage:
             "",
-        gymCompletedMessage:
-            "",
 
         moneyReward: 7500,
         moneyLoss: 1000,
@@ -1093,13 +1077,13 @@ global.leagueConfig = {
         battle_music: ["moddcorp:elite_four_battle_full"]
     },
 
-    e4_four_rematch:{
+    e4_dragon_rematch:{
 
-        trainerId: "e4_four_rematch",
-        displayName: "",
+        trainerId: "elite_four_dragon_ragnar",
+        displayName: "Elite Four Ragnar",
+        averageAboveLevel: 78,
 
         requiredStages: ["challenging_e4_rematch", "e4_one_rematch_complete", "e4_two_rematch_complete", "e4_three_rematch_complete"],
-        blockedStages: [], //Should trigger different team if this stage is blocked
         rewardStages: ["e4_four_rematch_complete"],
         completedStage: "e4_four_rematch_complete",
         removeStagesOnLoss: ["challenging_e4_rematch", "e4_one_rematch_complete", "e4_two_rematch_complete", "e4_three_rematch_complete"],
@@ -1110,8 +1094,6 @@ global.leagueConfig = {
             "If you are seeing this message, report it to Mizu on Discord. This is a bug. (e4_four_rematch blocked message)",
         completedMessage:
             "",
-        gymCompletedMessage:
-            "",
 
         moneyReward: 7500,
         moneyLoss: 1000,
@@ -1121,11 +1103,11 @@ global.leagueConfig = {
 
     champion_rematch:{
 
-        trainerId: "champion_rematch",
-        displayName: "",
+        trainerId: "champion_mizu_rematch",
+        displayName: "Champion Mizu",
+        averageAboveLevel: 80,
 
         requiredStages: ["challenging_e4_rematch", "e4_one_rematch_complete", "e4_two_rematch_complete", "e4_three_rematch_complete", "e4_four_rematch_complete"],
-        blockedStages: [], //Should trigger different team if this stage is blocked
         rewardStages: ["e4_rematch_complete"],
         removeStages: ["e4_one_rematch_complete", "e4_two_rematch_complete", "e4_three_rematch_complete", "e4_four_rematch_complete", "challenging_e4_rematch"],
         completedStage: "e4_rematch_complete",
@@ -1137,13 +1119,11 @@ global.leagueConfig = {
             "If you are seeing this message, report it to Mizu on Discord. This is a bug. (champion_rematch blocked message)",
         completedMessage:
             "",
-        gymCompletedMessage:
-            "",
 
         moneyReward: 15000,
         moneyLoss: 1000,
 
-        battle_music: ["moddcorp:elite_four_battle_full"]
+        battle_music: ["moddcorp:champion_battle_full"]
     },
 
     //==============================================
