@@ -176,7 +176,7 @@ StartupEvents.registry("block", (event) => {
 // Custom Item and Block Registration
 //==============================================
 
-StartupEvents.registry('sound_event', event => {
+/*StartupEvents.registry('sound_event', event => {
     event.create('moddcorp:rby_trainer_battle')
 })
 
@@ -186,223 +186,61 @@ StartupEvents.registry('item', event => {
         .song('moddcorp:rby_trainer_battle', 179)
         .texture('moddcorp:item/music_disc_rby')
         .tooltip('Generation 1 (Red/Blue/Yellow)')
-})
+})*/
 
-StartupEvents.registry('sound_event', event => {
-    event.create('moddcorp:sgc_johto_trainer_battle')
-})
+StartupEvents.registry("sound_event", event => {
+    event.create("moddcorp:player_battle");
+    event.create("moddcorp:gym_leader_battle");
+    event.create("moddcorp:gym_leader_rematch");
+    event.create("moddcorp:elite_four_battle");
+    event.create("moddcorp:elite_four_rematch");
+    event.create("moddcorp:champion_battle");
+    event.create("moddcorp:champion_rematch");
+    event.create("moddcorp:boss_battle");
+    event.create("moddcorp:boss_pokemon_battle");
+    event.create("moddcorp:trainer_battle");
+    event.create("moddcorp:trainer_battle_alt");
+    event.create("moddcorp:trainer_battle_upbeat");
+    event.create("moddcorp:expert_battle");
+    event.create("moddcorp:wild_battle");
+    event.create("moddcorp:wild_battle_alt");
+});
 
-StartupEvents.registry('item', event => {
-    event.create('moddcorp:music_disc_sgc_johto_trainer_battle', 'music_disc')
-        .displayName('Silver/Gold/Crystal Johto Trainer Battle')
-        .song('moddcorp:sgc_johto_trainer_battle', 179)
-        .texture('moddcorp:item/music_disc_sgc_johto')
-        .tooltip('Generation 2 (Silver/Gold/Crystal)')
-})
+// [sound id, display name, length in seconds (rounded up), texture name]
+const MUSIC_DISCS = [
+    ["player_battle", "Player Battle", 278, "music_disc_player"],
+    ["gym_leader_battle", "Gym Leader Battle", 212, "music_disc_gym_leader"],
+    ["gym_leader_rematch", "Gym Leader Rematch", 209, "music_disc_gym_leader_rematch"],
+    ["elite_four_battle", "Elite Four Battle", 240, "music_disc_elite_four"],
+    ["elite_four_rematch", "Elite Four Rematch", 367, "music_disc_elite_four_rematch"],
+    ["champion_battle", "Champion Battle", 546, "music_disc_champion"],
+    ["champion_rematch", "Champion Rematch", 519, "music_disc_champion_rematch"],
+    ["boss_battle", "Boss Battle", 161, "music_disc_boss"],
+    ["boss_pokemon_battle", "Boss Pokemon Battle", 194, "music_disc_legendary"],
+    ["trainer_battle", "Trainer Battle", 163, "music_disc_trainer"],
+    ["trainer_battle_alt", "Trainer Battle (Alt)", 178, "music_disc_trainer_2"],
+    ["trainer_battle_upbeat", "Trainer Battle (Upbeat)", 264, "music_disc_trainer_3"],
+    ["expert_battle", "Expert Battle", 183, "music_disc_expert"],
+    ["wild_battle", "Wild Battle", 227, "music_disc_wild"],
+    ["wild_battle_alt", "Wild Battle (Alt)", 73, "music_disc_wild_2"]
+];
 
-StartupEvents.registry('sound_event', event => {
-    event.create('moddcorp:sgc_kanto_trainer_battle')
-})
+StartupEvents.registry("item", event => {
+    MUSIC_DISCS.forEach(([sound, name, seconds, texture]) => {
+        event.create("moddcorp:music_disc_" + sound, "music_disc")
+            .displayName(name)
+            .song("moddcorp:" + sound, seconds)
+            .texture("moddcorp:item/" + texture)
+            .tooltip(name + " Music");
+    });
+});
 
-StartupEvents.registry('item', event => {
-    event.create('moddcorp:music_disc_sgc_kanto_trainer_battle', 'music_disc')
-        .displayName('Silver/Gold/Crystal Kanto Trainer Battle')
-        .song('moddcorp:sgc_kanto_trainer_battle', 109)
-        .texture('moddcorp:item/music_disc_sgc_kanto')
-        .tooltip('Generation 2 (Silver/Gold/Crystal)')
-})
-
-StartupEvents.registry('sound_event', event => {
-    event.create('moddcorp:rse_trainer_battle')
-})
-
-StartupEvents.registry('item', event => {
-    event.create('moddcorp:music_disc_rse_trainer_battle', 'music_disc')
-        .displayName('Ruby/Sapphire/Emerald Trainer Battle')
-        .song('moddcorp:rse_trainer_battle', 179)
-        .texture('moddcorp:item/music_disc_rse')
-        .tooltip('Generation 3 (Ruby/Sapphire/Emerald)')
-})
-
-StartupEvents.registry('sound_event', event => {
-    event.create('moddcorp:frlg_trainer_battle')
-})
-
-StartupEvents.registry('item', event => {
-    event.create('moddcorp:music_disc_frlg_trainer_battle', 'music_disc')
-        .displayName('FireRed/LeafGreen Trainer Battle')
-        .song('moddcorp:frlg_trainer_battle', 192)
-        .texture('moddcorp:item/music_disc_frlg')
-        .tooltip('Generation 3 (FireRed/LeafGreen)')
-})
-
-StartupEvents.registry('sound_event', event => {
-    event.create('moddcorp:colosseum_trainer_battle_01')
-})
-
-StartupEvents.registry('item', event => {
-    event.create('moddcorp:music_disc_colosseum_normal_trainer_battle', 'music_disc')
-        .displayName('Colosseum Normal Trainer Battle')
-        .song('moddcorp:colosseum_trainer_battle_01', 136)
-        .texture('moddcorp:item/music_disc_colosseum_1')
-        .tooltip('Generation 3 (Colosseum)')
-})
-
-StartupEvents.registry('sound_event', event => {
-    event.create('moddcorp:colosseum_trainer_battle_02')
-})
-
-StartupEvents.registry('item', event => {
-    event.create('moddcorp:music_disc_colosseum_friendly_trainer_battle', 'music_disc')
-        .displayName('Colosseum Friendly Trainer Battle')
-        .song('moddcorp:colosseum_trainer_battle_02', 141)
-        .texture('moddcorp:item/music_disc_colosseum_2')
-        .tooltip('Generation 3 (Colosseum)')
-})
-
-StartupEvents.registry('sound_event', event => {
-    event.create('moddcorp:xd_trainer_battle')
-})
-
-StartupEvents.registry('item', event => {
-    event.create('moddcorp:music_disc_xd_trainer_battle', 'music_disc')
-        .displayName('XD Trainer Battle')
-        .song('moddcorp:xd_trainer_battle', 77)
-        .texture('moddcorp:item/music_disc_xd')
-        .tooltip('Generation 3 (XD: Gale of Darkness)')
-})
-
-StartupEvents.registry('sound_event', event => {
-    event.create('moddcorp:dpp_trainer_battle')
-})
-
-StartupEvents.registry('item', event => {
-    event.create('moddcorp:music_disc_dpp_trainer_battle', 'music_disc')
-        .displayName('Diamond/Pearl/Platinum Trainer Battle')
-        .song('moddcorp:dpp_trainer_battle', 179)
-        .texture('moddcorp:item/music_disc_dpp')
-        .tooltip('Generation 4 (Diamond/Pearl/Platinum)')
-})
-
-StartupEvents.registry('sound_event', event => {
-    event.create('moddcorp:hgss_johto_trainer_battle')
-})
-
-StartupEvents.registry('item', event => {
-    event.create('moddcorp:music_disc_hgss_johto_trainer_battle', 'music_disc')
-        .displayName('HeartGold/SoulSilver Johto Trainer Battle')
-        .song('moddcorp:hgss_johto_trainer_battle', 179)
-        .texture('moddcorp:item/music_disc_hgss_johto')
-        .tooltip('Generation 4 (HeartGold/SoulSilver)')
-})
-
-StartupEvents.registry('sound_event', event => {
-    event.create('moddcorp:hgss_kanto_trainer_battle')
-})
-
-StartupEvents.registry('item', event => {
-    event.create('moddcorp:music_disc_hgss_kanto_trainer_battle', 'music_disc')
-        .displayName('HeartGold/SoulSilver Kanto Trainer Battle')
-        .song('moddcorp:hgss_kanto_trainer_battle', 179)
-        .texture('moddcorp:item/music_disc_hgss_kanto')
-        .tooltip('Generation 4 (HeartGold/SoulSilver)')
-})
-
-StartupEvents.registry('sound_event', event => {
-    event.create('moddcorp:bw_trainer_battle')
-})
-
-StartupEvents.registry('item', event => {
-    event.create('moddcorp:music_disc_bw_trainer_battle', 'music_disc')
-        .displayName('Black/White Trainer Battle')
-        .song('moddcorp:bw_trainer_battle', 179)
-        .texture('moddcorp:item/music_disc_bw')
-        .tooltip('Generation 5 (Black/White)')
-})
-
-StartupEvents.registry('sound_event', event => {
-    event.create('moddcorp:xy_trainer_battle')
-})
-
-StartupEvents.registry('item', event => {
-    event.create('moddcorp:music_disc_xy_trainer_battle', 'music_disc')
-        .displayName('X/Y Trainer Battle')
-        .song('moddcorp:xy_trainer_battle', 300)
-        .texture('moddcorp:item/music_disc_xy')
-        .tooltip('Generation 6 (X/Y)')
-})
-
-StartupEvents.registry('sound_event', event => {
-    event.create('moddcorp:oras_trainer_battle')
-})
-
-StartupEvents.registry('item', event => {
-    event.create('moddcorp:music_disc_oras_trainer_battle', 'music_disc')
-        .displayName('Omega Ruby/Alpha Sapphire Trainer Battle')
-        .song('moddcorp:oras_trainer_battle', 300)
-        .texture('moddcorp:item/music_disc_oras')
-        .tooltip('Generation 6 (Omega Ruby/Alpha Sapphire)')
-})
-
-StartupEvents.registry('sound_event', event => {
-    event.create('moddcorp:sm_trainer_battle')
-})
-
-StartupEvents.registry('item', event => {
-    event.create('moddcorp:music_disc_sm_trainer_battle', 'music_disc')
-        .displayName('Sun/Moon Trainer Battle')
-        .song('moddcorp:sm_trainer_battle', 300)
-        .texture('moddcorp:item/music_disc_sm')
-        .tooltip('Generation 7 (Sun/Moon)')
-})
-
-StartupEvents.registry('sound_event', event => {
-    event.create('moddcorp:swsh_trainer_battle')
-})
-
-StartupEvents.registry('item', event => {
-    event.create('moddcorp:music_disc_swsh_trainer_battle', 'music_disc')
-        .displayName('Sword/Shield Trainer Battle')
-        .song('moddcorp:swsh_trainer_battle', 299)
-        .texture('moddcorp:item/music_disc_swsh')
-        .tooltip('Generation 8 (Sword/Shield)')
-})
-
-StartupEvents.registry('sound_event', event => {
-    event.create('moddcorp:sv_trainer_battle')
-})
-
-StartupEvents.registry('item', event => {
-    event.create('moddcorp:music_disc_sv_trainer_battle', 'music_disc')
-        .displayName('Scarlet/Violet Trainer Battle')
-        .song('moddcorp:sv_trainer_battle', 299)
-        .texture('moddcorp:item/music_disc_sv')
-        .tooltip('Generation 9 (Scarlet/Violet)')
-})
-
-StartupEvents.registry('sound_event', event => {
-    event.create('moddcorp:champions_trainer_battle')
-})
-
-StartupEvents.registry('item', event => {
-    event.create('moddcorp:music_disc_champions_trainer_battle', 'music_disc')
-        .displayName('Champions Trainer Battle')
-        .song('moddcorp:champions_trainer_battle', 277)
-        .texture('moddcorp:item/music_disc_champions')
-        .tooltip('Generation 9 (Champions)')
-})
-
-StartupEvents.registry('sound_event', event => {
-    event.create('moddcorp:ado_battle')
-})
-
-StartupEvents.registry('item', event => {
-    event.create('moddcorp:music_disc_ado_battle', 'music_disc')
-        .displayName('Ado Trainer Battle')
-        .song('moddcorp:ado_battle', 380)
-        .texture('moddcorp:item/music_disc_ado')
-        .tooltip('Buriki no Dance')
-})
+StartupEvents.registry("item", event => {
+  event.create("moddcorp:legendary_whistle")
+    .displayName("Legendary Whistle")
+    .maxStackSize(1)
+    .tooltip("A whistle that calls forth a legendary Cobblemon")
+});
 
 StartupEvents.registry("block", event => {
   event.create("sunlit_cobblemon:cobblemon_spawner")
