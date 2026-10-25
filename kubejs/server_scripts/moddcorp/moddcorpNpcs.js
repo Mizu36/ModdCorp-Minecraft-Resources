@@ -412,8 +412,8 @@ const locationCoords = {
   chesnosubway: {x: 764, z: 426, y: 65},
   shiromori: {x: 2395, z: 707, y: 70},
   chesnoairship: {x: 707, z: 413, y: 72},
-  stratos: {x: 100, z: 100, y: 100}, //placeholder for sky location
-  battlemountain: {x: -100, z: -100, y: 100} //placeholder for battle mountain location
+  stratos: {x: 1890, z: -256, y: 240},
+  battlemountain: {x: 3534, z: 226, y: 129}
 };
 
 function getClosestLocation(entity, candidates) {
