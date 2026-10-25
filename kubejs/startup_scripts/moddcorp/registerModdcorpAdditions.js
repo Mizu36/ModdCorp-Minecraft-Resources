@@ -168,33 +168,6 @@ global.runLeaguePodium = function(entity){
 
 };
 
-StartupEvents.registry("block", (event) => {
-  event
-    .create("moddcorp:league_podium", "cardinal")
-    .tagBlock("minecraft:mineable/pickaxe")
-    .tagBlock("minecraft:mineable/axe")
-    .tagBlock("minecraft:needs_stone_tool")
-    .waterlogged()
-    .box(1, 0, 1, 15, 2, 15)
-    .defaultCutout()
-    .item((item) => {
-      item.tooltip(Text.translatable("block.sunlit_cobblemon.trainer_podium.description").gray());
-      item.modelJson({
-        parent: "sunlit_cobblemon:block/kubejs/trainer_podium",
-      });
-    })
-    .model("sunlit_cobblemon:block/kubejs/trainer_podium")
-    .blockEntity((blockInfo) => {
-      blockInfo.enableSync();
-      blockInfo.initialData({encounterId: ""});
-      blockInfo.serverTick(200, 0, (entity) => {
-        global.runLeaguePodium(entity);
-      });
-    })
-});
-
-
-
 //==============================================
 // Custom Item and Block Registration
 //==============================================
@@ -253,16 +226,39 @@ StartupEvents.registry("item", event => {
     .tooltip("A whistle that calls forth a legendary Cobblemon")
 });
 
+StartupEvents.registry("block", (event) => {
+  event
+    .create("moddcorp:league_podium", "cardinal")
+    .tagBlock("minecraft:mineable/pickaxe")
+    .tagBlock("minecraft:mineable/axe")
+    .tagBlock("minecraft:needs_stone_tool")
+    .waterlogged()
+    .box(1, 0, 1, 15, 2, 15)
+    .defaultCutout()
+    .item((item) => {
+      item.tooltip(Text.translatable("block.sunlit_cobblemon.trainer_podium.description").gray());
+      item.modelJson({
+        parent: "sunlit_cobblemon:block/kubejs/trainer_podium",
+      });
+    })
+    .model("sunlit_cobblemon:block/kubejs/trainer_podium")
+    .blockEntity((blockInfo) => {
+      blockInfo.enableSync();
+      blockInfo.initialData({encounterId: ""});
+      blockInfo.serverTick(200, 0, (entity) => {
+        global.runLeaguePodium(entity);
+      });
+    })
+});
+
 StartupEvents.registry("block", event => {
-  event.create("sunlit_cobblemon:cobblemon_spawner")
+  event.create("moddcorp:cobblemon_spawner")
     .displayName("Cobblemon Spawner")
     .soundType("amethyst")
     .hardness(1)
     .resistance(10)
     .noDrops()
     .tagBlock("minecraft:mineable/pickaxe")
-    // Vanilla's spawner texture has transparent "cage" gaps, so it must render
-    // like glass or neighboring blocks get their faces culled through it.
     .defaultCutout()
     .model("minecraft:block/spawner")
     .item(item => {
