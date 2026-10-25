@@ -2,7 +2,11 @@ const Float = Java.loadClass("java.lang.Float");
 const UUID = Java.loadClass("java.util.UUID");
 const BlockPos = Java.loadClass("net.minecraft.core.BlockPos");
 const PokemonProperties = Java.loadClass("com.cobblemon.mod.common.api.pokemon.PokemonProperties");
-const COBBLEMON_SPAWNER_ID = "sunlit_cobblemon:cobblemon_spawner";
+const COBBLEMON_SPAWNER_ID = "moddcorp:cobblemon_spawner";
+
+function isCobblemonSpawnerBlock(block) {
+    return block.id == COBBLEMON_SPAWNER_ID;
+}
 const SPAWNER_ACTIVE_RANGE = 32;
 
 global.tickCobblemonSpawner = function(entity) {
@@ -55,7 +59,10 @@ function playerWithinRange(level, x, y, z, range) {
     return false;
 }
 
-BlockEvents.placed(COBBLEMON_SPAWNER_ID, event => {
+BlockEvents.placed(event => {
+
+    if (!isCobblemonSpawnerBlock(event.block))
+        return;
 
     // Items from /cobblespawner give carry their data in BlockEntityTag, which
     // vanilla already copies onto the block entity before this event fires.
@@ -72,7 +79,7 @@ BlockEvents.rightClicked(event => {
     if (event.hand != "MAIN_HAND")
         return;
 
-    if (event.block.id != COBBLEMON_SPAWNER_ID)
+    if (!isCobblemonSpawnerBlock(event.block))
         return;
 
     let spawner = getSpawnerData(event.block);
