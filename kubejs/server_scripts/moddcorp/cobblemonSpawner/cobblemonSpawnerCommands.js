@@ -105,7 +105,7 @@ function createSpawnerCommand(ctx) {
 
     let block = player.level.getBlock(hit.blockPos);
     
-    if (block.id != COBBLEMON_SPAWNER_ID) {
+    if (!isCobblemonSpawnerBlock(block)) {
         player.tell("Look at a Cobblemon spawner block.");
         return 0;
     }
@@ -128,7 +128,7 @@ function setSpawnerPropertyCommand(ctx) {
 
     let block = player.level.getBlock(hit.blockPos);
 
-    if (block.id != COBBLEMON_SPAWNER_ID) {
+    if (!isCobblemonSpawnerBlock(block)) {
 
         player.tell("Look at a Cobblemon spawner.");
 
@@ -201,7 +201,7 @@ function infoSpawnerCommand(ctx) {
 
     let block = player.level.getBlock(hit.blockPos);
 
-    if (block.id != COBBLEMON_SPAWNER_ID) {
+    if (!isCobblemonSpawnerBlock(block)) {
 
         player.tell("Look at a Cobblemon spawner.");
 
