@@ -2,8 +2,26 @@ console.info("[MODDCORP] registerModdcorpAdditions.js loaded");
 
 
 //==============================================
-// League Podium Logic
+// Logic
 //==============================================
+
+const cardScannerRotations = {
+  floor: { x: 0, y: { north: 0, east: 90, south: 180, west: 270 } },
+  wall: { x: 90, y: { north: 0, east: 90, south: 180, west: 270 } },
+  ceiling: { x: 180, y: { north: 180, east: 270, south: 0, west: 90 } },
+};
+const cardScannerVariants = {};
+Object.keys(cardScannerRotations).forEach((face) => {
+  ["north", "east", "south", "west"].forEach((facing) => {
+    [true, false].forEach((powered) => {
+      let rot = cardScannerRotations[face];
+      let state = { model: "moddcorp:block/card_scanner" };
+      if (rot.x) state.x = rot.x;
+      if (rot.y[facing]) state.y = rot.y[facing];
+      cardScannerVariants[`face=${face},facing=${facing},powered=${powered}`] = state;
+    });
+  });
+});
 
 function resetNearbyTrainers (level, block, forceRemoval) {
   let noTrainers = false;
@@ -176,18 +194,6 @@ StartupEvents.registry("block", (event) => {
 // Custom Item and Block Registration
 //==============================================
 
-/*StartupEvents.registry('sound_event', event => {
-    event.create('moddcorp:rby_trainer_battle')
-})
-
-StartupEvents.registry('item', event => {
-    event.create('moddcorp:music_disc_rby_trainer_battle', 'music_disc')
-        .displayName('Red/Blue/Yellow Trainer Battle')
-        .song('moddcorp:rby_trainer_battle', 179)
-        .texture('moddcorp:item/music_disc_rby')
-        .tooltip('Generation 1 (Red/Blue/Yellow)')
-})*/
-
 StartupEvents.registry("sound_event", event => {
     event.create("moddcorp:player_battle");
     event.create("moddcorp:gym_leader_battle");
@@ -277,5 +283,20 @@ StartupEvents.registry("block", event => {
         global.tickCobblemonSpawner(entity);
       });
     });
+});
+
+StartupEvents.registry("block", (event) => {
+  let builder = event
+    .create("moddcorp:card_scanner", "button")
+    .displayName("Card Scanner")
+    .ticksToStayPressed(200)
+    .textureAll("moddcorp:block/card_scanner")
+    .hardness(-1)
+    .resistance(3600000)
+    .model("moddcorp:block/card_scanner")
+    .item((item) => {
+      item.modelJson({ parent: "moddcorp:block/card_scanner" });
+    });
+  builder.blockstateJson = { variants: cardScannerVariants };
 });
 
