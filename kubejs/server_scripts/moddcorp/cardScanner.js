@@ -4,6 +4,27 @@ global.pendingCardScans = global.pendingCardScans || {};
 
 global.cardScannerKey = (level, pos) => `scanner:${level.dimension}|${pos.x},${pos.y},${pos.z}`;
 
+// Swaps in the denied block for 3 seconds, then restores the idle scanner (the stage is stored by position, so it carries over)
+global.flashCardScannerDenied = (server, level, x, y, z) => {
+  let block = level.getBlock(x, y, z);
+  if (block.id !== "moddcorp:card_scanner") return;
+  let props = { face: String(block.properties.face), facing: String(block.properties.facing), powered: "false" };
+  block.set("moddcorp:card_scanner_denied", props);
+  server.scheduleInTicks(60, () => {
+    let current = level.getBlock(x, y, z);
+    if (current.id !== "moddcorp:card_scanner_denied") return;
+    current.set("moddcorp:card_scanner", props);
+  });
+};
+
+BlockEvents.rightClicked("moddcorp:card_scanner_denied", (e) => {
+  e.cancel();
+});
+
+BlockEvents.rightClicked("moddcorp:card_scanner_approved", (e) => {
+  e.cancel();
+});
+
 BlockEvents.rightClicked("moddcorp:card_scanner", (e) => {
   // e.cancel() exits the handler immediately, so the work runs first and the cancel (which stops the button press) comes last
   if (String(e.hand).toUpperCase() === "MAIN_HAND") {
@@ -15,6 +36,7 @@ BlockEvents.rightClicked("moddcorp:card_scanner", (e) => {
 
       if (requiredStage !== "" && !player.stages.has(requiredStage)) {
         player.tell(Text.red("Access denied."));
+        global.flashCardScannerDenied(e.server, e.level, e.block.x, e.block.y, e.block.z);
       } else {
         global.pendingCardScans[String(player.uuid)] = {
           dimension: String(e.level.dimension),
@@ -97,7 +119,7 @@ global.swipeCardScanner = (player) => {
   let level = player.level;
   if (String(level.dimension) !== pending.dimension) return false;
   let block = level.getBlock(pending.x, pending.y, pending.z);
-  if (block.id !== "moddcorp:card_scanner") return false;
+  if (block.id !== "moddcorp:card_scanner") return block.id === "moddcorp:card_scanner_approved";
   let dx = Number(player.x) - (Number(pending.x) + 0.5);
   let dy = Number(player.y) - (Number(pending.y) + 0.5);
   let dz = Number(player.z) - (Number(pending.z) + 0.5);
@@ -109,10 +131,17 @@ global.swipeCardScanner = (player) => {
   let requiredStage = data.contains(scannerKey) ? String(data.getString(scannerKey)) : "";
   if (requiredStage !== "" && !player.stages.has(requiredStage)) return false;
 
-  if (String(block.properties.powered) === "true") return true;
   try {
-    let state = block.blockState;
-    state.block.press(state, level, block.pos);
+    let props = { face: String(block.properties.face), facing: String(block.properties.facing), powered: "false" };
+    block.set("moddcorp:card_scanner_approved", props);
+    let approvedBlock = level.getBlock(pending.x, pending.y, pending.z);
+    let state = approvedBlock.blockState;
+    state.block.press(state, level, approvedBlock.pos);
+    // Restore the idle scanner shortly after the 10 second press expires
+    player.server.scheduleInTicks(210, () => {
+      let current = level.getBlock(pending.x, pending.y, pending.z);
+      if (current.id === "moddcorp:card_scanner_approved") current.set("moddcorp:card_scanner", props);
+    });
   } catch (err) {
     console.error(`[CARD SCANNER] press failed: ${err}`);
     return false;

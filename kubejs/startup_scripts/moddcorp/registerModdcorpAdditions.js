@@ -5,23 +5,28 @@ console.info("[MODDCORP] registerModdcorpAdditions.js loaded");
 // Logic
 //==============================================
 
+// The model's front texture is rotated 180 so it reads upright on walls, so floor and ceiling add 180 to y to compensate
 const cardScannerRotations = {
-  floor: { x: 0, y: { north: 0, east: 90, south: 180, west: 270 } },
+  floor: { x: 0, y: { north: 180, east: 270, south: 0, west: 90 } },
   wall: { x: 90, y: { north: 0, east: 90, south: 180, west: 270 } },
-  ceiling: { x: 180, y: { north: 180, east: 270, south: 0, west: 90 } },
+  ceiling: { x: 180, y: { north: 0, east: 90, south: 180, west: 270 } },
 };
-const cardScannerVariants = {};
-Object.keys(cardScannerRotations).forEach((face) => {
-  ["north", "east", "south", "west"].forEach((facing) => {
-    [true, false].forEach((powered) => {
-      let rot = cardScannerRotations[face];
-      let state = { model: "moddcorp:block/card_scanner" };
-      if (rot.x) state.x = rot.x;
-      if (rot.y[facing]) state.y = rot.y[facing];
-      cardScannerVariants[`face=${face},facing=${facing},powered=${powered}`] = state;
+// The denied look is a separate block the script swaps in for 3 seconds (button blocks don't support custom properties)
+function buildCardScannerVariants(idleModel, poweredModel) {
+  let variants = {};
+  Object.keys(cardScannerRotations).forEach((face) => {
+    ["north", "east", "south", "west"].forEach((facing) => {
+      [true, false].forEach((powered) => {
+        let rot = cardScannerRotations[face];
+        let state = { model: "moddcorp:block/" + (powered ? poweredModel : idleModel) };
+        if (rot.x) state.x = rot.x;
+        if (rot.y[facing]) state.y = rot.y[facing];
+        variants[`face=${face},facing=${facing},powered=${powered}`] = state;
+      });
     });
   });
-});
+  return variants;
+}
 
 function resetNearbyTrainers (level, block, forceRemoval) {
   let noTrainers = false;
@@ -297,6 +302,30 @@ StartupEvents.registry("block", (event) => {
     .item((item) => {
       item.modelJson({ parent: "moddcorp:block/card_scanner" });
     });
-  builder.blockstateJson = { variants: cardScannerVariants };
+  builder.blockstateJson = { variants: buildCardScannerVariants("card_scanner", "card_scanner") };
+
+  // The client predicts a button press on right click, so the idle block looks idle even when pressed;
+  // the script swaps to this block (approved look) only for a real swipe
+  let approved = event
+    .create("moddcorp:card_scanner_approved", "button")
+    .displayName("Card Scanner (Approved)")
+    .ticksToStayPressed(200)
+    .textureAll("moddcorp:block/card_scanner_approved")
+    .hardness(-1)
+    .resistance(3600000)
+    .noItem()
+    .model("moddcorp:block/card_scanner_approved");
+  approved.blockstateJson = { variants: buildCardScannerVariants("card_scanner_approved", "card_scanner_approved") };
+
+  let denied = event
+    .create("moddcorp:card_scanner_denied", "button")
+    .displayName("Card Scanner (Denied)")
+    .ticksToStayPressed(200)
+    .textureAll("moddcorp:block/card_scanner_denied")
+    .hardness(-1)
+    .resistance(3600000)
+    .noItem()
+    .model("moddcorp:block/card_scanner_denied");
+  denied.blockstateJson = { variants: buildCardScannerVariants("card_scanner_denied", "card_scanner_denied") };
 });
 
