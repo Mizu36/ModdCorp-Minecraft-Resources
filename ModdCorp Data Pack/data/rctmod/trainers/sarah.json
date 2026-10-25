@@ -1,0 +1,102 @@
+{
+    "displayName": "Stefan",
+    "team": [
+        {
+            "species": "cobblemon:chingling",
+            "gender": "MALE",
+            "level": 0,
+            "nature": "cobblemon:",
+            "ability": "",
+            "moveset": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:"
+        },
+        {
+            "species": "cobblemon:lumineon",
+            "gender": "FEMALE",
+            "level": 0,
+            "nature": "cobblemon:",
+            "ability": "",
+            "moveset": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:"
+        },
+        {
+            "species": "cobblemon:arboliva",
+            "gender": "FEMALE",
+            "level": 0,
+            "nature": "cobblemon:",
+            "ability": "",
+            "moveset": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:"
+        }
+    ],
+    "winCommand": "",
+    "lossCommand": "",
+    "canOnlyBeatOnce": false,
+    "cooldownSeconds": 0
+}
