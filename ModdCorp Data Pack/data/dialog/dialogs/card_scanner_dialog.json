@@ -1,0 +1,63 @@
+{
+	"id": "card_scanner_dialog",
+	"title": "card scanner",
+	"description": "Card Scanner",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"text": "Card Scanner",
+				"color": "white"
+			},
+			"text": [
+				{
+					"text": "Please swipe your card."
+				}
+			],
+			"options": [
+				{
+					"text": {
+						"text": "Swipe card"
+					},
+					"target": "swiped",
+					"command": [
+						"moddcorpswipe"
+					]
+				},
+				{
+					"text": {
+						"text": "Exit"
+					},
+					"target": "exit",
+					"command": []
+				}
+			]
+		},
+		{
+			"id": "swiped",
+			"endDialog": true,
+			"speaker": {
+				"text": "Card Scanner",
+				"color": "white"
+			},
+			"text": [
+				{
+					"text": "Card accepted."
+				}
+			]
+		},
+		{
+			"id": "exit",
+			"endDialog": true,
+			"speaker": {
+				"text": "Card Scanner",
+				"color": "white"
+			},
+			"text": [
+				{
+					"text": "Card scanner idle."
+				}
+			]
+		}
+	]
+}
