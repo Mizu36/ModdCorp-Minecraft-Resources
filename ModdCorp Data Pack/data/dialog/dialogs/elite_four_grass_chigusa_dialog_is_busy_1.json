@@ -1,0 +1,20 @@
+{
+	"id": "elite_four_grass_chigusa_choice_dialog_is_busy_1",
+	"title": "elite_four_grass_chigusa is_busy_1",
+	"description": "dialog.npc.elite_four_grass_chigusa.dialog.is_busy_1",
+	"entries": [
+		{
+			"id": "start",
+			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"speaker": {
+				"translate": "dialog.npc.elite_four_grass_chigusa.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.elite_four_grass_chigusa.dialog.is_busy_1.line_0"
+				}
+			]
+		}
+	]
+}

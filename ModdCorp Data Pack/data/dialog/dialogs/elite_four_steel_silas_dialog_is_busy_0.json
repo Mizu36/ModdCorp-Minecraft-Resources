@@ -1,0 +1,20 @@
+{
+	"id": "elite_four_steel_silas_choice_dialog_is_busy_0",
+	"title": "elite_four_steel_silas is_busy_0",
+	"description": "dialog.npc.elite_four_steel_silas.dialog.is_busy_0",
+	"entries": [
+		{
+			"id": "start",
+			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"speaker": {
+				"translate": "dialog.npc.elite_four_steel_silas.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.elite_four_steel_silas.dialog.is_busy_0.line_0"
+				}
+			]
+		}
+	]
+}

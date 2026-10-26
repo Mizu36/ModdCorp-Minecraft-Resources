@@ -1,0 +1,64 @@
+{
+	"id": "elite_four_ghost_acerola_rematch_choice_dialog_challenge",
+	"title": "elite_four_ghost_acerola_rematch challenge",
+	"description": "dialog.npc.elite_four_ghost_acerola_rematch.dialog.challenge",
+	"entries": [
+		{
+			"id": "start",
+			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"speaker": {
+				"translate": "dialog.npc.elite_four_ghost_acerola_rematch.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.elite_four_ghost_acerola_rematch.dialog.challenge.line_0"
+				}
+			],
+			"options": [
+				{
+					"text": {
+						"translate": "dialog.npc.elite_four_ghost_acerola_rematch.dialog.challenge.option_0"
+					},
+					"target": "battle_start",
+					"command": [
+						"moddcorpbattle e4_ghost_rematch"
+					]
+				},
+				{
+					"text": {
+						"translate": "dialog.npc.elite_four_ghost_acerola_rematch.dialog.challenge.option_1"
+					},
+					"target": "end",
+					"command": []
+				}
+			]
+		},
+		{
+			"id": "battle_start",
+			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"speaker": {
+				"translate": "dialog.npc.elite_four_ghost_acerola_rematch.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.elite_four_ghost_acerola_rematch.dialog.battle_start.line_0"
+				}
+			]
+		},
+		{
+			"id": "end",
+			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"speaker": {
+				"translate": "dialog.npc.elite_four_ghost_acerola_rematch.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.elite_four_ghost_acerola_rematch.dialog.challenge.line_2"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,64 @@
+{
+	"id": "champion_mizu_rematch_choice_dialog_challenge",
+	"title": "champion_mizu_rematch challenge",
+	"description": "dialog.npc.champion_mizu_rematch.dialog.challenge",
+	"entries": [
+		{
+			"id": "start",
+			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"speaker": {
+				"translate": "dialog.npc.champion_mizu_rematch.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.champion_mizu_rematch.dialog.challenge.line_0"
+				}
+			],
+			"options": [
+				{
+					"text": {
+						"translate": "dialog.npc.champion_mizu_rematch.dialog.challenge.option_0"
+					},
+					"target": "battle_start",
+					"command": [
+						"moddcorpbattle champion_rematch"
+					]
+				},
+				{
+					"text": {
+						"translate": "dialog.npc.champion_mizu_rematch.dialog.challenge.option_1"
+					},
+					"target": "end",
+					"command": []
+				}
+			]
+		},
+		{
+			"id": "battle_start",
+			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"speaker": {
+				"translate": "dialog.npc.champion_mizu_rematch.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.champion_mizu_rematch.dialog.battle_start.line_0"
+				}
+			]
+		},
+		{
+			"id": "end",
+			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"speaker": {
+				"translate": "dialog.npc.champion_mizu_rematch.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.champion_mizu_rematch.dialog.challenge.line_2"
+				}
+			]
+		}
+	]
+}

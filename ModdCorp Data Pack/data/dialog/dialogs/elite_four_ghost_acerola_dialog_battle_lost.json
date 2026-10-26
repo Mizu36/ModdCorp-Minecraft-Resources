@@ -1,0 +1,20 @@
+{
+	"id": "elite_four_ghost_acerola_choice_dialog_battle_lost",
+	"title": "elite_four_ghost_acerola battle_lost",
+	"description": "dialog.npc.elite_four_ghost_acerola.dialog.battle_lost",
+	"entries": [
+		{
+			"id": "start",
+			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"speaker": {
+				"translate": "dialog.npc.elite_four_ghost_acerola.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.elite_four_ghost_acerola.dialog.battle_lost.line_0"
+				}
+			]
+		}
+	]
+}

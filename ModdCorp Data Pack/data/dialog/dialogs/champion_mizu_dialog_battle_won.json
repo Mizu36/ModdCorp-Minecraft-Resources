@@ -1,0 +1,20 @@
+{
+	"id": "champion_mizu_choice_dialog_battle_won",
+	"title": "champion_mizu battle_won",
+	"description": "dialog.npc.champion_mizu.dialog.battle_won",
+	"entries": [
+		{
+			"id": "start",
+			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"speaker": {
+				"translate": "dialog.npc.champion_mizu.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.champion_mizu.dialog.battle_won.line_0"
+				}
+			]
+		}
+	]
+}

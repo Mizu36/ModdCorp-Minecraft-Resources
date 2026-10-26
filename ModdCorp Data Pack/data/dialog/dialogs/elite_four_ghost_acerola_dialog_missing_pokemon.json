@@ -1,0 +1,20 @@
+{
+	"id": "elite_four_ghost_acerola_choice_dialog_missing_pokemon",
+	"title": "elite_four_ghost_acerola missing_pokemon",
+	"description": "dialog.npc.elite_four_ghost_acerola.dialog.missing_pokemon",
+	"entries": [
+		{
+			"id": "start",
+			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"speaker": {
+				"translate": "dialog.npc.elite_four_ghost_acerola.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.elite_four_ghost_acerola.dialog.missing_pokemon.line_0"
+				}
+			]
+		}
+	]
+}
