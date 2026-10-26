@@ -114,7 +114,6 @@ global.npcBattleTargets = global.npcBattleTargets || {};
 
 // NPC key (dialog.npc.<key>.name) -> league encounter fought through /moddcorpbattle
 global.gymTrainerEncounters = {
-  gym_bug_trainer: "bug_trainer_01",
   gym_leader_bug_shino: "bug_leader",
   gym_leader_ground_ashley: "ground_leader",
   gym_leader_water_kamiya: "water_leader",
