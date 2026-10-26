@@ -23,12 +23,18 @@ const npcMap = new Map([
   ["gym_leader_ice_glacia", "humanoid_slim/gym_leader_ice_glacia"],
   ["gym_leader_normal_maddie", "humanoid_slim/gym_leader_normal_maddie"],
   ["gym_leader_poison_kinoko", "humanoid_slim/gym_leader_poison_kinoko"],
-  ["gym_leader_water_kamiya", "humanoid_slim/gym_leader_water_kamiya"]
+  ["gym_leader_water_kamiya", "humanoid_slim/gym_leader_water_kamiya"],
+  ["elite_four_dragon_ragnar", "humanoid/elite_four_dragon_ragnar"],
+  ["elite_four_steel_silas", "humanoid/elite_four_steel_silas"],
+  ["elite_four_ghost_acerola", "humanoid_slim/elite_four_ghost_acerola"],
+  ["elite_four_grass_chigusa", "humanoid_slim/elite_four_grass_chigusa"],
+  ["champion_mizu", "humanoid_slim/champion_mizu"]
 ]);
 global.villagerHomeTypes = Array.from(npcMap.keys());
 const specialHomeTypes = ["nurse", "clerk", "shipmaster", "aviator", "subway", "gym_bug_trainer", "gym_leader_bug_shino",
   "gym_leader_electric_voltaire", "gym_leader_fire_tim", "gym_leader_ground_ashley", "gym_leader_ice_glacia",
-  "gym_leader_normal_maddie", "gym_leader_poison_kinoko", "gym_leader_water_kamiya"];
+  "gym_leader_normal_maddie", "gym_leader_poison_kinoko", "gym_leader_water_kamiya", "elite_four_dragon_ragnar",
+  "elite_four_steel_silas", "elite_four_ghost_acerola", "elite_four_grass_chigusa", "champion_mizu"];
 const getBoundNpc = (level, block, boundNpc) => {
   let nearbyNPCs = level.getLevel()
     .getServer()

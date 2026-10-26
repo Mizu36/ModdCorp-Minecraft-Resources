@@ -122,6 +122,17 @@ global.gymTrainerEncounters = {
   gym_leader_electric_voltaire: "electric_leader",
   gym_leader_ice_glacia: "ice_leader",
   gym_leader_normal_maddie: "normal_leader",
+  elite_four_grass_chigusa: "e4_grass",
+  elite_four_ghost_acerola: "e4_ghost",
+  elite_four_steel_silas: "e4_steel",
+  elite_four_dragon_ragnar: "e4_dragon",
+  champion_mizu: "champion",
+  // Rematch variants reuse the same NPC; handleNpcGymTrainer switches to "<npc>_rematch" while the player is on the rematch run
+  elite_four_grass_chigusa_rematch: "e4_grass_rematch",
+  elite_four_ghost_acerola_rematch: "e4_ghost_rematch",
+  elite_four_steel_silas_rematch: "e4_steel_rematch",
+  elite_four_dragon_ragnar_rematch: "e4_dragon_rematch",
+  champion_mizu_rematch: "champion_rematch",
 };
 
 // NPCs that have the full set of state dialogs (<npc>_choice_dialog_<state>); the others only have "challenge"
@@ -134,6 +145,16 @@ global.gymTrainerFullDialogs = [
   "gym_leader_electric_voltaire",
   "gym_leader_ice_glacia",
   "gym_leader_normal_maddie",
+  "elite_four_grass_chigusa",
+  "elite_four_ghost_acerola",
+  "elite_four_steel_silas",
+  "elite_four_dragon_ragnar",
+  "champion_mizu",
+  "elite_four_grass_chigusa_rematch",
+  "elite_four_ghost_acerola_rematch",
+  "elite_four_steel_silas_rematch",
+  "elite_four_dragon_ragnar_rematch",
+  "champion_mizu_rematch",
 ];
 
 // Number of random variants for states with several lines (dialog ids get a _<n> suffix)
@@ -223,6 +244,9 @@ global.showNpcBattleResult = (server, player, encounterId, playerWon) => {
 };
 
 global.handleNpcGymTrainer = (e, level, server, target, player, npcId) => {
+  // A player on the rematch run (or who has finished it) gets the rematch encounter and dialogs
+  const onRematch = player.stages.has("challenging_e4_rematch") || player.stages.has("e4_rematch_complete");
+  if (onRematch && global.gymTrainerEncounters[`${npcId}_rematch`]) npcId = `${npcId}_rematch`;
   const encounterId = global.gymTrainerEncounters[npcId];
   if (!encounterId) return;
   global.npcBattleTargets[String(player.uuid)] = String(target.getUuid());
