@@ -5,6 +5,7 @@
 	"entries": [
 		{
 			"id": "start",
+			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
 			"speaker": {
 				"translate": "dialog.npc.gym_leader_normal_maddie.name",
 				"color": "white"
