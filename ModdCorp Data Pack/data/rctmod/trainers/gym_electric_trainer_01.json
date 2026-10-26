@@ -30,7 +30,7 @@
                 "speed": 0
             },
             "shiny": false,
-            "heldItem": "minecraft:air"
+            "heldItem": "cobblemon:light_ball"
         },
         {
             "species": "cobblemon:jolteon",
