@@ -1012,8 +1012,8 @@ global.leagueConfig = {
         averageAboveLevel: 74,
 
         requiredStages: ["challenging_e4_rematch"],
-        rewardStages: ["e4_one_rematch_complete"],
-        completedStage: "e4_one_rematch_complete",
+        rewardStages: ["e4_one_complete"],
+        completedStage: "e4_one_complete",
         removeStagesOnLoss: ["challenging_e4_rematch"],
 
         lockedMessage:
@@ -1035,10 +1035,10 @@ global.leagueConfig = {
         displayName: "Elite Four Acerola",
         averageAboveLevel: 75,
 
-        requiredStages: ["challenging_e4_rematch", "e4_one_rematch_complete"],
-        rewardStages: ["e4_two_rematch_complete"],
-        completedStage: "e4_two_rematch_complete",
-        removeStagesOnLoss: ["challenging_e4_rematch", "e4_one_rematch_complete"],
+        requiredStages: ["challenging_e4_rematch", "e4_one_complete"],
+        rewardStages: ["e4_two_complete"],
+        completedStage: "e4_two_complete",
+        removeStagesOnLoss: ["challenging_e4_rematch", "e4_one_complete"],
 
         lockedMessage:
             "",
@@ -1059,10 +1059,10 @@ global.leagueConfig = {
         displayName: "Elite Four Silas",
         averageAboveLevel: 76,
 
-        requiredStages: ["challenging_e4_rematch", "e4_one_rematch_complete", "e4_two_rematch_complete"],
-        rewardStages: ["e4_three_rematch_complete"],
-        completedStage: "e4_three_rematch_complete",
-        removeStagesOnLoss: ["challenging_e4_rematch", "e4_one_rematch_complete", "e4_two_rematch_complete"],
+        requiredStages: ["challenging_e4_rematch", "e4_one_complete", "e4_two_complete"],
+        rewardStages: ["e4_three_complete"],
+        completedStage: "e4_three_complete",
+        removeStagesOnLoss: ["challenging_e4_rematch", "e4_one_complete", "e4_two_complete"],
 
         lockedMessage:
             "",
@@ -1083,10 +1083,10 @@ global.leagueConfig = {
         displayName: "Elite Four Ragnar",
         averageAboveLevel: 78,
 
-        requiredStages: ["challenging_e4_rematch", "e4_one_rematch_complete", "e4_two_rematch_complete", "e4_three_rematch_complete"],
+        requiredStages: ["challenging_e4_rematch", "e4_one_complete", "e4_two_complete", "e4_three_complete"],
         rewardStages: ["e4_four_rematch_complete"],
         completedStage: "e4_four_rematch_complete",
-        removeStagesOnLoss: ["challenging_e4_rematch", "e4_one_rematch_complete", "e4_two_rematch_complete", "e4_three_rematch_complete"],
+        removeStagesOnLoss: ["challenging_e4_rematch", "e4_one_complete", "e4_two_complete", "e4_three_complete"],
 
         lockedMessage:
             "",
@@ -1107,11 +1107,11 @@ global.leagueConfig = {
         displayName: "Champion Mizu",
         averageAboveLevel: 80,
 
-        requiredStages: ["challenging_e4_rematch", "e4_one_rematch_complete", "e4_two_rematch_complete", "e4_three_rematch_complete", "e4_four_rematch_complete"],
+        requiredStages: ["challenging_e4_rematch", "e4_one_complete", "e4_two_complete", "e4_three_complete", "e4_four_complete"],
         rewardStages: ["e4_rematch_complete"],
-        removeStages: ["e4_one_rematch_complete", "e4_two_rematch_complete", "e4_three_rematch_complete", "e4_four_rematch_complete", "challenging_e4_rematch"],
+        removeStages: ["e4_one_complete", "e4_two_complete", "e4_three_complete", "e4_four_complete", "challenging_e4_rematch"],
         completedStage: "e4_rematch_complete",
-        removeStagesOnLoss: ["challenging_e4_rematch", "e4_one_rematch_complete", "e4_two_rematch_complete", "e4_three_rematch_complete", "e4_four_rematch_complete"],
+        removeStagesOnLoss: ["challenging_e4_rematch", "e4_one_complete", "e4_two_complete", "e4_three_complete", "e4_four_complete"],
 
         lockedMessage:
             "",
