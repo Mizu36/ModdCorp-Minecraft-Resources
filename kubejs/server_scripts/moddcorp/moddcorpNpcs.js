@@ -423,9 +423,10 @@ global.leagueTP = (server, player, location) => {
     }
     server.runCommandSilent(`tp ${player.getUuid()} ${locationCoords["leaguechambers"].x} ${locationCoords["leaguechambers"].y} ${locationCoords["leaguechambers"].z}`);
   } else if (location == "entrance") {
-    if (player.stages.has("challenging_e4") || player.stages.has("challenging_e4_rematch")){ //Player is leaving the league chambers through their own will, remove the challenging stages
-      player.stages.remove("challenging_e4");
-      player.stages.remove("challenging_e4_rematch");
+    for (const stage of ["e4_one_complete", "e4_two_complete", "e4_three_complete", "e4_four_complete", "challenging_e4", "challenging_e4_rematch"]) { //Remove all stages related to the elite four challenge
+      if (player.stages.has(stage)) {
+        player.stages.remove(stage);
+      }
     }
     server.runCommandSilent(`tp ${player.getUuid()} ${locationCoords["leaguedoor"].x} ${locationCoords["leaguedoor"].y} ${locationCoords["leaguedoor"].z}`);
   }
