@@ -1,7 +1,7 @@
 {
-	"id": "aviator_choice_dialog_need_to_travel_sky_early",
-	"title": "aviator need_to_travel_sky_early",
-	"description": "dialog.npc.aviator.dialog.need_to_travel_sky_early",
+	"id": "aviator_choice_dialog_need_to_travel_stratos_early",
+	"title": "aviator need_to_travel_stratos_early",
+	"description": "dialog.npc.aviator.dialog.need_to_travel_stratos_early",
 	"entries": [
 		{
 			"id": "start",
@@ -11,7 +11,7 @@
 			},
 			"text": [
 				{
-					"translate": "dialog.npc.aviator.dialog.need_to_travel_sky_early.line_0"
+					"translate": "dialog.npc.aviator.dialog.need_to_travel_stratos_early.line_0"
 				}
 			],
 			"portraits": [
@@ -24,7 +24,7 @@
 			"options": [
 				{
 					"text": {
-						"translate": "dialog.npc.aviator.dialog.need_to_travel_sky_early.option_0"
+						"translate": "dialog.npc.aviator.dialog.need_to_travel_stratos_early.option_0"
 					},
 					"target": "end",
 					"command": [
@@ -33,7 +33,7 @@
 				},
 				{
 					"text": {
-						"translate": "dialog.npc.aviator.dialog.need_to_travel_sky_early.option_1"
+						"translate": "dialog.npc.aviator.dialog.need_to_travel_stratos_early.option_1"
 					},
 					"target": "end",
 					"command": [
