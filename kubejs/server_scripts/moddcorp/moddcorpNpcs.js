@@ -93,6 +93,22 @@ ServerEvents.commandRegistry(event => {
   );
 
   event.register(
+    Commands.literal("moddcorpleaguetp")
+      .then(Commands.argument("location", Arguments.STRING.create(event))
+        .executes(ctx => {
+          const player = ctx.source.player;
+
+          if (!player) return 0;
+
+          const server = ctx.source.server;
+          const location = Arguments.STRING.getResult(ctx, "location");
+          global.leagueTP(server, player, location);
+          return 1;
+        })
+      )
+  );
+
+  event.register(
     Commands.literal("moddcorpreject") // shows the npc's rejected line when travel is declined
       .then(Commands.argument("npc", Arguments.STRING.create(event))
         .executes(ctx => {
@@ -375,9 +391,44 @@ global.handleNpcAviator = (e, level, server, target, player) => {
   }
 };
 
+global.handleNpcLeague = (e, level, server, target, player) => {
+  const stage = getCurrentStage(player);
+  if (player.stages.has("challenging_e4")){ //Remove the challenging_e4 stage if it exists
+    (player.stages.remove("challenging_e4"))
+  } else if (player.stages.has("challenging_e4_rematch")) { //Remove the challenging_e4_rematch stage if it exists
+    (player.stages.remove("challenging_e4_rematch"))
+  }
+  if (stage < 9) {
+    server.runCommandSilent(`dialog ${player.getUuid()} show ${player.username} league_dialog_not_ready`); //Player has not completed all gyms and is not ready for the league challenge
+  } else if (stage == 9){
+    server.runCommandSilent(`dialog ${player.getUuid()} show ${player.username} league_choice_dialog_ready`); //Player has completed all gyms and is ready for the league challenge
+  } else if (stage == 10) {
+    server.runCommandSilent(`dialog ${player.getUuid()} show ${player.username} league_choice_dialog_rematch_ready`); //Player has completed the league and is ready for a rematch
+  } else if (stage > 10) {
+    server.runCommandSilent(`dialog ${player.getUuid()} show ${player.username} league_choice_dialog_rematch_completed`); //Can still rematch again, but uses same team as the original rematch challenge
+  }
+};
+
 global.travelToLocation = (server, player, npc, location) => {
   server.runCommandSilent(`dialog ${player.getUuid()} show ${player.username} ${npc}_unique_traveling`);
   server.runCommandSilent(`tp ${player.getUuid()} ${locationCoords[location].x} ${locationCoords[location].y} ${locationCoords[location].z}`);
+};
+
+global.leagueTP = (server, player, location) => {
+  if (location == "chamber"){
+    if (player.stages.has("e4_complete")){
+      player.stages.add("challenging_e4_rematch")
+    } else {
+      player.stages.add("challenging_e4")
+    }
+    server.runCommandSilent(`tp ${player.getUuid()} ${locationCoords["leaguechambers"].x} ${locationCoords["leaguechambers"].y} ${locationCoords["leaguechambers"].z}`);
+  } else if (location == "entrance") {
+    if (player.stages.has("challenging_e4") || player.stages.has("challenging_e4_rematch")){ //Player is leaving the league chambers through their own will, remove the challenging stages
+      player.stages.remove("challenging_e4");
+      player.stages.remove("challenging_e4_rematch");
+    }
+    server.runCommandSilent(`tp ${player.getUuid()} ${locationCoords["leaguedoor"].x} ${locationCoords["leaguedoor"].y} ${locationCoords["leaguedoor"].z}`);
+  }
 };
 
 function getCurrentStage(player) {
@@ -392,9 +443,13 @@ function getCurrentStage(player) {
   // 7: gym_electric_complete
   // 8: gym_ice_complete
   // 9: gym_normal_complete
-  // 10: league_complete
+  // 10: e4_complete
+  // 11: e4_rematch_complete
   //Retrieves the player's current stage to determine what dialog to build
-  if (player.stages.has("league_complete")) {
+  if (player.stages.has("e4_rematch_complete")) {
+    return 11;
+  }
+  if (player.stages.has("e4_complete")) {
     return 10;
   }
   if (player.stages.has("gym_normal_complete")) {
@@ -436,7 +491,9 @@ const locationCoords = {
   shiromori: {x: 2395, z: 707, y: 70},
   chesnoairship: {x: 707, z: 413, y: 72},
   stratos: {x: 1890, z: -256, y: 240},
-  battlemountain: {x: 3534, z: 226, y: 129}
+  battlemountain: {x: 3534, z: 226, y: 129},
+  leaguedoor: {x: 3501, z: 224, y: 119},
+  leaguechambers: {x: 3503, z: 224, y: 33}
 };
 
 function getClosestLocation(entity, candidates) {

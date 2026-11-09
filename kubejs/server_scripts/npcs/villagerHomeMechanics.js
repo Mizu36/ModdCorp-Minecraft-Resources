@@ -15,6 +15,7 @@ const npcMap = new Map([
   ["shipmaster", "humanoid/shipmaster"],
   ["aviator", "humanoid/aviator"],
   ["subway", "humanoid/subway"],
+  ["league", "humanoid/league"],
   ["gym_bug_trainer", "humanoid/gym_bug_trainer"],
   ["gym_leader_bug_shino", "humanoid/gym_leader_bug_shino"],
   ["gym_leader_electric_voltaire", "humanoid/gym_leader_electric_voltaire"],
@@ -31,7 +32,7 @@ const npcMap = new Map([
   ["champion_mizu", "humanoid_slim/champion_mizu"]
 ]);
 global.villagerHomeTypes = Array.from(npcMap.keys());
-const specialHomeTypes = ["nurse", "clerk", "shipmaster", "aviator", "subway", "gym_bug_trainer", "gym_leader_bug_shino",
+const specialHomeTypes = ["nurse", "clerk", "shipmaster", "aviator", "subway", "league", "gym_bug_trainer", "gym_leader_bug_shino",
   "gym_leader_electric_voltaire", "gym_leader_fire_tim", "gym_leader_ground_ashley", "gym_leader_ice_glacia",
   "gym_leader_normal_maddie", "gym_leader_poison_kinoko", "gym_leader_water_kamiya", "elite_four_dragon_ragnar",
   "elite_four_steel_silas", "elite_four_ghost_acerola", "elite_four_grass_chigusa", "champion_mizu"];
