@@ -1,0 +1,20 @@
+{
+	"id": "league_dialog_not_ready",
+	"title": "league not_ready",
+	"description": "dialog.npc.league.dialog.not_ready.line_0",
+	"entries": [
+		{
+			"id": "start",
+			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"speaker": {
+				"translate": "dialog.npc.league.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.league.dialog.not_ready.line_0"
+				}
+			]
+		}
+	]
+}

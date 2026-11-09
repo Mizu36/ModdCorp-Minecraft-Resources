@@ -1,0 +1,63 @@
+{
+	"id": "league_choice_dialog_ready",
+	"title": "league ready",
+	"description": "dialog.npc.league.dialog.ready.line_0",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.league.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.league.dialog.ready.line_0"
+				}
+			],
+			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"options": [
+				{
+					"text": {
+						"translate": "dialog.npc.league.dialog.ready.option_0"
+					},
+					"target": "start_challenge",
+					"command": [
+						"moddcorpleaguetp chamber"
+					]
+				},
+				{
+					"text": {
+						"translate": "dialog.npc.league.dialog.ready.option_1"
+					},
+					"target": "end",
+					"command": []
+				}
+			]
+		},
+		{
+			"id": "start_challenge",
+			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"speaker": {
+				"translate": "dialog.npc.league.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.league.dialog.start_challenge.line_0"
+				}
+			]
+		},
+		{
+			"id": "end",
+			"speaker": {
+				"translate": "dialog.npc.league.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.league.dialog.cancel.line_0"
+				}
+			]
+		}
+	]
+}
