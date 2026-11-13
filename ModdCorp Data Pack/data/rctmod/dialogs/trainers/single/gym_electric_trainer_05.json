@@ -1,0 +1,29 @@
+{
+  "missing_pokemon": [
+    "Why are you wasting me time, you don't have any healthy Pokemon with you."
+  ],
+  "battle_start": [
+    "Let's hurry up and get this over with."
+  ],
+  "battle_lost": [
+    "Okay, you are worthy of seeing Voltaire. I'll add your key card to the whitelist for his office."
+  ],
+  "battle_won": [
+    "That was boring. Please make it actually worth my time next battle."
+  ],
+  "on_cooldown": [
+    "..."
+  ],
+  "is_busy": [
+    "I'm busy, go away."
+  ],
+  "done_looser": [
+    "THIS IS A BUG, IF YOU SEE THIS MESSAGE, SCREENSHOT AND REPORT IT TO MIZU ON DISCORD. (done_looser electric_trainer_05)"
+  ],
+  "done_winner": [
+    "THIS IS A BUG, IF YOU SEE THIS MESSAGE, SCREENSHOT AND REPORT IT TO MIZU ON DISCORD. (done_winner electric_trainer_05)"
+  ],
+  "done_generic": [
+    "I can't battle you anymore."
+  ]
+}

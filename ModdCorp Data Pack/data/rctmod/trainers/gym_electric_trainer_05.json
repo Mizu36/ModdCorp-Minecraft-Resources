@@ -1,0 +1,105 @@
+{
+    "displayName": "Admin Max",
+    "team": [
+        {
+            "species": "cobblemon:dedenne",
+            "nickname": "Mimi",
+            "gender": "FEMALE",
+            "level": 36,
+            "nature": "cobblemon:timid",
+            "ability": "cheekpouch",
+            "moveset": [
+                "charm",
+                "rest",
+                "snore",
+                "paraboliccharge"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": true,
+            "heldItem": "cobblemon:shuca_berry"
+        },
+        {
+            "species": "cobblemon:electrode",
+            "nickname": "",
+            "gender": "MALE",
+            "level": 37,
+            "nature": "cobblemon:hasty",
+            "ability": "soundproof",
+            "moveset": [
+                "metalsound",
+                "electroball",
+                "magnetrise",
+                "selfdestruct"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "minecraft:air"
+        },
+        {
+            "species": "cobblemon:electivire",
+            "nickname": "",
+            "gender": "MALE",
+            "level": 38,
+            "nature": "cobblemon:adamant",
+            "ability": "motordrive",
+            "moveset": [
+                "thunderpunch",
+                "screech",
+                "metronome",
+                "doubleedge"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:sitrus_berry"
+        }
+    ],
+    "winCommand": "",
+    "lossCommand": "",
+    "canOnlyBeatOnce": false,
+    "cooldownSeconds": 0
+}

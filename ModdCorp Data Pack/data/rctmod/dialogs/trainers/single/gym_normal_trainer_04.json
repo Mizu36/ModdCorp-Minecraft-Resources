@@ -1,0 +1,29 @@
+{
+  "missing_pokemon": [
+    "No Pokémon? Sweet. More time for my high score. Uh, I mean... quarterly projections."
+  ],
+  "battle_start": [
+    "A battle? Sure, whatever. Just lemme pause my... spreadsheet."
+  ],
+  "battle_lost": [
+    "Dang. Lost the battle AND my Paddle Ball streak. Rough day."
+  ],
+  "battle_won": [
+    "Huh. I won? Wasn't even paying attention. New high score, though!"
+  ],
+  "on_cooldown": [
+    "Can't battle yet. I'm, uh... processing some very important data."
+  ],
+  "is_busy": [
+    "Busy right now. You wouldn't interrupt a man doing his job, would you?"
+  ],
+  "done_looser": [
+    "THIS IS A BUG, IF YOU SEE THIS MESSAGE, SCREENSHOT AND REPORT IT TO MIZU ON DISCORD. (done_looser normal_trainer_04)"
+  ],
+  "done_winner": [
+    "THIS IS A BUG, IF YOU SEE THIS MESSAGE, SCREENSHOT AND REPORT IT TO MIZU ON DISCORD. (done_winner normal_trainer_04)"
+  ],
+  "done_generic": [
+    "I can't battle you anymore!"
+  ]
+}

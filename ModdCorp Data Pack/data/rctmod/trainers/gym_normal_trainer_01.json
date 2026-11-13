@@ -1,17 +1,17 @@
 {
-    "displayName": "",
+    "displayName": "Receptionist Bibi",
     "team": [
         {
-            "species": "cobblemon:",
-            "gender": "MALE",
-            "level": 0,
-            "nature": "cobblemon:",
-            "ability": "",
+            "species": "cobblemon:indeedee",
+            "gender": "FEMALE",
+            "level": 44,
+            "nature": "cobblemon:modest",
+            "ability": "innerfocus",
             "moveset": [
-                "",
-                "",
-                "",
-                ""
+                "psybeam",
+                "disarmingvoice",
+                "calmmind",
+                "psychic"
             ],
             "ivs": {
                 "hp": 0,
@@ -33,16 +33,16 @@
             "heldItem": "minecraft:air"
         },
         {
-            "species": "cobblemon:",
+            "species": "cobblemon:delcatty",
             "gender": "FEMALE",
-            "level": 0,
-            "nature": "cobblemon:",
-            "ability": "",
+            "level": 45,
+            "nature": "cobblemon:jolly",
+            "ability": "cutecharm",
             "moveset": [
-                "",
-                "",
-                "",
-                ""
+                "fakeout",
+                "doubleedge",
+                "playrough",
+                "sing"
             ],
             "ivs": {
                 "hp": 0,
@@ -61,7 +61,7 @@
                 "speed": 0
             },
             "shiny": false,
-            "heldItem": "cobblemon:"
+            "heldItem": "cobblemon:sitrus_berry"
         }
     ],
     "winCommand": "",

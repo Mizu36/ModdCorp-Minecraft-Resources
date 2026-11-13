@@ -1,21 +1,21 @@
 {
   "missing_pokemon": [
-    ""
+    "Why don't you have any healthy Pokemon with you?"
   ],
   "battle_start": [
-    ""
+    "Hey! Martin's my name! Let's get started!"
   ],
   "battle_lost": [
-    ""
+    "Well I utterly lost. Luckily for you, I can give you permissions to advance to the next floor."
   ],
   "battle_won": [
-    ""
+    "Come back when you're ready for another battle!"
   ],
   "on_cooldown": [
-    ""
+    "I need a moment to recover before we can battle again."
   ],
   "is_busy": [
-    ""
+    "I'm busy right now, why don't you come back later?"
   ],
   "done_looser": [
     "THIS IS A BUG, IF YOU SEE THIS MESSAGE, SCREENSHOT AND REPORT IT TO MIZU ON DISCORD. (done_looser electric_trainer_03)"
@@ -24,6 +24,6 @@
     "THIS IS A BUG, IF YOU SEE THIS MESSAGE, SCREENSHOT AND REPORT IT TO MIZU ON DISCORD. (done_winner electric_trainer_03)"
   ],
   "done_generic": [
-    ""
+    "I can't battle you anymore."
   ]
 }

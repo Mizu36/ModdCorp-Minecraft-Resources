@@ -1,0 +1,102 @@
+{
+    "displayName": "Salaryman Steve",
+    "team": [
+        {
+            "species": "cobblemon:bouffalant",
+            "gender": "MALE",
+            "level": 45,
+            "nature": "cobblemon:adamant",
+            "ability": "reckless",
+            "moveset": [
+                "headcharge",
+                "throatchop",
+                "reversal",
+                "swordsdance"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "minecraft:air"
+        },
+        {
+            "species": "cobblemon:obstagoon",
+            "gender": "FEMALE",
+            "level": 45,
+            "nature": "cobblemon:adamant",
+            "ability": "guts",
+            "moveset": [
+                "obstruct",
+                "nightslash",
+                "crosschop",
+                "takedown"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:silk_scarf"
+        },
+        {
+            "species": "cobblemon:ursaluna",
+            "gender": "MALE",
+            "level": 46,
+            "nature": "cobblemon:adamant",
+            "ability": "bulletproof",
+            "moveset": [
+                "headlongrush",
+                "playrough",
+                "rest",
+                "snore"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:sitrus_berry"
+        }
+    ],
+    "winCommand": "",
+    "lossCommand": "",
+    "canOnlyBeatOnce": false,
+    "cooldownSeconds": 0
+}
