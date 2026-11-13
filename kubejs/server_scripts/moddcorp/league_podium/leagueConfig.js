@@ -447,7 +447,7 @@ global.leagueConfig = {
                 count: 1,
             },
             {
-                id: "simpletms:burningjealousy",
+                id: "simpletms:tm_burningjealousy",
                 count: 1,
             }
         ],
@@ -539,9 +539,9 @@ global.leagueConfig = {
         isLeader: true,
         averageAboveLevel: 43,
 
-        requiredStages: ["gym_electric_trainer_01_complete", "gym_electric_trainer_02_complete", "gym_electric_trainer_03_complete"],
+        requiredStages: ["key_card_leader"],
         rewardStages: ["gym_electric_complete"],
-        removeStages: ["gym_electric_trainer_01_complete", "gym_electric_trainer_02_complete", "gym_electric_trainer_03_complete"],
+        removeStages: ["gym_electric_trainer_01_complete", "gym_electric_trainer_02_complete", "gym_electric_trainer_03_complete", "gym_electric_trainer_04_complete", "gym_electric_trainer_05_complete"],
         completedStage: "gym_electric_complete",
 
         lockedMessage:
@@ -557,7 +557,7 @@ global.leagueConfig = {
                 count: 1,
             },
             {
-                id: "simpletms:",
+                id: "simpletms:tm_electroball",
                 count: 1,
             }
         ],
@@ -568,22 +568,22 @@ global.leagueConfig = {
     electric_trainer_01: {
 
         trainerId: "gym_electric_trainer_01",
-        displayName: "",
+        displayName: "Receptionist Giga",
         isLeader: false,
 
         requiredStages: ["gym_fire_complete"],
-        rewardStages: ["gym_electric_trainer_01_complete"],
+        rewardStages: ["gym_electric_trainer_01_complete", "key_card_floor_1"],
         completedStage: "gym_electric_trainer_01_complete",
         gymCompletedStage: "gym_electric_complete",
 
         lockedMessage:
-            "",
+            "I'm so sorry, but we aren't taking any walk-ins today. I hope you understand.",
         blockedMessage:
             "If you are seeing this message, report it to Mizu on Discord. This is a bug. (electric_trainer_01 blocked message)",
         completedMessage:
-            "",
+            "I let the staff know that you are allowed to enter. Use this key card at the stair case in the corner, past the bathrooms and model propeller.",
         gymCompletedMessage:
-            "",
+            "Congratulations on defeating Gym Leader Voltaire! You can come and go as you like, you're key cards will continue to work even after you leave.",
 
         moneyReward: 3600,
         moneyLoss: 1500,
@@ -592,7 +592,7 @@ global.leagueConfig = {
     electric_trainer_02: {
 
         trainerId: "gym_electric_trainer_02",
-        displayName: "",
+        displayName: "Electrician Gazpacho",
         isLeader: false,
 
         requiredStages: ["gym_fire_complete"],
@@ -601,13 +601,13 @@ global.leagueConfig = {
         gymCompletedStage: "gym_electric_complete",
 
         lockedMessage:
-            "",
+            "You aren't supposed to be here. Leave before I call security.",
         blockedMessage:
             "If you are seeing this message, report it to Mizu on Discord. This is a bug. (electric_trainer_02 blocked message)",
         completedMessage:
-            "",
+            "You are truly a superb trainer! Unfortunately, I don't have the credentials to allow you access to the next floor.",
         gymCompletedMessage:
-            "",
+            "Feel free to look around. You've earned all our respect.",
 
         moneyReward: 3600,
         moneyLoss: 1500,
@@ -616,22 +616,70 @@ global.leagueConfig = {
     electric_trainer_03: {
 
         trainerId: "gym_electric_trainer_03",
-        displayName: "",
+        displayName: "Engineer Martin",
         isLeader: false,
 
         requiredStages: ["gym_fire_complete"],
-        rewardStages: ["gym_electric_trainer_03_complete"],
+        rewardStages: ["gym_electric_trainer_03_complete", "key_card_floor_2"],
         completedStage: "gym_electric_trainer_03_complete",
         gymCompletedStage: "gym_electric_complete",
 
         lockedMessage:
-            "",
+            "Why are you here? You don't have the required key card. Did someone let you in?",
         blockedMessage:
             "If you are seeing this message, report it to Mizu on Discord. This is a bug. (electric_trainer_03 blocked message)",
         completedMessage:
-            "",
+            "I wasn't expecting to lose. I've given you access to the Administration floor. Interact with the card scanner at the staircase to proceed.",
         gymCompletedMessage:
-            "",
+            "Beating me was one thing, but defeating Voltaire? You have really defied my expectations.",
+
+        moneyReward: 3600,
+        moneyLoss: 1500,
+    },
+
+    electric_trainer_04: {
+
+        trainerId: "gym_electric_trainer_04",
+        displayName: "Technician Tessa",
+        isLeader: false,
+
+        requiredStages: ["gym_fire_complete"],
+        rewardStages: ["gym_electric_trainer_04_complete"],
+        completedStage: "gym_electric_trainer_04_complete",
+        gymCompletedStage: "gym_electric_complete",
+
+        lockedMessage:
+            "I am curious how you got in here, but you should leave, quickly.",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (electric_trainer_04 blocked message)",
+        completedMessage:
+            "Now that was an exhilerating battle, but, uh, I'm don't have a way to give you access to the Admin floor. Sorry.'",
+        gymCompletedMessage:
+            "Good to see you again. How was your battle with Voltaire?",
+
+        moneyReward: 3600,
+        moneyLoss: 1500,
+    },
+
+    electric_trainer_05: {
+
+        trainerId: "gym_electric_trainer_05",
+        displayName: "Admin Max",
+        isLeader: false,
+
+        requiredStages: ["gym_fire_complete"],
+        rewardStages: ["gym_electric_trainer_05_complete", "key_card_leader"],
+        completedStage: "gym_electric_trainer_05_complete",
+        gymCompletedStage: "gym_electric_complete",
+
+        lockedMessage:
+            "Get out of here before I call security.",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (electric_trainer_05 blocked message)",
+        completedMessage:
+            "I've given you the necessary permissions to see the Gym Leader. He's in the next room over. Now please leave me be.",
+        gymCompletedMessage:
+            "Are you still here? Please leave, I have a lot of work to do.",
 
         moneyReward: 3600,
         moneyLoss: 1500,
@@ -666,7 +714,7 @@ global.leagueConfig = {
                 count: 1,
             },
             {
-                id: "simpletms:",
+                id: "simpletms:tm_iceshard",
                 count: 1,
             }
         ],
@@ -775,7 +823,7 @@ global.leagueConfig = {
                 count: 1,
             },
             {
-                id: "simpletms:",
+                id: "simpletms:tm_fakeout",
                 count: 1,
             }
         ],
@@ -786,7 +834,7 @@ global.leagueConfig = {
     normal_trainer_01: {
 
         trainerId: "gym_normal_trainer_01",
-        displayName: "",
+        displayName: "Receptionist Bibi",
         isLeader: false,
 
         requiredStages: ["gym_ice_complete"],
@@ -795,13 +843,13 @@ global.leagueConfig = {
         gymCompletedStage: "gym_normal_complete",
 
         lockedMessage:
-            "",
+            "Welcome to ModdCorp! Unfortunately, you don't meet our battle requirements! But you're welcome to look around! Isn't that WONDERFUL?",
         blockedMessage:
             "If you are seeing this message, report it to Mizu on Discord. This is a bug. (normal_trainer_01 blocked message)",
         completedMessage:
-            "",
+            "Congratulations on your victory! Please enjoy your complimentary access to the rest of the building! Complimentary means free!",
         gymCompletedMessage:
-            "",
+            "You've beaten all eight gyms? You're ready to face the Cobblemon League!",
 
         moneyReward: 2000,
         moneyLoss: 2000,
@@ -810,7 +858,7 @@ global.leagueConfig = {
     normal_trainer_02: {
 
         trainerId: "gym_normal_trainer_02",
-        displayName: "",
+        displayName: "Salaryman George",
         isLeader: false,
 
         requiredStages: ["gym_ice_complete"],
@@ -819,13 +867,13 @@ global.leagueConfig = {
         gymCompletedStage: "gym_normal_complete",
 
         lockedMessage:
-            "",
+            "Y-you can't battle here yet! You need to defeat the other gyms first! Wait... did the CEO send you to test me?!",
         blockedMessage:
             "If you are seeing this message, report it to Mizu on Discord. This is a bug. (normal_trainer_02 blocked message)",
         completedMessage:
-            "",
+            "Y-you won! That's fine! Everything's fine! Just... please don't tell the CEO how badly I lost!",
         gymCompletedMessage:
-            "",
+            "YOU BEAT MADDIEPLY?! Keep your voice down! The CEO might HEAR you!",
 
         moneyReward: 2000,
         moneyLoss: 2000,
@@ -834,7 +882,7 @@ global.leagueConfig = {
     normal_trainer_03: {
 
         trainerId: "gym_normal_trainer_03",
-        displayName: "",
+        displayName: "Salaryman Florence",
         isLeader: false,
 
         requiredStages: ["gym_ice_complete"],
@@ -843,13 +891,61 @@ global.leagueConfig = {
         gymCompletedStage: "gym_normal_complete",
 
         lockedMessage:
-            "",
+            "You need to beat seven gyms before we can battle? Great. Guess I'll get back to these 400 reports.",
         blockedMessage:
             "If you are seeing this message, report it to Mizu on Discord. This is a bug. (normal_trainer_03 blocked message)",
         completedMessage:
-            "",
+            "That was a nice break. Thanks. Now, if you'll excuse me, these reports won't falsify themselves.",
         gymCompletedMessage:
-            "",
+            "You beat MaddiePly? Any chance the CEO didn't notice?",
+
+        moneyReward: 2000,
+        moneyLoss: 2000,
+    },
+
+    normal_trainer_04: {
+
+        trainerId: "gym_normal_trainer_04",
+        displayName: "Salaryman Porridge",
+        isLeader: false,
+
+        requiredStages: ["gym_ice_complete"],
+        rewardStages: ["gym_normal_trainer_04_complete"],
+        completedStage: "gym_normal_trainer_04_complete",
+        gymCompletedStage: "gym_normal_complete",
+
+        lockedMessage:
+            "Seven badges first, apparently. Anyway, could you stand over there? You're blocking my screen.",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (normal_trainer_04 blocked message)",
+        completedMessage:
+            "Nice one. Hey, while you're upstairs, could you tell Maddie that I'm working really hard?",
+        gymCompletedMessage:
+            "You beat MaddiePly? Cool. Think you could get her to unblock the games website?",
+
+        moneyReward: 2000,
+        moneyLoss: 2000,
+    },
+
+    normal_trainer_05: {
+
+        trainerId: "gym_normal_trainer_05",
+        displayName: "Salaryman Steve",
+        isLeader: false,
+
+        requiredStages: ["gym_ice_complete"],
+        rewardStages: ["gym_normal_trainer_05_complete"],
+        completedStage: "gym_normal_trainer_05_complete",
+        gymCompletedStage: "gym_normal_complete",
+
+        lockedMessage:
+            "Unfortunately, HR says you need seven badges before I can fight you. I miss when I could just punch things.",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (normal_trainer_05 blocked message)",
+        completedMessage:
+            "Well, that's my job done. The Gym Leader is waiting for you up on the roof. I'd wish you luck, but I'm pretty sure that's against company policy.",
+        gymCompletedMessage:
+            "Well, that's it. You're officially above my pay grade. Not that I get paid enough to begin with.",
 
         moneyReward: 2000,
         moneyLoss: 2000,
@@ -1084,8 +1180,8 @@ global.leagueConfig = {
         averageAboveLevel: 78,
 
         requiredStages: ["challenging_e4_rematch", "e4_one_complete", "e4_two_complete", "e4_three_complete"],
-        rewardStages: ["e4_four_rematch_complete"],
-        completedStage: "e4_four_rematch_complete",
+        rewardStages: ["e4_four_complete"],
+        completedStage: "e4_four_complete",
         removeStagesOnLoss: ["challenging_e4_rematch", "e4_one_complete", "e4_two_complete", "e4_three_complete"],
 
         lockedMessage:
