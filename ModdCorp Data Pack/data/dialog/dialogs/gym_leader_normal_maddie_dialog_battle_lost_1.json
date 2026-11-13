@@ -1,0 +1,84 @@
+{
+	"id": "gym_leader_normal_maddie_choice_dialog_battle_lost_1",
+	"title": "gym_leader_normal_maddie battle_lost",
+	"description": "dialog.npc.gym_leader_normal_maddie.dialog.battle_lost_1.line_0",
+	"entries": [
+		{
+			"id": "start",
+			"portraits": [
+				{
+					"path": "maddieply.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_normal_maddie.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_normal_maddie.dialog.battle_lost_1.line_0"
+				}
+			]
+		},
+		{
+			"id": "line_1",
+			"portraits": [
+				{
+					"path": "maddieply.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_normal_maddie.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_normal_maddie.dialog.battle_lost_1.line_1"
+				}
+			]
+		},
+		{
+			"id": "line_2",
+			"portraits": [
+				{
+					"path": "maddieply.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_normal_maddie.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_normal_maddie.dialog.battle_lost_1.line_2"
+				}
+			]
+		},
+		{
+			"id": "line_3",
+			"portraits": [
+				{
+					"path": "maddieply.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_normal_maddie.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_normal_maddie.dialog.battle_lost_1.line_3"
+				}
+			],
+			"endDialog": true
+		}
+	]
+}

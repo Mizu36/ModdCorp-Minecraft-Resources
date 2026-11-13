@@ -1,11 +1,17 @@
 {
 	"id": "gym_leader_normal_maddie_choice_dialog_is_busy_0",
 	"title": "gym_leader_normal_maddie is_busy_0",
-	"description": "dialog.npc.gym_leader_normal_maddie.dialog.is_busy_0",
+	"description": "dialog.npc.gym_leader_normal_maddie.dialog.is_busy_0.line_0",
 	"entries": [
 		{
 			"id": "start",
-			"portraits": [{ "path": "maddieply.png", "position": "INLINE", "brightness": 1 }],
+			"portraits": [
+				{
+					"path": "maddieply.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
 			"speaker": {
 				"translate": "dialog.npc.gym_leader_normal_maddie.name",
 				"color": "white"
@@ -15,6 +21,26 @@
 					"translate": "dialog.npc.gym_leader_normal_maddie.dialog.is_busy_0.line_0"
 				}
 			]
+		},
+		{
+			"id": "line_1",
+			"portraits": [
+				{
+					"path": "maddieply.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_normal_maddie.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_normal_maddie.dialog.is_busy_0.line_1"
+				}
+			],
+			"endDialog": true
 		}
 	]
 }

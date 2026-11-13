@@ -1,20 +1,65 @@
 {
 	"id": "gym_leader_normal_maddie_choice_dialog_locked",
 	"title": "gym_leader_normal_maddie locked",
-	"description": "dialog.npc.gym_leader_normal_maddie.dialog.locked",
+	"description": "dialog.npc.gym_leader_normal_maddie.dialog.locked_0.line_0",
 	"entries": [
 		{
 			"id": "start",
-			"portraits": [{ "path": "maddieply.png", "position": "INLINE", "brightness": 1 }],
+			"portraits": [
+				{
+					"path": "maddieply.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
 			"speaker": {
 				"translate": "dialog.npc.gym_leader_normal_maddie.name",
 				"color": "white"
 			},
 			"text": [
 				{
-					"translate": "dialog.npc.gym_leader_normal_maddie.dialog.locked.line_0"
+					"translate": "dialog.npc.gym_leader_normal_maddie.dialog.locked_0.line_0"
 				}
 			]
+		},
+		{
+			"id": "line_1",
+			"portraits": [
+				{
+					"path": "maddieply.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_normal_maddie.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_normal_maddie.dialog.locked_0.line_1"
+				}
+			]
+		},
+		{
+			"id": "line_2",
+			"portraits": [
+				{
+					"path": "maddieply.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_normal_maddie.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_normal_maddie.dialog.locked_0.line_2"
+				}
+			],
+			"endDialog": true
 		}
 	]
 }

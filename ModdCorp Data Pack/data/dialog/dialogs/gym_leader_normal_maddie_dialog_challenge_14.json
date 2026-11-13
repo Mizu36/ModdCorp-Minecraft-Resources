@@ -1,0 +1,179 @@
+{
+	"id": "gym_leader_normal_maddie_choice_dialog_challenge_14",
+	"title": "gym_leader_normal_maddie challenge",
+	"description": "dialog.npc.gym_leader_normal_maddie.dialog.challenge_2.line_0",
+	"entries": [
+		{
+			"id": "start",
+			"portraits": [
+				{
+					"path": "maddieply.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_normal_maddie.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_normal_maddie.dialog.challenge_2.line_0"
+				}
+			]
+		},
+		{
+			"id": "challenge_1",
+			"portraits": [
+				{
+					"path": "maddieply.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_normal_maddie.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_normal_maddie.dialog.challenge_2.line_1"
+				}
+			]
+		},
+		{
+			"id": "challenge_2",
+			"portraits": [
+				{
+					"path": "maddieply.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_normal_maddie.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_normal_maddie.dialog.challenge_2.line_2"
+				}
+			]
+		},
+		{
+			"id": "challenge_3",
+			"portraits": [
+				{
+					"path": "maddieply.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_normal_maddie.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_normal_maddie.dialog.challenge_2.line_3"
+				}
+			],
+			"options": [
+				{
+					"text": {
+						"translate": "dialog.npc.gym_leader_normal_maddie.dialog.challenge.option_0"
+					},
+					"target": "battle_start",
+					"command": [
+						"moddcorpbattle normal_leader"
+					]
+				},
+				{
+					"text": {
+						"translate": "dialog.npc.gym_leader_normal_maddie.dialog.challenge.option_1"
+					},
+					"target": "end",
+					"command": []
+				}
+			]
+		},
+		{
+			"id": "battle_start",
+			"portraits": [
+				{
+					"path": "maddieply.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_normal_maddie.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_normal_maddie.dialog.battle_start_0.line_0"
+				}
+			],
+			"endDialog": true
+		},
+		{
+			"id": "end",
+			"portraits": [
+				{
+					"path": "maddieply.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_normal_maddie.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_normal_maddie.dialog.battle_cancel_2.line_0"
+				}
+			]
+		},
+		{
+			"id": "end_1",
+			"portraits": [
+				{
+					"path": "maddieply.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_normal_maddie.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_normal_maddie.dialog.battle_cancel_2.line_1"
+				}
+			]
+		},
+		{
+			"id": "end_2",
+			"portraits": [
+				{
+					"path": "maddieply.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_normal_maddie.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_normal_maddie.dialog.battle_cancel_2.line_2"
+				}
+			],
+			"endDialog": true
+		}
+	]
+}

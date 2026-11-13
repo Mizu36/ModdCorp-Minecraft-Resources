@@ -31,11 +31,19 @@
 					},
 					"target": "end",
 					"command": []
+				},
+				{
+					"text": {
+						"translate": "dialog.npc.elite_four.dialog.end_challenge.option_2"
+					},
+					"target": "end_challenge",
+					"command": []
 				}
 			]
 		},
 		{
 			"id": "battle_start",
+			"endDialog": true,
 			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
 			"speaker": {
 				"translate": "dialog.npc.elite_four_grass_chigusa_rematch.name",
@@ -49,6 +57,7 @@
 		},
 		{
 			"id": "end",
+			"endDialog": true,
 			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
 			"speaker": {
 				"translate": "dialog.npc.elite_four_grass_chigusa_rematch.name",
@@ -57,6 +66,84 @@
 			"text": [
 				{
 					"translate": "dialog.npc.elite_four_grass_chigusa_rematch.dialog.challenge.line_2"
+				}
+			]
+		},
+		{
+			"id": "end_challenge",
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.elite_four_grass_chigusa_rematch.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.elite_four.dialog.end_challenge.line_0"
+				}
+			],
+			"options": [
+				{
+					"text": {
+						"translate": "dialog.npc.elite_four.dialog.end_challenge.option_0"
+					},
+					"target": "end_challenge_yes",
+					"command": []
+				},
+				{
+					"text": {
+						"translate": "dialog.npc.elite_four.dialog.end_challenge.option_1"
+					},
+					"target": "end_challenge_no",
+					"command": []
+				}
+			]
+		},
+		{
+			"id": "end_challenge_yes",
+			"endDialog": true,
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.elite_four_grass_chigusa_rematch.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.elite_four.dialog.end_challenge_yes.line_0"
+				}
+			],
+			"command": [
+				"moddcorpleaguetp entrance"
+			]
+		},
+		{
+			"id": "end_challenge_no",
+			"endDialog": true,
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.elite_four_grass_chigusa_rematch.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.elite_four.dialog.end_challenge_no.line_0"
 				}
 			]
 		}

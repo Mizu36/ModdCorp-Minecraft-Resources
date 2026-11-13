@@ -102,8 +102,7 @@ ServerEvents.commandRegistry(event => {
 
           const server = ctx.source.server;
           const location = Arguments.STRING.getResult(ctx, "location");
-          global.leagueTP(server, player, location);
-          return 1;
+          return global.leagueTP(server, player, location) ? 1 : 0;
         })
       )
   );
@@ -173,14 +172,26 @@ global.gymTrainerFullDialogs = [
   "champion_mizu_rematch",
 ];
 
-// Number of random variants for states with several lines (dialog ids get a _<n> suffix)
-const gymDialogVariants = { is_busy: 2 };
+// Configure counts per NPC and state; variant 0 is unsuffixed except for is_busy.
+const gymDialogVariants = {
+  gym_leader_normal_maddie: {
+    challenge: 18, // 3 introductions x 2 battle starts x 3 cancellations
+    locked: 3,
+    completed: 3,
+    missing_pokemon: 3,
+    is_busy: 3,
+    battle_won: 3,
+    battle_lost: 2,
+  },
+};
 
 global.npcBattleKeys = global.npcBattleKeys || {};
 
 global.showGymDialog = (server, player, npcId, state) => {
-  const variants = gymDialogVariants[state];
-  const suffix = variants ? `_${Math.floor(Math.random() * variants)}` : "";
+  const npcVariants = gymDialogVariants[npcId] || {};
+  const variants = npcVariants[state] || (state === "is_busy" ? 2 : 1);
+  const variant = Math.floor(Math.random() * variants);
+  const suffix = state === "is_busy" || variant > 0 ? `_${variant}` : "";
   server.runCommandSilent(`dialog ${player.getUuid()} show ${player.username} ${npcId}_choice_dialog_${state}${suffix}`);
 };
 
@@ -216,7 +227,8 @@ const isEncounterBusy = (player, encounterId) => {
 // Returns "ready" or the dialog state explaining why the player can't battle right now
 global.getGymEncounterState = (player, encounterId) => {
   var encounter = global.leagueConfig[encounterId];
-  if (encounter.completedStage && player.stages.has(encounter.completedStage)) return "completed";
+  const repeatingChampionRematch = encounterId === "champion_rematch" && player.stages.has("challenging_e4_rematch");
+  if (encounter.completedStage && player.stages.has(encounter.completedStage) && !repeatingChampionRematch) return "completed";
   if (encounter.requiredStages && encounter.requiredStages.some((stage) => !player.stages.has(stage))) return "locked";
   if (isEncounterBusy(player, encounterId)) return "is_busy";
   if (!hasHealthyPokemon(player)) return "missing_pokemon";
@@ -422,6 +434,7 @@ global.leagueTP = (server, player, location) => {
       player.stages.add("challenging_e4")
     }
     server.runCommandSilent(`tp ${player.getUuid()} ${locationCoords["leaguechambers"].x} ${locationCoords["leaguechambers"].y} ${locationCoords["leaguechambers"].z}`);
+    return true;
   } else if (location == "entrance") {
     for (const stage of ["e4_one_complete", "e4_two_complete", "e4_three_complete", "e4_four_complete", "challenging_e4", "challenging_e4_rematch"]) { //Remove all stages related to the elite four challenge
       if (player.stages.has(stage)) {
@@ -429,7 +442,10 @@ global.leagueTP = (server, player, location) => {
       }
     }
     server.runCommandSilent(`tp ${player.getUuid()} ${locationCoords["leaguedoor"].x} ${locationCoords["leaguedoor"].y} ${locationCoords["leaguedoor"].z}`);
+    return true;
   }
+  player.tell(Text.of(`Unknown league location: ${location}`).red());
+  return false;
 };
 
 function getCurrentStage(player) {
