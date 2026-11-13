@@ -1,17 +1,27 @@
-const WHISTLE_ID = "moddcorp:legendary_whistle";
+const WHISTLE_ID = "moddcorp:cobblemon_whistle";
 const WHISTLE_POKEMON_LEVEL = 70;
 const WhistlePokemonProperties = Java.loadClass("com.cobblemon.mod.common.api.pokemon.PokemonProperties");
+const WhistleIntegerArgument = Java.loadClass("com.mojang.brigadier.arguments.IntegerArgumentType");
 
-function createWhistle(cobblemon) {
+function createWhistle(cobblemon, pokemonLevel) {
     let pretty = String(cobblemon).split(/[\s_-]+/)
         .map(w => String(w).charAt(0).toUpperCase() + String(w).slice(1))
         .join(" ");
-    return Item.of(WHISTLE_ID, `{Cobblemon:"${cobblemon}"}`)
-        .withName(Text.of("Legendary Whistle (" + pretty + ")").italic(false));
+    return Item.of(WHISTLE_ID, `{Cobblemon:"${cobblemon}",Level:${pokemonLevel}}`)
+        .withName(Text.of("Cobblemon Whistle (" + pretty + ", Lv. " + pokemonLevel + ")").italic(false));
 }
 
 ServerEvents.commandRegistry(event => {
     const { commands: Commands, arguments: Arguments } = event;
+
+    function giveCommand(ctx, target, pokemonLevel) {
+        let name = ctx.getArgument("cobblemon", Java.loadClass("java.lang.String"));
+        if (!global.giveWhistle(target, name, pokemonLevel)) return 0;
+        if (ctx.source.player) {
+            ctx.source.player.tell("§aGave a whistle bound to §e" + name + " §aat level §e" + pokemonLevel);
+        }
+        return 1;
+    }
 
     event.register(
         Commands.literal("whistle")
@@ -24,11 +34,16 @@ ServerEvents.commandRegistry(event => {
                                 let player = ctx.source.player;
                                 if (!player) return 0;
 
-                                let name = ctx.getArgument("cobblemon", Java.loadClass("java.lang.String"));
-                                player.give(createWhistle(name.toLowerCase()));
-                                player.tell("§aGave a whistle bound to §e" + name);
-                                return 1;
+                                return giveCommand(ctx, player, WHISTLE_POKEMON_LEVEL);
                             })
+                            .then(
+                                Commands.argument("level", WhistleIntegerArgument.integer(1, 100))
+                                    .executes(ctx => {
+                                        let player = ctx.source.player;
+                                        if (!player) return 0;
+                                        return giveCommand(ctx, player, WhistleIntegerArgument.getInteger(ctx, "level"));
+                                    })
+                            )
                     )
             )
             .then(
@@ -39,10 +54,15 @@ ServerEvents.commandRegistry(event => {
                                 Commands.argument("cobblemon", Arguments.STRING.create(event))
                                     .executes(ctx => {
                                         let target = Arguments.PLAYER.getResult(ctx, "target");
-                                        let name = ctx.getArgument("cobblemon", Java.loadClass("java.lang.String"));
-                                        global.giveWhistle(target, name);
-                                        return 1;
+                                        return giveCommand(ctx, target, WHISTLE_POKEMON_LEVEL);
                                     })
+                                    .then(
+                                        Commands.argument("level", WhistleIntegerArgument.integer(1, 100))
+                                            .executes(ctx => {
+                                                let target = Arguments.PLAYER.getResult(ctx, "target");
+                                                return giveCommand(ctx, target, WhistleIntegerArgument.getInteger(ctx, "level"));
+                                            })
+                                    )
                             )
                     )
             )
@@ -50,8 +70,15 @@ ServerEvents.commandRegistry(event => {
 });
 
 // Entry point for NPC/trainer reward scripts.
-global.giveWhistle = function (player, cobblemon) {
-    player.give(createWhistle(String(cobblemon).toLowerCase()));
+global.giveWhistle = function (player, cobblemon, pokemonLevel) {
+    if (pokemonLevel === undefined) pokemonLevel = WHISTLE_POKEMON_LEVEL;
+    pokemonLevel = Number(pokemonLevel);
+    if (!Number.isInteger(pokemonLevel) || pokemonLevel < 1 || pokemonLevel > 100) {
+        player.tell("§cWhistle level must be a whole number between 1 and 100.");
+        return false;
+    }
+    player.give(createWhistle(String(cobblemon).toLowerCase(), pokemonLevel));
+    return true;
 };
 
 ItemEvents.rightClicked(WHISTLE_ID, event => {
@@ -67,9 +94,22 @@ ItemEvents.rightClicked(WHISTLE_ID, event => {
         return;
     }
 
+    let pokemonLevel = WHISTLE_POKEMON_LEVEL;
+    if (nbt.contains("Level")) {
+        if (!nbt.contains("Level", 99)) {
+            player.tell("§cThis whistle has an invalid Cobblemon level.");
+            return;
+        }
+        pokemonLevel = Number(nbt.getDouble("Level"));
+        if (!Number.isInteger(pokemonLevel) || pokemonLevel < 1 || pokemonLevel > 100) {
+            player.tell("§cThis whistle's Cobblemon level must be between 1 and 100.");
+            return;
+        }
+    }
+
     let entity;
     try {
-        entity = WhistlePokemonProperties.Companion.parse(name + " level=" + WHISTLE_POKEMON_LEVEL).createEntity(level);
+        entity = WhistlePokemonProperties.Companion.parse(name + " level=" + pokemonLevel).createEntity(level);
     } catch (e) {
         entity = null;
     }

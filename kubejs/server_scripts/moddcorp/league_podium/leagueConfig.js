@@ -915,7 +915,7 @@ global.leagueConfig = {
         gymCompletedStage: "gym_normal_complete",
 
         lockedMessage:
-            "Seven badges first, apparently. Anyway, could you stand over there? You're blocking my screen.",
+            "You have to beat seven gyms first, apparently. Anyway, could you stand over there? You're blocking my screen.",
         blockedMessage:
             "If you are seeing this message, report it to Mizu on Discord. This is a bug. (normal_trainer_04 blocked message)",
         completedMessage:
@@ -939,7 +939,7 @@ global.leagueConfig = {
         gymCompletedStage: "gym_normal_complete",
 
         lockedMessage:
-            "Unfortunately, HR says you need seven badges before I can fight you. I miss when I could just punch things.",
+            "Unfortunately, HR says you need to defeat seven gyms before I can fight you. I miss when I could just punch things.",
         blockedMessage:
             "If you are seeing this message, report it to Mizu on Discord. This is a bug. (normal_trainer_05 blocked message)",
         completedMessage:

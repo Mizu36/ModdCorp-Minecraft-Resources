@@ -220,10 +220,10 @@ StartupEvents.registry("item", event => {
 });
 
 StartupEvents.registry("item", event => {
-  event.create("moddcorp:legendary_whistle")
-    .displayName("Legendary Whistle")
+  event.create("moddcorp:cobblemon_whistle")
+    .displayName("Cobblemon Whistle")
     .maxStackSize(1)
-    .tooltip("A whistle that calls forth a legendary Cobblemon")
+    .tooltip("A whistle that calls forth a Cobblemon")
 });
 
 StartupEvents.registry("block", (event) => {
