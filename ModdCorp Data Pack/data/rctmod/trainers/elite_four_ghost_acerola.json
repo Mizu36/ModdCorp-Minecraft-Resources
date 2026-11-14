@@ -133,7 +133,7 @@
         {
             "species": "cobblemon:chandelure",
             "nickname": "",
-            "gender": "UNKNOWN",
+            "gender": "GENDERLESS",
             "level": 55,
             "nature": "cobblemon:modest",
             "ability": "flashfire",

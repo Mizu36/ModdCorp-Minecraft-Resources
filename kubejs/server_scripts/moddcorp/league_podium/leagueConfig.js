@@ -1101,6 +1101,194 @@ global.leagueConfig = {
         battle_music: ["moddcorp:champion_battle_full"]
     },
 
+    //==============================================
+    // Rematches
+    //==============================================
+
+    bug_leader_rematch: {
+
+        trainerId: "gym_leader_bug_shino_rematch",
+        displayName: "Gym Leader Shino",
+        averageAboveLevel: 70,
+
+        requiredStages: ["challenging_gym_rematch"],
+        rewardStages: ["gym_bug_rematch_complete"],
+        completedStage: "gym_bug_rematch_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (bug_leader_rematch blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["moddcorp:gym_leader_rematch_full"],
+    },
+
+    ground_leader_rematch: {
+
+        trainerId: "gym_leader_ground_ashley_rematch",
+        displayName: "Gym Leader Ashley",
+        averageAboveLevel: 70,
+
+        requiredStages: ["challenging_gym_rematch"],
+        rewardStages: ["gym_ground_rematch_complete"],
+        completedStage: "gym_ground_rematch_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (ground_leader_rematch blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["moddcorp:gym_leader_rematch_full"],
+    },
+
+    water_leader_rematch: {
+
+        trainerId: "gym_leader_water_kamiya_rematch",
+        displayName: "Gym Leader Kamiya",
+        averageAboveLevel: 70,
+
+        requiredStages: ["challenging_gym_rematch"],
+        rewardStages: ["gym_water_rematch_complete"],
+        completedStage: "gym_water_rematch_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (water_leader_rematch blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["moddcorp:gym_leader_rematch_full"],
+    },
+
+    poison_leader_rematch: {
+
+        trainerId: "gym_leader_poison_kinoko_rematch",
+        displayName: "Gym Leader Kinoko",
+        averageAboveLevel: 70,
+
+        requiredStages: ["challenging_gym_rematch"],
+        rewardStages: ["gym_poison_rematch_complete"],
+        completedStage: "gym_poison_rematch_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (poison_leader_rematch blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["moddcorp:gym_leader_rematch_full"],
+    },
+
+    fire_leader_rematch: {
+
+        trainerId: "gym_leader_fire_tim_rematch",
+        displayName: "Gym Leader Tim",
+        averageAboveLevel: 70,
+
+        requiredStages: ["challenging_gym_rematch"],
+        rewardStages: ["gym_fire_rematch_complete"],
+        completedStage: "gym_fire_rematch_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (fire_leader_rematch blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["moddcorp:gym_leader_rematch_full"],
+    },
+
+    electric_leader_rematch: {
+
+        trainerId: "gym_leader_electric_voltaire_rematch",
+        displayName: "Gym Leader Voltaire",
+        averageAboveLevel: 70,
+
+        requiredStages: ["challenging_gym_rematch"],
+        rewardStages: ["gym_electric_rematch_complete"],
+        completedStage: "gym_electric_rematch_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (electric_leader_rematch blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["moddcorp:gym_leader_rematch_full"],
+    },
+
+    ice_leader_rematch: {
+
+        trainerId: "gym_leader_ice_glacia_rematch",
+        displayName: "Gym Leader Glacia",
+        averageAboveLevel: 70,
+
+        requiredStages: ["challenging_gym_rematch"],
+        rewardStages: ["gym_ice_rematch_complete"],
+        completedStage: "gym_ice_rematch_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (ice_leader_rematch blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["moddcorp:gym_leader_rematch_full"],
+    },
+
+    normal_leader_rematch: {
+
+        trainerId: "gym_leader_normal_maddie_rematch",
+        displayName: "Gym Leader MaddiePly",
+        averageAboveLevel: 70,
+
+        requiredStages: ["challenging_gym_rematch"],
+        rewardStages: ["gym_normal_rematch_complete"],
+        completedStage: "gym_normal_rematch_complete",
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (normal_leader_rematch blocked message)",
+        completedMessage:
+            "",
+
+        moneyReward: 3000,
+        moneyLoss: 696,
+
+        battle_music: ["moddcorp:gym_leader_rematch_full"],
+    },
+
     e4_grass_rematch:{
 
         trainerId: "elite_four_grass_chigusa_rematch",
@@ -1122,12 +1310,12 @@ global.leagueConfig = {
         moneyReward: 7500,
         moneyLoss: 1000,
 
-        battle_music: ["moddcorp:elite_four_battle_full"]
+        battle_music: ["moddcorp:elite_four_rematch_full"]
     },
 
     e4_ghost_rematch:{
 
-        trainerId: "elite_four_ghost_acerola",
+        trainerId: "elite_four_ghost_acerola_rematch",
         displayName: "Elite Four Acerola",
         averageAboveLevel: 75,
 
@@ -1146,12 +1334,12 @@ global.leagueConfig = {
         moneyReward: 7500,
         moneyLoss: 1000,
 
-        battle_music: ["moddcorp:elite_four_battle_full"]
+        battle_music: ["moddcorp:elite_four_rematch_full"]
     },
 
     e4_steel_rematch:{
 
-        trainerId: "elite_four_steel_silas",
+        trainerId: "elite_four_steel_silas_rematch",
         displayName: "Elite Four Silas",
         averageAboveLevel: 76,
 
@@ -1170,12 +1358,12 @@ global.leagueConfig = {
         moneyReward: 7500,
         moneyLoss: 1000,
 
-        battle_music: ["moddcorp:elite_four_battle_full"]
+        battle_music: ["moddcorp:elite_four_rematch_full"]
     },
 
     e4_dragon_rematch:{
 
-        trainerId: "elite_four_dragon_ragnar",
+        trainerId: "elite_four_dragon_ragnar_rematch",
         displayName: "Elite Four Ragnar",
         averageAboveLevel: 78,
 
@@ -1194,7 +1382,7 @@ global.leagueConfig = {
         moneyReward: 7500,
         moneyLoss: 1000,
 
-        battle_music: ["moddcorp:elite_four_battle_full"]
+        battle_music: ["moddcorp:elite_four_rematch_full"]
     },
 
     champion_rematch:{
@@ -1223,195 +1411,154 @@ global.leagueConfig = {
     },
 
     //==============================================
-    // Battle Dojo (Gym Leaders)
+    // Battle Dojo
     //==============================================
 
-    bug_leader_rematch: {
+    bug_leader_gauntlet: {
 
-        trainerId: "gym_leader_bug_shino_rematch",
+        trainerId: "gym_leader_bug_shino_gauntlet",
         displayName: "Gym Leader Shino",
-        averageAboveLevel: 55,
 
-        requiredStages: ["challenging_gym_rematch"],
-        rewardStages: ["gym_bug_rematch_complete"],
-        completedStage: "gym_bug_rematch_complete",
+        moneyReward: 0,
+        moneyLoss: 0,
 
-        lockedMessage:
-            "",
-        blockedMessage:
-            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (bug_leader_rematch blocked message)",
-        completedMessage:
-            "",
-
-        moneyReward: 3000,
-        moneyLoss: 696,
-
-        battle_music: ["moddcorp:gym_leader_rematch_full"],
+        battle_music: ["moddcorp:gym_leader_rematch_full", "moddcorp:gym_leader_battle_full"],
     },
 
-    ground_leader_rematch: {
+    ground_leader_gauntlet: {
 
-        trainerId: "gym_leader_ground_ashley_rematch",
+        trainerId: "gym_leader_ground_ashley_gauntlet",
         displayName: "Gym Leader Ashley",
-        averageAboveLevel: 55,
 
-        requiredStages: ["challenging_gym_rematch"],
-        rewardStages: ["gym_ground_rematch_complete"],
-        completedStage: "gym_ground_rematch_complete",
+        moneyReward: 0,
+        moneyLoss: 0,
 
-        lockedMessage:
-            "",
-        blockedMessage:
-            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (ground_leader_rematch blocked message)",
-        completedMessage:
-            "",
-
-        moneyReward: 3000,
-        moneyLoss: 696,
-
-        battle_music: ["moddcorp:gym_leader_rematch_full"],
+        battle_music: ["moddcorp:gym_leader_rematch_full", "moddcorp:gym_leader_battle_full"],
     },
 
-    water_leader_rematch: {
+    water_leader_gauntlet: {
 
-        trainerId: "gym_leader_water_kamiya_rematch",
+        trainerId: "gym_leader_water_kamiya_gauntlet",
         displayName: "Gym Leader Kamiya",
-        averageAboveLevel: 55,
 
-        requiredStages: ["challenging_gym_rematch"],
-        rewardStages: ["gym_water_rematch_complete"],
-        completedStage: "gym_water_rematch_complete",
+        moneyReward: 0,
+        moneyLoss: 0,
 
-        lockedMessage:
-            "",
-        blockedMessage:
-            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (water_leader_rematch blocked message)",
-        completedMessage:
-            "",
-
-        moneyReward: 3000,
-        moneyLoss: 696,
-
-        battle_music: ["moddcorp:gym_leader_rematch_full"],
+        battle_music: ["moddcorp:gym_leader_rematch_full", "moddcorp:gym_leader_battle_full"],
     },
 
-    poison_leader_rematch: {
+    poison_leader_gauntlet: {
 
-        trainerId: "gym_leader_poison_kinoko_rematch",
+        trainerId: "gym_leader_poison_kinoko_gauntlet",
         displayName: "Gym Leader Kinoko",
-        averageAboveLevel: 55,
 
-        requiredStages: ["challenging_gym_rematch"],
-        rewardStages: ["gym_poison_rematch_complete"],
-        completedStage: "gym_poison_rematch_complete",
+        moneyReward: 0,
+        moneyLoss: 0,
 
-        lockedMessage:
-            "",
-        blockedMessage:
-            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (poison_leader_rematch blocked message)",
-        completedMessage:
-            "",
-
-        moneyReward: 3000,
-        moneyLoss: 696,
-
-        battle_music: ["moddcorp:gym_leader_rematch_full"],
+        battle_music: ["moddcorp:gym_leader_rematch_full", "moddcorp:gym_leader_battle_full"],
     },
 
-    fire_leader_rematch: {
+    fire_leader_gauntlet: {
 
-        trainerId: "gym_leader_fire_tim_rematch",
+        trainerId: "gym_leader_fire_tim_gauntlet",
         displayName: "Gym Leader Tim",
-        averageAboveLevel: 55,
 
-        requiredStages: ["challenging_gym_rematch"],
-        rewardStages: ["gym_fire_rematch_complete"],
-        completedStage: "gym_fire_rematch_complete",
+        moneyReward: 0,
+        moneyLoss: 0,
 
-        lockedMessage:
-            "",
-        blockedMessage:
-            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (fire_leader_rematch blocked message)",
-        completedMessage:
-            "",
-
-        moneyReward: 3000,
-        moneyLoss: 696,
-
-        battle_music: ["moddcorp:gym_leader_rematch_full"],
+        battle_music: ["moddcorp:gym_leader_rematch_full", "moddcorp:gym_leader_battle_full"],
     },
 
-    electric_leader_rematch: {
+    electric_leader_gauntlet: {
 
-        trainerId: "gym_leader_electric_voltaire_rematch",
+        trainerId: "gym_leader_electric_voltaire_gauntlet",
         displayName: "Gym Leader Voltaire",
-        averageAboveLevel: 55,
 
-        requiredStages: ["challenging_gym_rematch"],
-        rewardStages: ["gym_electric_rematch_complete"],
-        completedStage: "gym_electric_rematch_complete",
+        moneyReward: 0,
+        moneyLoss: 0,
 
-        lockedMessage:
-            "",
-        blockedMessage:
-            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (electric_leader_rematch blocked message)",
-        completedMessage:
-            "",
-
-        moneyReward: 3000,
-        moneyLoss: 696,
-
-        battle_music: ["moddcorp:gym_leader_rematch_full"],
+        battle_music: ["moddcorp:gym_leader_rematch_full", "moddcorp:gym_leader_battle_full"],
     },
 
-    ice_leader_rematch: {
+    ice_leader_gauntlet: {
 
-        trainerId: "gym_leader_ice_glacia_rematch",
+        trainerId: "gym_leader_ice_glacia_gauntlet",
         displayName: "Gym Leader Glacia",
-        averageAboveLevel: 55,
 
-        requiredStages: ["challenging_gym_rematch"],
-        rewardStages: ["gym_ice_rematch_complete"],
-        completedStage: "gym_ice_rematch_complete",
+        moneyReward: 0,
+        moneyLoss: 0,
 
-        lockedMessage:
-            "",
-        blockedMessage:
-            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (ice_leader_rematch blocked message)",
-        completedMessage:
-            "",
-
-        moneyReward: 3000,
-        moneyLoss: 696,
-
-        battle_music: ["moddcorp:gym_leader_rematch_full"],
+        battle_music: ["moddcorp:gym_leader_rematch_full", "moddcorp:gym_leader_battle_full"],
     },
 
-    normal_leader_rematch: {
+    normal_leader_gauntlet: {
 
-        trainerId: "gym_leader_normal_maddie_rematch",
+        trainerId: "gym_leader_normal_maddie_gauntlet",
         displayName: "Gym Leader MaddiePly",
-        averageAboveLevel: 55,
 
-        requiredStages: ["challenging_gym_rematch"],
-        rewardStages: ["gym_normal_rematch_complete"],
-        completedStage: "gym_normal_rematch_complete",
+        moneyReward: 0,
+        moneyLoss: 0,
 
-        lockedMessage:
-            "",
-        blockedMessage:
-            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (normal_leader_rematch blocked message)",
-        completedMessage:
-            "",
+        battle_music: ["moddcorp:gym_leader_rematch_full", "moddcorp:gym_leader_battle_full"],
+    },
 
-        moneyReward: 3000,
-        moneyLoss: 696,
+    e4_grass_gauntlet:{
 
-        battle_music: ["moddcorp:gym_leader_rematch_full"],
+        trainerId: "elite_four_grass_chigusa_gauntlet",
+        displayName: "Elite Four Chigusa",
+
+        moneyReward: 0,
+        moneyLoss: 0,
+
+        battle_music: ["moddcorp:elite_four_rematch_full", "moddcorp:elite_four_battle_full"]
+    },
+
+    e4_ghost_gauntlet:{
+
+        trainerId: "elite_four_ghost_acerola_gauntlet",
+        displayName: "Elite Four Acerola",
+
+        moneyReward: 0,
+        moneyLoss: 0,
+
+        battle_music: ["moddcorp:elite_four_rematch_full", "moddcorp:elite_four_battle_full"]
+    },
+
+    e4_steel_gauntlet:{
+
+        trainerId: "elite_four_steel_silas_gauntlet",
+        displayName: "Elite Four Silas",
+
+        moneyReward: 0,
+        moneyLoss: 0,
+
+        battle_music: ["moddcorp:elite_four_rematch_full", "moddcorp:elite_four_battle_full"]
+    },
+
+    e4_dragon_gauntlet:{
+
+        trainerId: "elite_four_dragon_ragnar_gauntlet",
+        displayName: "Elite Four Ragnar",
+
+        moneyReward: 0,
+        moneyLoss: 0,
+
+        battle_music: ["moddcorp:elite_four_rematch_full", "moddcorp:elite_four_battle_full"]
+    },
+
+    champion_gauntlet:{
+
+        trainerId: "champion_mizu_gauntlet",
+        displayName: "Champion Mizu",
+
+        moneyReward: 0,
+        moneyLoss: 0,
+
+        battle_music: ["moddcorp:champion_rematch_full", "moddcorp:champion_battle_full"]
     },
 
     //==============================================
-    // Battle Dojo (Cameos)
+    // Cameos
     //==============================================
 
     ado_cameo: {

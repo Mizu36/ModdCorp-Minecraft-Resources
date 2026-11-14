@@ -37,7 +37,7 @@
         {
             "species": "cobblemon:arceus",
             "nickname": "VP",
-            "gender": "UNKNOWN",
+            "gender": "GENDERLESS",
             "level": 85,
             "nature": "cobblemon:impish",
             "ability": "multitype",
@@ -130,7 +130,7 @@
         {
             "species": "cobblemon:miraidon",
             "nickname": "Too Tired",
-            "gender": "UNKNOWN",
+            "gender": "GENDERLESS",
             "level": 87,
             "nature": "cobblemon:modest",
             "ability": "hadronengine",
@@ -162,7 +162,7 @@
         {
             "species": "cobblemon:hooh",
             "nickname": "BIRD UP",
-            "gender": "UNKNOWN",
+            "gender": "GENDERLESS",
             "level": 88,
             "nature": "cobblemon:impish",
             "ability": "regenerator",

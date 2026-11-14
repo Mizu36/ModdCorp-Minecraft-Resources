@@ -101,7 +101,7 @@
         {
             "species": "cobblemon:pecharunt",
             "nickname": "",
-            "gender": "UNKNOWN",
+            "gender": "GENDERLESS",
             "level": 73,
             "nature": "cobblemon:modest",
             "ability": "poisonpuppeteer",
@@ -165,7 +165,7 @@
         {
             "species": "cobblemon:chandelure",
             "nickname": "",
-            "gender": "UNKNOWN",
+            "gender": "GENDERLESS",
             "level": 73,
             "nature": "cobblemon:modest",
             "ability": "flashfire",

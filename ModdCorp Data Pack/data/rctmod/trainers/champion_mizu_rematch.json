@@ -67,7 +67,7 @@
         },
         {
             "species": "cobblemon:polteageist",
-            "gender": "UNKNOWN",
+            "gender": "GENDERLESS",
             "level": 76,
             "nature": "cobblemon:timid",
             "ability": "cursedbody",
@@ -129,7 +129,7 @@
         },
         {
             "species": "cobblemon:victini",
-            "gender": "UNKNOWN",
+            "gender": "GENDERLESS",
             "level": 78,
             "nature": "cobblemon:jolly",
             "ability": "victorystar",
@@ -160,7 +160,7 @@
         },
         {
             "species": "cobblemon:ironvaliant",
-            "gender": "UNKNOWN",
+            "gender": "GENDERLESS",
             "level": 78,
             "nature": "cobblemon:timid",
             "ability": "quarkdrive",

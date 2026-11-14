@@ -37,7 +37,7 @@
         {
             "species": "cobblemon:aegislash",
             "nickname": "",
-            "gender": "UNKNOWN",
+            "gender": "GENDERLESS",
             "level": 56,
             "nature": "cobblemon:brave",
             "ability": "stancechange",
@@ -133,7 +133,7 @@
         {
             "species": "cobblemon:metagross",
             "nickname": "",
-            "gender": "UNKNOWN",
+            "gender": "GENDERLESS",
             "level": 58,
             "nature": "cobblemon:adamant",
             "ability": "clearbody",

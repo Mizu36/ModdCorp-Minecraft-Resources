@@ -1,0 +1,31 @@
+{
+	"id": "gym_leader_water_kamiya_gauntlet_loss",
+	"title": "gym_leader_water_kamiya gauntlet loss",
+	"description": "dialog.npc.gym_leader_water_kamiya.dialog.gauntlet_loss.line_0",
+	"allowClose": false,
+	"entries": [
+		{
+			"id": "start",
+			"endDialog": true,
+			"command": [
+				"moddcorpgymgauntlet continue"
+			],
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_water_kamiya.name",
+				"color": "white"
+			},
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_water_kamiya.dialog.gauntlet_loss.line_0"
+				}
+			]
+		}
+	]
+}

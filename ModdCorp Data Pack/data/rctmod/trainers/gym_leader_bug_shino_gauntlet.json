@@ -1,0 +1,134 @@
+{
+    "displayName": "Gym Leader Shino",
+    "identity": "Leader Shino",
+    "team": [
+        {
+            "species": "cobblemon:anorith",
+            "gender": "MALE",
+            "level": 12,
+            "nature": "cobblemon:jolly",
+            "ability": "battlearmor",
+            "moveset": [
+                "swordsdance",
+                "stealthrock",
+                "smackdown",
+                "metalclaw"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 12,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 64,
+                "attack": 64,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 4,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:focus_sash"
+        },
+        {
+            "species": "cobblemon:cutiefly",
+            "gender": "FEMALE",
+            "level": 12,
+            "nature": "cobblemon:timid",
+            "ability": "shielddust",
+            "moveset": [
+                "fairywind",
+                "stunspore",
+                "drainingkiss",
+                "bugbuzz"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 12,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 64,
+                "special_defence": 0,
+                "speed": 64
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:oran_berry"
+        },
+        {
+            "species": "cobblemon:joltik",
+            "gender": "MALE",
+            "level": 14,
+            "nature": "cobblemon:timid",
+            "ability": "compoundeyes",
+            "moveset": [
+                "electroweb",
+                "strugglebug",
+                "chargebeam",
+                "thunderwave"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 12,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 64,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:oran_berry"
+        },
+        {
+            "species": "cobblemon:spidops",
+            "gender": "MALE",
+            "level": 15,
+            "nature": "cobblemon:adamant",
+            "ability": "insomnia",
+            "moveset": [
+                "stringshot",
+                "bugbite",
+                "electroweb",
+                "brickbreak"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 6,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 6
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 64,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:occa_berry"
+        }
+    ],
+    "winCommand": "",
+    "lossCommand": "",
+    "canOnlyBeatOnce": false,
+    "cooldownSeconds": 0
+}

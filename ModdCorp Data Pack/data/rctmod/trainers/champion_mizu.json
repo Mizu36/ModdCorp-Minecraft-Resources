@@ -5,7 +5,7 @@
         {
             "species": "cobblemon:polteageist",
             "nickname": "",
-            "gender": "UNKNOWN",
+            "gender": "GENDERLESS",
             "level": 62,
             "nature": "cobblemon:timid",
             "ability": "cursedbody",
@@ -133,7 +133,7 @@
         {
             "species": "cobblemon:victini",
             "nickname": "",
-            "gender": "UNKNOWN",
+            "gender": "GENDERLESS",
             "level": 65,
             "nature": "cobblemon:jolly",
             "ability": "victorystar",
@@ -165,7 +165,7 @@
         {
             "species": "cobblemon:ironvaliant",
             "nickname": "",
-            "gender": "UNKNOWN",
+            "gender": "GENDERLESS",
             "level": 66,
             "nature": "cobblemon:jolly",
             "ability": "quarkdrive",

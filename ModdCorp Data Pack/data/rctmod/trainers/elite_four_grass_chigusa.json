@@ -133,7 +133,7 @@
         {
             "species": "cobblemon:celebi",
             "nickname": "",
-            "gender": "UNKNOWN",
+            "gender": "GENDERLESS",
             "level": 54,
             "nature": "cobblemon:modest",
             "ability": "naturalcure",

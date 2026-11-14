@@ -15,6 +15,19 @@
 					"translate": "dialog.npc.gym_leader_ice_glacia.dialog.locked.line_0"
 				}
 			]
+		},
+		{
+			"id": "line_1",
+			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_ice_glacia.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_ice_glacia.dialog.locked.line_1"
+				}
+			]
 		}
 	]
 }

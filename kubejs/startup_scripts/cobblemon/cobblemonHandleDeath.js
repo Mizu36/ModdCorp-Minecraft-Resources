@@ -89,6 +89,12 @@ global.handleCobblemonDefeat = (e) => {
   console.info(`[NPC BATTLE] victory: pending=${pending ? pending.encounterId : "none"} playerWon=${playerWon}`);
   if (pending && pending.started) {
     delete global.pendingNpcBattles[String(pendingPlayer.uuid)];
+    if (pending.gymGauntlet) {
+      Utils.server.runCommandSilent("stopsound " + pendingPlayer.username + " music");
+      Utils.server.runCommandSilent("stopsound " + pendingPlayer.username + " record");
+      global.finishGymGauntletBattle(pendingPlayer.getServer(), pendingPlayer, playerWon);
+      return;
+    }
     if (typeof global.showNpcBattleResult === "function") {
       global.showNpcBattleResult(pendingPlayer.getServer(), pendingPlayer, pending.encounterId, playerWon);
     }
@@ -298,7 +304,8 @@ StartupEvents.postInit((init) => {
     }
     if (encounterId) {
       global.runMusicForLeagueEncounter(player, encounterId);
-      global.handleLeagueBattleStart(player, encounterId);
+      let pending = global.pendingNpcBattles[String(player.uuid)];
+      if (!pending || !pending.gymGauntlet) global.handleLeagueBattleStart(player, encounterId);
     } else {
       global.runMusicForEncounter(player);
     }
@@ -335,6 +342,10 @@ StartupEvents.postInit((init) => {
         let pending = global.pendingNpcBattles[String(p.uuid)];
         if (pending && pending.started) {
           delete global.pendingNpcBattles[String(p.uuid)];
+          if (pending.gymGauntlet) {
+            global.finishGymGauntletBattle(p.getServer(), p, false);
+            return;
+          }
           global.handleLeagueBattleEnd(p, pending.encounterId);
         }
       });

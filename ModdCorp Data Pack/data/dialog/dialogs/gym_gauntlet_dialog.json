@@ -1,0 +1,41 @@
+{
+	"id": "gym_gauntlet_choice_dialog",
+	"title": "gym_gauntlet ready",
+	"description": "dialog.npc.gym_gauntlet.dialog.ready.line_0",
+	"allowClose": false,
+	"entries": [
+		{
+			"id": "start",
+			"speaker": { "translate": "dialog.npc.gym_gauntlet.name", "color": "white" },
+			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"text": [{ "translate": "dialog.npc.gym_gauntlet.dialog.ready.line_0" }],
+			"options": [
+				{
+					"text": { "translate": "dialog.npc.gym_gauntlet.dialog.ready.option_0" },
+					"target": "accepted",
+					"command": []
+				},
+				{
+					"text": { "translate": "dialog.npc.gym_gauntlet.dialog.ready.option_1" },
+					"target": "cancelled",
+					"command": []
+				}
+			]
+		},
+		{
+			"id": "accepted",
+			"endDialog": true,
+			"command": ["moddcorpgymgauntlet start"],
+			"speaker": { "translate": "dialog.npc.gym_gauntlet.name", "color": "white" },
+			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"text": [{ "translate": "dialog.npc.gym_gauntlet.dialog.start.line_0" }]
+		},
+		{
+			"id": "cancelled",
+			"endDialog": true,
+			"speaker": { "translate": "dialog.npc.gym_gauntlet.name", "color": "white" },
+			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"text": [{ "translate": "dialog.npc.gym_gauntlet.dialog.cancel.line_0" }]
+		}
+	]
+}

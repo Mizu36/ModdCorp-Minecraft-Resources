@@ -221,10 +221,18 @@ const handleNpc = (e, npcId, level, server, target, player, item) => {
 ItemEvents.entityInteracted((e) => {
     const { hand, player, item, level, target, server } = e;
     if (player.isFake()) return;
+    if (npcIds.includes(target.type) && global.isGymGauntletLocked(server, target)) {
+        e.cancel();
+        return;
+    }
     if (hand == "OFF_HAND") return;
     if (item.id == 'easy_npc_config_ui:easy_npc_wand') return;
     if (!npcIds.includes(target.type)) return;
     if (hand == "MAIN_HAND") {
+        if (global.handleGymGauntletInteraction(server, target, player)) {
+            e.cancel();
+            return;
+        }
         let npcId = getNpcKey(target.nbt.CustomName.toString())
         handleNpc(e, npcId, level, server, target, player, item)
     }

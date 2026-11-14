@@ -209,6 +209,7 @@ const isEncounterBusy = (player, encounterId) => {
   for (var i = 0; i < uuids.length; i++) {
     var uuid = uuids[i];
     var pending = global.pendingNpcBattles[uuid];
+    if (pending.gymGauntlet) continue;
     if (pending.encounterId !== encounterId) continue;
     if (!pending.started) {
       if (now - pending.requestedAt < 10000) return true;

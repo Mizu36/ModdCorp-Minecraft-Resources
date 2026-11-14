@@ -35,7 +35,7 @@
         },
         {
             "species": "cobblemon:magneton",
-            "gender": "UNKNOWN",
+            "gender": "GENDERLESS",
             "level": 39,
             "nature": "cobblemon:timid",
             "ability": "sturdy",

@@ -1,0 +1,31 @@
+{
+	"id": "gym_leader_fire_tim_gauntlet_challenge",
+	"title": "gym_leader_fire_tim gauntlet challenge",
+	"description": "dialog.npc.gym_leader_fire_tim.dialog.gauntlet_challenge.line_0",
+	"allowClose": false,
+	"entries": [
+		{
+			"id": "start",
+			"endDialog": true,
+			"command": [
+				"moddcorpgymgauntlet battle"
+			],
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_fire_tim.name",
+				"color": "white"
+			},
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_fire_tim.dialog.gauntlet_challenge.line_0"
+				}
+			]
+		}
+	]
+}
