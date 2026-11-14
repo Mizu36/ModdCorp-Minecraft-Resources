@@ -14,6 +14,10 @@
 				{
 					"translate": "dialog.npc.champion_mizu.dialog.battle_won.line_0"
 				}
+			],
+			"endDialog": true,
+			"command": [
+				"moddcorpleaguetp entrance"
 			]
 		}
 	]

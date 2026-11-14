@@ -14,6 +14,10 @@
 				{
 					"translate": "dialog.npc.elite_four_grass_chigusa_rematch.dialog.battle_won.line_0"
 				}
+			],
+			"endDialog": true,
+			"command": [
+				"moddcorpleaguetp entrance"
 			]
 		}
 	]
