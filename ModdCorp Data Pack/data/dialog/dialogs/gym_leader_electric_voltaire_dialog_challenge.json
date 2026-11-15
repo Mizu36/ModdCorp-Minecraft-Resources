@@ -1,6 +1,6 @@
 {
 	"id": "gym_leader_electric_voltaire_choice_dialog_challenge",
-	"title": "gym_leader_electric_voltaire challenge",
+	"title": "gym_leader_electric_voltaire_choice_dialog_challenge",
 	"description": "dialog.npc.gym_leader_electric_voltaire.dialog.challenge.line_0",
 	"entries": [
 		{
@@ -23,7 +23,7 @@
 			]
 		},
 		{
-			"id": "challenge_1",
+			"id": "start_1",
 			"portraits": [
 				{
 					"path": "gym.png",

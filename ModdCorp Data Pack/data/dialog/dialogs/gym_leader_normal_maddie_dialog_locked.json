@@ -1,6 +1,6 @@
 {
 	"id": "gym_leader_normal_maddie_choice_dialog_locked",
-	"title": "gym_leader_normal_maddie locked",
+	"title": "gym_leader_normal_maddie_choice_dialog_locked",
 	"description": "dialog.npc.gym_leader_normal_maddie.dialog.locked_0.line_0",
 	"entries": [
 		{
@@ -23,7 +23,7 @@
 			]
 		},
 		{
-			"id": "line_1",
+			"id": "start_1",
 			"portraits": [
 				{
 					"path": "maddieply.png",
@@ -42,7 +42,7 @@
 			]
 		},
 		{
-			"id": "line_2",
+			"id": "start_2",
 			"portraits": [
 				{
 					"path": "maddieply.png",
@@ -58,8 +58,7 @@
 				{
 					"translate": "dialog.npc.gym_leader_normal_maddie.dialog.locked_0.line_2"
 				}
-			],
-			"endDialog": true
+			]
 		}
 	]
 }

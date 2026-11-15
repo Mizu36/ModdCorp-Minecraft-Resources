@@ -1,18 +1,24 @@
 {
 	"id": "gym_leader_fire_tim_choice_dialog_battle_lost",
-	"title": "gym_leader_fire_tim battle_lost",
-	"description": "dialog.npc.gym_leader_fire_tim.dialog.battle_lost",
+	"title": "gym_leader_fire_tim_choice_dialog_battle_lost",
+	"description": "dialog.npc.gym_leader_fire_tim.dialog.battle_lost_0.line_0",
 	"entries": [
 		{
 			"id": "start",
-			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
 			"speaker": {
 				"translate": "dialog.npc.gym_leader_fire_tim.name",
 				"color": "white"
 			},
 			"text": [
 				{
-					"translate": "dialog.npc.gym_leader_fire_tim.dialog.battle_lost.line_0"
+					"translate": "dialog.npc.gym_leader_fire_tim.dialog.battle_lost_0.line_0"
 				}
 			]
 		}

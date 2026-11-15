@@ -1,0 +1,84 @@
+{
+	"id": "gym_leader_bug_shino_rematch_choice_dialog_challenge",
+	"title": "gym_leader_bug_shino_rematch_choice_dialog_challenge",
+	"description": "dialog.npc.gym_leader_bug_shino_rematch.dialog.challenge.line_0",
+	"entries": [
+		{
+			"id": "start",
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_bug_shino_rematch.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_bug_shino_rematch.dialog.challenge.line_0"
+				}
+			],
+			"options": [
+				{
+					"text": {
+						"translate": "dialog.npc.gym_leader_bug_shino_rematch.dialog.challenge.option_0"
+					},
+					"target": "battle_start",
+					"command": [
+						"moddcorpbattle bug_leader_rematch"
+					]
+				},
+				{
+					"text": {
+						"translate": "dialog.npc.gym_leader_bug_shino_rematch.dialog.challenge.option_1"
+					},
+					"target": "end",
+					"command": []
+				}
+			]
+		},
+		{
+			"id": "battle_start",
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_bug_shino_rematch.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_bug_shino_rematch.dialog.battle_start.line_0"
+				}
+			],
+			"endDialog": true
+		},
+		{
+			"id": "end",
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.gym_leader_bug_shino_rematch.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.gym_leader_bug_shino_rematch.dialog.battle_cancel.line_0"
+				}
+			],
+			"endDialog": true
+		}
+	]
+}

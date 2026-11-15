@@ -1,11 +1,17 @@
 {
 	"id": "gym_leader_ice_glacia_choice_dialog_completed",
-	"title": "gym_leader_ice_glacia completed",
-	"description": "dialog.npc.gym_leader_ice_glacia.dialog.completed",
+	"title": "gym_leader_ice_glacia_choice_dialog_completed",
+	"description": "dialog.npc.gym_leader_ice_glacia.dialog.completed.line_0",
 	"entries": [
 		{
 			"id": "start",
-			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
 			"speaker": {
 				"translate": "dialog.npc.gym_leader_ice_glacia.name",
 				"color": "white"
@@ -17,8 +23,14 @@
 			]
 		},
 		{
-			"id": "line_1",
-			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"id": "start_1",
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
 			"speaker": {
 				"translate": "dialog.npc.gym_leader_ice_glacia.name",
 				"color": "white"

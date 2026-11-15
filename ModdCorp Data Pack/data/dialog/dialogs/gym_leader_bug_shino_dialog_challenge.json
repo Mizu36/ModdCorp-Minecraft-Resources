@@ -1,7 +1,7 @@
 {
 	"id": "gym_leader_bug_shino_choice_dialog_challenge",
-	"title": "gym_leader_bug_shino challenge",
-	"description": "dialog.npc.gym_leader_bug_shino.dialog.challenge.line_0",
+	"title": "gym_leader_bug_shino_choice_dialog_challenge",
+	"description": "dialog.npc.gym_leader_bug_shino.dialog.challenge_0.line_0",
 	"entries": [
 		{
 			"id": "start",
@@ -18,7 +18,7 @@
 			},
 			"text": [
 				{
-					"translate": "dialog.npc.gym_leader_bug_shino.dialog.challenge.line_0"
+					"translate": "dialog.npc.gym_leader_bug_shino.dialog.challenge_0.line_0"
 				}
 			],
 			"options": [
@@ -55,7 +55,7 @@
 			},
 			"text": [
 				{
-					"translate": "dialog.npc.gym_leader_bug_shino.dialog.battle_start.line_0"
+					"translate": "dialog.npc.gym_leader_bug_shino.dialog.battle_start_0.line_0"
 				}
 			],
 			"endDialog": true
@@ -75,7 +75,7 @@
 			},
 			"text": [
 				{
-					"translate": "dialog.npc.gym_leader_bug_shino.dialog.battle_cancel.line_0"
+					"translate": "dialog.npc.gym_leader_bug_shino.dialog.battle_cancel_0.line_0"
 				}
 			],
 			"endDialog": true

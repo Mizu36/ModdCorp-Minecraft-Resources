@@ -137,12 +137,20 @@ global.gymTrainerEncounters = {
   gym_leader_electric_voltaire: "electric_leader",
   gym_leader_ice_glacia: "ice_leader",
   gym_leader_normal_maddie: "normal_leader",
+  gym_leader_bug_shino_rematch: "bug_leader_rematch",
+  gym_leader_ground_ashley_rematch: "ground_leader_rematch",
+  gym_leader_water_kamiya_rematch: "water_leader_rematch",
+  gym_leader_poison_kinoko_rematch: "poison_leader_rematch",
+  gym_leader_fire_tim_rematch: "fire_leader_rematch",
+  gym_leader_electric_voltaire_rematch: "electric_leader_rematch",
+  gym_leader_ice_glacia_rematch: "ice_leader_rematch",
+  gym_leader_normal_maddie_rematch: "normal_leader_rematch",
   elite_four_grass_chigusa: "e4_grass",
   elite_four_ghost_acerola: "e4_ghost",
   elite_four_steel_silas: "e4_steel",
   elite_four_dragon_ragnar: "e4_dragon",
   champion_mizu: "champion",
-  // Rematch variants reuse the same NPC; handleNpcGymTrainer switches to "<npc>_rematch" while the player is on the rematch run
+  // Rematch variants reuse the same NPC.
   elite_four_grass_chigusa_rematch: "e4_grass_rematch",
   elite_four_ghost_acerola_rematch: "e4_ghost_rematch",
   elite_four_steel_silas_rematch: "e4_steel_rematch",
@@ -160,6 +168,14 @@ global.gymTrainerFullDialogs = [
   "gym_leader_electric_voltaire",
   "gym_leader_ice_glacia",
   "gym_leader_normal_maddie",
+  "gym_leader_bug_shino_rematch",
+  "gym_leader_ground_ashley_rematch",
+  "gym_leader_water_kamiya_rematch",
+  "gym_leader_poison_kinoko_rematch",
+  "gym_leader_fire_tim_rematch",
+  "gym_leader_electric_voltaire_rematch",
+  "gym_leader_ice_glacia_rematch",
+  "gym_leader_normal_maddie_rematch",
   "elite_four_grass_chigusa",
   "elite_four_ghost_acerola",
   "elite_four_steel_silas",
@@ -174,6 +190,11 @@ global.gymTrainerFullDialogs = [
 
 // Configure counts per NPC and state; variant 0 is unsuffixed except for is_busy.
 const gymDialogVariants = {
+  gym_leader_bug_shino: { challenge: 27 },
+  gym_leader_ground_ashley: { challenge: 4 },
+  gym_leader_water_kamiya: { challenge: 18, locked: 3, completed: 2 },
+  gym_leader_poison_kinoko: { challenge: 4, battle_won: 2, battle_lost: 2 },
+  gym_leader_fire_tim: { battle_lost: 2 },
   gym_leader_normal_maddie: {
     challenge: 18, // 3 introductions x 2 battle starts x 3 cancellations
     locked: 3,
@@ -189,9 +210,9 @@ global.npcBattleKeys = global.npcBattleKeys || {};
 
 global.showGymDialog = (server, player, npcId, state) => {
   const npcVariants = gymDialogVariants[npcId] || {};
-  const variants = npcVariants[state] || (state === "is_busy" ? 2 : 1);
+  const variants = npcVariants[state] || (state === "is_busy" && !(npcId.startsWith("gym_leader_") && npcId.endsWith("_rematch")) ? 2 : 1);
   const variant = Math.floor(Math.random() * variants);
-  const suffix = state === "is_busy" || variant > 0 ? `_${variant}` : "";
+  const suffix = (state === "is_busy" && variants > 1) || variant > 0 ? `_${variant}` : "";
   server.runCommandSilent(`dialog ${player.getUuid()} show ${player.username} ${npcId}_choice_dialog_${state}${suffix}`);
 };
 
@@ -229,7 +250,8 @@ const isEncounterBusy = (player, encounterId) => {
 global.getGymEncounterState = (player, encounterId) => {
   var encounter = global.leagueConfig[encounterId];
   const repeatingChampionRematch = encounterId === "champion_rematch" && player.stages.has("challenging_e4_rematch");
-  if (encounter.completedStage && player.stages.has(encounter.completedStage) && !repeatingChampionRematch) return "completed";
+  const gymRematch = encounterId.endsWith("_leader_rematch");
+  if (encounter.completedStage && player.stages.has(encounter.completedStage) && !repeatingChampionRematch && !gymRematch) return "completed";
   if (encounter.requiredStages && encounter.requiredStages.some((stage) => !player.stages.has(stage))) return "locked";
   if (isEncounterBusy(player, encounterId)) return "is_busy";
   if (!hasHealthyPokemon(player)) return "missing_pokemon";
@@ -246,7 +268,11 @@ global.startNpcBattle = (server, player, encounterId) => {
   if (npcId && global.gymTrainerFullDialogs.includes(npcId)) {
     gateState = global.getGymEncounterState(player, encounterId);
     if (gateState !== "ready") {
-      global.showGymDialog(server, player, npcId, gateState);
+      if (gateState === "locked" && encounterId.endsWith("_leader_rematch")) {
+        player.tell("§cYou must complete the Elite Four before challenging a Gym Leader rematch.");
+      } else {
+        global.showGymDialog(server, player, npcId, gateState);
+      }
       return false;
     }
   } else {
@@ -257,24 +283,28 @@ global.startNpcBattle = (server, player, encounterId) => {
 
   // Falls back to the player as the anchor entity (the same thing the duo podium does) if the NPC is unknown
   var anchor = global.npcBattleTargets[playerKey] || playerKey;
-  global.pendingNpcBattles[playerKey] = { encounterId: encounterId, requestedAt: Date.now(), started: false, trainerId: encounter.trainerId };
+  global.pendingNpcBattles[playerKey] = { encounterId: encounterId, requestedAt: Date.now(), started: false, trainerId: encounter.trainerId,
+    rematchCompleted: encounterId.endsWith("_leader_rematch") && !!encounter.completedStage && player.stages.has(encounter.completedStage) };
   server.runCommandSilent(`trainers makebattle ${player.username} ${encounter.trainerId} ${anchor}`);
   return true;
 };
 
 // Called when an NPC battle ends. Dialog keys are written from the NPC's perspective:
 // battle_won = the NPC won, battle_lost = the player won.
-global.showNpcBattleResult = (server, player, encounterId, playerWon) => {
+global.showNpcBattleResult = (server, player, encounterId, playerWon, rematchCompleted) => {
   const npcId = global.gymTrainerFullDialogs.find((id) => global.gymTrainerEncounters[id] === encounterId);
   if (!npcId) return;
+  const resultState = (playerWon ? "battle_lost" : "battle_won") + (rematchCompleted ? "_completed" : "");
   server.scheduleInTicks(40, () => {
-    global.showGymDialog(server, player, npcId, playerWon ? "battle_lost" : "battle_won");
+    global.showGymDialog(server, player, npcId, resultState);
   });
 };
 
 global.handleNpcGymTrainer = (e, level, server, target, player, npcId) => {
   // A player on the rematch run (or who has finished it) gets the rematch encounter and dialogs
-  const onRematch = player.stages.has("challenging_e4_rematch") || player.stages.has("e4_rematch_complete");
+  const onRematch = npcId.startsWith("gym_leader_")
+    ? player.stages.has("e4_complete")
+    : player.stages.has("challenging_e4_rematch") || player.stages.has("e4_rematch_complete");
   if (onRematch && global.gymTrainerEncounters[`${npcId}_rematch`]) npcId = `${npcId}_rematch`;
   const encounterId = global.gymTrainerEncounters[npcId];
   if (!encounterId) return;
@@ -285,6 +315,7 @@ global.handleNpcGymTrainer = (e, level, server, target, player, npcId) => {
   if (global.gymTrainerFullDialogs.includes(npcId)) {
     encounterState = global.getGymEncounterState(player, encounterId);
     if (encounterState !== "ready") dialogState = encounterState;
+    else if (encounterId.endsWith("_leader_rematch") && player.stages.has(global.leagueConfig[encounterId].completedStage)) dialogState = "challenge_completed";
   }
   global.showGymDialog(server, player, npcId, dialogState);
 };

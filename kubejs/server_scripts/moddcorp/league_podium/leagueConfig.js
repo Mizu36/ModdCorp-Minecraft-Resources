@@ -1111,7 +1111,7 @@ global.leagueConfig = {
         displayName: "Gym Leader Shino",
         averageAboveLevel: 70,
 
-        requiredStages: ["challenging_gym_rematch"],
+        requiredStages: ["e4_complete"],
         rewardStages: ["gym_bug_rematch_complete"],
         completedStage: "gym_bug_rematch_complete",
 
@@ -1134,7 +1134,7 @@ global.leagueConfig = {
         displayName: "Gym Leader Ashley",
         averageAboveLevel: 70,
 
-        requiredStages: ["challenging_gym_rematch"],
+        requiredStages: ["e4_complete"],
         rewardStages: ["gym_ground_rematch_complete"],
         completedStage: "gym_ground_rematch_complete",
 
@@ -1157,7 +1157,7 @@ global.leagueConfig = {
         displayName: "Gym Leader Kamiya",
         averageAboveLevel: 70,
 
-        requiredStages: ["challenging_gym_rematch"],
+        requiredStages: ["e4_complete"],
         rewardStages: ["gym_water_rematch_complete"],
         completedStage: "gym_water_rematch_complete",
 
@@ -1180,7 +1180,7 @@ global.leagueConfig = {
         displayName: "Gym Leader Kinoko",
         averageAboveLevel: 70,
 
-        requiredStages: ["challenging_gym_rematch"],
+        requiredStages: ["e4_complete"],
         rewardStages: ["gym_poison_rematch_complete"],
         completedStage: "gym_poison_rematch_complete",
 
@@ -1203,7 +1203,7 @@ global.leagueConfig = {
         displayName: "Gym Leader Tim",
         averageAboveLevel: 70,
 
-        requiredStages: ["challenging_gym_rematch"],
+        requiredStages: ["e4_complete"],
         rewardStages: ["gym_fire_rematch_complete"],
         completedStage: "gym_fire_rematch_complete",
 
@@ -1226,7 +1226,7 @@ global.leagueConfig = {
         displayName: "Gym Leader Voltaire",
         averageAboveLevel: 70,
 
-        requiredStages: ["challenging_gym_rematch"],
+        requiredStages: ["e4_complete"],
         rewardStages: ["gym_electric_rematch_complete"],
         completedStage: "gym_electric_rematch_complete",
 
@@ -1249,7 +1249,7 @@ global.leagueConfig = {
         displayName: "Gym Leader Glacia",
         averageAboveLevel: 70,
 
-        requiredStages: ["challenging_gym_rematch"],
+        requiredStages: ["e4_complete"],
         rewardStages: ["gym_ice_rematch_complete"],
         completedStage: "gym_ice_rematch_complete",
 
@@ -1272,7 +1272,7 @@ global.leagueConfig = {
         displayName: "Gym Leader MaddiePly",
         averageAboveLevel: 70,
 
-        requiredStages: ["challenging_gym_rematch"],
+        requiredStages: ["e4_complete"],
         rewardStages: ["gym_normal_rematch_complete"],
         completedStage: "gym_normal_rematch_complete",
 

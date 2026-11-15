@@ -96,7 +96,7 @@ global.handleCobblemonDefeat = (e) => {
       return;
     }
     if (typeof global.showNpcBattleResult === "function") {
-      global.showNpcBattleResult(pendingPlayer.getServer(), pendingPlayer, pending.encounterId, playerWon);
+      global.showNpcBattleResult(pendingPlayer.getServer(), pendingPlayer, pending.encounterId, playerWon, pending.rematchCompleted);
     }
     let stub = makeNpcTrainerStub(pendingPlayer, pending);
     if (playerWon) { winningPlayer = pendingPlayer; losingPlayer = stub; }
