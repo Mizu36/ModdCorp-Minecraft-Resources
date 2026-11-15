@@ -1,0 +1,30 @@
+{
+	"id": "champion_mizu_rematch_choice_dialog_battle_won_1",
+	"title": "champion_mizu_rematch battle_won",
+	"description": "dialog.npc.champion_mizu_rematch.dialog.battle_won_1.line_0",
+	"entries": [
+		{
+			"id": "start",
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.champion_mizu_rematch.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.champion_mizu_rematch.dialog.battle_won_1.line_0"
+				}
+			],
+			"endDialog": true,
+			"command": [
+				"moddcorpleaguetp entrance"
+			]
+		}
+	]
+}

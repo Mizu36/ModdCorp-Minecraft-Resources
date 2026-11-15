@@ -1,0 +1,30 @@
+{
+	"id": "elite_four_grass_chigusa_choice_dialog_battle_won_1",
+	"title": "elite_four_grass_chigusa battle_won",
+	"description": "dialog.npc.elite_four_grass_chigusa.dialog.battle_won_1.line_0",
+	"entries": [
+		{
+			"id": "start",
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.elite_four_grass_chigusa.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.elite_four_grass_chigusa.dialog.battle_won_1.line_0"
+				}
+			],
+			"endDialog": true,
+			"command": [
+				"moddcorpleaguetp entrance"
+			]
+		}
+	]
+}

@@ -1,18 +1,24 @@
 {
 	"id": "champion_mizu_choice_dialog_completed",
 	"title": "champion_mizu completed",
-	"description": "dialog.npc.champion_mizu.dialog.completed",
+	"description": "dialog.npc.champion_mizu.dialog.completed_0.line_0",
 	"entries": [
 		{
 			"id": "start",
-			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
 			"speaker": {
 				"translate": "dialog.npc.champion_mizu.name",
 				"color": "white"
 			},
 			"text": [
 				{
-					"translate": "dialog.npc.champion_mizu.dialog.completed.line_0"
+					"translate": "dialog.npc.champion_mizu.dialog.completed_0.line_0"
 				}
 			]
 		}

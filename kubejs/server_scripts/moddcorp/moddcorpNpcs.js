@@ -206,10 +206,20 @@ const gymDialogVariants = {
   },
 };
 
+const eliteFourDialogVariants = {
+  challenge: 27,
+  completed: 3,
+  missing_pokemon: 3,
+  is_busy: 3,
+  battle_won: 3,
+  battle_lost: 3,
+};
+
 global.npcBattleKeys = global.npcBattleKeys || {};
 
 global.showGymDialog = (server, player, npcId, state) => {
-  const npcVariants = gymDialogVariants[npcId] || {};
+  const npcVariants = gymDialogVariants[npcId] ||
+    (npcId.startsWith("elite_four_") || npcId.startsWith("champion_") ? eliteFourDialogVariants : {});
   const variants = npcVariants[state] || (state === "is_busy" && !(npcId.startsWith("gym_leader_") && npcId.endsWith("_rematch")) ? 2 : 1);
   const variant = Math.floor(Math.random() * variants);
   const suffix = (state === "is_busy" && variants > 1) || variant > 0 ? `_${variant}` : "";

@@ -1,0 +1,169 @@
+{
+	"id": "champion_mizu_rematch_choice_dialog_challenge_3",
+	"title": "champion_mizu_rematch challenge",
+	"description": "dialog.npc.champion_mizu_rematch.dialog.challenge_0.line_0",
+	"entries": [
+		{
+			"id": "start",
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.champion_mizu_rematch.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.champion_mizu_rematch.dialog.challenge_0.line_0"
+				}
+			],
+			"options": [
+				{
+					"text": {
+						"translate": "dialog.npc.champion_mizu_rematch.dialog.challenge.option_0"
+					},
+					"target": "battle_start",
+					"command": [
+						"moddcorpbattle champion_rematch"
+					]
+				},
+				{
+					"text": {
+						"translate": "dialog.npc.champion_mizu_rematch.dialog.challenge.option_1"
+					},
+					"target": "end",
+					"command": []
+				},
+				{
+					"text": {
+						"translate": "dialog.npc.champion_mizu_rematch.dialog.challenge.option_2"
+					},
+					"target": "end_challenge",
+					"command": []
+				}
+			]
+		},
+		{
+			"id": "battle_start",
+			"endDialog": true,
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.champion_mizu_rematch.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.champion_mizu_rematch.dialog.battle_start_1.line_0"
+				}
+			]
+		},
+		{
+			"id": "end",
+			"endDialog": true,
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.champion_mizu_rematch.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.champion_mizu_rematch.dialog.battle_cancel_0.line_0"
+				}
+			]
+		},
+		{
+			"id": "end_challenge",
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.champion_mizu_rematch.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.elite_four.dialog.end_challenge.line_0"
+				}
+			],
+			"options": [
+				{
+					"text": {
+						"translate": "dialog.npc.elite_four.dialog.end_challenge.option_0"
+					},
+					"target": "end_challenge_yes",
+					"command": []
+				},
+				{
+					"text": {
+						"translate": "dialog.npc.elite_four.dialog.end_challenge.option_1"
+					},
+					"target": "end_challenge_no",
+					"command": []
+				}
+			]
+		},
+		{
+			"id": "end_challenge_yes",
+			"endDialog": true,
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.champion_mizu_rematch.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.elite_four.dialog.end_challenge_yes.line_0"
+				}
+			],
+			"command": [
+				"moddcorpleaguetp entrance"
+			]
+		},
+		{
+			"id": "end_challenge_no",
+			"endDialog": true,
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.champion_mizu_rematch.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.elite_four.dialog.end_challenge_no.line_0"
+				}
+			]
+		}
+	]
+}

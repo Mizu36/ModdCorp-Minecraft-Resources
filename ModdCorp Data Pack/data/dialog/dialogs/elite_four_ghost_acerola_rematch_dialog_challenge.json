@@ -1,18 +1,24 @@
 {
 	"id": "elite_four_ghost_acerola_rematch_choice_dialog_challenge",
 	"title": "elite_four_ghost_acerola_rematch challenge",
-	"description": "dialog.npc.elite_four_ghost_acerola_rematch.dialog.challenge",
+	"description": "dialog.npc.elite_four_ghost_acerola_rematch.dialog.challenge_0.line_0",
 	"entries": [
 		{
 			"id": "start",
-			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
 			"speaker": {
 				"translate": "dialog.npc.elite_four_ghost_acerola_rematch.name",
 				"color": "white"
 			},
 			"text": [
 				{
-					"translate": "dialog.npc.elite_four_ghost_acerola_rematch.dialog.challenge.line_0"
+					"translate": "dialog.npc.elite_four_ghost_acerola_rematch.dialog.challenge_0.line_0"
 				}
 			],
 			"options": [
@@ -34,7 +40,7 @@
 				},
 				{
 					"text": {
-						"translate": "dialog.npc.elite_four.dialog.end_challenge.option_2"
+						"translate": "dialog.npc.elite_four_ghost_acerola_rematch.dialog.challenge.option_2"
 					},
 					"target": "end_challenge",
 					"command": []
@@ -44,28 +50,40 @@
 		{
 			"id": "battle_start",
 			"endDialog": true,
-			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
 			"speaker": {
 				"translate": "dialog.npc.elite_four_ghost_acerola_rematch.name",
 				"color": "white"
 			},
 			"text": [
 				{
-					"translate": "dialog.npc.elite_four_ghost_acerola_rematch.dialog.battle_start.line_0"
+					"translate": "dialog.npc.elite_four_ghost_acerola_rematch.dialog.battle_start_0.line_0"
 				}
 			]
 		},
 		{
 			"id": "end",
 			"endDialog": true,
-			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
 			"speaker": {
 				"translate": "dialog.npc.elite_four_ghost_acerola_rematch.name",
 				"color": "white"
 			},
 			"text": [
 				{
-					"translate": "dialog.npc.elite_four_ghost_acerola_rematch.dialog.challenge.line_2"
+					"translate": "dialog.npc.elite_four_ghost_acerola_rematch.dialog.battle_cancel_0.line_0"
 				}
 			]
 		},

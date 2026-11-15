@@ -1,0 +1,26 @@
+{
+	"id": "elite_four_steel_silas_choice_dialog_completed_2",
+	"title": "elite_four_steel_silas completed",
+	"description": "dialog.npc.elite_four_steel_silas.dialog.completed_2.line_0",
+	"entries": [
+		{
+			"id": "start",
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.elite_four_steel_silas.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.elite_four_steel_silas.dialog.completed_2.line_0"
+				}
+			]
+		}
+	]
+}

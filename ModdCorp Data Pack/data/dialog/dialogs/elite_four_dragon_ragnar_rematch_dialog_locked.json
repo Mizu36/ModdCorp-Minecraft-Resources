@@ -1,11 +1,17 @@
 {
 	"id": "elite_four_dragon_ragnar_rematch_choice_dialog_locked",
 	"title": "elite_four_dragon_ragnar_rematch locked",
-	"description": "dialog.npc.elite_four_dragon_ragnar_rematch.dialog.locked",
+	"description": "dialog.npc.elite_four_dragon_ragnar_rematch.dialog.locked.line_0",
 	"entries": [
 		{
 			"id": "start",
-			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
 			"speaker": {
 				"translate": "dialog.npc.elite_four_dragon_ragnar_rematch.name",
 				"color": "white"

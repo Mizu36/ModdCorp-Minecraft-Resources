@@ -1,11 +1,17 @@
 {
 	"id": "elite_four_steel_silas_choice_dialog_locked",
 	"title": "elite_four_steel_silas locked",
-	"description": "dialog.npc.elite_four_steel_silas.dialog.locked",
+	"description": "dialog.npc.elite_four_steel_silas.dialog.locked.line_0",
 	"entries": [
 		{
 			"id": "start",
-			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
 			"speaker": {
 				"translate": "dialog.npc.elite_four_steel_silas.name",
 				"color": "white"
