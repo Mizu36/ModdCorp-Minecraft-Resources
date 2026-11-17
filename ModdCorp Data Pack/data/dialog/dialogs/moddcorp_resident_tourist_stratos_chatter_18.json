@@ -1,0 +1,20 @@
+{
+	"id": "moddcorp_resident_tourist_stratos_chatter_18",
+	"title": "moddcorp_resident_tourist_stratos_chatter_18",
+	"description": "dialog.npc.tourist.dialog.chatter_18.line_0",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.townsfolk_stratos.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.tourist.dialog.chatter_18.line_0"
+				}
+			],
+			"endDialog": true
+		}
+	]
+}

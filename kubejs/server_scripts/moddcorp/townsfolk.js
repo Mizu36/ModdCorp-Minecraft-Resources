@@ -22,6 +22,15 @@ global.handleTownsfolkInteraction = (server, target, player) => {
         return true;
     }
 
+    var genericFamily = "generic_" + family;
+    var genericDialogs = global.townsfolkDialogs[genericFamily];
+    if (!genericDialogs) {
+        console.error("[TOWNSFOLK] No generic dialog index registered for " + family + ".");
+        player.tell("§cThis resident's dialog data is out of date. Check the server log.");
+        return true;
+    }
+    if (genericDialogs.length > 0 && Math.random() < 0.5) dialogs = genericDialogs;
+
     var dialog = dialogs[Math.floor(Math.random() * dialogs.length)];
     if (Number(server.runCommandSilent(`dialog ${player.getUuid()} show ${player.username} ${dialog}`)) < 1) {
         console.error("[TOWNSFOLK] Could not show dialog " + dialog + " for " + player.username + ".");

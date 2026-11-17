@@ -1,0 +1,20 @@
+{
+	"id": "moddcorp_resident_generic_townsfolk_farmville_child_chatter_23",
+	"title": "moddcorp_resident_generic_townsfolk_farmville_child_chatter_23",
+	"description": "dialog.npc.townsfolk_generic_child.dialog.chatter_23.line_0",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.townsfolk_farmville.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.townsfolk_generic_child.dialog.chatter_23.line_0"
+				}
+			],
+			"endDialog": true
+		}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"id": "moddcorp_resident_townsfolk_antares_chatter_4",
+	"title": "moddcorp_resident_townsfolk_antares_chatter_4",
+	"description": "dialog.npc.townsfolk_antares.dialog.chatter_4.line_0",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.townsfolk_antares.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.townsfolk_antares.dialog.chatter_4.line_0"
+				}
+			],
+			"endDialog": true
+		}
+	]
+}

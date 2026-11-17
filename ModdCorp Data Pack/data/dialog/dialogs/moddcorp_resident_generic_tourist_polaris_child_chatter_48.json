@@ -1,0 +1,20 @@
+{
+	"id": "moddcorp_resident_generic_tourist_polaris_child_chatter_48",
+	"title": "moddcorp_resident_generic_tourist_polaris_child_chatter_48",
+	"description": "dialog.npc.townsfolk_generic_child.dialog.chatter_48.line_0",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.townsfolk_polaris.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.townsfolk_generic_child.dialog.chatter_48.line_0"
+				}
+			],
+			"endDialog": true
+		}
+	]
+}

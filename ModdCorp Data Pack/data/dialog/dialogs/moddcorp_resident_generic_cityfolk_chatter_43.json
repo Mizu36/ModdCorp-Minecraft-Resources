@@ -1,0 +1,20 @@
+{
+	"id": "moddcorp_resident_generic_cityfolk_chatter_43",
+	"title": "moddcorp_resident_generic_cityfolk_chatter_43",
+	"description": "dialog.npc.townsfolk_generic.dialog.chatter_43.line_0",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.cityfolk_chesno.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.townsfolk_generic.dialog.chatter_43.line_0"
+				}
+			],
+			"endDialog": true
+		}
+	]
+}

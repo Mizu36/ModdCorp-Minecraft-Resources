@@ -1,0 +1,20 @@
+{
+	"id": "moddcorp_resident_townsfolk_archi_chatter_16",
+	"title": "moddcorp_resident_townsfolk_archi_chatter_16",
+	"description": "dialog.npc.townsfolk_archi.dialog.chatter_16.line_0",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.townsfolk_archi.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.townsfolk_archi.dialog.chatter_16.line_0"
+				}
+			],
+			"endDialog": true
+		}
+	]
+}

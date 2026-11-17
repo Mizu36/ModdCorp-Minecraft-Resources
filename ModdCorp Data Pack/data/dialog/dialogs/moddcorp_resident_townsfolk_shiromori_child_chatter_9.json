@@ -1,0 +1,20 @@
+{
+	"id": "moddcorp_resident_townsfolk_shiromori_child_chatter_9",
+	"title": "moddcorp_resident_townsfolk_shiromori_child_chatter_9",
+	"description": "dialog.npc.townsfolk_shiromori_child.dialog.chatter_9.line_0",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.townsfolk_shiromori.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.townsfolk_shiromori_child.dialog.chatter_9.line_0"
+				}
+			],
+			"endDialog": true
+		}
+	]
+}

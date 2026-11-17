@@ -1,0 +1,20 @@
+{
+	"id": "moddcorp_resident_generic_tourist_stillwater_chatter_49",
+	"title": "moddcorp_resident_generic_tourist_stillwater_chatter_49",
+	"description": "dialog.npc.townsfolk_generic.dialog.chatter_49.line_0",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.townsfolk_stillwater.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.townsfolk_generic.dialog.chatter_49.line_0"
+				}
+			],
+			"endDialog": true
+		}
+	]
+}

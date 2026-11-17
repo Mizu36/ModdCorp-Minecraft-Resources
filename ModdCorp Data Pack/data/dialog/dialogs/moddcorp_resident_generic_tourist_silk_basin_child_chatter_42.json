@@ -1,0 +1,20 @@
+{
+	"id": "moddcorp_resident_generic_tourist_silk_basin_child_chatter_42",
+	"title": "moddcorp_resident_generic_tourist_silk_basin_child_chatter_42",
+	"description": "dialog.npc.townsfolk_generic_child.dialog.chatter_42.line_0",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.townsfolk_silk_basin.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.townsfolk_generic_child.dialog.chatter_42.line_0"
+				}
+			],
+			"endDialog": true
+		}
+	]
+}

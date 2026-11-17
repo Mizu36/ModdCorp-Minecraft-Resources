@@ -1,0 +1,20 @@
+{
+	"id": "moddcorp_resident_generic_townsfolk_kuromori_chatter_25",
+	"title": "moddcorp_resident_generic_townsfolk_kuromori_chatter_25",
+	"description": "dialog.npc.townsfolk_generic.dialog.chatter_25.line_0",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.townsfolk_kuromori.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.townsfolk_generic.dialog.chatter_25.line_0"
+				}
+			],
+			"endDialog": true
+		}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"id": "moddcorp_resident_generic_townsfolk_jewel_of_desert_child_chatter_32",
+	"title": "moddcorp_resident_generic_townsfolk_jewel_of_desert_child_chatter_32",
+	"description": "dialog.npc.townsfolk_generic_child.dialog.chatter_32.line_0",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.townsfolk_jewel_of_desert.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.townsfolk_generic_child.dialog.chatter_32.line_0"
+				}
+			],
+			"endDialog": true
+		}
+	]
+}

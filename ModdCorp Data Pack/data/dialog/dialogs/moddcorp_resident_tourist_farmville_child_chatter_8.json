@@ -1,0 +1,20 @@
+{
+	"id": "moddcorp_resident_tourist_farmville_child_chatter_8",
+	"title": "moddcorp_resident_tourist_farmville_child_chatter_8",
+	"description": "dialog.npc.tourist_child.dialog.chatter_8.line_0",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.townsfolk_farmville.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.tourist_child.dialog.chatter_8.line_0"
+				}
+			],
+			"endDialog": true
+		}
+	]
+}
