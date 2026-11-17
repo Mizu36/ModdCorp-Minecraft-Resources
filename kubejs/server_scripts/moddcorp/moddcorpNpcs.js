@@ -74,6 +74,21 @@ ServerEvents.commandRegistry(event => {
   );
 
   event.register(
+    Commands.literal("recordshop")
+      .executes(ctx => {
+        const player = ctx.source.player;
+        if (!player) return 0;
+        const result = ctx.source.server.runCommandSilent(`openshop ${player.username} record_shop`);
+        if (Number(result) < 1) {
+          console.error(`[RECORD SHOP] Could not open record_shop for ${player.username}.`);
+          player.tell("§cCould not open the record shop. Check the server log.");
+          return 0;
+        }
+        return 1;
+      })
+  );
+
+  event.register(
     Commands.literal("moddcorptravel") // shows the npc's traveling line, then teleports to the destination
       .then(Commands.argument("npc", Arguments.STRING.create(event))
         .then(Commands.argument("location", Arguments.STRING.create(event))
@@ -460,6 +475,16 @@ global.handleNpcLeague = (e, level, server, target, player) => {
     server.runCommandSilent(`dialog ${player.getUuid()} show ${player.username} league_choice_dialog_rematch_ready`); //Player has completed the league and is ready for a rematch
   } else if (stage > 10) {
     server.runCommandSilent(`dialog ${player.getUuid()} show ${player.username} league_choice_dialog_rematch_completed`); //Can still rematch again, but uses same team as the original rematch challenge
+  }
+};
+
+global.handleNpcRecord = (e, level, server, player) => {
+  const variant = Math.floor(Math.random() * 6);
+  const suffix = variant ? `_${variant}` : "";
+  const dialogId = `record_dialog_need_to_buy${suffix}`;
+  if (Number(server.runCommandSilent(`dialog ${player.getUuid()} show ${player.username} ${dialogId}`)) < 1) {
+    console.error(`[RECORD SHOP] Could not show dialog ${dialogId} for ${player.username}.`);
+    player.tell("§cCould not open the record shop dialog. Check the server log.");
   }
 };
 

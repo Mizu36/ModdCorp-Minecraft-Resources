@@ -33,6 +33,10 @@ global.isPlayerVsPlayerBattle = (battle) => {
   return actors.length > 1 && actors.every((actor) => String(actor.getType()) === "PLAYER");
 };
 
+const grantFirstBattleStage = (player, stage) => {
+  if (!player.stages.has(stage)) player.stages.add(stage);
+};
+
 global.handleCobblemonDefeat = (e) => {
   // Player vs player battles only stop the music; no rewards or league logic
   if (global.isPlayerVsPlayerBattle(e.battle)) {
@@ -55,6 +59,10 @@ global.handleCobblemonDefeat = (e) => {
     if (String(actor.getType()) === "WILD") isWildBattle = true;
   });
   if (isWildBattle) {
+    e.winners.forEach((actor) => {
+      let winner = safeEntity(actor);
+      if (winner && winner.isPlayer()) grantFirstBattleStage(winner, "first_wild_battle");
+    });
     e.battle.getPlayers().forEach((p) => {
       Utils.server.runCommandSilent("stopsound " + p.username + " music");
       Utils.server.runCommandSilent("stopsound " + p.username + " record");
@@ -126,6 +134,10 @@ global.handleCobblemonDefeat = (e) => {
       } else {
           Utils.server.runCommandSilent("stopsound " + winningPlayer.username + " record");
       }
+      e.winners.forEach((actor) => {
+        let winner = safeEntity(actor);
+        if (winner && winner.isPlayer()) grantFirstBattleStage(winner, "first_trainer_battle");
+      });
       let wins = winningPlayer.persistentData.wins;
       winningPlayer.persistentData.wins = wins || 0;
       winningPlayer.persistentData.wins++;
@@ -283,12 +295,16 @@ StartupEvents.postInit((init) => {
     if (players.length === 0) return;
 
     if (global.isPlayerVsPlayerBattle(e.battle)) {
+      players.forEach((player) => grantFirstBattleStage(player, "first_player_battle"));
       global.runMusicForPlayerBattle(players);
       return;
     }
 
     let player = players[0];
     if (!trainer && e.battle.getActors().some((actor) => String(actor.getType()) === "WILD")) {
+      if (global.isWildLegendaryBattle(e.battle)) {
+        players.forEach((participant) => grantFirstBattleStage(participant, "first_legendary_battle"));
+      }
       global.runMusicForWildEncounter(player, e.battle);
       return;
     }

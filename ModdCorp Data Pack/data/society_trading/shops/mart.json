@@ -2,6 +2,7 @@
   "shop_id": "mart",
   "name": "shop.society_trading.mart",
   "texture": "cobblemon:textures/item/poke_balls/poke_ball",
+  "hidden_from_selector": true,
   "selector_weight": -101,
   "jei_catalyst": {
     "item": "cobblemon:poke_ball"

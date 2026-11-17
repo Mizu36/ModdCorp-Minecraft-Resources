@@ -1,0 +1,20 @@
+{
+	"id": "moddcorp_resident_townsfolk_stillwater_child_chatter_1",
+	"title": "moddcorp_resident_townsfolk_stillwater_child_chatter_1",
+	"description": "dialog.npc.townsfolk_stillwater_child.dialog.chatter_1.line_0",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.townsfolk_stillwater.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.townsfolk_stillwater_child.dialog.chatter_1.line_0"
+				}
+			],
+			"endDialog": true
+		}
+	]
+}

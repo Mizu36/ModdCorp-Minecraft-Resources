@@ -1,0 +1,294 @@
+{
+  "shop_id": "record_shop",
+  "name": "shop.society_trading.record_shop",
+  "texture": "moddcorp:textures/item/music_disc_wild",
+  "hidden_from_selector": true,
+  "selector_weight": -101,
+  "jei_catalyst": {
+    "item": "moddcorp:music_disc_wild_battle"
+  },
+  "trades": [
+    {
+      "offer": {
+        "item": "etched:etching_table",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:crown",
+        "count": 1
+      },
+      "numismatics_cost": 512,
+      "trade_id": "record_shop_etching_table"
+    },
+    {
+      "offer": {
+        "item": "etched:album_jukebox",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:sun",
+        "count": 1
+      },
+      "numismatics_cost": 4096,
+      "trade_id": "record_shop_album_jukebox"
+    },
+    {
+      "offer": {
+        "item": "etched:radio",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:cog",
+        "count": 4
+      },
+      "numismatics_cost": 256,
+      "trade_id": "record_shop_radio"
+    },
+    {
+      "offer": {
+        "item": "etched:music_label",
+        "count": 4
+      },
+      "request": {
+        "item": "numismatics:crown",
+        "count": 1
+      },
+      "numismatics_cost": 512,
+      "trade_id": "record_shop_music_label"
+    },
+    {
+      "offer": {
+        "item": "etched:blank_music_disc",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:crown",
+        "count": 1
+      },
+      "numismatics_cost": 512,
+      "trade_id": "record_shop_blank_music_disc"
+    },
+    {
+      "offer": {
+        "item": "etched:album_cover",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:crown",
+        "count": 1
+      },
+      "numismatics_cost": 512,
+      "trade_id": "record_shop_album_cover"
+    },
+    {
+      "offer": {
+        "item": "moddcorp:music_disc_wild_battle",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:sun",
+        "count": 1
+      },
+      "numismatics_cost": 4096,
+      "stage_required": "first_wild_battle",
+      "unlock_description": "jei.society_trading.wild_battle",
+      "trade_id": "record_shop_wild_battle"
+    },
+    {
+      "offer": {
+        "item": "moddcorp:music_disc_wild_battle_alt",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:sun",
+        "count": 1
+      },
+      "numismatics_cost": 4096,
+      "stage_required": "first_wild_battle",
+      "unlock_description": "jei.society_trading.wild_battle",
+      "trade_id": "record_shop_wild_battle_alt"
+    },
+    {
+      "offer": {
+        "item": "moddcorp:music_disc_trainer_battle",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:sun",
+        "count": 1
+      },
+      "numismatics_cost": 4096,
+      "stage_required": "first_trainer_battle",
+      "unlock_description": "jei.society_trading.trainer_battle",
+      "trade_id": "record_shop_trainer_battle"
+    },
+    {
+      "offer": {
+        "item": "moddcorp:music_disc_trainer_battle_alt",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:sun",
+        "count": 1
+      },
+      "numismatics_cost": 4096,
+      "stage_required": "first_trainer_battle",
+      "unlock_description": "jei.society_trading.trainer_battle",
+      "trade_id": "record_shop_trainer_battle_alt"
+    },
+    {
+      "offer": {
+        "item": "moddcorp:music_disc_trainer_battle_remix",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:sun",
+        "count": 1
+      },
+      "numismatics_cost": 4096,
+      "stage_required": "stefan_battle_complete",
+      "unlock_description": "jei.society_trading.trainer_battle_remix",
+      "trade_id": "record_shop_trainer_battle_remix"
+    },
+    {
+      "offer": {
+        "item": "moddcorp:music_disc_player_battle",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:sun",
+        "count": 1
+      },
+      "numismatics_cost": 4096,
+      "stage_required": "first_player_battle",
+      "unlock_description": "jei.society_trading.player_battle",
+      "trade_id": "record_shop_player_battle"
+    },
+    {
+      "offer": {
+        "item": "moddcorp:music_disc_expert_battle",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:sun",
+        "count": 1
+      },
+      "numismatics_cost": 4096,
+      "stage_required": "first_expert_battle",
+      "unlock_description": "jei.society_trading.expert_battle",
+      "trade_id": "record_shop_expert_battle"
+    },
+    {
+      "offer": {
+        "item": "moddcorp:music_disc_boss_pokemon_battle",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:sun",
+        "count": 1
+      },
+      "numismatics_cost": 4096,
+      "stage_required": "first_legendary_battle",
+      "unlock_description": "jei.society_trading.legendary",
+      "trade_id": "record_shop_legendary_battle"
+    },
+    {
+      "offer": {
+        "item": "moddcorp:music_disc_gym_leader_battle",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:sun",
+        "count": 1
+      },
+      "numismatics_cost": 4096,
+      "stage_required": "gym_bug_complete",
+      "unlock_description": "jei.society_trading.gym_leader",
+      "trade_id": "record_shop_gym_leader_battle"
+    },
+    {
+      "offer": {
+        "item": "moddcorp:music_disc_gym_leader_rematch",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:sun",
+        "count": 1
+      },
+      "numismatics_cost": 4096,
+      "stage_required": "first_gym_rematch",
+      "unlock_description": "jei.society_trading.gym_rematch",
+      "trade_id": "record_shop_gym_rematch"
+    },
+    {
+      "offer": {
+        "item": "moddcorp:music_disc_elite_four_battle",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:sun",
+        "count": 1
+      },
+      "numismatics_cost": 4096,
+      "stage_required": "e4_complete",
+      "unlock_description": "jei.society_trading.elite_four",
+      "trade_id": "record_shop_elite_four_battle"
+    },
+    {
+      "offer": {
+        "item": "moddcorp:music_disc_champion_battle",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:sun",
+        "count": 1
+      },
+      "numismatics_cost": 4096,
+      "stage_required": "e4_complete",
+      "unlock_description": "jei.society_trading.elite_four",
+      "trade_id": "record_shop_champion_battle"
+    },
+    {
+      "offer": {
+        "item": "moddcorp:music_disc_elite_four_rematch",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:sun",
+        "count": 1
+      },
+      "numismatics_cost": 4096,
+      "stage_required": "e4_rematch_complete",
+      "unlock_description": "jei.society_trading.elite_four_rematch",
+      "trade_id": "record_shop_elite_four_rematch"
+    },
+    {
+      "offer": {
+        "item": "moddcorp:music_disc_champion_rematch",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:sun",
+        "count": 1
+      },
+      "numismatics_cost": 4096,
+      "stage_required": "e4_rematch_complete",
+      "unlock_description": "jei.society_trading.champion_rematch",
+      "trade_id": "record_shop_champion_rematch"
+    },
+    {
+      "offer": {
+        "item": "moddcorp:music_disc_boss_battle",
+        "count": 1
+      },
+      "request": {
+        "item": "numismatics:sun",
+        "count": 1
+      },
+      "numismatics_cost": 4096,
+      "stage_required": "ceo_complete",
+      "unlock_description": "jei.society_trading.ceo_battle",
+      "trade_id": "record_shop_ceo_battle"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+	"id": "moddcorp_resident_tourist_antares_child_chatter_2",
+	"title": "moddcorp_resident_tourist_antares_child_chatter_2",
+	"description": "dialog.npc.tourist_child.dialog.chatter_2.line_0",
+	"entries": [
+		{
+			"id": "start",
+			"speaker": {
+				"translate": "dialog.npc.townsfolk_antares.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.tourist_child.dialog.chatter_2.line_0"
+				}
+			],
+			"endDialog": true
+		}
+	]
+}

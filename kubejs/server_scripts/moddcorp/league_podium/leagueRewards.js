@@ -6,8 +6,8 @@ global.trainerBattleMusic = ["moddcorp:trainer_battle_full"];
 global.playerBattleMusic = ["moddcorp:player_battle_full"];
 global.leaderBattleMusic =  ["moddcorp:gym_leader_battle_full"];
 global.legendaryPokemon = [
-    "articuno", "zapdos", "moltres", "mewtwo",
-    "raikou", "entei", "suicune", "lugia", "hooh",
+    "articuno", "zapdos", "moltres", "mewtwo", "mew",
+    "raikou", "entei", "suicune", "lugia", "hooh", "celebi",
     "regirock", "regice", "registeel", "latias", "latios", "kyogre", "groudon", "rayquaza",
     "uxie", "mesprit", "azelf", "dialga", "palkia", "heatran", "regigigas", "giratina", "cresselia",
     "cobalion", "terrakion", "virizion", "tornadus", "thundurus", "landorus", "reshiram", "zekrom", "kyurem",
@@ -46,7 +46,7 @@ global.runMusicForEncounter = function(player){
     Utils.server.runCommandSilent("execute at " + player.username + " run playsound " + music + " record " + player.username + " ~ ~ ~");
 }
 
-global.runMusicForWildEncounter = function(player, battle) {
+global.isWildLegendaryBattle = function(battle) {
     let isLegendary = false;
     battle.getActors().forEach((actor) => {
         if (String(actor.getType()) !== "WILD") return;
@@ -55,8 +55,11 @@ global.runMusicForWildEncounter = function(player, battle) {
             if (global.legendaryPokemon.includes(species)) isLegendary = true;
         });
     });
+    return isLegendary;
+};
 
-    let musicList = isLegendary ? global.legendaryBattleMusic : global.wildBattleMusic;
+global.runMusicForWildEncounter = function(player, battle) {
+    let musicList = global.isWildLegendaryBattle(battle) ? global.legendaryBattleMusic : global.wildBattleMusic;
     let music = musicList[Math.floor(Math.random() * musicList.length)];
     Utils.server.runCommandSilent("stopsound " + player.username + " music");
     Utils.server.runCommandSilent("stopsound " + player.username + " record");

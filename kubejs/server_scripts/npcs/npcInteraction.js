@@ -45,6 +45,8 @@ const handleNpc = (e, npcId, level, server, target, player, item) => {
         global.handleNpcNurse(e, level, server, player);
     } else if (npcId === "clerk") {
         global.handleNpcClerk(e, level, server, player);
+    } else if (npcId === "record") {
+        global.handleNpcRecord(e, level, server, player);
     } else if (npcId === "shipmaster") {
         global.handleNpcShipmaster(e, level, server, target, player);
     } else if (npcId === "aviator") {
@@ -230,6 +232,10 @@ ItemEvents.entityInteracted((e) => {
     if (!npcIds.includes(target.type)) return;
     if (hand == "MAIN_HAND") {
         if (global.handleGymGauntletInteraction(server, target, player)) {
+            e.cancel();
+            return;
+        }
+        if (global.handleTownsfolkInteraction(server, target, player)) {
             e.cancel();
             return;
         }

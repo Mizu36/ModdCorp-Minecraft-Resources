@@ -1,5 +1,5 @@
 ModdCorp Custom Resources/
-tools/
+tools/*
 kubejs/server_scripts/cobblemon/trainerNicknames.js
 new_versions_for_comparison/
 ModdCorp Asset Pack/

@@ -958,8 +958,8 @@ global.leagueConfig = {
         isLeader: false,
 
         requiredStages: ["gym_normal_complete"],
-        rewardStages: ["super_boss_ceo_complete"],
-        completedStage: "super_boss_ceo_complete",
+        rewardStages: ["ceo_complete"],
+        completedStage: "ceo_complete",
 
         lockedMessage:
             "",
@@ -1112,7 +1112,7 @@ global.leagueConfig = {
         averageAboveLevel: 70,
 
         requiredStages: ["e4_complete"],
-        rewardStages: ["gym_bug_rematch_complete"],
+        rewardStages: ["gym_bug_rematch_complete", "first_rematch_complete"],
         completedStage: "gym_bug_rematch_complete",
 
         lockedMessage:
@@ -1135,7 +1135,7 @@ global.leagueConfig = {
         averageAboveLevel: 70,
 
         requiredStages: ["e4_complete"],
-        rewardStages: ["gym_ground_rematch_complete"],
+        rewardStages: ["gym_ground_rematch_complete", "first_rematch_complete"],
         completedStage: "gym_ground_rematch_complete",
 
         lockedMessage:
@@ -1158,7 +1158,7 @@ global.leagueConfig = {
         averageAboveLevel: 70,
 
         requiredStages: ["e4_complete"],
-        rewardStages: ["gym_water_rematch_complete"],
+        rewardStages: ["gym_water_rematch_complete", "first_rematch_complete"],
         completedStage: "gym_water_rematch_complete",
 
         lockedMessage:
@@ -1181,7 +1181,7 @@ global.leagueConfig = {
         averageAboveLevel: 70,
 
         requiredStages: ["e4_complete"],
-        rewardStages: ["gym_poison_rematch_complete"],
+        rewardStages: ["gym_poison_rematch_complete", "first_rematch_complete"],
         completedStage: "gym_poison_rematch_complete",
 
         lockedMessage:
@@ -1204,7 +1204,7 @@ global.leagueConfig = {
         averageAboveLevel: 70,
 
         requiredStages: ["e4_complete"],
-        rewardStages: ["gym_fire_rematch_complete"],
+        rewardStages: ["gym_fire_rematch_complete", "first_rematch_complete"],
         completedStage: "gym_fire_rematch_complete",
 
         lockedMessage:
@@ -1227,7 +1227,7 @@ global.leagueConfig = {
         averageAboveLevel: 70,
 
         requiredStages: ["e4_complete"],
-        rewardStages: ["gym_electric_rematch_complete"],
+        rewardStages: ["gym_electric_rematch_complete", "first_rematch_complete"],
         completedStage: "gym_electric_rematch_complete",
 
         lockedMessage:
@@ -1250,7 +1250,7 @@ global.leagueConfig = {
         averageAboveLevel: 70,
 
         requiredStages: ["e4_complete"],
-        rewardStages: ["gym_ice_rematch_complete"],
+        rewardStages: ["gym_ice_rematch_complete", "first_rematch_complete"],
         completedStage: "gym_ice_rematch_complete",
 
         lockedMessage:
@@ -1273,7 +1273,7 @@ global.leagueConfig = {
         averageAboveLevel: 70,
 
         requiredStages: ["e4_complete"],
-        rewardStages: ["gym_normal_rematch_complete"],
+        rewardStages: ["gym_normal_rematch_complete", "first_rematch_complete"],
         completedStage: "gym_normal_rematch_complete",
 
         lockedMessage:
@@ -1555,6 +1555,38 @@ global.leagueConfig = {
         moneyLoss: 0,
 
         battle_music: ["moddcorp:champion_rematch_full", "moddcorp:champion_battle_full"]
+    },
+
+    //==============================================
+    // Master & Special Trainers
+    //==============================================
+
+    stefan: {
+
+        trainerId: "stefan",
+        displayName: "Stefan",
+
+        rewardStages: ["stefan_complete"],
+        completedStage: "stefan_complete",
+
+        moneyReward: 5000,
+        moneyLoss: 2500,
+
+        battle_music: ["moddcorp:trainer_battle_remix_full"]
+    },
+
+    master_sploobus: { //PLACEHOLDER
+
+        trainerId: "master_sploobus",
+        displayName: "Sploobus",
+
+        rewardStages: ["master_sploobus_complete", "first_expert_battle"],
+        completedStage: "master_sploobus_complete",
+
+        moneyReward: 5000,
+        moneyLoss: 2500,
+
+        battle_music: ["moddcorp:expert_battle_full"]
     },
 
     //==============================================

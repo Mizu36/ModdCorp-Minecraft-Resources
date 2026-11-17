@@ -184,7 +184,7 @@ StartupEvents.registry("sound_event", event => {
     event.create("moddcorp:boss_pokemon_battle");
     event.create("moddcorp:trainer_battle");
     event.create("moddcorp:trainer_battle_alt");
-    event.create("moddcorp:trainer_battle_upbeat");
+    event.create("moddcorp:trainer_battle_remix");
     event.create("moddcorp:expert_battle");
     event.create("moddcorp:wild_battle");
     event.create("moddcorp:wild_battle_alt");
@@ -203,7 +203,7 @@ const MUSIC_DISCS = [
     ["boss_pokemon_battle", "Boss Pokemon Battle", 194, "music_disc_legendary"],
     ["trainer_battle", "Trainer Battle", 163, "music_disc_trainer"],
     ["trainer_battle_alt", "Trainer Battle (Alt)", 178, "music_disc_trainer_2"],
-    ["trainer_battle_upbeat", "Trainer Battle (Upbeat)", 264, "music_disc_trainer_3"],
+    ["trainer_battle_remix", "Trainer Battle (Remix)", 264, "music_disc_trainer_3"],
     ["expert_battle", "Expert Battle", 183, "music_disc_expert"],
     ["wild_battle", "Wild Battle", 227, "music_disc_wild"],
     ["wild_battle_alt", "Wild Battle (Alt)", 73, "music_disc_wild_2"]
@@ -212,10 +212,12 @@ const MUSIC_DISCS = [
 StartupEvents.registry("item", event => {
     MUSIC_DISCS.forEach(([sound, name, seconds, texture]) => {
         event.create("moddcorp:music_disc_" + sound, "music_disc")
-            .displayName(name)
+            .displayName("Music Disc")
             .song("moddcorp:" + sound, seconds)
             .texture("moddcorp:item/" + texture)
-            .tooltip(name + " Music");
+            .tooltip(name + " Music")
+            .tag("minecraft:music_discs")
+            .tag("botania:loonium_blacklist");
     });
 });
 
