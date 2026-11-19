@@ -213,6 +213,7 @@ StartupEvents.postInit((init) => {
   // (generated from the trainer JSONs) before the battle packs its teams.
   try {
     $CobblemonEvents.BATTLE_STARTED_PRE.subscribe("normal", (e) => {
+      if (e.isCanceled() || !global.preparePlayerLevelCapBattle(e)) return;
       let players = e.battle.getPlayers();
       if (players.length === 0) return;
       let pending = global.pendingNpcBattles[String(players[0].uuid)];
@@ -245,6 +246,7 @@ StartupEvents.postInit((init) => {
       // If the party's highest and lowest levels differ by more than 5, every Pokémon becomes highest - 2
       // instead of the average (anti-cheese).
       let encounter = global.leagueConfig && global.leagueConfig[pending.encounterId];
+      if (encounter && encounter.maxPlayerLevel != null) return;
       let threshold = encounter ? encounter.averageAboveLevel : undefined;
       if (threshold === undefined || threshold === null || threshold < 0) return;
       let Cobblemon = Java.loadClass("com.cobblemon.mod.common.Cobblemon");
@@ -345,6 +347,7 @@ StartupEvents.postInit((init) => {
   }
 
   $CobblemonEvents.BATTLE_VICTORY.subscribe("normal", (e) => {
+    e.battle.getPlayers().forEach((player) => global.queuePlayerLevelCapRecovery(player.getServer(), player));
     global.handleCobblemonDefeat(e);
   });
 
@@ -352,6 +355,7 @@ StartupEvents.postInit((init) => {
   try {
     $CobblemonEvents.BATTLE_FLED.subscribe("normal", (e) => {
       e.battle.getPlayers().forEach((p) => {
+        global.queuePlayerLevelCapRecovery(p.getServer(), p);
         Utils.server.runCommandSilent("stopsound " + p.username + " music");
         Utils.server.runCommandSilent("stopsound " + p.username + " record");
 
