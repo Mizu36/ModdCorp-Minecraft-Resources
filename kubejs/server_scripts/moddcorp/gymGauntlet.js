@@ -180,7 +180,7 @@ global.finishGymGauntletBattle = (server, player, won) => {
     state.phase = "result";
     state.won = won;
     saveGymGauntlet(server, state);
-    showRoundDialog(server, state, won ? "win" : "loss", 40);
+    showRoundDialog(server, state, won ? "loss" : "win", 40);
 };
 
 ServerEvents.commandRegistry(event => {
