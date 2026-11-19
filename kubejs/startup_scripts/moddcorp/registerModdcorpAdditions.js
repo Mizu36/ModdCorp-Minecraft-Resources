@@ -199,7 +199,7 @@ const MUSIC_DISCS = [
     ["elite_four_rematch", "Elite Four Rematch", 367, "music_disc_elite_four_rematch"],
     ["champion_battle", "Champion Battle", 546, "music_disc_champion"],
     ["champion_rematch", "Champion Rematch", 519, "music_disc_champion_rematch"],
-    ["boss_battle", "Boss Battle", 161, "music_disc_boss"],
+    ["boss_battle", "Boss Battle", 211, "music_disc_boss"],
     ["boss_pokemon_battle", "Boss Pokemon Battle", 194, "music_disc_legendary"],
     ["trainer_battle", "Trainer Battle", 163, "music_disc_trainer"],
     ["trainer_battle_alt", "Trainer Battle (Alt)", 178, "music_disc_trainer_2"],
