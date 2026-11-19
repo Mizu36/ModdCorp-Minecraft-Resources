@@ -1418,6 +1418,7 @@ global.leagueConfig = {
 
         trainerId: "gym_leader_bug_shino_gauntlet",
         displayName: "Gym Leader Shino",
+        maxTrainerLevel: 50,
 
         moneyReward: 0,
         moneyLoss: 0,
@@ -1429,6 +1430,7 @@ global.leagueConfig = {
 
         trainerId: "gym_leader_ground_ashley_gauntlet",
         displayName: "Gym Leader Ashley",
+        maxTrainerLevel: 50,
 
         moneyReward: 0,
         moneyLoss: 0,
@@ -1440,6 +1442,7 @@ global.leagueConfig = {
 
         trainerId: "gym_leader_water_kamiya_gauntlet",
         displayName: "Gym Leader Kamiya",
+        maxTrainerLevel: 50,
 
         moneyReward: 0,
         moneyLoss: 0,
@@ -1451,6 +1454,7 @@ global.leagueConfig = {
 
         trainerId: "gym_leader_poison_kinoko_gauntlet",
         displayName: "Gym Leader Kinoko",
+        maxTrainerLevel: 50,
 
         moneyReward: 0,
         moneyLoss: 0,
@@ -1462,6 +1466,7 @@ global.leagueConfig = {
 
         trainerId: "gym_leader_fire_tim_gauntlet",
         displayName: "Gym Leader Tim",
+        maxTrainerLevel: 50,
 
         moneyReward: 0,
         moneyLoss: 0,
@@ -1473,6 +1478,7 @@ global.leagueConfig = {
 
         trainerId: "gym_leader_electric_voltaire_gauntlet",
         displayName: "Gym Leader Voltaire",
+        maxTrainerLevel: 50,
 
         moneyReward: 0,
         moneyLoss: 0,
@@ -1484,6 +1490,7 @@ global.leagueConfig = {
 
         trainerId: "gym_leader_ice_glacia_gauntlet",
         displayName: "Gym Leader Glacia",
+        maxTrainerLevel: 50,
 
         moneyReward: 0,
         moneyLoss: 0,
@@ -1495,6 +1502,7 @@ global.leagueConfig = {
 
         trainerId: "gym_leader_normal_maddie_gauntlet",
         displayName: "Gym Leader MaddiePly",
+        maxTrainerLevel: 50,
 
         moneyReward: 0,
         moneyLoss: 0,
@@ -1506,6 +1514,7 @@ global.leagueConfig = {
 
         trainerId: "elite_four_grass_chigusa_gauntlet",
         displayName: "Elite Four Chigusa",
+        maxTrainerLevel: 50,
 
         moneyReward: 0,
         moneyLoss: 0,
@@ -1517,6 +1526,7 @@ global.leagueConfig = {
 
         trainerId: "elite_four_ghost_acerola_gauntlet",
         displayName: "Elite Four Acerola",
+        maxTrainerLevel: 50,
 
         moneyReward: 0,
         moneyLoss: 0,
@@ -1528,6 +1538,7 @@ global.leagueConfig = {
 
         trainerId: "elite_four_steel_silas_gauntlet",
         displayName: "Elite Four Silas",
+        maxTrainerLevel: 50,
 
         moneyReward: 0,
         moneyLoss: 0,
@@ -1539,6 +1550,7 @@ global.leagueConfig = {
 
         trainerId: "elite_four_dragon_ragnar_gauntlet",
         displayName: "Elite Four Ragnar",
+        maxTrainerLevel: 50,
 
         moneyReward: 0,
         moneyLoss: 0,
@@ -1550,6 +1562,7 @@ global.leagueConfig = {
 
         trainerId: "champion_mizu_gauntlet",
         displayName: "Champion Mizu",
+        maxTrainerLevel: 50,
 
         moneyReward: 0,
         moneyLoss: 0,

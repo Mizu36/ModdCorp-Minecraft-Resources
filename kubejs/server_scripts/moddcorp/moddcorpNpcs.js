@@ -89,7 +89,7 @@ ServerEvents.commandRegistry(event => {
   );
 
   event.register(
-    Commands.literal("moddcorptravel") // shows the npc's traveling line, then teleports to the destination
+    Commands.literal("moddcorptravel") // shows the npc's traveling dialog, then teleports to the destination
       .then(Commands.argument("npc", Arguments.STRING.create(event))
         .then(Commands.argument("location", Arguments.STRING.create(event))
           .executes(ctx => {
