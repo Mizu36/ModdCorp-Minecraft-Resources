@@ -3,19 +3,19 @@
     "You don't have any healthy Pokemon to battle with!"
   ],
   "battle_start": [
-    ""
+    "Let this be an ice battle. Get it, it's like a nice battle, but an ice battle..."
   ],
   "battle_lost": [
-    ""
+    "Ice can't believe it... you defeated me! Hm, that didn't work at all."
   ],
   "battle_won": [
-    ""
+    "That got real dICEy there for a second. Haha, get it? Dicey, like ice... okay."
   ],
   "on_cooldown": [
-    ""
+    "One sec, duty calls."
   ],
   "is_busy": [
-    ""
+    "Ice to meet you, but I'm busy right now. Hehe, ice to meet you, thats a good one, I'm so clever and original."
   ],
   "done_looser": [
     "THIS IS A BUG, IF YOU SEE THIS MESSAGE, SCREENSHOT AND REPORT IT TO MIZU ON DISCORD. (done_looser ice_trainer_02)"

@@ -700,9 +700,9 @@ global.leagueConfig = {
         isLeader: true,
         averageAboveLevel: 48,
 
-        requiredStages: ["gym_ice_trainer_01_complete", "gym_ice_trainer_02_complete", "gym_ice_trainer_03_complete"],
+        requiredStages: ["gym_ice_trainer_01_complete", "gym_ice_trainer_02_complete", "gym_ice_trainer_03_complete", "gym_ice_trainer_04_complete"],
         rewardStages: ["gym_ice_complete"],
-        removeStages: ["gym_ice_trainer_01_complete", "gym_ice_trainer_02_complete", "gym_ice_trainer_03_complete"],
+        removeStages: ["gym_ice_trainer_01_complete", "gym_ice_trainer_02_complete", "gym_ice_trainer_03_complete", "gym_ice_trainer_04_complete"],
         completedStage: "gym_ice_complete",
 
         lockedMessage:
@@ -729,7 +729,7 @@ global.leagueConfig = {
     ice_trainer_01: {
 
         trainerId: "gym_ice_trainer_01",
-        displayName: "",
+        displayName: "Snowmancer Chione",
         isLeader: false,
 
         requiredStages: ["gym_electric_complete"],
@@ -738,13 +738,13 @@ global.leagueConfig = {
         gymCompletedStage: "gym_ice_complete",
 
         lockedMessage:
-            "",
+            "Welcome, challenger! Unfortunately, you won't be allowed to challenge this gym until you've beaten Voltaire in Stratos. Come to think of it, how did you even get here without doing that?",
         blockedMessage:
             "If you are seeing this message, report it to Mizu on Discord. This is a bug. (ice_trainer_01 blocked message)",
         completedMessage:
-            "",
+            "Glacia lets us choose our titles here, I thought Snowmancer sounded cool.",
         gymCompletedMessage:
-            "",
+            "You did it! You beat Glacia! Good luck on the rest of your journey!",
 
         moneyReward: 3800,
         moneyLoss: 1600,
@@ -753,7 +753,7 @@ global.leagueConfig = {
     ice_trainer_02: {
 
         trainerId: "gym_ice_trainer_02",
-        displayName: "",
+        displayName: "Icesmith Crystal",
         isLeader: false,
 
         requiredStages: ["gym_electric_complete"],
@@ -762,13 +762,13 @@ global.leagueConfig = {
         gymCompletedStage: "gym_ice_complete",
 
         lockedMessage:
-            "",
+            "You probably shouldn't be down here. This place is hard to navigate, and Glacia will turn you away since you haven't beaten the other six gyms yet.",
         blockedMessage:
             "If you are seeing this message, report it to Mizu on Discord. This is a bug. (ice_trainer_02 blocked message)",
         completedMessage:
-            "",
+            "I produce the ice you may have seen around town. It's my job to create enough for everyone in order to make this place habitable. I also pipe it through the ground to cool off the roads.",
         gymCompletedMessage:
-            "",
+            "You may have defeated Glacia, but I hope you stick around in Antares for a while. We've worked really hard to make it a comfortable place for everyone.",
 
         moneyReward: 3800,
         moneyLoss: 1600,
@@ -777,7 +777,7 @@ global.leagueConfig = {
     ice_trainer_03: {
 
         trainerId: "gym_ice_trainer_03",
-        displayName: "",
+        displayName: "Snowrunner Eira",
         isLeader: false,
 
         requiredStages: ["gym_electric_complete"],
@@ -786,13 +786,37 @@ global.leagueConfig = {
         gymCompletedStage: "gym_ice_complete",
 
         lockedMessage:
-            "",
+            "Come back when you've beaten six other gyms. Now if you'll excuse me, I need to deliver some fresh snow.",
         blockedMessage:
             "If you are seeing this message, report it to Mizu on Discord. This is a bug. (ice_trainer_03 blocked message)",
         completedMessage:
-            "",
+            "I often have to leave my post to supply the town with fresh snow or ice. Honestly it messes with my body temperature a lot.",
         gymCompletedMessage:
-            "",
+            "Good job beating Glacia. Do you need help getting out of here? The exit is through Glacia's chamber.",
+
+        moneyReward: 3800,
+        moneyLoss: 1600,
+    },
+
+    ice_trainer_04: {
+
+        trainerId: "gym_ice_trainer_04",
+        displayName: "Cold Person Amelia",
+        isLeader: false,
+
+        requiredStages: ["gym_electric_complete"],
+        rewardStages: ["gym_ice_trainer_04_complete"],
+        completedStage: "gym_ice_trainer_04_complete",
+        gymCompletedStage: "gym_ice_complete",
+
+        lockedMessage:
+            "I need more layers...",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (ice_trainer_04 blocked message)",
+        completedMessage:
+            "I need a hot chocolate...",
+        gymCompletedMessage:
+            "I want to go home and crawl into bed.",
 
         moneyReward: 3800,
         moneyLoss: 1600,
@@ -809,9 +833,9 @@ global.leagueConfig = {
         isLeader: true,
         averageAboveLevel: 53,
 
-        requiredStages: ["gym_normal_trainer_01_complete", "gym_normal_trainer_02_complete", "gym_normal_trainer_03_complete"],
+        requiredStages: ["gym_normal_trainer_01_complete", "gym_normal_trainer_02_complete", "gym_normal_trainer_03_complete", "gym_normal_trainer_04_complete", "gym_normal_trainer_05_complete"],
         rewardStages: ["gym_normal_complete"],
-        removeStages: ["gym_normal_trainer_01_complete", "gym_normal_trainer_02_complete", "gym_normal_trainer_03_complete"],
+        removeStages: ["gym_normal_trainer_01_complete", "gym_normal_trainer_02_complete", "gym_normal_trainer_03_complete", "gym_normal_trainer_04_complete", "gym_normal_trainer_05_complete"],
         completedStage: "gym_normal_complete",
 
         lockedMessage:
@@ -961,14 +985,39 @@ global.leagueConfig = {
         displayName: "The CEO",
         isLeader: false,
 
+        giveStageOnLoss: ["ceo_loss"],
         requiredStages: ["gym_normal_complete"],
         rewardStages: ["ceo_complete"],
         completedStage: "ceo_complete",
+        removeStages: ["ceo_loss"],
 
         lockedMessage:
             "",
         blockedMessage:
             "If you are seeing this message, report it to Mizu on Discord. This is a bug. (super_boss_ceo blocked message)",
+        completedMessage:
+            "",
+        gymCompletedMessage:
+            "",
+
+        moneyReward: 10000,
+        moneyLoss: 5000,
+
+        battle_music: ["moddcorp:boss_battle_full"]
+    },
+
+    super_boss_ceo_rematch:{
+
+        trainerId: "super_boss_ceo_rematch",
+        displayName: "The CEO",
+        isLeader: false,
+
+        requiredStages: ["ceo_complete"],
+
+        lockedMessage:
+            "",
+        blockedMessage:
+            "If you are seeing this message, report it to Mizu on Discord. This is a bug. (super_boss_ceo_rematch blocked message)",
         completedMessage:
             "",
         gymCompletedMessage:

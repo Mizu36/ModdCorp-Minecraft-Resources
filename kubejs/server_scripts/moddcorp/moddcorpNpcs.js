@@ -171,6 +171,8 @@ global.gymTrainerEncounters = {
   elite_four_steel_silas_rematch: "e4_steel_rematch",
   elite_four_dragon_ragnar_rematch: "e4_dragon_rematch",
   champion_mizu_rematch: "champion_rematch",
+  super_boss_ceo: "super_boss_ceo",
+  super_boss_ceo_rematch: "super_boss_ceo_rematch",
 };
 
 // NPCs that have the full set of state dialogs (<npc>_choice_dialog_<state>); the others only have "challenge"
@@ -201,10 +203,14 @@ global.gymTrainerFullDialogs = [
   "elite_four_steel_silas_rematch",
   "elite_four_dragon_ragnar_rematch",
   "champion_mizu_rematch",
+  "super_boss_ceo",
+  "super_boss_ceo_rematch",
 ];
 
 // Configure counts per NPC and state; variant 0 is unsuffixed except for is_busy.
 const gymDialogVariants = {
+  super_boss_ceo: { challenge: 18, challenge_again: 27, locked: 8, missing_pokemon: 2, is_busy: 3, battle_won: 3, battle_lost: 3 },
+  super_boss_ceo_rematch: { challenge: 4, missing_pokemon: 2, is_busy: 3, battle_won: 2, battle_lost: 2 },
   gym_leader_bug_shino: { challenge: 27 },
   gym_leader_ground_ashley: { challenge: 4 },
   gym_leader_water_kamiya: { challenge: 18, locked: 3, completed: 2 },
@@ -327,9 +333,11 @@ global.showNpcBattleResult = (server, player, encounterId, playerWon, rematchCom
 
 global.handleNpcGymTrainer = (e, level, server, target, player, npcId) => {
   // A player on the rematch run (or who has finished it) gets the rematch encounter and dialogs
-  const onRematch = npcId.startsWith("gym_leader_")
-    ? player.stages.has("e4_complete")
-    : player.stages.has("challenging_e4_rematch") || player.stages.has("e4_rematch_complete");
+  const onRematch = npcId === "super_boss_ceo"
+    ? player.stages.has("ceo_complete")
+    : npcId.startsWith("gym_leader_")
+      ? player.stages.has("e4_complete")
+      : player.stages.has("challenging_e4_rematch") || player.stages.has("e4_rematch_complete");
   if (onRematch && global.gymTrainerEncounters[`${npcId}_rematch`]) npcId = `${npcId}_rematch`;
   const encounterId = global.gymTrainerEncounters[npcId];
   if (!encounterId) return;
@@ -340,6 +348,7 @@ global.handleNpcGymTrainer = (e, level, server, target, player, npcId) => {
   if (global.gymTrainerFullDialogs.includes(npcId)) {
     encounterState = global.getGymEncounterState(player, encounterId);
     if (encounterState !== "ready") dialogState = encounterState;
+    else if (encounterId === "super_boss_ceo" && player.stages.has("ceo_loss")) dialogState = "challenge_again";
     else if (encounterId.endsWith("_leader_rematch") && player.stages.has(global.leagueConfig[encounterId].completedStage)) dialogState = "challenge_completed";
   }
   global.showGymDialog(server, player, npcId, dialogState);

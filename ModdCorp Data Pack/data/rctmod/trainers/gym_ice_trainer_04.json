@@ -1,0 +1,71 @@
+{
+    "displayName": "Cold Person Amelia",
+    "team": [
+        {
+            "species": "cobblemon:lapras",
+            "gender": "FEMALE",
+            "level": 40,
+            "nature": "cobblemon:timid",
+            "ability": "shellarmor",
+            "moveset": [
+                "bodyslam",
+                "freezedry",
+                "surf",
+                "thunderbolt"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:sitrus_berry"
+        },
+        {
+            "species": "cobblemon:abomasnow",
+            "gender": "MALE",
+            "level": 40,
+            "nature": "cobblemon:adamant",
+            "ability": "snowwarning",
+            "moveset": [
+                "ingrain",
+                "swagger",
+                "icepunch",
+                "gigadrain"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:leftovers"
+        }
+    ],
+    "winCommand": "",
+    "lossCommand": "",
+    "canOnlyBeatOnce": false,
+    "cooldownSeconds": 0
+}

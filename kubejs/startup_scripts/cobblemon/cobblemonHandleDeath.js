@@ -192,6 +192,9 @@ global.handleCobblemonDefeat = (e) => {
     if (leagueEncounter) {
       losingPlayer.persistentData.bagItemsUsed = 0;
       global.handleLeagueBattleEnd(losingPlayer, winningPlayer.persistentData.encounterId);
+      if (leagueEncounter.giveStageOnLoss) {
+        leagueEncounter.giveStageOnLoss.forEach(stage => {losingPlayer.stages.add(stage);});
+      }
       if (leagueEncounter.removeStagesOnLoss != null && leagueEncounter.removeStagesOnLoss.length > 0) {
         leagueEncounter.removeStagesOnLoss.forEach(stage => {losingPlayer.stages.remove(stage);});
       }

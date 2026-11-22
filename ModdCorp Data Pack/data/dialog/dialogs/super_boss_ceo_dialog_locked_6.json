@@ -1,0 +1,26 @@
+{
+	"id": "super_boss_ceo_choice_dialog_locked_6",
+	"title": "super_boss_ceo_choice_dialog_locked_6",
+	"description": "dialog.npc.the_ceo.dialog.locked_6.line_0",
+	"entries": [
+		{
+			"id": "start",
+			"portraits": [
+				{
+					"path": "gym.png",
+					"position": "INLINE",
+					"brightness": 1
+				}
+			],
+			"speaker": {
+				"translate": "dialog.npc.the_ceo.name",
+				"color": "white"
+			},
+			"text": [
+				{
+					"translate": "dialog.npc.the_ceo.dialog.locked_6.line_0"
+				}
+			]
+		}
+	]
+}

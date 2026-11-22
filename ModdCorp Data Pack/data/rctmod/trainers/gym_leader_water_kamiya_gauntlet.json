@@ -3,16 +3,16 @@
     "identity": "Leader Kamiya",
     "team": [
         {
-            "species": "cobblemon:wingull",
+            "species": "cobblemon:pelipper",
             "gender": "FEMALE",
-            "level": 20,
-            "nature": "cobblemon:timid",
-            "ability": "keeneye",
+            "level": 50,
+            "nature": "cobblemon:bold",
+            "ability": "drizzle",
             "moveset": [
-                "supersonic",
-                "wingattack",
-                "waterpulse",
-                "quickattack"
+                "surf",
+                "hurricane",
+                "uturn",
+                "roost"
             ],
             "ivs": {
                 "hp": 0,
@@ -20,111 +20,111 @@
                 "defence": 0,
                 "special_attack": 0,
                 "special_defence": 0,
-                "speed": 12
+                "speed": 0
             },
             "evs": {
                 "hp": 0,
                 "attack": 0,
                 "defence": 0,
-                "special_attack": 64,
+                "special_attack": 0,
                 "special_defence": 0,
-                "speed": 64
+                "speed": 0
             },
             "shiny": false,
-            "heldItem": "cobblemon:oran_berry"
+            "heldItem": "cobblemon:damp_rock"
         },
         {
-            "species": "cobblemon:tirtouga",
+            "species": "cobblemon:barraskewda",
             "gender": "FEMALE",
-            "level": 20,
-            "nature": "cobblemon:impish",
-            "ability": "solidrock",
-            "moveset": [
-                "aquajet",
-                "waterpulse",
-                "withdraw",
-                "ancientpower"
-            ],
-            "ivs": {
-                "hp": 0,
-                "attack": 0,
-                "defence": 12,
-                "special_attack": 0,
-                "special_defence": 0,
-                "speed": 0
-            },
-            "evs": {
-                "hp": 0,
-                "attack": 0,
-                "defence": 64,
-                "special_attack": 0,
-                "special_defence": 0,
-                "speed": 64
-            },
-            "shiny": false,
-            "heldItem": "cobblemon:oran_berry"
-        },
-        {
-            "species": "cobblemon:quagsire",
-            "gender": "MALE",
-            "level": 20,
-            "nature": "cobblemon:sassy",
-            "ability": "unaware",
-            "moveset": [
-                "waterfall",
-                "amnesia",
-                "raindance",
-                "mudshot"
-            ],
-            "ivs": {
-                "hp": 12,
-                "attack": 0,
-                "defence": 0,
-                "special_attack": 0,
-                "special_defence": 0,
-                "speed": 0
-            },
-            "evs": {
-                "hp": 64,
-                "attack": 0,
-                "defence": 0,
-                "special_attack": 64,
-                "special_defence": 0,
-                "speed": 0
-            },
-            "shiny": false,
-            "heldItem": "cobblemon:oran_berry"
-        },
-        {
-            "species": "cobblemon:dondozo",
-            "gender": "MALE",
-            "level": 24,
+            "level": 50,
             "nature": "cobblemon:adamant",
-            "ability": "waterveil",
+            "ability": "swiftswim",
             "moveset": [
-                "dive",
-                "rest",
-                "nobleroar",
-                "waterpulse"
+                "liquidation",
+                "flipturn",
+                "closecombat",
+                "aquajet"
             ],
             "ivs": {
-                "hp": 6,
+                "hp": 0,
                 "attack": 0,
-                "defence": 6,
+                "defence": 0,
                 "special_attack": 0,
                 "special_defence": 0,
                 "speed": 0
             },
             "evs": {
-                "hp": 64,
+                "hp": 0,
                 "attack": 0,
-                "defence": 64,
+                "defence": 0,
                 "special_attack": 0,
                 "special_defence": 0,
                 "speed": 0
             },
             "shiny": false,
-            "heldItem": "cobblemon:wacan_berry"
+            "heldItem": "cobblemon:life_orb"
+        },
+        {
+            "species": "cobblemon:crawdaunt",
+            "gender": "MALE",
+            "level": 50,
+            "nature": "cobblemon:adamant",
+            "ability": "adaptability",
+            "moveset": [
+                "crabhammer",
+                "knockoff",
+                "aquajet",
+                "closecombat"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:choice_band"
+        },
+        {
+            "species": "cobblemon:toxicroak",
+            "gender": "MALE",
+            "level": 50,
+            "nature": "cobblemon:jolly",
+            "ability": "dryskin",
+            "moveset": [
+                "swordsdance",
+                "drainpunch",
+                "poisonjab",
+                "suckerpunch"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:black_sludge"
         }
     ],
     "winCommand": "",
