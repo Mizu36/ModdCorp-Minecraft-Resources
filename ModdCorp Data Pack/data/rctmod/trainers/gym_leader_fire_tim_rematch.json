@@ -1,130 +1,162 @@
 {
     "displayName": "Gym Leader Tim",
+    "aiLevel": 9,
     "identity": "Leader Tim",
     "team": [
         {
-            "species": "cobblemon:magmar",
+            "species": "cobblemon:magmortar",
             "gender": "MALE",
-            "level": 32,
+            "level": 75,
             "nature": "cobblemon:mild",
             "ability": "flamebody",
             "moveset": [
-                "confuseray",
-                "burningjealousy",
-                "lowsweep",
-                "sunnyday"
+                "lavaplume",
+                "sunnyday",
+                "scorchingsands",
+                "protect"
             ],
             "ivs": {
                 "hp": 0,
                 "attack": 0,
                 "defence": 0,
-                "special_attack": 0,
-                "special_defence": 0,
-                "speed": 24
+                "special_attack": 31,
+                "special_defence": 31,
+                "speed": 31
             },
             "evs": {
                 "hp": 0,
                 "attack": 0,
                 "defence": 0,
-                "special_attack": 64,
-                "special_defence": 0,
-                "speed": 64
+                "special_attack": 252,
+                "special_defence": 128,
+                "speed": 128
             },
             "shiny": false,
-            "heldItem": "cobblemon:oran_berry"
+            "heldItem": "cobblemon:leftovers"
         },
         {
             "species": "cobblemon:scovillain",
             "gender": "FEMALE",
-            "level": 33,
+            "level": 75,
             "nature": "cobblemon:rash",
             "ability": "moody",
             "moveset": [
-                "magicalleaf",
-                "firefang",
+                "energyball",
+                "flamethrower",
                 "willowisp",
                 "swagger"
             ],
             "ivs": {
-                "hp": 0,
-                "attack": 12,
-                "defence": 0,
-                "special_attack": 12,
+                "hp": 31,
+                "attack": 0,
+                "defence": 31,
+                "special_attack": 31,
                 "special_defence": 0,
                 "speed": 0
             },
             "evs": {
                 "hp": 0,
-                "attack": 64,
-                "defence": 0,
-                "special_attack": 64,
+                "attack": 0,
+                "defence": 252,
+                "special_attack": 252,
                 "special_defence": 0,
                 "speed": 0
             },
             "shiny": false,
-            "heldItem": "cobblemon:oran_berry"
+            "heldItem": "cobblemon:rocky_helmet"
         },
         {
             "species": "cobblemon:turtonator",
             "gender": "FEMALE",
-            "level": 34,
+            "level": 75,
             "nature": "cobblemon:relaxed",
             "ability": "shellarmor",
             "moveset": [
-                "burningjealousy",
-                "irondefense",
-                "workup",
-                "dragonpulse"
+                "earthquake",
+                "shelltrap",
+                "overheat",
+                "explosion"
             ],
             "ivs": {
                 "hp": 0,
                 "attack": 0,
-                "defence": 24,
+                "defence": 31,
                 "special_attack": 0,
-                "special_defence": 0,
+                "special_defence": 31,
                 "speed": 0
             },
             "evs": {
                 "hp": 0,
                 "attack": 0,
-                "defence": 64,
+                "defence": 252,
                 "special_attack": 0,
-                "special_defence": 64,
+                "special_defence": 252,
                 "speed": 0
             },
             "shiny": false,
-            "heldItem": "cobblemon:oran_berry"
+            "heldItem": "cobblemon:assault_vest"
         },
         {
             "species": "cobblemon:chiyu",
             "gender": "GENDERLESS",
-            "level": 34,
+            "level": 75,
             "nature": "cobblemon:mild",
             "ability": "beadsofruin",
             "moveset": [
-                "burningjealousy",
-                "nastyplot",
-                "reflect",
-                "willowisp"
+                "flamethrower",
+                "psychic",
+                "darkpulse",
+                "hex"
             ],
             "ivs": {
                 "hp": 0,
                 "attack": 0,
                 "defence": 0,
-                "special_attack": 0,
+                "special_attack": 31,
                 "special_defence": 0,
-                "speed": 24
+                "speed": 31
             },
             "evs": {
                 "hp": 0,
                 "attack": 0,
                 "defence": 0,
-                "special_attack": 0,
+                "special_attack": 252,
                 "special_defence": 0,
-                "speed": 128
+                "speed": 252
             },
             "shiny": false,
             "heldItem": "cobblemon:absorb_bulb"
+        },
+        {
+            "species": "cobblemon:gougingfire",
+            "gender": "GENDERLESS",
+            "level": 75,
+            "nature": "cobblemon:mild",
+            "ability": "protosynthesis",
+            "moveset": [
+                "burningbulwark",
+                "flareblitz",
+                "nobleroar",
+                "dragontail"
+            ],
+            "ivs": {
+                "hp": 0,
+                "attack": 31,
+                "defence": 31,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 0,
+                "attack": 252,
+                "defence": 252,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:booster_energy"
         }
     ],
     "winCommand": "",

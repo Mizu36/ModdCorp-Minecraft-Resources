@@ -1296,7 +1296,7 @@ global.leagueConfig = {
 
         rewardItems: [
             {
-                id: "simpletms:tr_",
+                id: "simpletms:tr_lavaplume",
                 count: 1,
             }
         ],
