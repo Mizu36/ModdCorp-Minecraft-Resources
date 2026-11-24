@@ -1,5 +1,6 @@
 {
     "displayName": "Gym Leader Shino",
+    "aiLevel": 9,
     "identity": "Leader Shino",
     "team": [
         {
@@ -15,18 +16,18 @@
                 "voltswitch"
             ],
             "ivs": {
-                "hp": 0,
-                "attack": 0,
-                "defence": 0,
-                "special_attack": 12,
-                "special_defence": 0,
-                "speed": 0
+                "hp": 31,
+                "attack": 31,
+                "defence": 31,
+                "special_attack": 31,
+                "special_defence": 31,
+                "speed": 31
             },
             "evs": {
                 "hp": 0,
                 "attack": 0,
                 "defence": 0,
-                "special_attack": 64,
+                "special_attack": 0,
                 "special_defence": 0,
                 "speed": 0
             },
@@ -46,19 +47,19 @@
                 "nightslash"
             ],
             "ivs": {
-                "hp": 0,
-                "attack": 0,
-                "defence": 0,
-                "special_attack": 0,
-                "special_defence": 0,
-                "speed": 0
+                "hp": 31,
+                "attack": 31,
+                "defence": 31,
+                "special_attack": 31,
+                "special_defence": 31,
+                "speed": 31
             },
             "evs": {
                 "hp": 0,
                 "attack": 0,
                 "defence": 0,
                 "special_attack": 0,
-                "special_defence": 4,
+                "special_defence": 0,
                 "speed": 0
             },
             "shiny": false,
@@ -77,12 +78,12 @@
                 "swordsdance"
             ],
             "ivs": {
-                "hp": 0,
-                "attack": 0,
-                "defence": 0,
-                "special_attack": 0,
-                "special_defence": 0,
-                "speed": 0
+                "hp": 31,
+                "attack": 31,
+                "defence": 31,
+                "special_attack": 31,
+                "special_defence": 31,
+                "speed": 31
             },
             "evs": {
                 "hp": 0,
@@ -108,12 +109,12 @@
                 "gigadrain"
             ],
             "ivs": {
-                "hp": 0,
-                "attack": 0,
-                "defence": 0,
-                "special_attack": 0,
-                "special_defence": 0,
-                "speed": 0
+                "hp": 31,
+                "attack": 31,
+                "defence": 31,
+                "special_attack": 31,
+                "special_defence": 31,
+                "speed": 31
             },
             "evs": {
                 "hp": 0,

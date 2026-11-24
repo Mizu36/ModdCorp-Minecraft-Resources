@@ -1162,7 +1162,7 @@ global.leagueConfig = {
 
         trainerId: "gym_leader_bug_shino_rematch",
         displayName: "Gym Leader Shino",
-        averageAboveLevel: 70,
+        averageAboveLevel: 80,
 
         requiredStages: ["e4_complete"],
         rewardStages: ["gym_bug_rematch_complete", "first_rematch_complete"],
@@ -1175,8 +1175,15 @@ global.leagueConfig = {
         completedMessage:
             "",
 
-        moneyReward: 3000,
-        moneyLoss: 696,
+        rewardItems: [
+            {
+                id: "simpletms:tr_lunge",
+                count: 1,
+            }
+        ],
+
+        moneyReward: 5000,
+        moneyLoss: 1000,
 
         battle_music: ["moddcorp:gym_leader_rematch_full"],
     },
@@ -1185,7 +1192,7 @@ global.leagueConfig = {
 
         trainerId: "gym_leader_ground_ashley_rematch",
         displayName: "Gym Leader Ashley",
-        averageAboveLevel: 70,
+        averageAboveLevel: 80,
 
         requiredStages: ["e4_complete"],
         rewardStages: ["gym_ground_rematch_complete", "first_rematch_complete"],
@@ -1198,8 +1205,15 @@ global.leagueConfig = {
         completedMessage:
             "",
 
-        moneyReward: 3000,
-        moneyLoss: 696,
+        rewardItems: [
+            {
+                id: "simpletms:tr_earthpower",
+                count: 1,
+            }
+        ],
+
+        moneyReward: 5000,
+        moneyLoss: 1000,
 
         battle_music: ["moddcorp:gym_leader_rematch_full"],
     },
@@ -1208,7 +1222,7 @@ global.leagueConfig = {
 
         trainerId: "gym_leader_water_kamiya_rematch",
         displayName: "Gym Leader Kamiya",
-        averageAboveLevel: 70,
+        averageAboveLevel: 80,
 
         requiredStages: ["e4_complete"],
         rewardStages: ["gym_water_rematch_complete", "first_rematch_complete"],
@@ -1221,8 +1235,15 @@ global.leagueConfig = {
         completedMessage:
             "",
 
-        moneyReward: 3000,
-        moneyLoss: 696,
+        rewardItems: [
+            {
+                id: "simpletms:tr_liquidation",
+                count: 1,
+            }
+        ],
+
+        moneyReward: 5000,
+        moneyLoss: 1000,
 
         battle_music: ["moddcorp:gym_leader_rematch_full"],
     },
@@ -1231,7 +1252,7 @@ global.leagueConfig = {
 
         trainerId: "gym_leader_poison_kinoko_rematch",
         displayName: "Gym Leader Kinoko",
-        averageAboveLevel: 70,
+        averageAboveLevel: 80,
 
         requiredStages: ["e4_complete"],
         rewardStages: ["gym_poison_rematch_complete", "first_rematch_complete"],
@@ -1244,8 +1265,15 @@ global.leagueConfig = {
         completedMessage:
             "",
 
-        moneyReward: 3000,
-        moneyLoss: 696,
+        rewardItems: [
+            {
+                id: "simpletms:tr_",
+                count: 1,
+            }
+        ],
+
+        moneyReward: 5000,
+        moneyLoss: 1000,
 
         battle_music: ["moddcorp:gym_leader_rematch_full"],
     },
@@ -1254,7 +1282,7 @@ global.leagueConfig = {
 
         trainerId: "gym_leader_fire_tim_rematch",
         displayName: "Gym Leader Tim",
-        averageAboveLevel: 70,
+        averageAboveLevel: 80,
 
         requiredStages: ["e4_complete"],
         rewardStages: ["gym_fire_rematch_complete", "first_rematch_complete"],
@@ -1267,8 +1295,15 @@ global.leagueConfig = {
         completedMessage:
             "",
 
-        moneyReward: 3000,
-        moneyLoss: 696,
+        rewardItems: [
+            {
+                id: "simpletms:tr_",
+                count: 1,
+            }
+        ],
+
+        moneyReward: 5000,
+        moneyLoss: 1000,
 
         battle_music: ["moddcorp:gym_leader_rematch_full"],
     },
@@ -1277,7 +1312,7 @@ global.leagueConfig = {
 
         trainerId: "gym_leader_electric_voltaire_rematch",
         displayName: "Gym Leader Voltaire",
-        averageAboveLevel: 70,
+        averageAboveLevel: 80,
 
         requiredStages: ["e4_complete"],
         rewardStages: ["gym_electric_rematch_complete", "first_rematch_complete"],
@@ -1290,8 +1325,15 @@ global.leagueConfig = {
         completedMessage:
             "",
 
-        moneyReward: 3000,
-        moneyLoss: 696,
+        rewardItems: [
+            {
+                id: "simpletms:tr_",
+                count: 1,
+            }
+        ],
+
+        moneyReward: 5000,
+        moneyLoss: 1000,
 
         battle_music: ["moddcorp:gym_leader_rematch_full"],
     },
@@ -1300,7 +1342,7 @@ global.leagueConfig = {
 
         trainerId: "gym_leader_ice_glacia_rematch",
         displayName: "Gym Leader Glacia",
-        averageAboveLevel: 70,
+        averageAboveLevel: 80,
 
         requiredStages: ["e4_complete"],
         rewardStages: ["gym_ice_rematch_complete", "first_rematch_complete"],
@@ -1313,8 +1355,15 @@ global.leagueConfig = {
         completedMessage:
             "",
 
-        moneyReward: 3000,
-        moneyLoss: 696,
+        rewardItems: [
+            {
+                id: "simpletms:tr_",
+                count: 1,
+            }
+        ],
+
+        moneyReward: 5000,
+        moneyLoss: 1000,
 
         battle_music: ["moddcorp:gym_leader_rematch_full"],
     },
@@ -1323,7 +1372,7 @@ global.leagueConfig = {
 
         trainerId: "gym_leader_normal_maddie_rematch",
         displayName: "Gym Leader MaddiePly",
-        averageAboveLevel: 70,
+        averageAboveLevel: 80,
 
         requiredStages: ["e4_complete"],
         rewardStages: ["gym_normal_rematch_complete", "first_rematch_complete"],
@@ -1336,8 +1385,15 @@ global.leagueConfig = {
         completedMessage:
             "",
 
-        moneyReward: 3000,
-        moneyLoss: 696,
+        rewardItems: [
+            {
+                id: "simpletms:tr_",
+                count: 1,
+            }
+        ],
+
+        moneyReward: 5000,
+        moneyLoss: 1000,
 
         battle_music: ["moddcorp:gym_leader_rematch_full"],
     },
