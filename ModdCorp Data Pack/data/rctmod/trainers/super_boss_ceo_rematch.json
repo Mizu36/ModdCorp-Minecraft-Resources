@@ -1,0 +1,200 @@
+{
+    "displayName": "The CEO",
+    "aiLevel": 11,
+    "identity": "The CEO",
+    "team": [
+        {
+            "species": "cobblemon:gliscor",
+            "nickname": "Secretary",
+            "gender": "FEMALE",
+            "level": 95,
+            "nature": "cobblemon:impish",
+            "ability": "poisonheal",
+            "moveset": [
+                "uturn",
+                "knockoff",
+                "toxic",
+                "spikes"
+            ],
+            "ivs": {
+                "hp": 31,
+                "attack": 31,
+                "defence": 31,
+                "special_attack": 31,
+                "special_defence": 31,
+                "speed": 0
+            },
+            "evs": {
+                "hp": 244,
+                "attack": 0,
+                "defence": 252,
+                "special_attack": 0,
+                "special_defence": 12,
+                "speed": 64
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:toxic_orb"
+        },
+        {
+            "species": "cobblemon:arceus",
+            "nickname": "VP",
+            "gender": "GENDERLESS",
+            "level": 95,
+            "nature": "cobblemon:impish",
+            "ability": "multitype",
+            "moveset": [
+                "foulplay",
+                "irondefense",
+                "willowisp",
+                "recover"
+            ],
+            "ivs": {
+                "hp": 31,
+                "attack": 0,
+                "defence": 31,
+                "special_attack": 31,
+                "special_defence": 31,
+                "speed": 31
+            },
+            "evs": {
+                "hp": 240,
+                "attack": 0,
+                "defence": 252,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 16
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:heavy_duty_boots"
+        },
+        {
+            "species": "cobblemon:ditto",
+            "nickname": "AI Replacement",
+            "gender": "FEMALE",
+            "level": 95,
+            "nature": "cobblemon:impish",
+            "ability": "imposter",
+            "moveset": [
+                "transform"
+            ],
+            "ivs": {
+                "hp": 31,
+                "attack": 30,
+                "defence": 31,
+                "special_attack": 31,
+                "special_defence": 31,
+                "speed": 31
+            },
+            "evs": {
+                "hp": 248,
+                "attack": 8,
+                "defence": 252,
+                "special_attack": 0,
+                "special_defence": 0,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:choice_scarf"
+        },
+        {
+            "species": "cobblemon:clodsire",
+            "nickname": "Modsire",
+            "gender": "MALE",
+            "level": 96,
+            "nature": "cobblemon:careful",
+            "ability": "waterabsorb",
+            "moveset": [
+                "recover",
+                "stealthrock",
+                "toxic",
+                "earthquake"
+            ],
+            "ivs": {
+                "hp": 31,
+                "attack": 31,
+                "defence": 31,
+                "special_attack": 31,
+                "special_defence": 31,
+                "speed": 31
+            },
+            "evs": {
+                "hp": 252,
+                "attack": 0,
+                "defence": 4,
+                "special_attack": 0,
+                "special_defence": 252,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:black_sludge"
+        },
+        {
+            "species": "cobblemon:miraidon",
+            "nickname": "Too Tired",
+            "gender": "GENDERLESS",
+            "level": 97,
+            "nature": "cobblemon:modest",
+            "ability": "hadronengine",
+            "moveset": [
+                "electrodrift",
+                "dracometeor",
+                "voltswitch",
+                "flashcannon"
+            ],
+            "ivs": {
+                "hp": 31,
+                "attack": 31,
+                "defence": 31,
+                "special_attack": 31,
+                "special_defence": 31,
+                "speed": 31
+            },
+            "evs": {
+                "hp": 112,
+                "attack": 0,
+                "defence": 0,
+                "special_attack": 252,
+                "special_defence": 4,
+                "speed": 140
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:assault_vest"
+        },
+        {
+            "species": "cobblemon:hooh",
+            "nickname": "BIRD UP",
+            "gender": "GENDERLESS",
+            "level": 98,
+            "nature": "cobblemon:impish",
+            "ability": "regenerator",
+            "moveset": [
+                "bravebird",
+                "whirlwind",
+                "sacredfire",
+                "recover"
+            ],
+            "ivs": {
+                "hp": 31,
+                "attack": 31,
+                "defence": 31,
+                "special_attack": 31,
+                "special_defence": 31,
+                "speed": 31
+            },
+            "evs": {
+                "hp": 252,
+                "attack": 0,
+                "defence": 252,
+                "special_attack": 0,
+                "special_defence": 4,
+                "speed": 0
+            },
+            "shiny": false,
+            "heldItem": "cobblemon:heavy_duty_boots"
+        }
+    ],
+    "winCommand": "",
+    "lossCommand": "",
+    "canOnlyBeatOnce": false,
+    "cooldownSeconds": 0
+}

@@ -1,0 +1,14 @@
+{
+	"id": "super_boss_ceo_choice_dialog_battle_start_1",
+	"title": "super_boss_ceo_choice_dialog_battle_start_1",
+	"description": "dialog.npc.the_ceo.dialog.battle_start_1.line_0",
+	"allowClose": false,
+	"entries": [{
+		"id": "start",
+		"endDialog": true,
+		"command": ["moddcorpbattle super_boss_ceo"],
+		"portraits": [{"path": "gym.png", "position": "INLINE", "brightness": 1}],
+		"speaker": {"translate": "dialog.npc.the_ceo.name", "color": "white"},
+		"text": [{"translate": "dialog.npc.the_ceo.dialog.battle_start_1.line_0"}]
+	}]
+}

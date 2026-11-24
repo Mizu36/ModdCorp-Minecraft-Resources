@@ -986,18 +986,17 @@ global.leagueConfig = {
         isLeader: false,
 
         giveStageOnLoss: ["ceo_loss"],
+        removeStagesOnLoss: ["ceo_battle_ready"],
         requiredStages: ["gym_normal_complete"],
         rewardStages: ["ceo_complete"],
         completedStage: "ceo_complete",
-        removeStages: ["ceo_loss"],
+        removeStages: ["ceo_loss", "ceo_battle_ready"],
 
         lockedMessage:
             "",
         blockedMessage:
             "If you are seeing this message, report it to Mizu on Discord. This is a bug. (super_boss_ceo blocked message)",
         completedMessage:
-            "",
-        gymCompletedMessage:
             "",
 
         moneyReward: 10000,
@@ -1013,6 +1012,8 @@ global.leagueConfig = {
         isLeader: false,
 
         requiredStages: ["ceo_complete"],
+        removeStages: ["ceo_battle_rematch_ready"],
+        removeStagesOnLoss: ["ceo_battle_rematch_ready"],
 
         lockedMessage:
             "",
@@ -1020,11 +1021,9 @@ global.leagueConfig = {
             "If you are seeing this message, report it to Mizu on Discord. This is a bug. (super_boss_ceo_rematch blocked message)",
         completedMessage:
             "",
-        gymCompletedMessage:
-            "",
 
-        moneyReward: 10000,
-        moneyLoss: 5000,
+        moneyReward: 2500,
+        moneyLoss: 1000,
 
         battle_music: ["moddcorp:boss_battle_full"]
     },
@@ -1267,7 +1266,7 @@ global.leagueConfig = {
 
         rewardItems: [
             {
-                id: "simpletms:tr_",
+                id: "simpletms:tr_sludgewave",
                 count: 1,
             }
         ],

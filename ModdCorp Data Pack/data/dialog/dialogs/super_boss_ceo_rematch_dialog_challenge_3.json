@@ -28,7 +28,7 @@
 					},
 					"target": "battle_start",
 					"command": [
-						"moddcorpbattle super_boss_ceo_rematch"
+						"moddcorpceoready super_boss_ceo_rematch"
 					]
 				},
 				{
@@ -55,7 +55,7 @@
 			},
 			"text": [
 				{
-					"translate": "dialog.npc.the_ceo_rematch.dialog.battle_start.line_0"
+					"translate": "dialog.npc.the_ceo_rematch.dialog.challenge_accepted.line_0"
 				}
 			],
 			"endDialog": true

@@ -209,7 +209,7 @@ global.gymTrainerFullDialogs = [
 
 // Configure counts per NPC and state; variant 0 is unsuffixed except for is_busy.
 const gymDialogVariants = {
-  super_boss_ceo: { challenge: 18, challenge_again: 27, locked: 8, missing_pokemon: 2, is_busy: 3, battle_won: 3, battle_lost: 3 },
+  super_boss_ceo: { challenge: 18, challenge_again: 27, locked: 8, missing_pokemon: 2, is_busy: 3, battle_start: 3, battle_won: 3, battle_lost: 3 },
   super_boss_ceo_rematch: { challenge: 4, missing_pokemon: 2, is_busy: 3, battle_won: 2, battle_lost: 2 },
   gym_leader_bug_shino: { challenge: 27 },
   gym_leader_ground_ashley: { challenge: 4 },
@@ -262,7 +262,8 @@ const isEncounterBusy = (player, encounterId) => {
     var uuid = uuids[i];
     var pending = global.pendingNpcBattles[uuid];
     if (pending.gymGauntlet) continue;
-    if (pending.encounterId !== encounterId) continue;
+    if (pending.encounterId !== encounterId &&
+        !(encounterId.startsWith("super_boss_ceo") && pending.encounterId.startsWith("super_boss_ceo"))) continue;
     if (!pending.started) {
       if (now - pending.requestedAt < 10000) return true;
       continue;
@@ -277,13 +278,19 @@ const isEncounterBusy = (player, encounterId) => {
   return false;
 };
 
-// Returns "ready" or the dialog state explaining why the player can't battle right now
-global.getGymEncounterState = (player, encounterId) => {
+const getGymEncounterProgressState = (player, encounterId) => {
   var encounter = global.leagueConfig[encounterId];
   const repeatingChampionRematch = encounterId === "champion_rematch" && player.stages.has("challenging_e4_rematch");
   const gymRematch = encounterId.endsWith("_leader_rematch");
   if (encounter.completedStage && player.stages.has(encounter.completedStage) && !repeatingChampionRematch && !gymRematch) return "completed";
   if (encounter.requiredStages && encounter.requiredStages.some((stage) => !player.stages.has(stage))) return "locked";
+  return "ready";
+};
+
+// Returns "ready" or the dialog state explaining why the player can't battle right now
+global.getGymEncounterState = (player, encounterId) => {
+  var progressState = getGymEncounterProgressState(player, encounterId);
+  if (progressState !== "ready") return progressState;
   if (isEncounterBusy(player, encounterId)) return "is_busy";
   if (!hasHealthyPokemon(player)) return "missing_pokemon";
   return "ready";
@@ -295,6 +302,13 @@ global.startNpcBattle = (server, player, encounterId) => {
 
   var playerKey = String(player.uuid);
   var npcId = global.npcBattleKeys[playerKey];
+  if (encounterId === "super_boss_ceo" || encounterId === "super_boss_ceo_rematch") {
+    var readyStage = encounterId === "super_boss_ceo" ? "ceo_battle_ready" : "ceo_battle_rematch_ready";
+    if (!player.stages.has(readyStage) || npcId !== encounterId || !global.npcBattleTargets[playerKey]) {
+      global.showGymDialog(server, player, "super_boss_ceo", "waiting_locked");
+      return false;
+    }
+  }
   var gateState = "ready";
   if (npcId && global.gymTrainerFullDialogs.includes(npcId)) {
     gateState = global.getGymEncounterState(player, encounterId);
@@ -332,6 +346,11 @@ global.showNpcBattleResult = (server, player, encounterId, playerWon, rematchCom
 };
 
 global.handleNpcGymTrainer = (e, level, server, target, player, npcId) => {
+  if (npcId === "super_boss_ceo" && (player.stages.has("ceo_battle_ready") || player.stages.has("ceo_battle_rematch_ready"))) {
+    var waitingId = player.stages.has("ceo_battle_rematch_ready") ? "super_boss_ceo_rematch" : "super_boss_ceo";
+    global.showGymDialog(server, player, waitingId, "challenge_accepted_waiting");
+    return;
+  }
   // A player on the rematch run (or who has finished it) gets the rematch encounter and dialogs
   const onRematch = npcId === "super_boss_ceo"
     ? player.stages.has("ceo_complete")
@@ -341,17 +360,41 @@ global.handleNpcGymTrainer = (e, level, server, target, player, npcId) => {
   if (onRematch && global.gymTrainerEncounters[`${npcId}_rematch`]) npcId = `${npcId}_rematch`;
   const encounterId = global.gymTrainerEncounters[npcId];
   if (!encounterId) return;
-  global.npcBattleTargets[String(player.uuid)] = String(target.getUuid());
-  global.npcBattleKeys[String(player.uuid)] = npcId;
+  if (npcId !== "super_boss_ceo" && npcId !== "super_boss_ceo_rematch") {
+    global.npcBattleTargets[String(player.uuid)] = String(target.getUuid());
+    global.npcBattleKeys[String(player.uuid)] = npcId;
+  } else {
+    delete global.npcBattleTargets[String(player.uuid)];
+    delete global.npcBattleKeys[String(player.uuid)];
+  }
   var dialogState = "challenge";
   var encounterState = "ready";
   if (global.gymTrainerFullDialogs.includes(npcId)) {
-    encounterState = global.getGymEncounterState(player, encounterId);
+    encounterState = encounterId === "super_boss_ceo" || encounterId === "super_boss_ceo_rematch"
+      ? getGymEncounterProgressState(player, encounterId)
+      : global.getGymEncounterState(player, encounterId);
     if (encounterState !== "ready") dialogState = encounterState;
     else if (encounterId === "super_boss_ceo" && player.stages.has("ceo_loss")) dialogState = "challenge_again";
     else if (encounterId.endsWith("_leader_rematch") && player.stages.has(global.leagueConfig[encounterId].completedStage)) dialogState = "challenge_completed";
   }
   global.showGymDialog(server, player, npcId, dialogState);
+};
+
+global.handleNpcCeoBattle = (server, target, player) => {
+  var encounterId = player.stages.has("ceo_battle_rematch_ready") ? "super_boss_ceo_rematch"
+    : player.stages.has("ceo_battle_ready") ? "super_boss_ceo" : null;
+  if (!encounterId) {
+    global.showGymDialog(server, player, "super_boss_ceo", "waiting_locked");
+    return;
+  }
+  var state = global.getGymEncounterState(player, encounterId);
+  if (state !== "ready") {
+    global.showGymDialog(server, player, encounterId, state);
+    return;
+  }
+  global.npcBattleTargets[String(player.uuid)] = String(target.getUuid());
+  global.npcBattleKeys[String(player.uuid)] = encounterId;
+  global.showGymDialog(server, player, encounterId, "battle_start");
 };
 
 ServerEvents.commandRegistry(event => {
@@ -371,6 +414,29 @@ ServerEvents.commandRegistry(event => {
           const type = Arguments.STRING.getResult(ctx, "type");
           player.give(Item.of("society:villager_home", `{type:"${type}"}`));
           player.tell(Text.of(`Gave a villager home for "${type}". Place it to move the NPC in.`).green());
+          return 1;
+        })
+      )
+  );
+
+  event.register(
+    Commands.literal("moddcorpceoready")
+      .then(Commands.argument("encounter", Arguments.STRING.create(event))
+        .executes(ctx => {
+          var player = ctx.source.player;
+          if (!player) return 0;
+          var encounterId = Arguments.STRING.getResult(ctx, "encounter");
+          if (encounterId !== "super_boss_ceo" && encounterId !== "super_boss_ceo_rematch") {
+            player.tell("Invalid CEO encounter.");
+            return 0;
+          }
+          var state = getGymEncounterProgressState(player, encounterId);
+          if (state !== "ready") {
+            player.tell("Your CEO challenge is no longer available. Talk to the CEO again.");
+            return 0;
+          }
+          var stage = encounterId === "super_boss_ceo" ? "ceo_battle_ready" : "ceo_battle_rematch_ready";
+          player.stages.add(stage);
           return 1;
         })
       )

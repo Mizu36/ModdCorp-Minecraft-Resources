@@ -55,6 +55,8 @@ const handleNpc = (e, npcId, level, server, target, player, item) => {
         global.handleNpcSubway(e, level, server, target, player);
     } else if (npcId === "league") {
         global.handleNpcLeague(e, level, server, target, player);
+    } else if (npcId === "super_boss_ceo_battle") {
+        global.handleNpcCeoBattle(server, target, player);
     } else if (global.gymTrainerEncounters[npcId]) {
         global.handleNpcGymTrainer(e, level, server, target, player, npcId);
     } else if (!npcData) {

@@ -1,0 +1,11 @@
+{
+	"id": "super_boss_ceo_rematch_choice_dialog_challenge_accepted_waiting",
+	"title": "super_boss_ceo_rematch_choice_dialog_challenge_accepted_waiting",
+	"description": "dialog.npc.the_ceo_rematch.dialog.challenge_accepted_waiting.line_0",
+	"entries": [{
+		"id": "start",
+		"portraits": [{"path": "gym.png", "position": "INLINE", "brightness": 1}],
+		"speaker": {"translate": "dialog.npc.the_ceo_rematch.name", "color": "white"},
+		"text": [{"translate": "dialog.npc.the_ceo_rematch.dialog.challenge_accepted_waiting.line_0"}]
+	}]
+}
