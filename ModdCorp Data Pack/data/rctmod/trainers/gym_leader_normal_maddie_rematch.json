@@ -1,166 +1,167 @@
 {
     "displayName": "Secretary MaddiePly",
+    "aiLevel": 9,
     "identity": "Secretary MaddiePly",
     "team": [
         {
             "species": "cobblemon:persian",
             "gender": "MALE",
-            "level": 46,
+            "level": 75,
             "nature": "cobblemon:timid",
-            "ability": "technician",
+            "ability": "limber",
             "moveset": [
                 "fakeout",
-                "darkpulse",
-                "nastyplot",
-                "partingshot"
+                "playrough",
+                "slash",
+                "foulplay"
             ],
             "ivs": {
                 "hp": 0,
-                "attack": 0,
+                "attack": 31,
                 "defence": 0,
-                "special_attack": 12,
+                "special_attack": 0,
                 "special_defence": 0,
-                "speed": 12
+                "speed": 31
             },
             "evs": {
                 "hp": 0,
-                "attack": 0,
+                "attack": 252,
                 "defence": 0,
-                "special_attack": 64,
+                "special_attack": 0,
                 "special_defence": 0,
-                "speed": 64
+                "speed": 252
             },
             "shiny": false,
-            "heldItem": "cobblemon:oran_berry"
+            "heldItem": "cobblemon:life_orb"
         },
         {
             "species": "cobblemon:purugly",
             "gender": "FEMALE",
-            "level": 46,
+            "level": 75,
             "nature": "cobblemon:jolly",
-            "ability": "thickfat",
+            "ability": "defiant",
             "moveset": [
                 "fakeout",
-                "knockoff",
+                "honeclaws",
                 "playrough",
-                "uturn"
+                "bodyslam"
             ],
             "ivs": {
                 "hp": 0,
-                "attack": 12,
+                "attack": 31,
                 "defence": 0,
                 "special_attack": 0,
                 "special_defence": 0,
-                "speed": 12
+                "speed": 31
             },
             "evs": {
-                "hp": 0,
-                "attack": 64,
+                "hp": 4,
+                "attack": 252,
                 "defence": 0,
                 "special_attack": 0,
                 "special_defence": 0,
-                "speed": 64
+                "speed": 252
             },
             "shiny": false,
-            "heldItem": "cobblemon:sitrus_berry"
+            "heldItem": "cobblemon:leftovers"
         },
         {
             "species": "cobblemon:meowstic",
             "gender": "FEMALE",
-            "level": 48,
+            "level": 75,
             "nature": "cobblemon:calm",
             "ability": "competitive",
             "moveset": [
                 "psychic",
                 "reflect",
                 "lightscreen",
-                "thunderwave"
+                "shadowball"
             ],
             "ivs": {
-                "hp": 12,
+                "hp": 31,
                 "attack": 0,
-                "defence": 12,
-                "special_attack": 0,
+                "defence": 31,
+                "special_attack": 31,
                 "special_defence": 0,
                 "speed": 0
             },
             "evs": {
-                "hp": 64,
+                "hp": 252,
                 "attack": 0,
-                "defence": 64,
-                "special_attack": 0,
+                "defence": 0,
+                "special_attack": 252,
                 "special_defence": 0,
                 "speed": 0
             },
             "shiny": false,
-            "heldItem": "cobblemon:lum_berry"
+            "heldItem": "cobblemon:light_clay"
         },
         {
             "species": "cobblemon:zeraora",
             "gender": "FEMALE",
-            "level": 48,
+            "level": 75,
             "nature": "cobblemon:jolly",
             "ability": "voltabsorb",
             "moveset": [
                 "plasmafists",
+                "rest",
                 "closecombat",
-                "knockoff",
-                "voltswitch"
+                "honeclaws"
             ],
             "ivs": {
                 "hp": 0,
-                "attack": 12,
+                "attack": 31,
                 "defence": 0,
                 "special_attack": 0,
                 "special_defence": 0,
-                "speed": 12
+                "speed": 31
             },
             "evs": {
                 "hp": 0,
-                "attack": 0,
+                "attack": 252,
                 "defence": 0,
                 "special_attack": 0,
                 "special_defence": 0,
-                "speed": 128
+                "speed": 252
             },
             "shiny": false,
-            "heldItem": "cobblemon:salac_berry"
+            "heldItem": "cobblemon:muscle_band"
         },
         {
             "species": "cobblemon:delcatty",
             "gender": "FEMALE",
-            "level": 50,
+            "level": 75,
             "nature": "cobblemon:jolly",
             "ability": "wonderskin",
             "moveset": [
                 "fakeout",
-                "playrough",
-                "thunderwave",
-                "suckerpunch"
+                "nastyplot",
+                "workup",
+                "batonpass"
             ],
             "ivs": {
                 "hp": 0,
-                "attack": 12,
+                "attack": 31,
                 "defence": 0,
                 "special_attack": 0,
                 "special_defence": 0,
-                "speed": 12
+                "speed": 31
             },
             "evs": {
                 "hp": 0,
-                "attack": 64,
+                "attack": 252,
                 "defence": 0,
                 "special_attack": 0,
                 "special_defence": 0,
-                "speed": 64
+                "speed": 252
             },
             "shiny": false,
-            "heldItem": "cobblemon:figy_berry"
+            "heldItem": "cobblemon:focus_sash"
         },
         {
             "species": "cobblemon:sylveon",
             "gender": "FEMALE",
-            "level": 50,
+            "level": 75,
             "nature": "cobblemon:modest",
             "ability": "pixilate",
             "moveset": [
@@ -173,20 +174,20 @@
                 "hp": 0,
                 "attack": 0,
                 "defence": 0,
-                "special_attack": 12,
+                "special_attack": 31,
                 "special_defence": 0,
-                "speed": 12
+                "speed": 31
             },
             "evs": {
-                "hp": 0,
+                "hp": 4,
                 "attack": 0,
                 "defence": 0,
-                "special_attack": 128,
+                "special_attack": 252,
                 "special_defence": 0,
-                "speed": 0
+                "speed": 252
             },
             "shiny": false,
-            "heldItem": "cobblemon:wiki_berry"
+            "heldItem": "cobblemon:shell_bell"
         }
     ],
     "winCommand": "",

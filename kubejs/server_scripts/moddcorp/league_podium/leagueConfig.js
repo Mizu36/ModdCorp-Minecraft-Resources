@@ -1356,7 +1356,7 @@ global.leagueConfig = {
 
         rewardItems: [
             {
-                id: "simpletms:tr_",
+                id: "simpletms:tr_iciclecrash",
                 count: 1,
             }
         ],
@@ -1386,7 +1386,7 @@ global.leagueConfig = {
 
         rewardItems: [
             {
-                id: "simpletms:tr_",
+                id: "simpletms:tr_honeclaws",
                 count: 1,
             }
         ],
