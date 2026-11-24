@@ -132,7 +132,7 @@
             "gender": "GENDERLESS",
             "level": 75,
             "nature": "cobblemon:hasty",
-            "ability": "protosynthesis",
+            "ability": "quarkdrive",
             "moveset": [
                 "morningsun",
                 "sludgewave",
