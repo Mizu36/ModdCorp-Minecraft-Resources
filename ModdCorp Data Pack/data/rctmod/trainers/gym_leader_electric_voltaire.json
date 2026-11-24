@@ -98,7 +98,7 @@
         },
         {
             "species": "cobblemon:dracozolt",
-            "gender": "MALE",
+            "gender": "GENDERLESS",
             "level": 40,
             "nature": "cobblemon:adamant",
             "ability": "hustle",
