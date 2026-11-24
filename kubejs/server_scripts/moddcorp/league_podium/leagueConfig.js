@@ -1326,7 +1326,7 @@ global.leagueConfig = {
 
         rewardItems: [
             {
-                id: "simpletms:tr_",
+                id: "simpletms:tr_discharge",
                 count: 1,
             }
         ],
