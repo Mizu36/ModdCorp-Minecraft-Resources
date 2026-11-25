@@ -4,7 +4,6 @@
     "team": [
         {
             "species": "cobblemon:jumpluff",
-            "nickname": "",
             "gender": "FEMALE",
             "level": 71,
             "nature": "cobblemon:timid",
@@ -16,15 +15,15 @@
                 "uturn"
             ],
             "ivs": {
-                "hp": 5,
+                "hp": 31,
                 "attack": 0,
                 "defence": 0,
                 "special_attack": 0,
                 "special_defence": 0,
-                "speed": 15
+                "speed": 31
             },
             "evs": {
-                "hp": 4,
+                "hp": 252,
                 "attack": 0,
                 "defence": 0,
                 "special_attack": 0,
@@ -36,7 +35,6 @@
         },
         {
             "species": "cobblemon:cacturne",
-            "nickname": "",
             "gender": "MALE",
             "level": 71,
             "nature": "cobblemon:adamant",
@@ -48,12 +46,12 @@
                 "spikes"
             ],
             "ivs": {
-                "hp": 0,
-                "attack": 10,
+                "hp": 31,
+                "attack": 31,
                 "defence": 0,
                 "special_attack": 0,
                 "special_defence": 0,
-                "speed": 10
+                "speed": 31
             },
             "evs": {
                 "hp": 4,
@@ -68,7 +66,6 @@
         },
         {
             "species": "cobblemon:lilligant",
-            "nickname": "",
             "gender": "FEMALE",
             "level": 71,
             "nature": "cobblemon:timid",
@@ -80,12 +77,12 @@
                 "petaldance"
             ],
             "ivs": {
-                "hp": 0,
+                "hp": 31,
                 "attack": 0,
                 "defence": 0,
-                "special_attack": 10,
+                "special_attack": 31,
                 "special_defence": 0,
-                "speed": 10
+                "speed": 31
             },
             "evs": {
                 "hp": 4,
@@ -100,7 +97,6 @@
         },
         {
             "species": "cobblemon:meowscarada",
-            "nickname": "",
             "gender": "MALE",
             "level": 71,
             "nature": "cobblemon:jolly",
@@ -112,12 +108,12 @@
                 "uturn"
             ],
             "ivs": {
-                "hp": 0,
-                "attack": 5,
+                "hp": 31,
+                "attack": 31,
                 "defence": 0,
                 "special_attack": 0,
                 "special_defence": 0,
-                "speed": 15
+                "speed": 31
             },
             "evs": {
                 "hp": 4,
@@ -132,7 +128,6 @@
         },
         {
             "species": "cobblemon:celebi",
-            "nickname": "",
             "gender": "GENDERLESS",
             "level": 72,
             "nature": "cobblemon:modest",
@@ -144,11 +139,11 @@
                 "recover"
             ],
             "ivs": {
-                "hp": 10,
+                "hp": 31,
                 "attack": 0,
                 "defence": 0,
-                "special_attack": 10,
-                "special_defence": 0,
+                "special_attack": 31,
+                "special_defence": 31,
                 "speed": 0
             },
             "evs": {
@@ -164,7 +159,6 @@
         },
         {
             "species": "cobblemon:hydrapple",
-            "nickname": "",
             "gender": "MALE",
             "level": 72,
             "nature": "cobblemon:modest",
@@ -176,11 +170,11 @@
                 "sludgebomb"
             ],
             "ivs": {
-                "hp": 10,
+                "hp": 31,
                 "attack": 0,
                 "defence": 0,
-                "special_attack": 10,
-                "special_defence": 0,
+                "special_attack": 31,
+                "special_defence": 31,
                 "speed": 0
             },
             "evs": {

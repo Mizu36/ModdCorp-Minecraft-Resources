@@ -4,7 +4,6 @@
     "team": [
         {
             "species": "cobblemon:skarmory",
-            "nickname": "",
             "gender": "FEMALE",
             "level": 55,
             "nature": "cobblemon:impish",
@@ -36,7 +35,6 @@
         },
         {
             "species": "cobblemon:aegislash",
-            "nickname": "",
             "gender": "GENDERLESS",
             "level": 56,
             "nature": "cobblemon:brave",
@@ -68,7 +66,6 @@
         },
         {
             "species": "cobblemon:scizor",
-            "nickname": "",
             "gender": "MALE",
             "level": 56,
             "nature": "cobblemon:adamant",
@@ -100,7 +97,6 @@
         },
         {
             "species": "cobblemon:empoleon",
-            "nickname": "",
             "gender": "MALE",
             "level": 57,
             "nature": "cobblemon:modest",
@@ -132,7 +128,6 @@
         },
         {
             "species": "cobblemon:metagross",
-            "nickname": "",
             "gender": "GENDERLESS",
             "level": 58,
             "nature": "cobblemon:adamant",

@@ -4,7 +4,6 @@
     "team": [
         {
             "species": "cobblemon:mimikyu",
-            "nickname": "",
             "gender": "FEMALE",
             "level": 72,
             "nature": "cobblemon:jolly",
@@ -16,12 +15,12 @@
                 "shadowsneak"
             ],
             "ivs": {
-                "hp": 0,
-                "attack": 15,
+                "hp": 31,
+                "attack": 31,
                 "defence": 0,
                 "special_attack": 0,
                 "special_defence": 0,
-                "speed": 5
+                "speed": 31
             },
             "evs": {
                 "hp": 4,
@@ -36,7 +35,6 @@
         },
         {
             "species": "cobblemon:dusknoir",
-            "nickname": "",
             "gender": "MALE",
             "level": 72,
             "nature": "cobblemon:impish",
@@ -48,11 +46,11 @@
                 "painsplit"
             ],
             "ivs": {
-                "hp": 15,
-                "attack": 5,
-                "defence": 0,
+                "hp": 31,
+                "attack": 0,
+                "defence": 31,
                 "special_attack": 0,
-                "special_defence": 0,
+                "special_defence": 31,
                 "speed": 0
             },
             "evs": {
@@ -68,7 +66,6 @@
         },
         {
             "species": "cobblemon:decidueye",
-            "nickname": "",
             "gender": "MALE",
             "level": 72,
             "nature": "cobblemon:adamant",
@@ -80,12 +77,12 @@
                 "bravebird"
             ],
             "ivs": {
-                "hp": 5,
-                "attack": 15,
+                "hp": 31,
+                "attack": 31,
                 "defence": 0,
                 "special_attack": 0,
                 "special_defence": 0,
-                "speed": 0
+                "speed": 31
             },
             "evs": {
                 "hp": 4,
@@ -100,7 +97,6 @@
         },
         {
             "species": "cobblemon:pecharunt",
-            "nickname": "",
             "gender": "GENDERLESS",
             "level": 73,
             "nature": "cobblemon:modest",
@@ -112,10 +108,10 @@
                 "recover"
             ],
             "ivs": {
-                "hp": 10,
+                "hp": 31,
                 "attack": 0,
-                "defence": 0,
-                "special_attack": 10,
+                "defence": 31,
+                "special_attack": 31,
                 "special_defence": 0,
                 "speed": 0
             },
@@ -132,7 +128,6 @@
         },
         {
             "species": "cobblemon:ceruledge",
-            "nickname": "",
             "gender": "MALE",
             "level": 73,
             "nature": "cobblemon:jolly",
@@ -144,12 +139,12 @@
                 "closecombat"
             ],
             "ivs": {
-                "hp": 0,
-                "attack": 15,
+                "hp": 31,
+                "attack": 31,
                 "defence": 0,
                 "special_attack": 0,
                 "special_defence": 0,
-                "speed": 5
+                "speed": 31
             },
             "evs": {
                 "hp": 4,
@@ -164,7 +159,6 @@
         },
         {
             "species": "cobblemon:chandelure",
-            "nickname": "",
             "gender": "GENDERLESS",
             "level": 73,
             "nature": "cobblemon:modest",
@@ -176,12 +170,12 @@
                 "psychic"
             ],
             "ivs": {
-                "hp": 0,
+                "hp": 31,
                 "attack": 0,
                 "defence": 0,
-                "special_attack": 15,
+                "special_attack": 31,
                 "special_defence": 0,
-                "speed": 5
+                "speed": 31
             },
             "evs": {
                 "hp": 4,

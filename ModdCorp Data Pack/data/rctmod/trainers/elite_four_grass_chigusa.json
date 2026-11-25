@@ -4,7 +4,6 @@
     "team": [
         {
             "species": "cobblemon:jumpluff",
-            "nickname": "",
             "gender": "FEMALE",
             "level": 52,
             "nature": "cobblemon:timid",
@@ -36,7 +35,6 @@
         },
         {
             "species": "cobblemon:cacturne",
-            "nickname": "",
             "gender": "MALE",
             "level": 52,
             "nature": "cobblemon:adamant",
@@ -68,7 +66,6 @@
         },
         {
             "species": "cobblemon:lilligant",
-            "nickname": "",
             "gender": "FEMALE",
             "level": 53,
             "nature": "cobblemon:timid",
@@ -100,7 +97,6 @@
         },
         {
             "species": "cobblemon:meowscarada",
-            "nickname": "",
             "gender": "MALE",
             "level": 53,
             "nature": "cobblemon:jolly",
@@ -132,7 +128,6 @@
         },
         {
             "species": "cobblemon:celebi",
-            "nickname": "",
             "gender": "GENDERLESS",
             "level": 54,
             "nature": "cobblemon:modest",

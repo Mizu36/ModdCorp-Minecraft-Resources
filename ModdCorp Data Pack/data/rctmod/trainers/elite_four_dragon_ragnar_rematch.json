@@ -4,7 +4,6 @@
     "team": [
         {
             "species": "cobblemon:druddigon",
-            "nickname": "",
             "gender": "MALE",
             "level": 74,
             "nature": "cobblemon:adamant",
@@ -36,7 +35,6 @@
         },
         {
             "species": "cobblemon:dragalge",
-            "nickname": "",
             "gender": "FEMALE",
             "level": 75,
             "nature": "cobblemon:modest",
@@ -68,7 +66,6 @@
         },
         {
             "species": "cobblemon:dragonite",
-            "nickname": "",
             "gender": "MALE",
             "level": 75,
             "nature": "cobblemon:jolly",
@@ -100,7 +97,6 @@
         },
         {
             "species": "cobblemon:drampa",
-            "nickname": "",
             "gender": "MALE",
             "level": 75,
             "nature": "cobblemon:modest",
@@ -132,7 +128,6 @@
         },
         {
             "species": "cobblemon:haxorus",
-            "nickname": "",
             "gender": "MALE",
             "level": 76,
             "nature": "cobblemon:jolly",
@@ -164,7 +159,6 @@
         },
         {
             "species": "cobblemon:ragingbolt",
-            "nickname": "",
             "gender": "GENDERLESS",
             "level": 76,
             "nature": "cobblemon:modest",

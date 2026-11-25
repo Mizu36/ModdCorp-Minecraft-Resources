@@ -4,7 +4,6 @@
     "team": [
         {
             "species": "cobblemon:mimikyu",
-            "nickname": "",
             "gender": "FEMALE",
             "level": 53,
             "nature": "cobblemon:jolly",
@@ -36,7 +35,6 @@
         },
         {
             "species": "cobblemon:dusknoir",
-            "nickname": "",
             "gender": "MALE",
             "level": 53,
             "nature": "cobblemon:impish",
@@ -68,7 +66,6 @@
         },
         {
             "species": "cobblemon:gourgeist",
-            "nickname": "",
             "gender": "FEMALE",
             "level": 54,
             "nature": "cobblemon:impish",
@@ -100,7 +97,6 @@
         },
         {
             "species": "cobblemon:ceruledge",
-            "nickname": "",
             "gender": "MALE",
             "level": 55,
             "nature": "cobblemon:jolly",
@@ -132,7 +128,6 @@
         },
         {
             "species": "cobblemon:chandelure",
-            "nickname": "",
             "gender": "GENDERLESS",
             "level": 55,
             "nature": "cobblemon:modest",

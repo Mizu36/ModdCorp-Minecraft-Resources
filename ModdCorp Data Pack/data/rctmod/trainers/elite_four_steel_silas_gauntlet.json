@@ -4,24 +4,23 @@
     "team": [
         {
             "species": "cobblemon:skarmory",
-            "nickname": "",
             "gender": "FEMALE",
-            "level": 73,
+            "level": 50,
             "nature": "cobblemon:impish",
             "ability": "sturdy",
             "moveset": [
-                "stealthrock",
+                "spikes",
                 "roost",
-                "bravebird",
+                "bodypress",
                 "whirlwind"
             ],
             "ivs": {
-                "hp": 15,
-                "attack": 5,
-                "defence": 0,
-                "special_attack": 0,
-                "special_defence": 0,
-                "speed": 0
+                "hp": 31,
+                "attack": 31,
+                "defence": 31,
+                "special_attack": 31,
+                "special_defence": 31,
+                "speed": 31
             },
             "evs": {
                 "hp": 252,
@@ -36,24 +35,23 @@
         },
         {
             "species": "cobblemon:aegislash",
-            "nickname": "",
             "gender": "GENDERLESS",
-            "level": 73,
-            "nature": "cobblemon:brave",
+            "level": 50,
+            "nature": "cobblemon:quiet",
             "ability": "stancechange",
             "moveset": [
                 "kingsshield",
-                "shadowsneak",
-                "ironhead",
-                "sacredsword"
+                "shadowball",
+                "flashcannon",
+                "closecombat"
             ],
             "ivs": {
-                "hp": 10,
-                "attack": 10,
-                "defence": 0,
-                "special_attack": 0,
-                "special_defence": 0,
-                "speed": 0
+                "hp": 31,
+                "attack": 31,
+                "defence": 31,
+                "special_attack": 31,
+                "special_defence": 31,
+                "speed": 31
             },
             "evs": {
                 "hp": 252,
@@ -64,13 +62,12 @@
                 "speed": 0
             },
             "shiny": false,
-            "heldItem": "cobblemon:spell_tag"
+            "heldItem": "cobblemon:leftovers"
         },
         {
             "species": "cobblemon:scizor",
-            "nickname": "",
             "gender": "MALE",
-            "level": 73,
+            "level": 50,
             "nature": "cobblemon:adamant",
             "ability": "technician",
             "moveset": [
@@ -80,44 +77,43 @@
                 "closecombat"
             ],
             "ivs": {
-                "hp": 5,
-                "attack": 15,
-                "defence": 0,
-                "special_attack": 0,
-                "special_defence": 0,
-                "speed": 0
+                "hp": 31,
+                "attack": 31,
+                "defence": 31,
+                "special_attack": 31,
+                "special_defence": 31,
+                "speed": 31
             },
             "evs": {
-                "hp": 4,
+                "hp": 0,
                 "attack": 252,
                 "defence": 0,
                 "special_attack": 0,
-                "special_defence": 0,
+                "special_defence": 4,
                 "speed": 252
             },
             "shiny": false,
-            "heldItem": "cobblemon:clear_amulet"
+            "heldItem": "cobblemon:life_orb"
         },
         {
             "species": "cobblemon:jirachi",
-            "nickname": "",
             "gender": "GENDERLESS",
-            "level": 73,
-            "nature": "cobblemon:modest",
+            "level": 50,
+            "nature": "cobblemon:timid",
             "ability": "serenegrace",
             "moveset": [
-                "flashcannon",
+                "doomdesire",
                 "psychic",
                 "thunderbolt",
-                "calmmind"
+                "trick"
             ],
             "ivs": {
-                "hp": 10,
-                "attack": 0,
-                "defence": 0,
-                "special_attack": 10,
-                "special_defence": 0,
-                "speed": 0
+                "hp": 31,
+                "attack": 31,
+                "defence": 31,
+                "special_attack": 31,
+                "special_defence": 31,
+                "speed": 31
             },
             "evs": {
                 "hp": 252,
@@ -128,71 +124,69 @@
                 "speed": 0
             },
             "shiny": false,
-            "heldItem": "cobblemon:leftovers"
+            "heldItem": "cobblemon:choice_scarf"
         },
         {
             "species": "cobblemon:empoleon",
-            "nickname": "",
             "gender": "MALE",
-            "level": 74,
-            "nature": "cobblemon:modest",
+            "level": 50,
+            "nature": "cobblemon:calm",
             "ability": "competitive",
             "moveset": [
-                "surf",
+                "scald",
                 "flashcannon",
-                "icebeam",
-                "grassknot"
+                "roost",
+                "defog"
             ],
             "ivs": {
-                "hp": 15,
-                "attack": 0,
-                "defence": 0,
-                "special_attack": 5,
-                "special_defence": 0,
-                "speed": 0
+                "hp": 31,
+                "attack": 31,
+                "defence": 31,
+                "special_attack": 31,
+                "special_defence": 31,
+                "speed": 31
             },
             "evs": {
                 "hp": 252,
                 "attack": 0,
-                "defence": 0,
-                "special_attack": 252,
-                "special_defence": 4,
+                "defence": 4,
+                "special_attack": 0,
+                "special_defence": 252,
                 "speed": 0
             },
             "shiny": false,
-            "heldItem": "cobblemon:expert_belt"
+            "heldItem": "cobblemon:sitrus_berry"
         },
         {
             "species": "cobblemon:metagross",
-            "nickname": "",
             "gender": "GENDERLESS",
-            "level": 74,
+            "level": 50,
             "nature": "cobblemon:adamant",
             "ability": "clearbody",
             "moveset": [
                 "meteormash",
                 "zenheadbutt",
                 "earthquake",
-                "bulletpunch"
+                "icepunch"
             ],
             "ivs": {
-                "hp": 5,
-                "attack": 15,
-                "defence": 0,
-                "special_attack": 0,
-                "special_defence": 0,
-                "speed": 0
+                "hp": 31,
+                "attack": 31,
+                "defence": 31,
+                "special_attack": 31,
+                "special_defence": 31,
+                "speed": 31
             },
             "evs": {
-                "hp": 4,
+                "hp": 252,
                 "attack": 252,
                 "defence": 0,
                 "special_attack": 0,
-                "special_defence": 0,
-                "speed": 252
+                "special_defence": 4,
+                "speed": 0
             },
             "shiny": false,
-            "heldItem": "cobblemon:metal_coat"
+            "heldItem": "cobblemon:assault_vest"
         }
     ],
     "winCommand": "",
