@@ -1,0 +1,16 @@
+{
+	"id": "elite_four_steel_silas_gauntlet_challenge",
+	"title": "elite_four_steel_silas gauntlet challenge",
+	"description": "dialog.npc.elite_four_steel_silas.dialog.gauntlet_challenge.line_0",
+	"allowClose": false,
+	"entries": [
+		{
+			"id": "start",
+			"endDialog": true,
+			"command": ["moddcorpgymgauntlet battle"],
+			"speaker": { "translate": "dialog.npc.elite_four_steel_silas.name", "color": "white" },
+			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"text": [{ "translate": "dialog.npc.elite_four_steel_silas.dialog.gauntlet_challenge.line_0" }]
+		}
+	]
+}

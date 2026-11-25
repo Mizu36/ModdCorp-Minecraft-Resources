@@ -1,0 +1,16 @@
+{
+	"id": "elite_four_ghost_acerola_gauntlet_win",
+	"title": "elite_four_ghost_acerola gauntlet win",
+	"description": "dialog.npc.elite_four_ghost_acerola.dialog.gauntlet_win.line_0",
+	"allowClose": false,
+	"entries": [
+		{
+			"id": "start",
+			"endDialog": true,
+			"command": ["moddcorpgymgauntlet continue"],
+			"speaker": { "translate": "dialog.npc.elite_four_ghost_acerola.name", "color": "white" },
+			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"text": [{ "translate": "dialog.npc.elite_four_ghost_acerola.dialog.gauntlet_win.line_0" }]
+		}
+	]
+}

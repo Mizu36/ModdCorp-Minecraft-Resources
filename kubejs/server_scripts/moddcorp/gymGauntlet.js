@@ -11,6 +11,21 @@ const gymGauntletRounds = [
     { npcId: "gym_leader_normal_maddie", model: "humanoid_slim", encounterId: "normal_leader_gauntlet" },
 ];
 
+const eliteFourGauntletRounds = [
+    { npcId: "elite_four_grass_chigusa", model: "humanoid_slim", encounterId: "e4_grass_gauntlet"},
+    { npcId: "elite_four_ghost_acerola", model: "humanoid_slim", encounterId: "e4_ghost_gauntlet"},
+    { npcId: "elite_four_steel_silas", model: "humanoid", encounterId: "e4_steel_gauntlet"},
+    { npcId: "elite_four_dragon_ragnar", model: "humanoid", encounterId: "e4_dragon_gauntlet"},
+    { npcId: "champion_mizu", model: "humanoid_slim", encounterId: "champion_gauntlet"}
+];
+
+const fullLeagueGauntletRounds = [...gymGauntletRounds, ...eliteFourGauntletRounds];
+
+const GAUNTLET_MODES = {
+    gyms: { rounds: gymGauntletRounds, label: "Gym Gauntlet", stages: ["gym_leader_rematch_gauntlet_complete"] },
+    elite_four: { rounds: eliteFourGauntletRounds, label: "Elite Four Gauntlet", stages: ["elite_four_rematch_gauntlet_complete"] },
+    full: { rounds: fullLeagueGauntletRounds, label: "Full League Gauntlet", stages: ["gym_leader_rematch_gauntlet_complete", "elite_four_rematch_gauntlet_complete", "full_league_gauntlet_complete"] },
+};
 const GAUNTLET_DATA_KEY = "moddcorp_gym_gauntlet";
 const GAUNTLET_HOST_PRESET = "easy_npc:preset/humanoid/gym_gauntlet.npc.nbt";
 const GauntletUUID = Java.loadClass("java.util.UUID");
@@ -63,8 +78,10 @@ function replaceGauntletPreset(server, state, preset) {
     return true;
 }
 
-function validateGymGauntletRounds(player) {
-    for (const round of gymGauntletRounds) {
+function validateGymGauntletRounds(player, mode) {
+    const config = GAUNTLET_MODES[mode];
+    if (!config) return false;
+    for (const round of config.rounds) {
         if (!global.leagueConfig[round.encounterId] || !global.leagueConfig[round.encounterId].trainerId) {
             player.tell("§cThe Gym Gauntlet has an invalid opponent configuration. Check the server log.");
             console.error("[GYM GAUNTLET] Invalid round configuration: " + JSON.stringify(round));
@@ -75,7 +92,8 @@ function validateGymGauntletRounds(player) {
 }
 
 function gauntletRound(state) {
-    return state.order && gymGauntletRounds[state.order[state.round]];
+    const config = GAUNTLET_MODES[state.mode];
+    return config && state.order && config.rounds[state.order[state.round]];
 }
 
 function gauntletPreset(round) {
@@ -116,8 +134,8 @@ global.handleGymGauntletInteraction = (server, target, player) => {
     if (state.phase !== "idle") {
         player.tell("§eThe Gym Gauntlet is currently in use.");
     } else if (!player.stages.has("e4_complete")) {
-        player.tell("§cYou must complete the Elite Four before challenging the Gym Gauntlet.");
-    } else if (validateGymGauntletRounds(player)) {
+        player.tell("§cYou must complete the Elite Four before taking a gauntlet challenge.");
+    } else {
         gymGauntletOffers[playerId] = Date.now();
         showGauntletDialog(server, player, "gym_gauntlet_choice_dialog");
     }
@@ -184,7 +202,7 @@ global.finishGymGauntletBattle = (server, player, won) => {
 };
 
 ServerEvents.commandRegistry(event => {
-    const { commands: Commands } = event;
+    const { commands: Commands, arguments: Arguments } = event;
     event.register(
         Commands.literal("moddcorpgymgauntlet")
             .then(Commands.literal("create").requires(src => src.hasPermission(2)).executes(ctx => {
@@ -206,9 +224,14 @@ ServerEvents.commandRegistry(event => {
                 player.tell("§aCreated Gym Gauntlet NPC: " + state.uuid);
                 return 1;
             }))
-            .then(Commands.literal("start").executes(ctx => {
+            .then(Commands.literal("start").then(Commands.argument("mode", Arguments.STRING.create(event)).executes(ctx => {
                 const player = ctx.source.player;
                 if (!player) return 0;
+                const mode = String(Arguments.STRING.getResult(ctx, "mode"));
+                if (!GAUNTLET_MODES[mode]) {
+                    player.tell("§cUnknown gauntlet type.");
+                    return 0;
+                }
                 const server = ctx.source.server;
                 const state = readGymGauntlet(server);
                 const playerId = String(player.getUuid());
@@ -217,12 +240,12 @@ ServerEvents.commandRegistry(event => {
                     return 0;
                 }
                 delete gymGauntletOffers[playerId];
-                if (!state || state.phase !== "idle" || !validateGymGauntletRounds(player)) {
+                if (!state || state.phase !== "idle" || !validateGymGauntletRounds(player, mode)) {
                     player.tell("§cThe Gym Gauntlet is unavailable.");
                     return 0;
                 }
                 if (!player.stages.has("e4_complete")) {
-                    player.tell("§cYou must complete the Elite Four before challenging the Gym Gauntlet.");
+                    player.tell("§cYou must complete the Elite Four before taking a gauntlet challenge.");
                     return 0;
                 }
                 if (gauntletBattleActive(playerId)) {
@@ -231,9 +254,12 @@ ServerEvents.commandRegistry(event => {
                 }
                 state.owner = playerId;
                 state.runId = String(GauntletUUID.randomUUID());
-                state.order = gymGauntletRounds.map((_, index) => index);
+                state.mode = mode;
+                state.order = GAUNTLET_MODES[mode].rounds.map((_, index) => index);
+                // Gym leaders are shuffled; the Elite Four and Champion always keep their fixed order.
+                const shuffleCount = mode === "elite_four" ? 0 : gymGauntletRounds.length;
                 let swapIndex, swapValue;
-                for (let i = state.order.length - 1; i > 0; i--) {
+                for (let i = shuffleCount - 1; i > 0; i--) {
                     swapIndex = Math.floor(Math.random() * (i + 1));
                     swapValue = state.order[i];
                     state.order[i] = state.order[swapIndex];
@@ -250,7 +276,7 @@ ServerEvents.commandRegistry(event => {
                 }
                 showRoundDialog(server, state, "challenge", 10);
                 return 1;
-            }))
+            })))
             .then(Commands.literal("battle").executes(ctx => {
                 const player = ctx.source.player;
                 return player && startGymGauntletBattle(ctx.source.server, player) ? 1 : 0;
@@ -325,7 +351,7 @@ ServerEvents.tick(event => {
     if (state.phase === "advancing" && !player) state.phase = "aborting";
     if (state.phase === "advancing") {
         var next = state.round + 1;
-        if (next < gymGauntletRounds.length) {
+        if (next < GAUNTLET_MODES[state.mode].rounds.length) {
             var party = global.getPlayerParty(player);
             if (!party) {
                 player.tell("§cCould not heal your Pokémon. Ask an administrator to reset the Gym Gauntlet.");
@@ -352,8 +378,9 @@ ServerEvents.tick(event => {
     }
     if (!replaceGauntletPreset(server, state, GAUNTLET_HOST_PRESET)) return;
     if (player && state.phase === "advancing") {
-        player.stages.add("gym_leader_rematch_gauntlet_complete");
-        player.tell("§aYou completed the Gym Gauntlet!");
+        var completedMode = GAUNTLET_MODES[state.mode];
+        completedMode.stages.forEach(stage => player.stages.add(stage));
+        player.tell("§aYou completed the " + completedMode.label + "!");
     }
     if (state.owner) {
         var remainingBattle = global.pendingNpcBattles[state.owner];
@@ -363,6 +390,7 @@ ServerEvents.tick(event => {
     delete state.owner;
     delete state.runId;
     delete state.order;
+    delete state.mode;
     delete state.round;
     delete state.won;
     saveGymGauntlet(server, state);

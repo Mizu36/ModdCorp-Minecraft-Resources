@@ -1,0 +1,16 @@
+{
+	"id": "champion_mizu_gauntlet_win",
+	"title": "champion_mizu gauntlet win",
+	"description": "dialog.npc.champion_mizu.dialog.gauntlet_win.line_0",
+	"allowClose": false,
+	"entries": [
+		{
+			"id": "start",
+			"endDialog": true,
+			"command": ["moddcorpgymgauntlet continue"],
+			"speaker": { "translate": "dialog.npc.champion_mizu.name", "color": "white" },
+			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"text": [{ "translate": "dialog.npc.champion_mizu.dialog.gauntlet_win.line_0" }]
+		}
+	]
+}

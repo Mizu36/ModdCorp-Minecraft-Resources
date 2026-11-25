@@ -1,0 +1,16 @@
+{
+	"id": "elite_four_dragon_ragnar_gauntlet_challenge",
+	"title": "elite_four_dragon_ragnar gauntlet challenge",
+	"description": "dialog.npc.elite_four_dragon_ragnar.dialog.gauntlet_challenge.line_0",
+	"allowClose": false,
+	"entries": [
+		{
+			"id": "start",
+			"endDialog": true,
+			"command": ["moddcorpgymgauntlet battle"],
+			"speaker": { "translate": "dialog.npc.elite_four_dragon_ragnar.name", "color": "white" },
+			"portraits": [{ "path": "gym.png", "position": "INLINE", "brightness": 1 }],
+			"text": [{ "translate": "dialog.npc.elite_four_dragon_ragnar.dialog.gauntlet_challenge.line_0" }]
+		}
+	]
+}
